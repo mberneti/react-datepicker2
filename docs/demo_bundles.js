@@ -8405,10 +8405,7 @@ var DatePicker = function (_Component) {
 
       return _react2.default.createElement(
         _reactTether2.default,
-        { attachment: 'bottom center', targetAttachment: 'top center', constraints: [{
-            to: 'window',
-            attachment: 'together'
-          }] },
+        { attachment: 'bottom center' },
         this.renderInput(),
         isOpen ? this.renderCalendar() : null
       );

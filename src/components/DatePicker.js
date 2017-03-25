@@ -85,7 +85,7 @@ export default class DatePicker extends Component {
 
       this.setState({
         isGregorian: nextProps.isGregorian,
-        inputValue: this.getValue(nextProps.value, nextProps.isGregorian,nextProps.timePicker),
+        inputValue: this.getValue(nextProps.value, nextProps.isGregorian, nextProps.timePicker),
         inputFormat: inputFormat
       });
     }
@@ -100,7 +100,7 @@ export default class DatePicker extends Component {
   }
 
   setMomentValue(momentValue) {
-    const { inputFormat,isGregorian,timePicker } = this.state;
+    const { inputFormat, isGregorian, timePicker } = this.state;
 
     if (this.props.onChange) {
       this.props.onChange(momentValue);
@@ -108,7 +108,7 @@ export default class DatePicker extends Component {
 
     // const inputValue = momentValue.format(inputFormat);
 
-    const inputValue =this.getValue(momentValue,isGregorian,timePicker);
+    const inputValue = this.getValue(momentValue, isGregorian, timePicker);
 
     this.setState({ momentValue, inputValue });
   }
@@ -243,10 +243,7 @@ export default class DatePicker extends Component {
     const { isOpen } = this.state;
 
     return (
-      <TetherComponent attachment="bottom center" targetAttachment='top center' constraints={[{
-        to: 'window',
-        attachment: 'together'
-      }]} >
+      <TetherComponent attachment="top center">
         {this.renderInput()}
         {isOpen ? this.renderCalendar() : null}
       </TetherComponent>
