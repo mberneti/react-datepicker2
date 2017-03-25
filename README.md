@@ -1,7 +1,8 @@
 # React Date Picker
 
-A simple and reusable Datepicker component for React (with persian jalali calendar support) [Demo](https://mberneti.github.io/react-datepicker2/)
+A simple and reusable Datepicker component for React (with persian jalali calendar support) [Demo](https://mberneti.github.io/react-datepicker2/).
 
+This package uses [react-persian-datepicker](https://github.com/evandhq/react-persian-datepicker) project under the hood.
 
 ## Installation
 
@@ -57,7 +58,7 @@ The most basic use of the DatePicker can be described with:
 
 The `master` branch contains the latest version of the Datepicker2 component. To start your example app, you can run `npm install` then `npm start`. This starts a simple webserver on http://localhost:8080.
 
-#### Todo
+## Todo
 
 - [ ] Write tests
 - [ ] Better documentation
@@ -67,10 +68,10 @@ The `master` branch contains the latest version of the Datepicker2 component. To
 
 * [moment-jalaali](https://github.com/jalaali/moment-jalaali) - A Jalaali (Jalali, Persian, Khorshidi, Shamsi) calendar system plugin for moment.js.
 
-### Thanks
-Special thanks to [@mohebifar](https://github.com/mohebifar) for his open-source project which this component is based on
+## Thanks
+Special thanks to [@mohebifar](https://github.com/mohebifar) for his open-source project which this component is based on.
 
-# Contributing
+## Contributing
 Contributions are **welcome** and will be fully **credited**.
 I'd be happy to accept PRs for that.
 
