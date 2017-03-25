@@ -1,6 +1,9 @@
 # React Date Picker
 
+
 A simple and reusable Datepicker component for React (with persian jalali calendar support) [Demo](https://mberneti.github.io/react-datepicker2/).
+
+![](https://mberneti.github.io/react-datepicker2/images/react-datepicker2.gif)
 
 This package uses [react-persian-datepicker](https://github.com/evandhq/react-persian-datepicker) project under the hood.
 
