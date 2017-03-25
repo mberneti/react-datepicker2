@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
   template: './docs/demo.html',
-  filename: 'index.html'
+  filename: 'demo.html'
 })
 
 module.exports = {
