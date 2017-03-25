@@ -28560,7 +28560,7 @@ exports.default = _react2.default.createClass({
       _react2.default.createElement(
         'a',
         { href: 'https://github.com/mberneti/react-datepicker2/' },
-        _react2.default.createElement('img', { className: 'github-ribbon', src: 'images/ribbon.png', alt: 'Fork me on GitHub' })
+        _react2.default.createElement('img', { className: 'github-ribbon', src: 'https://mberneti.github.io/react-datepicker2/images/ribbon.png', alt: 'Fork me on GitHub' })
       )
     );
   }
