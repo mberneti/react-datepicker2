@@ -24,7 +24,7 @@
   "license": "MIT",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack --config webpack.config.dev.js && webpack-dev-server --config webpack.config.dev.js",
+    "start": "webpack --config webpack.config.docs.js && webpack-dev-server --config webpack.config.dev.js",
     "build": "webpack --config webpack.config.prod.js"
   },
   "dependencies": {

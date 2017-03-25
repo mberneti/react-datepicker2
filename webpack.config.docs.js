@@ -1,17 +1,9 @@
 const path = require('path');
 
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-
-const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
-  template: './docs/preview/index.html',
-  filename: './index.html',
-  inject:'false'
-})
-
 module.exports = {
   entry: './docs/src/boot.js',
   output: {
-    path: path.resolve(__dirname, 'docs/preview'),
+    path: path.resolve(__dirname, 'docs'),
     libraryTarget: 'umd',
     filename: 'demo_bundles.js',
     library: 'react-datepicker2'
@@ -25,6 +17,5 @@ module.exports = {
         }
       }
     ]
-  },
-  plugins: [HtmlWebpackPluginConfig]
+  }
 }
