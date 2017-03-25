@@ -1,5 +1,5 @@
 .calendarContainer {
-    font-family: 'Open Sans', 'Vazir';
+    font-family: 'Open Sans','Vazir';
     border-radius: 3px;
     box-shadow: 0 3px 10px #dbdbdb;
     border: 1px solid #cccccc;
@@ -22,7 +22,7 @@
     clear: both;
 }
 
-.datepicker-input {
+.datepicker-input{
     box-sizing: border-box;
 }
 
@@ -237,6 +237,7 @@
 }
 
 .rc-time-picker-panel {
+    font-family: 'Open Sans','Vazir';
     z-index: 1070;
     width: 170px;
     position: absolute;
