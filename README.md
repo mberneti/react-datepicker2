@@ -51,6 +51,15 @@ export default React.createClass({
 })
 
 ```
+You can also use the standalone build by including react-datepicker2.js and react-datepicker2.css in your page. (If you do this though you'll also need to include the dependencies.) For example:
+```html
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.min.js"></script>
+<script src="https://unpkg.com/classnames/index.js"></script>
+<script src="https://unpkg.com/react-datepicker2/dist/index.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/react-datepicker2/dist/react-datepicker2.min.css">
+```
 
 ## Configuration
 
