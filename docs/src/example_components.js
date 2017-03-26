@@ -6,7 +6,7 @@ import Highlight from 'react-syntax-highlight';
 import Default from './examples/default'
 import Jalaali from './examples/jalaali'
 import DisabledTimepicker from './examples/disabledTimepicker'
-import SwitchIsGregorian from './examples/dwitchIsGregorian'
+import SwitchIsGregorian from './examples/switchIsGregorian'
 
 export default React.createClass({
   displayName: 'exampleComponents',
