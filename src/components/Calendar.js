@@ -32,7 +32,7 @@ export class Calendar extends Component {
   static defaultProps = {
     styles: defaultStyles,
     containerProps: {},
-    isGregorian:false
+    isGregorian: true
   };
 
   state = {
