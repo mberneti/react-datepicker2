@@ -14013,7 +14013,7 @@ Calendar.childContextTypes = {
 Calendar.defaultProps = {
   styles: _DefaultStyles.defaultStyles,
   containerProps: {},
-  isGregorian: false
+  isGregorian: true
 };
 exports.default = (0, _reactOnclickoutside2.default)(Calendar);
 
@@ -29368,6 +29368,8 @@ var _moment2 = _interopRequireDefault(_moment);
 
 var _src = __webpack_require__(289);
 
+var _src2 = _interopRequireDefault(_src);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = _react2.default.createClass({
@@ -29380,7 +29382,7 @@ exports.default = _react2.default.createClass({
   render: function render() {
     var _this = this;
 
-    return _react2.default.createElement(_src.DatePicker, {
+    return _react2.default.createElement(_src2.default, {
       onChange: function onChange(value) {
         return _this.setState({ value: value });
       },
@@ -31260,27 +31262,20 @@ exports.default = placements;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.outsideClickIgnoreClass = exports.DatePicker = exports.Calendar = undefined;
+exports.Calendar = undefined;
 
-var _DatePicker2 = __webpack_require__(34);
+var _DatePicker = __webpack_require__(34);
 
-Object.defineProperty(exports, 'outsideClickIgnoreClass', {
-  enumerable: true,
-  get: function get() {
-    return _DatePicker2.outsideClickIgnoreClass;
-  }
-});
+var _DatePicker2 = _interopRequireDefault(_DatePicker);
 
 var _Calendar2 = __webpack_require__(100);
 
 var _Calendar3 = _interopRequireDefault(_Calendar2);
 
-var _DatePicker3 = _interopRequireDefault(_DatePicker2);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+exports.default = _DatePicker2.default;
 exports.Calendar = _Calendar3.default;
-exports.DatePicker = _DatePicker3.default;
 
 /***/ }),
 /* 290 */

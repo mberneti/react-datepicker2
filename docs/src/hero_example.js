@@ -1,6 +1,6 @@
 import React from 'react'
 import moment from 'moment'
-import {DatePicker} from '../../src';
+import DatePicker from '../../src';
 
 export default React.createClass({
   getInitialState() {
