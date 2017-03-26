@@ -4,7 +4,7 @@ import CodeExampleComponent from './code_example_component'
 import Highlight from 'react-syntax-highlight';
 
 import Default from './examples/default'
-import Jalaali from './examples/Jalaali'
+import Jalaali from './examples/jalaali'
 import DisabledTimepicker from './examples/DisabledTimepicker'
 import SwitchIsGregorian from './examples/SwitchIsGregorian'
 
@@ -15,7 +15,7 @@ export default React.createClass({
     hljs.initHighlightingOnLoad()
   },
 
-  examples: [Default, Jalaali,DisabledTimepicker,SwitchIsGregorian],
+  examples: [Default, Jalaali, DisabledTimepicker, SwitchIsGregorian],
 
   renderExamples() {
     return this.examples.map((example, index) =>
