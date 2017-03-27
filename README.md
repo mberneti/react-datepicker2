@@ -76,9 +76,10 @@ The `master` branch contains the latest version of the Datepicker2 component. To
 
 ## Todo
 
-- [ ] Write tests
-- [ ] Better documentation
+- [x] Write some tests
+- [x] Better documentation
 - [ ] UI improvements
+- [ ] Remove classnames dependency
 
 ## Built With
 
