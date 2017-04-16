@@ -33,7 +33,7 @@ Below is a simple example on how to use the Datepicker in a React view. You will
 ```js
 import React from 'react'
 import moment from 'moment-jalaali'
-import DatePicker from 'react-datePicker2';
+import DatePicker from 'react-datepicker2';
 
 import 'react-datepicker2/dist/react-datepicker2.min.css';
 
