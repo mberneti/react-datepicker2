@@ -1,8 +1,8 @@
 {
   "name": "react-datepicker2",
-  "version": "v1.0.0-beta8",
+  "version": "v1.0.0-alpha1",
   "description": "react datepicker component. (include persian jalaali calendar)",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "style": "dist/react-datepicker2.min.css",
   "repository": {
     "type": "git",
