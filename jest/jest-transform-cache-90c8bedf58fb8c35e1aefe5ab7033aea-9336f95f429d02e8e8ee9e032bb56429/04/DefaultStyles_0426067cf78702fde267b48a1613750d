@@ -1,0 +1,12 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_29k6g8vqf9 = function () {var path = '/mnt/g/Work/Current/projects/react-datepicker2/src/components/DefaultStyles.js',hash = '4ae21b5a41d83814814fc78899499028f28818e1',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/mnt/g/Work/Current/projects/react-datepicker2/src/components/DefaultStyles.js', statementMap: { '0': { start: { line: 1, column: 29 }, end: { line: 13, column: 1 } } }, fnMap: {}, branchMap: {}, s: { '0': 0 }, f: {}, b: {}, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var defaultStyles = /* istanbul ignore next */exports.defaultStyles = (++cov_29k6g8vqf9.s[0], {
+  calendarContainer: 'calendarContainer',
+  heading: 'heading',
+  prev: 'prev',
+  next: 'next',
+  title: 'title',
+  dayWrapper: 'dayWrapper',
+  currentMonth: 'currentMonth',
+  daysOfWeek: 'daysOfWeek',
+  monthsList: 'monthsList',
+  selected: 'selected',
+  dayPickerContainer: 'dayPickerContainer' });

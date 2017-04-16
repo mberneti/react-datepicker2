@@ -1,0 +1,252 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });exports.outsideClickIgnoreClass = undefined;var cov_6g2bju5q7 = function () {var path = '/mnt/g/Work/Current/projects/react-datepicker2/src/components/DatePicker.js',hash = '2a2c54630218c268fa317a77833d8ea1be834307',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/mnt/g/Work/Current/projects/react-datepicker2/src/components/DatePicker.js', statementMap: { '0': { start: { line: 8, column: 39 }, end: { line: 8, column: 63 } }, '1': { start: { line: 9, column: 0 }, end: { line: 9, column: 21 } }, '2': { start: { line: 49, column: 4 }, end: { line: 50, column: 70 } }, '3': { start: { line: 50, column: 6 }, end: { line: 50, column: 70 } }, '4': { start: { line: 51, column: 4 }, end: { line: 51, column: 52 } }, '5': { start: { line: 55, column: 4 }, end: { line: 56, column: 16 } }, '6': { start: { line: 56, column: 6 }, end: { line: 56, column: 16 } }, '7': { start: { line: 57, column: 24 }, end: { line: 57, column: 68 } }, '8': { start: { line: 58, column: 4 }, end: { line: 58, column: 115 } }, '9': { start: { line: 63, column: 28 }, end: { line: 63, column: 38 } }, '10': { start: { line: 64, column: 4 }, end: { line: 66, column: 5 } }, '11': { start: { line: 65, column: 6 }, end: { line: 65, column: 39 } }, '12': { start: { line: 68, column: 4 }, end: { line: 68, column: 30 } }, '13': { start: { line: 72, column: 4 }, end: { line: 74, column: 5 } }, '14': { start: { line: 73, column: 6 }, end: { line: 73, column: 44 } }, '15': { start: { line: 79, column: 4 }, end: { line: 81, column: 5 } }, '16': { start: { line: 80, column: 6 }, end: { line: 80, column: 43 } }, '17': { start: { line: 83, column: 4 }, end: { line: 91, column: 5 } }, '18': { start: { line: 84, column: 26 }, end: { line: 84, column: 92 } }, '19': { start: { line: 86, column: 6 }, end: { line: 90, column: 9 } }, '20': { start: { line: 93, column: 4 }, end: { line: 98, column: 5 } }, '21': { start: { line: 94, column: 6 }, end: { line: 97, column: 9 } }, '22': { start: { line: 103, column: 53 }, end: { line: 103, column: 63 } }, '23': { start: { line: 105, column: 4 }, end: { line: 107, column: 5 } }, '24': { start: { line: 106, column: 6 }, end: { line: 106, column: 39 } }, '25': { start: { line: 111, column: 23 }, end: { line: 111, column: 74 } }, '26': { start: { line: 113, column: 4 }, end: { line: 113, column: 47 } }, '27': { start: { line: 117, column: 4 }, end: { line: 117, column: 23 } }, '28': { start: { line: 121, column: 23 }, end: { line: 121, column: 33 } }, '29': { start: { line: 122, column: 49 }, end: { line: 122, column: 59 } }, '30': { start: { line: 124, column: 4 }, end: { line: 128, column: 5 } }, '31': { start: { line: 125, column: 6 }, end: { line: 125, column: 30 } }, '32': { start: { line: 126, column: 11 }, end: { line: 128, column: 5 } }, '33': { start: { line: 127, column: 6 }, end: { line: 127, column: 20 } }, '34': { start: { line: 130, column: 4 }, end: { line: 133, column: 5 } }, '35': { start: { line: 131, column: 25 }, end: { line: 131, column: 56 } }, '36': { start: { line: 132, column: 6 }, end: { line: 132, column: 36 } }, '37': { start: { line: 137, column: 4 }, end: { line: 137, column: 24 } }, '38': { start: { line: 141, column: 38 }, end: { line: 141, column: 48 } }, '39': { start: { line: 142, column: 22 }, end: { line: 142, column: 41 } }, '40': { start: { line: 144, column: 4 }, end: { line: 151, column: 5 } }, '41': { start: { line: 145, column: 6 }, end: { line: 150, column: 11 } }, '42': { start: { line: 153, column: 4 }, end: { line: 153, column: 37 } }, '43': { start: { line: 157, column: 28 }, end: { line: 157, column: 38 } }, '44': { start: { line: 158, column: 23 }, end: { line: 158, column: 41 } }, '45': { start: { line: 159, column: 24 }, end: { line: 159, column: 55 } }, '46': { start: { line: 161, column: 4 }, end: { line: 163, column: 5 } }, '47': { start: { line: 162, column: 6 }, end: { line: 162, column: 37 } }, '48': { start: { line: 165, column: 4 }, end: { line: 165, column: 34 } }, '49': { start: { line: 169, column: 4 }, end: { line: 171, column: 5 } }, '50': { start: { line: 170, column: 6 }, end: { line: 170, column: 24 } }, '51': { start: { line: 175, column: 35 }, end: { line: 175, column: 45 } }, '52': { start: { line: 177, column: 22 }, end: { line: 179, column: 6 } }, '53': { start: { line: 181, column: 4 }, end: { line: 194, column: 6 } }, '54': { start: { line: 198, column: 74 }, end: { line: 198, column: 84 } }, '55': { start: { line: 199, column: 81 }, end: { line: 199, column: 91 } }, '56': { start: { line: 201, column: 4 }, end: { line: 228, column: 6 } }, '57': { start: { line: 232, column: 25 }, end: { line: 232, column: 35 } }, '58': { start: { line: 233, column: 4 }, end: { line: 235, column: 5 } }, '59': { start: { line: 234, column: 6 }, end: { line: 234, column: 19 } }, '60': { start: { line: 236, column: 4 }, end: { line: 239, column: 7 } }, '61': { start: { line: 243, column: 23 }, end: { line: 243, column: 33 } }, '62': { start: { line: 245, column: 4 }, end: { line: 250, column: 6 } } }, fnMap: { '0': { name: '(anonymous_0)', decl: { start: { line: 48, column: 2 }, end: { line: 48, column: 3 } }, loc: { start: { line: 48, column: 42 }, end: { line: 52, column: 3 } }, line: 48 }, '1': { name: '(anonymous_1)', decl: { start: { line: 54, column: 2 }, end: { line: 54, column: 3 } }, loc: { start: { line: 54, column: 48 }, end: { line: 59, column: 3 } }, line: 54 }, '2': { name: '(anonymous_2)', decl: { start: { line: 61, column: 2 }, end: { line: 61, column: 3 } }, loc: { start: { line: 61, column: 18 }, end: { line: 69, column: 3 } }, line: 61 }, '3': { name: '(anonymous_3)', decl: { start: { line: 71, column: 2 }, end: { line: 71, column: 3 } }, loc: { start: { line: 71, column: 23 }, end: { line: 75, column: 3 } }, line: 71 }, '4': { name: '(anonymous_4)', decl: { start: { line: 77, column: 2 }, end: { line: 77, column: 3 } }, loc: { start: { line: 77, column: 39 }, end: { line: 100, column: 3 } }, line: 77 }, '5': { name: '(anonymous_5)', decl: { start: { line: 102, column: 2 }, end: { line: 102, column: 3 } }, loc: { start: { line: 102, column: 30 }, end: { line: 114, column: 3 } }, line: 102 }, '6': { name: '(anonymous_6)', decl: { start: { line: 116, column: 2 }, end: { line: 116, column: 3 } }, loc: { start: { line: 116, column: 16 }, end: { line: 118, column: 3 } }, line: 116 }, '7': { name: '(anonymous_7)', decl: { start: { line: 120, column: 2 }, end: { line: 120, column: 3 } }, loc: { start: { line: 120, column: 20 }, end: { line: 134, column: 3 } }, line: 120 }, '8': { name: '(anonymous_8)', decl: { start: { line: 136, column: 2 }, end: { line: 136, column: 3 } }, loc: { start: { line: 136, column: 31 }, end: { line: 138, column: 3 } }, line: 136 }, '9': { name: '(anonymous_9)', decl: { start: { line: 140, column: 2 }, end: { line: 140, column: 3 } }, loc: { start: { line: 140, column: 31 }, end: { line: 154, column: 3 } }, line: 140 }, '10': { name: '(anonymous_10)', decl: { start: { line: 156, column: 2 }, end: { line: 156, column: 3 } }, loc: { start: { line: 156, column: 27 }, end: { line: 166, column: 3 } }, line: 156 }, '11': { name: '(anonymous_11)', decl: { start: { line: 168, column: 2 }, end: { line: 168, column: 3 } }, loc: { start: { line: 168, column: 21 }, end: { line: 172, column: 3 } }, line: 168 }, '12': { name: '(anonymous_12)', decl: { start: { line: 174, column: 2 }, end: { line: 174, column: 3 } }, loc: { start: { line: 174, column: 16 }, end: { line: 195, column: 3 } }, line: 174 }, '13': { name: '(anonymous_13)', decl: { start: { line: 197, column: 2 }, end: { line: 197, column: 3 } }, loc: { start: { line: 197, column: 19 }, end: { line: 229, column: 3 } }, line: 197 }, '14': { name: '(anonymous_14)', decl: { start: { line: 231, column: 2 }, end: { line: 231, column: 3 } }, loc: { start: { line: 231, column: 15 }, end: { line: 240, column: 3 } }, line: 231 }, '15': { name: '(anonymous_15)', decl: { start: { line: 242, column: 2 }, end: { line: 242, column: 3 } }, loc: { start: { line: 242, column: 11 }, end: { line: 251, column: 3 } }, line: 242 } }, branchMap: { '0': { loc: { start: { line: 40, column: 17 }, end: { line: 40, column: 48 } }, type: 'binary-expr', locations: [{ start: { line: 40, column: 17 }, end: { line: 40, column: 40 } }, { start: { line: 40, column: 44 }, end: { line: 40, column: 48 } }], line: 40 }, '1': { loc: { start: { line: 42, column: 17 }, end: { line: 42, column: 109 } }, type: 'binary-expr', locations: [{ start: { line: 42, column: 17 }, end: { line: 42, column: 39 } }, { start: { line: 42, column: 43 }, end: { line: 42, column: 109 } }], line: 42 }, '2': { loc: { start: { line: 45, column: 25 }, end: { line: 45, column: 73 } }, type: 'cond-expr', locations: [{ start: { line: 45, column: 49 }, end: { line: 45, column: 61 } }, { start: { line: 45, column: 64 }, end: { line: 45, column: 73 } }], line: 45 }, '3': { loc: { start: { line: 49, column: 4 }, end: { line: 50, column: 70 } }, type: 'if', locations: [{ start: { line: 49, column: 4 }, end: { line: 50, column: 70 } }, { start: { line: 49, column: 4 }, end: { line: 50, column: 70 } }], line: 49 }, '4': { loc: { start: { line: 50, column: 13 }, end: { line: 50, column: 69 } }, type: 'cond-expr', locations: [{ start: { line: 50, column: 27 }, end: { line: 50, column: 45 } }, { start: { line: 50, column: 48 }, end: { line: 50, column: 69 } }], line: 50 }, '5': { loc: { start: { line: 51, column: 11 }, end: { line: 51, column: 51 } }, type: 'cond-expr', locations: [{ start: { line: 51, column: 25 }, end: { line: 51, column: 35 } }, { start: { line: 51, column: 38 }, end: { line: 51, column: 51 } }], line: 51 }, '6': { loc: { start: { line: 55, column: 4 }, end: { line: 56, column: 16 } }, type: 'if', locations: [{ start: { line: 55, column: 4 }, end: { line: 56, column: 16 } }, { start: { line: 55, column: 4 }, end: { line: 56, column: 16 } }], line: 55 }, '7': { loc: { start: { line: 58, column: 11 }, end: { line: 58, column: 114 } }, type: 'cond-expr', locations: [{ start: { line: 58, column: 25 }, end: { line: 58, column: 68 } }, { start: { line: 58, column: 71 }, end: { line: 58, column: 114 } }], line: 58 }, '8': { loc: { start: { line: 64, column: 4 }, end: { line: 66, column: 5 } }, type: 'if', locations: [{ start: { line: 64, column: 4 }, end: { line: 66, column: 5 } }, { start: { line: 64, column: 4 }, end: { line: 66, column: 5 } }], line: 64 }, '9': { loc: { start: { line: 64, column: 8 }, end: { line: 64, column: 42 } }, type: 'binary-expr', locations: [{ start: { line: 64, column: 8 }, end: { line: 64, column: 19 } }, { start: { line: 64, column: 23 }, end: { line: 64, column: 42 } }], line: 64 }, '10': { loc: { start: { line: 72, column: 4 }, end: { line: 74, column: 5 } }, type: 'if', locations: [{ start: { line: 72, column: 4 }, end: { line: 74, column: 5 } }, { start: { line: 72, column: 4 }, end: { line: 74, column: 5 } }], line: 72 }, '11': { loc: { start: { line: 79, column: 4 }, end: { line: 81, column: 5 } }, type: 'if', locations: [{ start: { line: 79, column: 4 }, end: { line: 81, column: 5 } }, { start: { line: 79, column: 4 }, end: { line: 81, column: 5 } }], line: 79 }, '12': { loc: { start: { line: 79, column: 8 }, end: { line: 79, column: 68 } }, type: 'binary-expr', locations: [{ start: { line: 79, column: 8 }, end: { line: 79, column: 28 } }, { start: { line: 79, column: 32 }, end: { line: 79, column: 68 } }], line: 79 }, '13': { loc: { start: { line: 83, column: 4 }, end: { line: 91, column: 5 } }, type: 'if', locations: [{ start: { line: 83, column: 4 }, end: { line: 91, column: 5 } }, { start: { line: 83, column: 4 }, end: { line: 91, column: 5 } }], line: 83 }, '14': { loc: { start: { line: 83, column: 8 }, end: { line: 83, column: 86 } }, type: 'binary-expr', locations: [{ start: { line: 83, column: 8 }, end: { line: 83, column: 34 } }, { start: { line: 83, column: 38 }, end: { line: 83, column: 86 } }], line: 83 }, '15': { loc: { start: { line: 84, column: 26 }, end: { line: 84, column: 92 } }, type: 'cond-expr', locations: [{ start: { line: 84, column: 50 }, end: { line: 84, column: 68 } }, { start: { line: 84, column: 71 }, end: { line: 84, column: 92 } }], line: 84 }, '16': { loc: { start: { line: 93, column: 4 }, end: { line: 98, column: 5 } }, type: 'if', locations: [{ start: { line: 93, column: 4 }, end: { line: 98, column: 5 } }, { start: { line: 93, column: 4 }, end: { line: 98, column: 5 } }], line: 93 }, '17': { loc: { start: { line: 93, column: 8 }, end: { line: 93, column: 83 } }, type: 'binary-expr', locations: [{ start: { line: 93, column: 8 }, end: { line: 93, column: 33 } }, { start: { line: 93, column: 37 }, end: { line: 93, column: 83 } }], line: 93 }, '18': { loc: { start: { line: 96, column: 29 }, end: { line: 96, column: 77 } }, type: 'cond-expr', locations: [{ start: { line: 96, column: 53 }, end: { line: 96, column: 65 } }, { start: { line: 96, column: 68 }, end: { line: 96, column: 77 } }], line: 96 }, '19': { loc: { start: { line: 105, column: 4 }, end: { line: 107, column: 5 } }, type: 'if', locations: [{ start: { line: 105, column: 4 }, end: { line: 107, column: 5 } }, { start: { line: 105, column: 4 }, end: { line: 107, column: 5 } }], line: 105 }, '20': { loc: { start: { line: 124, column: 4 }, end: { line: 128, column: 5 } }, type: 'if', locations: [{ start: { line: 124, column: 4 }, end: { line: 128, column: 5 } }, { start: { line: 124, column: 4 }, end: { line: 128, column: 5 } }], line: 124 }, '21': { loc: { start: { line: 126, column: 11 }, end: { line: 128, column: 5 } }, type: 'if', locations: [{ start: { line: 126, column: 11 }, end: { line: 128, column: 5 } }, { start: { line: 126, column: 11 }, end: { line: 128, column: 5 } }], line: 126 }, '22': { loc: { start: { line: 130, column: 4 }, end: { line: 133, column: 5 } }, type: 'if', locations: [{ start: { line: 130, column: 4 }, end: { line: 133, column: 5 } }, { start: { line: 130, column: 4 }, end: { line: 133, column: 5 } }], line: 130 }, '23': { loc: { start: { line: 144, column: 4 }, end: { line: 151, column: 5 } }, type: 'if', locations: [{ start: { line: 144, column: 4 }, end: { line: 151, column: 5 } }, { start: { line: 144, column: 4 }, end: { line: 151, column: 5 } }], line: 144 }, '24': { loc: { start: { line: 161, column: 4 }, end: { line: 163, column: 5 } }, type: 'if', locations: [{ start: { line: 161, column: 4 }, end: { line: 163, column: 5 } }, { start: { line: 161, column: 4 }, end: { line: 163, column: 5 } }], line: 161 }, '25': { loc: { start: { line: 169, column: 4 }, end: { line: 171, column: 5 } }, type: 'if', locations: [{ start: { line: 169, column: 4 }, end: { line: 171, column: 5 } }, { start: { line: 169, column: 4 }, end: { line: 171, column: 5 } }], line: 169 }, '26': { loc: { start: { line: 216, column: 12 }, end: { line: 224, column: 20 } }, type: 'cond-expr', locations: [{ start: { line: 217, column: 14 }, end: { line: 223, column: 16 } }, { start: { line: 224, column: 16 }, end: { line: 224, column: 20 } }], line: 216 }, '27': { loc: { start: { line: 233, column: 4 }, end: { line: 235, column: 5 } }, type: 'if', locations: [{ start: { line: 233, column: 4 }, end: { line: 235, column: 5 } }, { start: { line: 233, column: 4 }, end: { line: 235, column: 5 } }], line: 233 }, '28': { loc: { start: { line: 248, column: 9 }, end: { line: 248, column: 46 } }, type: 'cond-expr', locations: [{ start: { line: 248, column: 18 }, end: { line: 248, column: 39 } }, { start: { line: 248, column: 42 }, end: { line: 248, column: 46 } }], line: 248 } }, s: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0, '6': 0, '7': 0, '8': 0, '9': 0, '10': 0, '11': 0, '12': 0, '13': 0, '14': 0, '15': 0, '16': 0, '17': 0, '18': 0, '19': 0, '20': 0, '21': 0, '22': 0, '23': 0, '24': 0, '25': 0, '26': 0, '27': 0, '28': 0, '29': 0, '30': 0, '31': 0, '32': 0, '33': 0, '34': 0, '35': 0, '36': 0, '37': 0, '38': 0, '39': 0, '40': 0, '41': 0, '42': 0, '43': 0, '44': 0, '45': 0, '46': 0, '47': 0, '48': 0, '49': 0, '50': 0, '51': 0, '52': 0, '53': 0, '54': 0, '55': 0, '56': 0, '57': 0, '58': 0, '59': 0, '60': 0, '61': 0, '62': 0 }, f: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0, '6': 0, '7': 0, '8': 0, '9': 0, '10': 0, '11': 0, '12': 0, '13': 0, '14': 0, '15': 0 }, b: { '0': [0, 0], '1': [0, 0], '2': [0, 0], '3': [0, 0], '4': [0, 0], '5': [0, 0], '6': [0, 0], '7': [0, 0], '8': [0, 0], '9': [0, 0], '10': [0, 0], '11': [0, 0], '12': [0, 0], '13': [0, 0], '14': [0, 0], '15': [0, 0], '16': [0, 0], '17': [0, 0], '18': [0, 0], '19': [0, 0], '20': [0, 0], '21': [0, 0], '22': [0, 0], '23': [0, 0], '24': [0, 0], '25': [0, 0], '26': [0, 0], '27': [0, 0], '28': [0, 0] }, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var _createClass = function () {function defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}return function (Constructor, protoProps, staticProps) {if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;};}();var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_momentJalaali = require('moment-jalaali'); /* istanbul ignore next */var _momentJalaali2 = _interopRequireDefault(_momentJalaali);
+var /* istanbul ignore next */_reactTether = require('react-tether'); /* istanbul ignore next */var _reactTether2 = _interopRequireDefault(_reactTether);
+var /* istanbul ignore next */_Calendar = require('./Calendar'); /* istanbul ignore next */var _Calendar2 = _interopRequireDefault(_Calendar);
+var /* istanbul ignore next */_classnames2 = require('classnames'); /* istanbul ignore next */var _classnames3 = _interopRequireDefault(_classnames2);
+var /* istanbul ignore next */_CustomTimePicker = require('./CustomTimePicker'); /* istanbul ignore next */var _CustomTimePicker2 = _interopRequireDefault(_CustomTimePicker);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self, call) {if (!self) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call && (typeof call === "object" || typeof call === "function") ? call : self;}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;}
+
+var outsideClickIgnoreClass = /* istanbul ignore next */exports.outsideClickIgnoreClass = (++cov_6g2bju5q7.s[0], 'ignore--click--outside'); /* istanbul ignore next */++cov_6g2bju5q7.s[1];
+/* istanbul ignore next */_momentJalaali2.default.loadPersian(); /* istanbul ignore next */var
+
+DatePicker = function (_Component) {_inherits(DatePicker, _Component);function DatePicker() {var _ref;var _temp, _this, _ret;_classCallCheck(this, DatePicker);for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {args[_key] = arguments[_key];}return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = DatePicker.__proto__ || Object.getPrototypeOf(DatePicker)).call.apply(_ref, [this].concat(args))), _this), _this.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    state = {
+      isOpen: false,
+      momentValue: /* istanbul ignore next */(++cov_6g2bju5q7.b[0][0], /* istanbul ignore next */_this.props.defaultValue) || /* istanbul ignore next */(++cov_6g2bju5q7.b[0][1], null),
+      inputValue: /* istanbul ignore next */_this.getValue( /* istanbul ignore next */_this.props.defaultValue, /* istanbul ignore next */_this.props.isGregorian, /* istanbul ignore next */_this.props.timePicker),
+      inputFormat: /* istanbul ignore next */(++cov_6g2bju5q7.b[1][0], /* istanbul ignore next */_this.props.inputFormat) || /* istanbul ignore next */(++cov_6g2bju5q7.b[1][1], /* istanbul ignore next */_this.getInputFormat( /* istanbul ignore next */_this.props.isGregorian, /* istanbul ignore next */_this.props.timePicker)),
+      isGregorian: /* istanbul ignore next */_this.props.isGregorian,
+      timePicker: /* istanbul ignore next */_this.props.timePicker,
+      timePickerComponent: /* istanbul ignore next */_this.props.timePicker ? /* istanbul ignore next */(++cov_6g2bju5q7.b[2][0], _CustomTimePicker2.default) : /* istanbul ignore next */(++cov_6g2bju5q7.b[2][1], undefined) }, _temp), _possibleConstructorReturn(_this, _ret);}_createClass(DatePicker, [{ key: 'getInputFormat', value: function getInputFormat(
+
+
+    isGregorian, timePicker) {/* istanbul ignore next */++cov_6g2bju5q7.f[0];++cov_6g2bju5q7.s[2];
+      if (timePicker)
+        {/* istanbul ignore next */++cov_6g2bju5q7.b[3][0];++cov_6g2bju5q7.s[3];return isGregorian ? /* istanbul ignore next */(++cov_6g2bju5q7.b[4][0], 'YYYY/M/D hh:mm A') : /* istanbul ignore next */(++cov_6g2bju5q7.b[4][1], 'jYYYY/jM/jD hh:mm A');} else /* istanbul ignore next */{++cov_6g2bju5q7.b[3][1];}++cov_6g2bju5q7.s[4];
+      return isGregorian ? /* istanbul ignore next */(++cov_6g2bju5q7.b[5][0], 'YYYY/M/D') : /* istanbul ignore next */(++cov_6g2bju5q7.b[5][1], 'jYYYY/jM/jD');
+    } }, { key: 'getValue', value: function getValue(
+
+    inputValue, isGregorian, timePicker) {/* istanbul ignore next */++cov_6g2bju5q7.f[1];++cov_6g2bju5q7.s[5];
+      if (!inputValue)
+        {/* istanbul ignore next */++cov_6g2bju5q7.b[6][0];++cov_6g2bju5q7.s[6];return '';} else /* istanbul ignore next */{++cov_6g2bju5q7.b[6][1];}
+      var inputFormat = /* istanbul ignore next */(++cov_6g2bju5q7.s[7], this.getInputFormat(isGregorian, timePicker)); /* istanbul ignore next */++cov_6g2bju5q7.s[8];
+      return isGregorian ? /* istanbul ignore next */(++cov_6g2bju5q7.b[7][0], inputValue.locale('es').format(inputFormat)) : /* istanbul ignore next */(++cov_6g2bju5q7.b[7][1], inputValue.locale('fa').format(inputFormat));
+    } }, { key: 'setOpen', value: function setOpen(
+
+    isOpen) {/* istanbul ignore next */++cov_6g2bju5q7.f[2];var _ref2 = (++cov_6g2bju5q7.s[9],
+
+      this.state),momentValue = _ref2.momentValue; /* istanbul ignore next */++cov_6g2bju5q7.s[10];
+      if ( /* istanbul ignore next */(++cov_6g2bju5q7.b[9][0], momentValue) && /* istanbul ignore next */(++cov_6g2bju5q7.b[9][1], this.props.onChange)) {/* istanbul ignore next */++cov_6g2bju5q7.b[8][0];++cov_6g2bju5q7.s[11];
+        this.props.onChange(momentValue);
+      } else /* istanbul ignore next */{++cov_6g2bju5q7.b[8][1];}++cov_6g2bju5q7.s[12];
+
+      this.setState({ isOpen: isOpen });
+    } }, { key: 'componentWillMount', value: function componentWillMount()
+
+    {/* istanbul ignore next */++cov_6g2bju5q7.f[3];++cov_6g2bju5q7.s[13];
+      if (this.props.value) {/* istanbul ignore next */++cov_6g2bju5q7.b[10][0];++cov_6g2bju5q7.s[14];
+        this.setMomentValue(this.props.value);
+      } else /* istanbul ignore next */{++cov_6g2bju5q7.b[10][1];}
+    } }, { key: 'componentWillReceiveProps', value: function componentWillReceiveProps(
+
+    nextProps) {/* istanbul ignore next */++cov_6g2bju5q7.f[4];++cov_6g2bju5q7.s[15];
+
+      if ( /* istanbul ignore next */(++cov_6g2bju5q7.b[12][0], 'value' in nextProps) && /* istanbul ignore next */(++cov_6g2bju5q7.b[12][1], nextProps.value !== this.props.value)) {/* istanbul ignore next */++cov_6g2bju5q7.b[11][0];++cov_6g2bju5q7.s[16];
+        this.setMomentValue(nextProps.value);
+      } else /* istanbul ignore next */{++cov_6g2bju5q7.b[11][1];}++cov_6g2bju5q7.s[17];
+
+      if ( /* istanbul ignore next */(++cov_6g2bju5q7.b[14][0], 'isGregorian' in nextProps) && /* istanbul ignore next */(++cov_6g2bju5q7.b[14][1], nextProps.isGregorian !== this.props.isGregorian)) {/* istanbul ignore next */++cov_6g2bju5q7.b[13][0];
+        var inputFormat = /* istanbul ignore next */(++cov_6g2bju5q7.s[18], nextProps.isGregorian ? /* istanbul ignore next */(++cov_6g2bju5q7.b[15][0], 'YYYY/M/D hh:mm A') : /* istanbul ignore next */(++cov_6g2bju5q7.b[15][1], 'jYYYY/jM/jD hh:mm A')); /* istanbul ignore next */++cov_6g2bju5q7.s[19];
+
+        this.setState({
+          isGregorian: nextProps.isGregorian,
+          inputValue: this.getValue(nextProps.value, nextProps.isGregorian, nextProps.timePicker),
+          inputFormat: inputFormat });
+
+      } else /* istanbul ignore next */{++cov_6g2bju5q7.b[13][1];}++cov_6g2bju5q7.s[20];
+
+      if ( /* istanbul ignore next */(++cov_6g2bju5q7.b[17][0], 'timePicker' in nextProps) && /* istanbul ignore next */(++cov_6g2bju5q7.b[17][1], nextProps.timePicker !== this.props.timePicker)) {/* istanbul ignore next */++cov_6g2bju5q7.b[16][0];++cov_6g2bju5q7.s[21];
+        this.setState({
+          timePicker: nextProps.timePicker,
+          timePickerComponent: this.props.timePicker ? /* istanbul ignore next */(++cov_6g2bju5q7.b[18][0], _CustomTimePicker2.default) : /* istanbul ignore next */(++cov_6g2bju5q7.b[18][1], undefined) });
+
+      } else /* istanbul ignore next */{++cov_6g2bju5q7.b[16][1];}
+
+    } }, { key: 'setMomentValue', value: function setMomentValue(
+
+    momentValue) {/* istanbul ignore next */++cov_6g2bju5q7.f[5];var _ref3 = (++cov_6g2bju5q7.s[22],
+      this.state),inputFormat = _ref3.inputFormat,isGregorian = _ref3.isGregorian,timePicker = _ref3.timePicker; /* istanbul ignore next */++cov_6g2bju5q7.s[23];
+
+      if (this.props.onChange) {/* istanbul ignore next */++cov_6g2bju5q7.b[19][0];++cov_6g2bju5q7.s[24];
+        this.props.onChange(momentValue);
+      } else /* istanbul ignore next */{++cov_6g2bju5q7.b[19][1];}
+
+      // const inputValue = momentValue.format(inputFormat);
+
+      var inputValue = /* istanbul ignore next */(++cov_6g2bju5q7.s[25], this.getValue(momentValue, isGregorian, timePicker)); /* istanbul ignore next */++cov_6g2bju5q7.s[26];
+
+      this.setState({ momentValue: momentValue, inputValue: inputValue });
+    } }, { key: 'handleFocus', value: function handleFocus()
+
+    {/* istanbul ignore next */++cov_6g2bju5q7.f[6];++cov_6g2bju5q7.s[27];
+      this.setOpen(true);
+    } }, { key: 'handleBlur', value: function handleBlur(
+
+    event) {/* istanbul ignore next */++cov_6g2bju5q7.f[7];var _ref4 = (++cov_6g2bju5q7.s[28],
+      this.props),onBlur = _ref4.onBlur; /* istanbul ignore next */var _ref5 = (++cov_6g2bju5q7.s[29],
+      this.state),isOpen = _ref5.isOpen,momentValue = _ref5.momentValue,inputFormat = _ref5.inputFormat; /* istanbul ignore next */++cov_6g2bju5q7.s[30];
+
+      if (isOpen) {/* istanbul ignore next */++cov_6g2bju5q7.b[20][0];++cov_6g2bju5q7.s[31];
+        this.refs.input.focus();
+      } else {/* istanbul ignore next */++cov_6g2bju5q7.b[20][1];++cov_6g2bju5q7.s[32];if (onBlur) {/* istanbul ignore next */++cov_6g2bju5q7.b[21][0];++cov_6g2bju5q7.s[33];
+            onBlur(event);
+          } else /* istanbul ignore next */{++cov_6g2bju5q7.b[21][1];}} /* istanbul ignore next */++cov_6g2bju5q7.s[34];
+
+      if (momentValue) {/* istanbul ignore next */++cov_6g2bju5q7.b[22][0];
+        var inputValue = /* istanbul ignore next */(++cov_6g2bju5q7.s[35], momentValue.format(inputFormat)); /* istanbul ignore next */++cov_6g2bju5q7.s[36];
+        this.setState({ inputValue: inputValue });
+      } else /* istanbul ignore next */{++cov_6g2bju5q7.b[22][1];}
+    } }, { key: 'handleClickOutsideCalendar', value: function handleClickOutsideCalendar()
+
+    {/* istanbul ignore next */++cov_6g2bju5q7.f[8];++cov_6g2bju5q7.s[37];
+      this.setOpen(false);
+    } }, { key: 'handleSelectDay', value: function handleSelectDay(
+
+    selectedDay) {/* istanbul ignore next */++cov_6g2bju5q7.f[9];var _ref6 = (++cov_6g2bju5q7.s[38],
+      this.state),oldValue = _ref6.momentValue;
+      var momentValue = /* istanbul ignore next */(++cov_6g2bju5q7.s[39], selectedDay.clone()); /* istanbul ignore next */++cov_6g2bju5q7.s[40];
+
+      if (oldValue) {/* istanbul ignore next */++cov_6g2bju5q7.b[23][0];++cov_6g2bju5q7.s[41];
+        momentValue = momentValue.
+        set({
+          hour: oldValue.hours(),
+          minute: oldValue.minutes(),
+          second: oldValue.seconds() });
+
+      } else /* istanbul ignore next */{++cov_6g2bju5q7.b[23][1];}++cov_6g2bju5q7.s[42];
+
+      this.setMomentValue(momentValue);
+    } }, { key: 'handleInputChange', value: function handleInputChange(
+
+    event) {/* istanbul ignore next */++cov_6g2bju5q7.f[10];var _ref7 = (++cov_6g2bju5q7.s[43],
+      this.state),inputFormat = _ref7.inputFormat;
+      var inputValue = /* istanbul ignore next */(++cov_6g2bju5q7.s[44], event.target.value);
+      var momentValue = /* istanbul ignore next */(++cov_6g2bju5q7.s[45], /* istanbul ignore next */(0, _momentJalaali2.default)(inputValue, inputFormat)); /* istanbul ignore next */++cov_6g2bju5q7.s[46];
+
+      if (momentValue.isValid()) {/* istanbul ignore next */++cov_6g2bju5q7.b[24][0];++cov_6g2bju5q7.s[47];
+        this.setState({ momentValue: momentValue });
+      } else /* istanbul ignore next */{++cov_6g2bju5q7.b[24][1];}++cov_6g2bju5q7.s[48];
+
+      this.setState({ inputValue: inputValue });
+    } }, { key: 'handleInputClick', value: function handleInputClick()
+
+    {/* istanbul ignore next */++cov_6g2bju5q7.f[11];++cov_6g2bju5q7.s[49];
+      if (!this.props.disabled) {/* istanbul ignore next */++cov_6g2bju5q7.b[25][0];++cov_6g2bju5q7.s[50];
+        this.setOpen(true);
+      } else /* istanbul ignore next */{++cov_6g2bju5q7.b[25][1];}
+    } }, { key: 'renderInput', value: function renderInput()
+
+    {/* istanbul ignore next */++cov_6g2bju5q7.f[12];var _ref8 = (++cov_6g2bju5q7.s[51],
+      this.state),isOpen = _ref8.isOpen,inputValue = _ref8.inputValue;
+
+      var className = /* istanbul ignore next */(++cov_6g2bju5q7.s[52], /* istanbul ignore next */(0, _classnames3.default)(this.props.className, /* istanbul ignore next */_defineProperty({},
+      outsideClickIgnoreClass, isOpen))); /* istanbul ignore next */++cov_6g2bju5q7.s[53];
+
+
+      return (
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */null,
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'input', /* istanbul ignore next */{
+            className: /* istanbul ignore next */'datepicker-input ' + className,
+            type: 'text',
+            ref: 'input',
+            onFocus: this.handleFocus.bind(this),
+            onBlur: this.handleBlur.bind(this),
+            onChange: this.handleInputChange.bind(this),
+            onClick: this.handleInputClick.bind(this),
+            value: inputValue })));
+
+
+
+    } }, { key: 'renderCalendar', value: function renderCalendar()
+
+    {/* istanbul ignore next */++cov_6g2bju5q7.f[13];var _ref9 = (++cov_6g2bju5q7.s[54],
+      this.state),momentValue = _ref9.momentValue,isGregorian = _ref9.isGregorian,TimePicker = _ref9.timePickerComponent; /* istanbul ignore next */var _ref10 = (++cov_6g2bju5q7.s[55],
+      this.props),onChange = _ref10.onChange,min = _ref10.min,max = _ref10.max,defaultMonth = _ref10.defaultMonth,styles = _ref10.styles,calendarContainerProps = _ref10.calendarContainerProps; /* istanbul ignore next */++cov_6g2bju5q7.s[56];
+
+      return (
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */null,
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Calendar2.default, /* istanbul ignore next */{
+              min: min,
+              max: max,
+              selectedDay: momentValue,
+              defaultMonth: defaultMonth,
+              onSelect: this.handleSelectDay.bind(this),
+              onClickOutside: this.handleClickOutsideCalendar.bind(this),
+              outsideClickIgnoreClass: outsideClickIgnoreClass,
+              styles: styles,
+              containerProps: calendarContainerProps,
+              isGregorian: isGregorian },
+
+
+            TimePicker ? /* istanbul ignore next */(++cov_6g2bju5q7.b[26][0],
+            /* istanbul ignore next */_react2.default.createElement(TimePicker, /* istanbul ignore next */{
+              isGregorian: isGregorian,
+              min: min,
+              max: max,
+              momentValue: momentValue,
+              setMomentValue: this.setMomentValue.bind(this) })) : /* istanbul ignore next */(++cov_6g2bju5q7.b[26][1],
+
+            null))));
+
+
+
+
+    } }, { key: 'removeDate', value: function removeDate()
+
+    {/* istanbul ignore next */++cov_6g2bju5q7.f[14];var _ref11 = (++cov_6g2bju5q7.s[57],
+      this.props),onChange = _ref11.onChange; /* istanbul ignore next */++cov_6g2bju5q7.s[58];
+      if (onChange) {/* istanbul ignore next */++cov_6g2bju5q7.b[27][0];++cov_6g2bju5q7.s[59];
+        onChange('');
+      } else /* istanbul ignore next */{++cov_6g2bju5q7.b[27][1];}++cov_6g2bju5q7.s[60];
+      this.setState({
+        input: '',
+        inputValue: '' });
+
+    } }, { key: 'render', value: function render()
+
+    {/* istanbul ignore next */++cov_6g2bju5q7.f[15];var _ref12 = (++cov_6g2bju5q7.s[61],
+      this.state),isOpen = _ref12.isOpen; /* istanbul ignore next */++cov_6g2bju5q7.s[62];
+
+      return (
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactTether2.default, /* istanbul ignore next */{ attachment: 'top center' },
+          this.renderInput(),
+          isOpen ? /* istanbul ignore next */(++cov_6g2bju5q7.b[28][0], this.renderCalendar()) : /* istanbul ignore next */(++cov_6g2bju5q7.b[28][1], null)));
+
+
+    } }]);return DatePicker;}(_react.Component); /* istanbul ignore next */DatePicker.propTypes = { value: /* istanbul ignore next */_react.PropTypes.object, defaultValue: /* istanbul ignore next */_react.PropTypes.object, onChange: /* istanbul ignore next */_react.PropTypes.func, onFocus: /* istanbul ignore next */_react.PropTypes.func, onBlur: /* istanbul ignore next */_react.PropTypes.func, children: /* istanbul ignore next */_react.PropTypes.node, min: /* istanbul ignore next */_react.PropTypes.object, max: /* istanbul ignore next */_react.PropTypes.object, defaultMonth: /* istanbul ignore next */_react.PropTypes.object, inputFormat: /* istanbul ignore next */_react.PropTypes.string, removable: /* istanbul ignore next */_react.PropTypes.bool, styles: /* istanbul ignore next */_react.PropTypes.object, calendarStyles: /* istanbul ignore next */_react.PropTypes.object, calendarContainerProps: /* istanbul ignore next */_react.PropTypes.object, isGregorian: /* istanbul ignore next */_react.PropTypes.bool, // jalaali or gregorian
+  timePicker: /* istanbul ignore next */_react.PropTypes.bool }; /* istanbul ignore next */DatePicker.defaultProps = { styles: undefined, calendarContainerProps: {}, isGregorian: true, timePicker: true }; /* istanbul ignore next */exports.default = DatePicker;

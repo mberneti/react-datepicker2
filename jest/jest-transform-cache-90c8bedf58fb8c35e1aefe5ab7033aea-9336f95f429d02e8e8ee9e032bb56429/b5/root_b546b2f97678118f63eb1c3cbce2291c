@@ -1,0 +1,43 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_nie90bsq6 = function () {var path = '/mnt/g/Work/Current/projects/react-datepicker2/docs/src/root.js',hash = 'd670d3980e98f460da03118369f24ee9e67d5922',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/mnt/g/Work/Current/projects/react-datepicker2/docs/src/root.js', statementMap: { '0': { start: { line: 9, column: 4 }, end: { line: 42, column: 5 } } }, fnMap: {}, branchMap: {}, s: { '0': 0 }, f: {}, b: {}, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_example_components = require('./example_components.js'); /* istanbul ignore next */var _example_components2 = _interopRequireDefault(_example_components);
+var /* istanbul ignore next */_hero_example = require('./hero_example.js'); /* istanbul ignore next */var _hero_example2 = _interopRequireDefault(_hero_example);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}exports.default =
+
+/* istanbul ignore next */_react2.default.createClass({
+  displayName: 'Root', /* istanbul ignore next */
+
+  render: function render() {/* istanbul ignore next */++cov_nie90bsq6.s[0];
+    return (
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */null,
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'hero' },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'hero__content' },
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'h1', /* istanbul ignore next */{ className: 'hero__title' }, /* istanbul ignore next */'ReactJS Datepicker2'),
+
+
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'hero__crafted-by' },
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'a', /* istanbul ignore next */{ href: 'https://berneti.ir', className: 'hero__crafted-by-link' }, /* istanbul ignore next */'Crafted by ',
+                /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'h3', /* istanbul ignore next */{ className: 'logo' }, /* istanbul ignore next */'mberneti'))),
+
+
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'hero__example' },
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_hero_example2.default, /* istanbul ignore next */null)))),
+
+
+
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'wrapper' },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'h1', /* istanbul ignore next */null, /* istanbul ignore next */'ReactJS Datepicker2'),
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'p', /* istanbul ignore next */null, /* istanbul ignore next */'A simple and reusable datepicker component for React. (with persian jalaali calendar)'),
+
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'h2', /* istanbul ignore next */null, /* istanbul ignore next */'Installation'),
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'p', /* istanbul ignore next */null, /* istanbul ignore next */'The package can be installed via NPM:'),
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'p', /* istanbul ignore next */null, /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'code', /* istanbul ignore next */null, /* istanbul ignore next */'npm install react-datepicker2 --save'))),
+
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'wrapper' },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_example_components2.default, /* istanbul ignore next */null)),
+
+
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'a', /* istanbul ignore next */{ href: 'https://github.com/mberneti/react-datepicker2/' },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'img', /* istanbul ignore next */{ className: 'github-ribbon', src: 'https://mberneti.github.io/react-datepicker2/images/ribbon.png', alt: 'Fork me on GitHub' }))));
+
+
+
+  } });

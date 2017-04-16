@@ -1,0 +1,113 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_2m4bri9ai7 = function () {var path = '/mnt/g/Work/Current/projects/react-datepicker2/src/components/MonthSelector.js',hash = 'eab1f4df3e454d7f52c3be2637a4f984ca040618',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/mnt/g/Work/Current/projects/react-datepicker2/src/components/MonthSelector.js', statementMap: { '0': { start: { line: 9, column: 22 }, end: { line: 22, column: 1 } }, '1': { start: { line: 24, column: 24 }, end: { line: 37, column: 1 } }, '2': { start: { line: 56, column: 4 }, end: { line: 58, column: 7 } }, '3': { start: { line: 62, column: 4 }, end: { line: 64, column: 7 } }, '4': { start: { line: 68, column: 42 }, end: { line: 68, column: 54 } }, '5': { start: { line: 69, column: 28 }, end: { line: 69, column: 38 } }, '6': { start: { line: 70, column: 27 }, end: { line: 70, column: 62 } }, '7': { start: { line: 71, column: 4 }, end: { line: 71, column: 43 } }, '8': { start: { line: 72, column: 4 }, end: { line: 72, column: 28 } }, '9': { start: { line: 76, column: 21 }, end: { line: 76, column: 31 } }, '10': { start: { line: 77, column: 50 }, end: { line: 77, column: 60 } }, '11': { start: { line: 78, column: 32 }, end: { line: 78, column: 62 } }, '12': { start: { line: 79, column: 27 }, end: { line: 79, column: 62 } }, '13': { start: { line: 80, column: 17 }, end: { line: 80, column: 62 } }, '14': { start: { line: 82, column: 4 }, end: { line: 112, column: 14 } }, '15': { start: { line: 94, column: 40 }, end: { line: 94, column: 81 } }, '16': { start: { line: 95, column: 47 }, end: { line: 95, column: 84 } }, '17': { start: { line: 96, column: 32 }, end: { line: 96, column: 78 } }, '18': { start: { line: 98, column: 32 }, end: { line: 100, column: 16 } }, '19': { start: { line: 102, column: 14 }, end: { line: 108, column: 16 } } }, fnMap: { '0': { name: '(anonymous_0)', decl: { start: { line: 55, column: 2 }, end: { line: 55, column: 3 } }, loc: { start: { line: 55, column: 13 }, end: { line: 59, column: 3 } }, line: 55 }, '1': { name: '(anonymous_1)', decl: { start: { line: 61, column: 2 }, end: { line: 61, column: 3 } }, loc: { start: { line: 61, column: 13 }, end: { line: 65, column: 3 } }, line: 61 }, '2': { name: '(anonymous_2)', decl: { start: { line: 67, column: 2 }, end: { line: 67, column: 3 } }, loc: { start: { line: 67, column: 19 }, end: { line: 73, column: 3 } }, line: 67 }, '3': { name: '(anonymous_3)', decl: { start: { line: 75, column: 2 }, end: { line: 75, column: 3 } }, loc: { start: { line: 75, column: 11 }, end: { line: 113, column: 3 } }, line: 75 }, '4': { name: '(anonymous_4)', decl: { start: { line: 93, column: 23 }, end: { line: 93, column: 24 } }, loc: { start: { line: 93, column: 38 }, end: { line: 109, column: 13 } }, line: 93 } }, branchMap: { '0': { loc: { start: { line: 70, column: 27 }, end: { line: 70, column: 62 } }, type: 'cond-expr', locations: [{ start: { line: 70, column: 41 }, end: { line: 70, column: 49 } }, { start: { line: 70, column: 52 }, end: { line: 70, column: 62 } }], line: 70 }, '1': { loc: { start: { line: 78, column: 32 }, end: { line: 78, column: 62 } }, type: 'cond-expr', locations: [{ start: { line: 78, column: 46 }, end: { line: 78, column: 52 } }, { start: { line: 78, column: 55 }, end: { line: 78, column: 62 } }], line: 78 }, '2': { loc: { start: { line: 79, column: 27 }, end: { line: 79, column: 62 } }, type: 'cond-expr', locations: [{ start: { line: 79, column: 41 }, end: { line: 79, column: 49 } }, { start: { line: 79, column: 52 }, end: { line: 79, column: 62 } }], line: 79 }, '3': { loc: { start: { line: 80, column: 17 }, end: { line: 80, column: 62 } }, type: 'cond-expr', locations: [{ start: { line: 80, column: 31 }, end: { line: 80, column: 46 } }, { start: { line: 80, column: 49 }, end: { line: 80, column: 62 } }], line: 80 } }, s: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0, '6': 0, '7': 0, '8': 0, '9': 0, '10': 0, '11': 0, '12': 0, '13': 0, '14': 0, '15': 0, '16': 0, '17': 0, '18': 0, '19': 0 }, f: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0 }, b: { '0': [0, 0], '1': [0, 0], '2': [0, 0], '3': [0, 0] }, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var _createClass = function () {function defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}return function (Constructor, protoProps, staticProps) {if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;};}();var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_momentJalaali = require('moment-jalaali'); /* istanbul ignore next */var _momentJalaali2 = _interopRequireDefault(_momentJalaali);
+var /* istanbul ignore next */_classnames2 = require('classnames'); /* istanbul ignore next */var _classnames3 = _interopRequireDefault(_classnames2);
+var /* istanbul ignore next */_MonthsViewHeading = require('./MonthsViewHeading'); /* istanbul ignore next */var _MonthsViewHeading2 = _interopRequireDefault(_MonthsViewHeading);
+var /* istanbul ignore next */_persian = require('../utils/persian');
+var /* istanbul ignore next */_assets = require('../utils/assets'); /* istanbul ignore next */function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self, call) {if (!self) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call && (typeof call === "object" || typeof call === "function") ? call : self;}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;}
+
+// List of months
+var monthsJalaali = /* istanbul ignore next */(++cov_2m4bri9ai7.s[0], [
+'فروردین',
+'اردیبهشت',
+'خرداد',
+'تیر',
+'مرداد',
+'شهریور',
+'مهر',
+'آبان',
+'آذر',
+'دی',
+'بهمن',
+'اسفند']);
+
+
+var monthsGregorian = /* istanbul ignore next */(++cov_2m4bri9ai7.s[1], [
+'January',
+'February',
+'March',
+'April',
+'May',
+'June',
+'July',
+'August',
+'September',
+'October',
+'November',
+'December']); /* istanbul ignore next */var
+
+
+MonthSelector = function (_Component) {_inherits(MonthSelector, _Component);function MonthSelector() {var _ref;var _temp, _this, _ret;_classCallCheck(this, MonthSelector);for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {args[_key] = arguments[_key];}return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = MonthSelector.__proto__ || Object.getPrototypeOf(MonthSelector)).call.apply(_ref, [this].concat(args))), _this), _this.
+
+
+
+
+
+
+
+
+
+
+
+    state = {
+      year: /* istanbul ignore next */_this.props.selectedMonth }, _temp), _possibleConstructorReturn(_this, _ret);}_createClass(MonthSelector, [{ key: 'nextYear', value: function nextYear()
+
+
+    {/* istanbul ignore next */++cov_2m4bri9ai7.f[0];++cov_2m4bri9ai7.s[2];
+      this.setState({
+        year: this.state.year.clone().add(1, 'year') });
+
+    } }, { key: 'prevYear', value: function prevYear()
+
+    {/* istanbul ignore next */++cov_2m4bri9ai7.f[1];++cov_2m4bri9ai7.s[3];
+      this.setState({
+        year: this.state.year.clone().subtract(1, 'year') });
+
+    } }, { key: 'handleClick', value: function handleClick(
+
+    key) {/* istanbul ignore next */++cov_2m4bri9ai7.f[2];var _ref2 = (++cov_2m4bri9ai7.s[4],
+      this.context),setMonth = _ref2.setMonth,setCalendarMode = _ref2.setCalendarMode; /* istanbul ignore next */var _ref3 = (++cov_2m4bri9ai7.s[5],
+      this.props),isGregorian = _ref3.isGregorian;
+      var monthYearFormat = /* istanbul ignore next */(++cov_2m4bri9ai7.s[6], isGregorian ? /* istanbul ignore next */(++cov_2m4bri9ai7.b[0][0], 'M-YYYY') : /* istanbul ignore next */(++cov_2m4bri9ai7.b[0][1], 'jM-jYYYY')); /* istanbul ignore next */++cov_2m4bri9ai7.s[7];
+      setMonth( /* istanbul ignore next */(0, _momentJalaali2.default)(key, monthYearFormat)); /* istanbul ignore next */++cov_2m4bri9ai7.s[8];
+      setCalendarMode('days');
+    } }, { key: 'render', value: function render()
+
+    {/* istanbul ignore next */var _this2 = this;++cov_2m4bri9ai7.f[3];var _ref4 = (++cov_2m4bri9ai7.s[9],
+      this.state),year = _ref4.year; /* istanbul ignore next */var _ref5 = (++cov_2m4bri9ai7.s[10],
+      this.props),selectedMonth = _ref5.selectedMonth,styles = _ref5.styles,isGregorian = _ref5.isGregorian;
+      var yearFormat = /* istanbul ignore next */(++cov_2m4bri9ai7.s[11], isGregorian ? /* istanbul ignore next */(++cov_2m4bri9ai7.b[1][0], 'YYYY') : /* istanbul ignore next */(++cov_2m4bri9ai7.b[1][1], 'jYYYY'));
+      var monthYearFormat = /* istanbul ignore next */(++cov_2m4bri9ai7.s[12], isGregorian ? /* istanbul ignore next */(++cov_2m4bri9ai7.b[2][0], 'M-YYYY') : /* istanbul ignore next */(++cov_2m4bri9ai7.b[2][1], 'jM-jYYYY'));
+      var months = /* istanbul ignore next */(++cov_2m4bri9ai7.s[13], isGregorian ? /* istanbul ignore next */(++cov_2m4bri9ai7.b[3][0], monthsGregorian) : /* istanbul ignore next */(++cov_2m4bri9ai7.b[3][1], monthsJalaali)); /* istanbul ignore next */++cov_2m4bri9ai7.s[14];
+
+      return (
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'month-selector' },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_MonthsViewHeading2.default, /* istanbul ignore next */{
+            isGregorian: isGregorian,
+            styles: styles,
+            year: year,
+            onNextYear: this.nextYear.bind(this),
+            onPrevYear: this.prevYear.bind(this) }),
+
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: styles.monthsList },
+
+            months.map(function (name, key) {/* istanbul ignore next */++cov_2m4bri9ai7.f[4];
+              var buttonFingerprint = /* istanbul ignore next */(++cov_2m4bri9ai7.s[15], key + 1 + '-' + year.format(yearFormat));
+              var selectedMonthFingerprint = /* istanbul ignore next */(++cov_2m4bri9ai7.s[16], selectedMonth.format(monthYearFormat));
+              var isCurrent = /* istanbul ignore next */(++cov_2m4bri9ai7.s[17], selectedMonthFingerprint === buttonFingerprint);
+
+              var className = /* istanbul ignore next */(++cov_2m4bri9ai7.s[18], /* istanbul ignore next */(0, _classnames3.default)(styles.monthWrapper, /* istanbul ignore next */_defineProperty({},
+              styles.selected, isCurrent))); /* istanbul ignore next */++cov_2m4bri9ai7.s[19];
+
+
+              return (
+                /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ key: key, className: className },
+                  /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'button', /* istanbul ignore next */{ onClick: /* istanbul ignore next */_this2.handleClick.bind( /* istanbul ignore next */_this2, buttonFingerprint) },
+                    name)));
+
+
+
+            }))));
+
+
+
+    } }]);return MonthSelector;}(_react.Component); /* istanbul ignore next */MonthSelector.propTypes = { styles: /* istanbul ignore next */_react.PropTypes.object, selectedMonth: /* istanbul ignore next */_react.PropTypes.object.isRequired, isGregorian: /* istanbul ignore next */_react.PropTypes.bool }; /* istanbul ignore next */MonthSelector.contextTypes = { setCalendarMode: /* istanbul ignore next */_react.PropTypes.func.isRequired, setMonth: /* istanbul ignore next */_react.PropTypes.func.isRequired }; /* istanbul ignore next */exports.default = MonthSelector;

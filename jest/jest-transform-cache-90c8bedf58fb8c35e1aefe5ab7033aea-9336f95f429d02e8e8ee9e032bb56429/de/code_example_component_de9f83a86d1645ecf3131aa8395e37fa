@@ -1,0 +1,17 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_r7q5gof92 = function () {var path = '/mnt/g/Work/Current/projects/react-datepicker2/docs/src/code_example_component.js',hash = '63775dae1320eadc29798d04a18141502d67d238',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/mnt/g/Work/Current/projects/react-datepicker2/docs/src/code_example_component.js', statementMap: { '0': { start: { line: 13, column: 4 }, end: { line: 16, column: 10 } } }, fnMap: {}, branchMap: {}, s: { '0': 0 }, f: {}, b: {}, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}exports.default =
+
+/* istanbul ignore next */_react2.default.createClass({
+  displayName: 'CodeExampleComponent',
+
+  propTypes: {
+    children: /* istanbul ignore next */_react2.default.PropTypes.element,
+    id: /* istanbul ignore next */_react2.default.PropTypes.number,
+    title: /* istanbul ignore next */_react2.default.PropTypes.string }, /* istanbul ignore next */
+
+
+  render: function render() {/* istanbul ignore next */++cov_r7q5gof92.s[0];
+    return (/* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ key: this.props.id, id: /* istanbul ignore next */'example-' + this.props.id, className: 'example' },
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'h2', /* istanbul ignore next */{ className: 'example__heading' }, this.props.title),
+        this.props.children));
+
+  } });

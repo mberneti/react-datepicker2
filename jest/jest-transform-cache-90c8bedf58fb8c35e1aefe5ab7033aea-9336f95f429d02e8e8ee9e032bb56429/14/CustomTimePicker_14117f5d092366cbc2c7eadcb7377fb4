@@ -1,0 +1,65 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_7ew8ysqmy = function () {var path = '/mnt/g/Work/Current/projects/react-datepicker2/src/components/CustomTimePicker.js',hash = '805e89456ab3ae17428cff12f4ee00271a42c30f',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/mnt/g/Work/Current/projects/react-datepicker2/src/components/CustomTimePicker.js', statementMap: { '0': { start: { line: 7, column: 24 }, end: { line: 9, column: 1 } }, '1': { start: { line: 8, column: 2 }, end: { line: 8, column: 66 } }, '2': { start: { line: 8, column: 38 }, end: { line: 8, column: 39 } }, '3': { start: { line: 8, column: 53 }, end: { line: 8, column: 64 } }, '4': { start: { line: 19, column: 33 }, end: { line: 19, column: 43 } }, '5': { start: { line: 22, column: 4 }, end: { line: 28, column: 5 } }, '6': { start: { line: 23, column: 6 }, end: { line: 23, column: 37 } }, '7': { start: { line: 24, column: 11 }, end: { line: 28, column: 5 } }, '8': { start: { line: 25, column: 6 }, end: { line: 25, column: 29 } }, '9': { start: { line: 27, column: 6 }, end: { line: 27, column: 31 } }, '10': { start: { line: 30, column: 4 }, end: { line: 30, column: 32 } }, '11': { start: { line: 31, column: 4 }, end: { line: 31, column: 36 } }, '12': { start: { line: 33, column: 4 }, end: { line: 33, column: 40 } }, '13': { start: { line: 37, column: 40 }, end: { line: 37, column: 50 } }, '14': { start: { line: 39, column: 27 }, end: { line: 39, column: 51 } }, '15': { start: { line: 41, column: 20 }, end: { line: 41, column: 47 } }, '16': { start: { line: 43, column: 4 }, end: { line: 64, column: 13 } }, '17': { start: { line: 58, column: 32 }, end: { line: 58, column: 52 } } }, fnMap: { '0': { name: '(anonymous_0)', decl: { start: { line: 7, column: 24 }, end: { line: 7, column: 25 } }, loc: { start: { line: 7, column: 30 }, end: { line: 9, column: 1 } }, line: 7 }, '1': { name: '(anonymous_1)', decl: { start: { line: 8, column: 28 }, end: { line: 8, column: 29 } }, loc: { start: { line: 8, column: 38 }, end: { line: 8, column: 39 } }, line: 8 }, '2': { name: '(anonymous_2)', decl: { start: { line: 8, column: 48 }, end: { line: 8, column: 49 } }, loc: { start: { line: 8, column: 53 }, end: { line: 8, column: 64 } }, line: 8 }, '3': { name: '(anonymous_3)', decl: { start: { line: 18, column: 2 }, end: { line: 18, column: 3 } }, loc: { start: { line: 18, column: 22 }, end: { line: 34, column: 3 } }, line: 18 }, '4': { name: '(anonymous_4)', decl: { start: { line: 36, column: 2 }, end: { line: 36, column: 3 } }, loc: { start: { line: 36, column: 11 }, end: { line: 65, column: 3 } }, line: 36 }, '5': { name: '(anonymous_5)', decl: { start: { line: 58, column: 23 }, end: { line: 58, column: 24 } }, loc: { start: { line: 58, column: 32 }, end: { line: 58, column: 52 } }, line: 58 } }, branchMap: { '0': { loc: { start: { line: 22, column: 4 }, end: { line: 28, column: 5 } }, type: 'if', locations: [{ start: { line: 22, column: 4 }, end: { line: 28, column: 5 } }, { start: { line: 22, column: 4 }, end: { line: 28, column: 5 } }], line: 22 }, '1': { loc: { start: { line: 24, column: 11 }, end: { line: 28, column: 5 } }, type: 'if', locations: [{ start: { line: 24, column: 11 }, end: { line: 28, column: 5 } }, { start: { line: 24, column: 11 }, end: { line: 28, column: 5 } }], line: 24 }, '2': { loc: { start: { line: 24, column: 15 }, end: { line: 24, column: 43 } }, type: 'binary-expr', locations: [{ start: { line: 24, column: 15 }, end: { line: 24, column: 18 } }, { start: { line: 24, column: 22 }, end: { line: 24, column: 43 } }], line: 24 }, '3': { loc: { start: { line: 39, column: 27 }, end: { line: 39, column: 51 } }, type: 'cond-expr', locations: [{ start: { line: 39, column: 39 }, end: { line: 39, column: 41 } }, { start: { line: 39, column: 42 }, end: { line: 39, column: 51 } }], line: 39 }, '4': { loc: { start: { line: 41, column: 20 }, end: { line: 41, column: 47 } }, type: 'cond-expr', locations: [{ start: { line: 41, column: 32 }, end: { line: 41, column: 39 } }, { start: { line: 41, column: 40 }, end: { line: 41, column: 47 } }], line: 41 }, '5': { loc: { start: { line: 43, column: 11 }, end: { line: 64, column: 12 } }, type: 'cond-expr', locations: [{ start: { line: 44, column: 6 }, end: { line: 63, column: 12 } }, { start: { line: 64, column: 8 }, end: { line: 64, column: 12 } }], line: 43 } }, s: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0, '6': 0, '7': 0, '8': 0, '9': 0, '10': 0, '11': 0, '12': 0, '13': 0, '14': 0, '15': 0, '16': 0, '17': 0 }, f: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0 }, b: { '0': [0, 0], '1': [0, 0], '2': [0, 0], '3': [0, 0], '4': [0, 0], '5': [0, 0] }, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var _createClass = function () {function defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}return function (Constructor, protoProps, staticProps) {if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;};}();var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_momentJalaali = require('moment-jalaali'); /* istanbul ignore next */var _momentJalaali2 = _interopRequireDefault(_momentJalaali);
+var /* istanbul ignore next */_TimePicker = require('./TimePicker'); /* istanbul ignore next */var _TimePicker2 = _interopRequireDefault(_TimePicker);
+var /* istanbul ignore next */_DatePicker = require('./DatePicker');
+var /* istanbul ignore next */_persian = require('../utils/persian'); /* istanbul ignore next */function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self, call) {if (!self) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call && (typeof call === "object" || typeof call === "function") ? call : self;}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;}function _toConsumableArray(arr) {if (Array.isArray(arr)) {for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) {arr2[i] = arr[i];}return arr2;} else {return Array.from(arr);}}++cov_7ew8ysqmy.s[0];
+
+var disabledMinutes = function disabledMinutes() {/* istanbul ignore next */++cov_7ew8ysqmy.f[0];++cov_7ew8ysqmy.s[1];
+  return (/* istanbul ignore next */[].concat(_toConsumableArray(Array(60))).map(function (v, i) {/* istanbul ignore next */++cov_7ew8ysqmy.f[1];++cov_7ew8ysqmy.s[2];return i;}).filter(function (v) {/* istanbul ignore next */++cov_7ew8ysqmy.f[2];++cov_7ew8ysqmy.s[3];return v % 5 !== 0;}));
+}; /* istanbul ignore next */var
+
+MyTimePicker = function (_Component) {_inherits(MyTimePicker, _Component);function MyTimePicker() {_classCallCheck(this, MyTimePicker);return _possibleConstructorReturn(this, (MyTimePicker.__proto__ || Object.getPrototypeOf(MyTimePicker)).apply(this, arguments));}_createClass(MyTimePicker, [{ key: 'handleChange', value: function handleChange(
+
+
+
+
+
+
+    value) {/* istanbul ignore next */++cov_7ew8ysqmy.f[3];var _ref = (++cov_7ew8ysqmy.s[4],
+      this.props),momentValue = _ref.momentValue,min = _ref.min;
+      var newValue = /* istanbul ignore next */void 0; /* istanbul ignore next */++cov_7ew8ysqmy.s[5];
+
+      if (momentValue) {/* istanbul ignore next */++cov_7ew8ysqmy.b[0][0];++cov_7ew8ysqmy.s[6];
+        newValue = momentValue.clone();
+      } else {/* istanbul ignore next */++cov_7ew8ysqmy.b[0][1];++cov_7ew8ysqmy.s[7];if ( /* istanbul ignore next */(++cov_7ew8ysqmy.b[2][0], min) && /* istanbul ignore next */(++cov_7ew8ysqmy.b[2][1], min.isAfter( /* istanbul ignore next */(0, _momentJalaali2.default)()))) {/* istanbul ignore next */++cov_7ew8ysqmy.b[1][0];++cov_7ew8ysqmy.s[8];
+            newValue = min.clone();
+          } else {/* istanbul ignore next */++cov_7ew8ysqmy.b[1][1];++cov_7ew8ysqmy.s[9];
+            newValue = /* istanbul ignore next */(0, _momentJalaali2.default)(value);
+          }} /* istanbul ignore next */++cov_7ew8ysqmy.s[10];
+
+      newValue.hour(value.hour()); /* istanbul ignore next */++cov_7ew8ysqmy.s[11];
+      newValue.minute(value.minute()); /* istanbul ignore next */++cov_7ew8ysqmy.s[12];
+
+      this.props.setMomentValue(newValue);
+    } }, { key: 'render', value: function render()
+
+    {/* istanbul ignore next */++cov_7ew8ysqmy.f[4];var _ref2 = (++cov_7ew8ysqmy.s[13],
+      this.props),momentValue = _ref2.momentValue,isGregorian = _ref2.isGregorian;
+
+      var jalaaliClassName = /* istanbul ignore next */(++cov_7ew8ysqmy.s[14], isGregorian ? /* istanbul ignore next */(++cov_7ew8ysqmy.b[3][0], '') : /* istanbul ignore next */(++cov_7ew8ysqmy.b[3][1], 'jalaali'));
+
+      var timeLabel = /* istanbul ignore next */(++cov_7ew8ysqmy.s[15], isGregorian ? /* istanbul ignore next */(++cov_7ew8ysqmy.b[4][0], 'time:') : /* istanbul ignore next */(++cov_7ew8ysqmy.b[4][1], 'ساعت:')); /* istanbul ignore next */++cov_7ew8ysqmy.s[16];
+
+      return momentValue ? /* istanbul ignore next */(++cov_7ew8ysqmy.b[5][0],
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: /* istanbul ignore next */'time-picker-container ' + jalaaliClassName },
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'time-label' }, timeLabel),
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'time-picker-panel' },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_TimePicker2.default, /* istanbul ignore next */{
+            showAMPM: /* istanbul ignore next */true,
+            isGregorian: isGregorian,
+            showSecond: false,
+            allowEmpty: false,
+            value: momentValue,
+            className: /* istanbul ignore next */_DatePicker.outsideClickIgnoreClass,
+            popupClassName: /* istanbul ignore next */_DatePicker.outsideClickIgnoreClass,
+            panelClassName: /* istanbul ignore next */_DatePicker.outsideClickIgnoreClass + ' time-picker-panel',
+            onChange: this.handleChange.bind(this),
+            disabledMinutes: disabledMinutes,
+            formatter: function /* istanbul ignore next */formatter(value) {/* istanbul ignore next */++cov_7ew8ysqmy.f[5];++cov_7ew8ysqmy.s[17];return (/* istanbul ignore next */(0, _persian.persianNumber)(value));},
+            hideDisabledOptions: /* istanbul ignore next */true })),
+
+
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { clear: 'both' } }))) : /* istanbul ignore next */(++cov_7ew8ysqmy.b[5][1],
+
+      null);
+    } }]);return MyTimePicker;}(_react.Component); /* istanbul ignore next */MyTimePicker.propTypes = { momentValue: /* istanbul ignore next */_react.PropTypes.object, setMomentValue: /* istanbul ignore next */_react.PropTypes.func, isGregorian: /* istanbul ignore next */_react.PropTypes.bool }; /* istanbul ignore next */exports.default = MyTimePicker;

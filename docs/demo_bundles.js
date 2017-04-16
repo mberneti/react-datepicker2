@@ -29047,21 +29047,21 @@ var _reactSyntaxHighlight = __webpack_require__(629);
 
 var _reactSyntaxHighlight2 = _interopRequireDefault(_reactSyntaxHighlight);
 
-var _default = __webpack_require__(273);
+var _default = __webpack_require__(270);
 
 var _default2 = _interopRequireDefault(_default);
 
-var _Jalaali = __webpack_require__(271);
+var _jalaali = __webpack_require__(272);
 
-var _Jalaali2 = _interopRequireDefault(_Jalaali);
+var _jalaali2 = _interopRequireDefault(_jalaali);
 
-var _DisabledTimepicker = __webpack_require__(270);
+var _disabledTimepicker = __webpack_require__(271);
 
-var _DisabledTimepicker2 = _interopRequireDefault(_DisabledTimepicker);
+var _disabledTimepicker2 = _interopRequireDefault(_disabledTimepicker);
 
-var _SwitchIsGregorian = __webpack_require__(272);
+var _switchIsGregorian = __webpack_require__(273);
 
-var _SwitchIsGregorian2 = _interopRequireDefault(_SwitchIsGregorian);
+var _switchIsGregorian2 = _interopRequireDefault(_switchIsGregorian);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -29073,7 +29073,7 @@ exports.default = _react2.default.createClass({
   },
 
 
-  examples: [_default2.default, _Jalaali2.default, _DisabledTimepicker2.default, _SwitchIsGregorian2.default],
+  examples: [_default2.default, _jalaali2.default, _disabledTimepicker2.default, _switchIsGregorian2.default],
 
   renderExamples: function renderExamples() {
     return this.examples.map(function (example, index) {
@@ -29149,6 +29149,56 @@ var _react = __webpack_require__(4);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _moment = __webpack_require__(0);
+
+var _moment2 = _interopRequireDefault(_moment);
+
+var _DatePicker = __webpack_require__(34);
+
+var _DatePicker2 = _interopRequireDefault(_DatePicker);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var component = _react2.default.createClass({
+  displayName: 'component',
+  getInitialState: function getInitialState() {
+    return {
+      value: (0, _moment2.default)()
+    };
+  },
+  render: function render() {
+    var _this = this;
+
+    return _react2.default.createElement(_DatePicker2.default, {
+      value: this.state.value,
+      onChange: function onChange(value) {
+        return _this.setState({ value: value });
+      }
+    });
+  }
+});
+
+var title = 'Default';
+var code = 'const component = React.createClass({\n  getInitialState() {\n    return {\n      value: moment()\n    }\n  },\n  render() {\n    return <DatePicker\n      value={this.state.value}\n      onChange={value => this.setState({ value })}\n    />\n  }\n});\n';
+var Default = { component: component, title: title, code: code };
+
+exports.default = Default;
+
+/***/ }),
+/* 271 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(4);
+
+var _react2 = _interopRequireDefault(_react);
+
 var _momentJalaali = __webpack_require__(30);
 
 var _momentJalaali2 = _interopRequireDefault(_momentJalaali);
@@ -29185,7 +29235,7 @@ var DisabledTimepicker = { component: component, title: title, code: code };
 exports.default = DisabledTimepicker;
 
 /***/ }),
-/* 271 */
+/* 272 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29235,7 +29285,7 @@ var Jalaali = { component: component, title: title, code: code };
 exports.default = Jalaali;
 
 /***/ }),
-/* 272 */
+/* 273 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29296,56 +29346,6 @@ var title = 'Switch IsGregorian';
 var code = 'const component = React.createClass({\n  getInitialState() {\n    return {\n      value: moment()\n    }\n  },\n  render() {\n    return <DatePicker\n      isGregorian={false}\n      value={this.state.value}\n      onChange={value => this.setState({ value })}\n    />\n  }\n});\n';
 var SwitchIsGregorian = { component: component, title: title, code: code };
 exports.default = SwitchIsGregorian;
-
-/***/ }),
-/* 273 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _react = __webpack_require__(4);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _moment = __webpack_require__(0);
-
-var _moment2 = _interopRequireDefault(_moment);
-
-var _DatePicker = __webpack_require__(34);
-
-var _DatePicker2 = _interopRequireDefault(_DatePicker);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var component = _react2.default.createClass({
-  displayName: 'component',
-  getInitialState: function getInitialState() {
-    return {
-      value: (0, _moment2.default)()
-    };
-  },
-  render: function render() {
-    var _this = this;
-
-    return _react2.default.createElement(_DatePicker2.default, {
-      value: this.state.value,
-      onChange: function onChange(value) {
-        return _this.setState({ value: value });
-      }
-    });
-  }
-});
-
-var title = 'Default';
-var code = 'const component = React.createClass({\n  getInitialState() {\n    return {\n      value: moment()\n    }\n  },\n  render() {\n    return <DatePicker\n      value={this.state.value}\n      onChange={value => this.setState({ value })}\n    />\n  }\n});\n';
-var Default = { component: component, title: title, code: code };
-
-exports.default = Default;
 
 /***/ }),
 /* 274 */

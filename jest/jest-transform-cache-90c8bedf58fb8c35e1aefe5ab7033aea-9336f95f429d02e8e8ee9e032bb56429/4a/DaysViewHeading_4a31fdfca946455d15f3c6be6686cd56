@@ -1,0 +1,49 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_2o68c05plv = function () {var path = '/mnt/g/Work/Current/projects/react-datepicker2/src/components/DaysViewHeading.js',hash = '5dc8a39c3e224c0ecc4ffbb5e3e1f888b8d83176',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/mnt/g/Work/Current/projects/react-datepicker2/src/components/DaysViewHeading.js', statementMap: { '0': { start: { line: 19, column: 32 }, end: { line: 19, column: 44 } }, '1': { start: { line: 20, column: 4 }, end: { line: 20, column: 27 } }, '2': { start: { line: 21, column: 4 }, end: { line: 21, column: 37 } }, '3': { start: { line: 25, column: 37 }, end: { line: 25, column: 49 } }, '4': { start: { line: 26, column: 30 }, end: { line: 26, column: 40 } }, '5': { start: { line: 28, column: 4 }, end: { line: 48, column: 6 } } }, fnMap: { '0': { name: '(anonymous_0)', decl: { start: { line: 18, column: 2 }, end: { line: 18, column: 3 } }, loc: { start: { line: 18, column: 26 }, end: { line: 22, column: 3 } }, line: 18 }, '1': { name: '(anonymous_1)', decl: { start: { line: 24, column: 2 }, end: { line: 24, column: 3 } }, loc: { start: { line: 24, column: 11 }, end: { line: 49, column: 3 } }, line: 24 } }, branchMap: { '0': { loc: { start: { line: 31, column: 11 }, end: { line: 31, column: 129 } }, type: 'cond-expr', locations: [{ start: { line: 31, column: 35 }, end: { line: 31, column: 73 } }, { start: { line: 31, column: 74 }, end: { line: 31, column: 129 } }], line: 31 } }, s: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0 }, f: { '0': 0, '1': 0 }, b: { '0': [0, 0] }, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var _createClass = function () {function defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}return function (Constructor, protoProps, staticProps) {if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;};}();var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_persian = require('../utils/persian');
+var /* istanbul ignore next */_assets = require('../utils/assets'); /* istanbul ignore next */function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self, call) {if (!self) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call && (typeof call === "object" || typeof call === "function") ? call : self;}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;}var
+
+Heading = function (_Component) {_inherits(Heading, _Component);function Heading() {_classCallCheck(this, Heading);return _possibleConstructorReturn(this, (Heading.__proto__ || Object.getPrototypeOf(Heading)).apply(this, arguments));}_createClass(Heading, [{ key: 'handleMonthClick', value: function handleMonthClick(
+
+
+
+
+
+
+
+
+
+
+
+
+    event) {/* istanbul ignore next */++cov_2o68c05plv.f[0];var _ref = (++cov_2o68c05plv.s[0],
+      this.context),setCalendarMode = _ref.setCalendarMode; /* istanbul ignore next */++cov_2o68c05plv.s[1];
+      event.preventDefault(); /* istanbul ignore next */++cov_2o68c05plv.s[2];
+      setCalendarMode('monthSelector');
+    } }, { key: 'render', value: function render()
+
+    {/* istanbul ignore next */++cov_2o68c05plv.f[1];var _ref2 = (++cov_2o68c05plv.s[3],
+      this.context),nextMonth = _ref2.nextMonth,prevMonth = _ref2.prevMonth; /* istanbul ignore next */var _ref3 = (++cov_2o68c05plv.s[4],
+      this.props),month = _ref3.month,styles = _ref3.styles; /* istanbul ignore next */++cov_2o68c05plv.s[5];
+
+      return (
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: styles.heading },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'button', /* istanbul ignore next */{ className: styles.title, onClick: this.handleMonthClick.bind(this) },
+            this.props.isGregorian ? /* istanbul ignore next */(++cov_2o68c05plv.b[0][0], month.locale('en').format('MMMM YYYY')) : /* istanbul ignore next */(++cov_2o68c05plv.b[0][1], /* istanbul ignore next */(0, _persian.persianNumber)(month.locale('fa').format('jMMMM jYYYY')))),
+
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'button', /* istanbul ignore next */{
+            type: 'button',
+            title: '\u0645\u0627\u0647 \u0642\u0628\u0644',
+            className: styles.prev,
+            onClick: prevMonth,
+            dangerouslySetInnerHTML: /* istanbul ignore next */_assets.rightArrow }),
+
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'button', /* istanbul ignore next */{
+            type: 'button',
+            title: '\u0645\u0627\u0647 \u0628\u0639\u062F',
+            className: styles.next,
+            onClick: nextMonth,
+            dangerouslySetInnerHTML: /* istanbul ignore next */_assets.leftArrow })));
+
+
+
+    } }]);return Heading;}(_react.Component); /* istanbul ignore next */Heading.propTypes = { month: /* istanbul ignore next */_react.PropTypes.object.isRequired, isGregorian: /* istanbul ignore next */_react.PropTypes.bool }; /* istanbul ignore next */Heading.contextTypes = { styles: /* istanbul ignore next */_react.PropTypes.object, nextMonth: /* istanbul ignore next */_react.PropTypes.func.isRequired, prevMonth: /* istanbul ignore next */_react.PropTypes.func.isRequired, setCalendarMode: /* istanbul ignore next */_react.PropTypes.func.isRequired }; /* istanbul ignore next */exports.default = Heading;

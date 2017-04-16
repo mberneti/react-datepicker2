@@ -1,0 +1,28 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_httdjmaaq = function () {var path = '/mnt/g/Work/Current/projects/react-datepicker2/src/utils/moment-helper.js',hash = '04e10cb8d8092457a78959e7efa3b47f469d51ca',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/mnt/g/Work/Current/projects/react-datepicker2/src/utils/moment-helper.js', statementMap: { '0': { start: { line: 8, column: 15 }, end: { line: 8, column: 17 } }, '1': { start: { line: 10, column: 22 }, end: { line: 10, column: 54 } }, '2': { start: { line: 11, column: 20 }, end: { line: 11, column: 39 } }, '3': { start: { line: 13, column: 18 }, end: { line: 13, column: 52 } }, '4': { start: { line: 14, column: 14 }, end: { line: 14, column: 46 } }, '5': { start: { line: 17, column: 2 }, end: { line: 17, column: 60 } }, '6': { start: { line: 20, column: 2 }, end: { line: 20, column: 51 } }, '7': { start: { line: 22, column: 2 }, end: { line: 25, column: 3 } }, '8': { start: { line: 23, column: 4 }, end: { line: 23, column: 31 } }, '9': { start: { line: 24, column: 4 }, end: { line: 24, column: 27 } }, '10': { start: { line: 27, column: 2 }, end: { line: 27, column: 14 } } }, fnMap: { '0': { name: 'getDaysOfMonth', decl: { start: { line: 7, column: 16 }, end: { line: 7, column: 30 } }, loc: { start: { line: 7, column: 51 }, end: { line: 28, column: 1 } }, line: 7 } }, branchMap: { '0': { loc: { start: { line: 10, column: 22 }, end: { line: 10, column: 54 } }, type: 'cond-expr', locations: [{ start: { line: 10, column: 36 }, end: { line: 10, column: 43 } }, { start: { line: 10, column: 46 }, end: { line: 10, column: 54 } }], line: 10 }, '1': { loc: { start: { line: 11, column: 20 }, end: { line: 11, column: 39 } }, type: 'cond-expr', locations: [{ start: { line: 11, column: 34 }, end: { line: 11, column: 35 } }, { start: { line: 11, column: 38 }, end: { line: 11, column: 39 } }], line: 11 } }, s: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0, '6': 0, '7': 0, '8': 0, '9': 0, '10': 0 }, f: { '0': 0 }, b: { '0': [0, 0], '1': [0, 0] }, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();exports.
+
+
+
+
+
+getDaysOfMonth = getDaysOfMonth; /**
+                                  * Get days of a month that should be shown on a month page
+                                  *
+                                  * @param month A moment object
+                                  * @returns {Array}
+                                  */function getDaysOfMonth(month, isGregorian) {/* istanbul ignore next */++cov_httdjmaaq.f[0];var days = /* istanbul ignore next */(++cov_httdjmaaq.s[0], []);var monthFormat = /* istanbul ignore next */(++cov_httdjmaaq.s[1], isGregorian ? /* istanbul ignore next */(++cov_httdjmaaq.b[0][0], 'Month') : /* istanbul ignore next */(++cov_httdjmaaq.b[0][1], 'jMonth'));var dayOffset = /* istanbul ignore next */(++cov_httdjmaaq.s[2], isGregorian ? /* istanbul ignore next */(++cov_httdjmaaq.b[1][0], 0) : /* istanbul ignore next */(++cov_httdjmaaq.b[1][1], 1));
+  var current = /* istanbul ignore next */(++cov_httdjmaaq.s[3], month.clone().startOf(monthFormat));
+  var end = /* istanbul ignore next */(++cov_httdjmaaq.s[4], month.clone().endOf(monthFormat));
+
+  // Set start to the first day of week in the last month
+  /* istanbul ignore next */++cov_httdjmaaq.s[5];current.subtract((current.day() + dayOffset) % 7, 'days');
+
+  // Set end to the last day of week in the next month
+  /* istanbul ignore next */++cov_httdjmaaq.s[6];end.add(6 - (end.day() + dayOffset) % 7, 'days'); /* istanbul ignore next */++cov_httdjmaaq.s[7];
+
+  while (current.isBefore(end)) {/* istanbul ignore next */++cov_httdjmaaq.s[8];
+    days.push(current.clone()); /* istanbul ignore next */++cov_httdjmaaq.s[9];
+    current.add(1, 'days');
+  } /* istanbul ignore next */++cov_httdjmaaq.s[10];
+
+  return days;
+}

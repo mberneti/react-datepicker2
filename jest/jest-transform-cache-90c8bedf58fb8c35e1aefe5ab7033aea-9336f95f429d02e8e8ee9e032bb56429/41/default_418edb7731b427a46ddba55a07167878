@@ -1,0 +1,36 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_u8ixqmbk5 = function () {var path = '/mnt/g/Work/Current/projects/react-datepicker2/docs/src/examples/default.js',hash = '4d6cd3ab583df8f1ab2f4bad6b4c8a954398038d',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/mnt/g/Work/Current/projects/react-datepicker2/docs/src/examples/default.js', statementMap: { '0': { start: { line: 5, column: 18 }, end: { line: 17, column: 2 } }, '1': { start: { line: 7, column: 4 }, end: { line: 9, column: 5 } }, '2': { start: { line: 12, column: 4 }, end: { line: 15, column: 6 } }, '3': { start: { line: 14, column: 25 }, end: { line: 14, column: 49 } }, '4': { start: { line: 19, column: 14 }, end: { line: 19, column: 23 } }, '5': { start: { line: 20, column: 13 }, end: { line: 33, column: 1 } }, '6': { start: { line: 34, column: 16 }, end: { line: 34, column: 42 } } }, fnMap: { '0': { name: '(anonymous_0)', decl: { start: { line: 14, column: 16 }, end: { line: 14, column: 17 } }, loc: { start: { line: 14, column: 25 }, end: { line: 14, column: 49 } }, line: 14 } }, branchMap: {}, s: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0, '6': 0 }, f: { '0': 0 }, b: {}, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_moment = require('moment'); /* istanbul ignore next */var _moment2 = _interopRequireDefault(_moment);
+var /* istanbul ignore next */_DatePicker = require('../../../src/components/DatePicker'); /* istanbul ignore next */var _DatePicker2 = _interopRequireDefault(_DatePicker);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+var component = /* istanbul ignore next */(++cov_u8ixqmbk5.s[0], /* istanbul ignore next */_react2.default.createClass({ /* istanbul ignore next */displayName: 'component', /* istanbul ignore next */
+  getInitialState: function getInitialState() {/* istanbul ignore next */++cov_u8ixqmbk5.s[1];
+    return {
+      value: /* istanbul ignore next */(0, _moment2.default)() };
+
+  }, /* istanbul ignore next */
+  render: function render() {/* istanbul ignore next */var _this = this;++cov_u8ixqmbk5.s[2];
+    return (/* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_DatePicker2.default, /* istanbul ignore next */{
+        value: this.state.value,
+        onChange: function /* istanbul ignore next */onChange(value) {/* istanbul ignore next */++cov_u8ixqmbk5.f[0];++cov_u8ixqmbk5.s[3];return (/* istanbul ignore next */_this.setState({ value: value }));} }));
+
+  } }));
+
+
+var title = /* istanbul ignore next */(++cov_u8ixqmbk5.s[4], 'Default');
+var code = /* istanbul ignore next */(++cov_u8ixqmbk5.s[5], 'const component = React.createClass({\n  getInitialState() {\n    return {\n      value: moment()\n    }\n  },\n  render() {\n    return <DatePicker\n      value={this.state.value}\n      onChange={value => this.setState({ value })}\n    />\n  }\n});\n');
+
+
+
+
+
+
+
+
+
+
+
+
+
+var Default = /* istanbul ignore next */(++cov_u8ixqmbk5.s[6], { component: component, title: title, code: code }); /* istanbul ignore next */exports.default =
+
+Default;

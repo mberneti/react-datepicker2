@@ -1,0 +1,201 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });exports.Calendar = undefined;var cov_1ahls872iq = function () {var path = '/mnt/g/Work/Current/projects/react-datepicker2/src/components/Calendar.js',hash = '9ca8c413d67d57211cb7a25313e4ba6281131555',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/mnt/g/Work/Current/projects/react-datepicker2/src/components/Calendar.js', statementMap: { '0': { start: { line: 46, column: 4 }, end: { line: 52, column: 6 } }, '1': { start: { line: 56, column: 4 }, end: { line: 62, column: 5 } }, '2': { start: { line: 57, column: 6 }, end: { line: 57, column: 34 } }, '3': { start: { line: 58, column: 11 }, end: { line: 62, column: 5 } }, '4': { start: { line: 59, column: 6 }, end: { line: 59, column: 34 } }, '5': { start: { line: 60, column: 11 }, end: { line: 62, column: 5 } }, '6': { start: { line: 61, column: 6 }, end: { line: 61, column: 33 } }, '7': { start: { line: 66, column: 4 }, end: { line: 66, column: 28 } }, '8': { start: { line: 70, column: 4 }, end: { line: 70, column: 29 } }, '9': { start: { line: 74, column: 4 }, end: { line: 74, column: 28 } }, '10': { start: { line: 78, column: 28 }, end: { line: 78, column: 38 } }, '11': { start: { line: 79, column: 24 }, end: { line: 79, column: 56 } }, '12': { start: { line: 81, column: 4 }, end: { line: 83, column: 7 } }, '13': { start: { line: 87, column: 28 }, end: { line: 87, column: 38 } }, '14': { start: { line: 88, column: 24 }, end: { line: 88, column: 56 } }, '15': { start: { line: 90, column: 4 }, end: { line: 92, column: 7 } }, '16': { start: { line: 96, column: 35 }, end: { line: 96, column: 45 } }, '17': { start: { line: 97, column: 28 }, end: { line: 97, column: 63 } }, '18': { start: { line: 100, column: 4 }, end: { line: 102, column: 5 } }, '19': { start: { line: 101, column: 6 }, end: { line: 101, column: 44 } }, '20': { start: { line: 104, column: 4 }, end: { line: 104, column: 35 } }, '21': { start: { line: 108, column: 25 }, end: { line: 108, column: 35 } }, '22': { start: { line: 109, column: 4 }, end: { line: 109, column: 32 } }, '23': { start: { line: 110, column: 4 }, end: { line: 112, column: 5 } }, '24': { start: { line: 111, column: 6 }, end: { line: 111, column: 28 } }, '25': { start: { line: 116, column: 4 }, end: { line: 118, column: 5 } }, '26': { start: { line: 117, column: 6 }, end: { line: 117, column: 39 } }, '27': { start: { line: 125, column: 35 }, end: { line: 125, column: 45 } }, '28': { start: { line: 126, column: 23 }, end: { line: 126, column: 33 } }, '29': { start: { line: 127, column: 4 }, end: { line: 127, column: 95 } }, '30': { start: { line: 131, column: 48 }, end: { line: 131, column: 58 } }, '31': { start: { line: 132, column: 68 }, end: { line: 132, column: 78 } }, '32': { start: { line: 136, column: 4 }, end: { line: 142, column: 5 } }, '33': { start: { line: 137, column: 6 }, end: { line: 137, column: 23 } }, '34': { start: { line: 139, column: 6 }, end: { line: 139, column: 48 } }, '35': { start: { line: 140, column: 6 }, end: { line: 140, column: 23 } }, '36': { start: { line: 141, column: 6 }, end: { line: 141, column: 37 } }, '37': { start: { line: 144, column: 24 }, end: { line: 144, column: 50 } }, '38': { start: { line: 145, column: 23 }, end: { line: 145, column: 63 } }, '39': { start: { line: 148, column: 4 }, end: { line: 176, column: 6 } }, '40': { start: { line: 156, column: 37 }, end: { line: 156, column: 90 } }, '41': { start: { line: 157, column: 31 }, end: { line: 157, column: 100 } }, '42': { start: { line: 158, column: 31 }, end: { line: 158, column: 83 } }, '43': { start: { line: 160, column: 14 }, end: { line: 171, column: 16 } }, '44': { start: { line: 188, column: 8 }, end: { line: 188, column: 18 } }, '45': { start: { line: 189, column: 34 }, end: { line: 189, column: 44 } }, '46': { start: { line: 191, column: 29 }, end: { line: 191, column: 58 } }, '47': { start: { line: 193, column: 4 }, end: { line: 197, column: 6 } } }, fnMap: { '0': { name: '(anonymous_0)', decl: { start: { line: 45, column: 2 }, end: { line: 45, column: 3 } }, loc: { start: { line: 45, column: 20 }, end: { line: 53, column: 3 } }, line: 45 }, '1': { name: '(anonymous_1)', decl: { start: { line: 55, column: 2 }, end: { line: 55, column: 3 } }, loc: { start: { line: 55, column: 64 }, end: { line: 63, column: 3 } }, line: 55 }, '2': { name: '(anonymous_2)', decl: { start: { line: 65, column: 2 }, end: { line: 65, column: 3 } }, loc: { start: { line: 65, column: 16 }, end: { line: 67, column: 3 } }, line: 65 }, '3': { name: '(anonymous_3)', decl: { start: { line: 69, column: 2 }, end: { line: 69, column: 3 } }, loc: { start: { line: 69, column: 18 }, end: { line: 71, column: 3 } }, line: 69 }, '4': { name: '(anonymous_4)', decl: { start: { line: 73, column: 2 }, end: { line: 73, column: 3 } }, loc: { start: { line: 73, column: 16 }, end: { line: 75, column: 3 } }, line: 73 }, '5': { name: '(anonymous_5)', decl: { start: { line: 77, column: 2 }, end: { line: 77, column: 3 } }, loc: { start: { line: 77, column: 14 }, end: { line: 84, column: 3 } }, line: 77 }, '6': { name: '(anonymous_6)', decl: { start: { line: 86, column: 2 }, end: { line: 86, column: 3 } }, loc: { start: { line: 86, column: 14 }, end: { line: 93, column: 3 } }, line: 86 }, '7': { name: '(anonymous_7)', decl: { start: { line: 95, column: 2 }, end: { line: 95, column: 3 } }, loc: { start: { line: 95, column: 25 }, end: { line: 105, column: 3 } }, line: 95 }, '8': { name: '(anonymous_8)', decl: { start: { line: 107, column: 21 }, end: { line: 107, column: 22 } }, loc: { start: { line: 107, column: 36 }, end: { line: 113, column: 3 } }, line: 107 }, '9': { name: '(anonymous_9)', decl: { start: { line: 115, column: 2 }, end: { line: 115, column: 3 } }, loc: { start: { line: 115, column: 28 }, end: { line: 119, column: 3 } }, line: 115 }, '10': { name: '(anonymous_10)', decl: { start: { line: 124, column: 2 }, end: { line: 124, column: 3 } }, loc: { start: { line: 124, column: 24 }, end: { line: 128, column: 3 } }, line: 124 }, '11': { name: '(anonymous_11)', decl: { start: { line: 130, column: 2 }, end: { line: 130, column: 3 } }, loc: { start: { line: 130, column: 15 }, end: { line: 177, column: 3 } }, line: 130 }, '12': { name: '(anonymous_12)', decl: { start: { line: 155, column: 21 }, end: { line: 155, column: 22 } }, loc: { start: { line: 155, column: 28 }, end: { line: 172, column: 13 } }, line: 155 }, '13': { name: '(anonymous_13)', decl: { start: { line: 179, column: 2 }, end: { line: 179, column: 3 } }, loc: { start: { line: 179, column: 11 }, end: { line: 198, column: 3 } }, line: 179 } }, branchMap: { '0': { loc: { start: { line: 39, column: 11 }, end: { line: 39, column: 86 } }, type: 'binary-expr', locations: [{ start: { line: 39, column: 11 }, end: { line: 39, column: 34 } }, { start: { line: 39, column: 38 }, end: { line: 39, column: 60 } }, { start: { line: 39, column: 64 }, end: { line: 39, column: 86 } }], line: 39 }, '1': { loc: { start: { line: 40, column: 17 }, end: { line: 40, column: 47 } }, type: 'binary-expr', locations: [{ start: { line: 40, column: 17 }, end: { line: 40, column: 39 } }, { start: { line: 40, column: 43 }, end: { line: 40, column: 47 } }], line: 40 }, '2': { loc: { start: { line: 56, column: 4 }, end: { line: 62, column: 5 } }, type: 'if', locations: [{ start: { line: 56, column: 4 }, end: { line: 62, column: 5 } }, { start: { line: 56, column: 4 }, end: { line: 62, column: 5 } }], line: 56 }, '3': { loc: { start: { line: 58, column: 11 }, end: { line: 62, column: 5 } }, type: 'if', locations: [{ start: { line: 58, column: 11 }, end: { line: 62, column: 5 } }, { start: { line: 58, column: 11 }, end: { line: 62, column: 5 } }], line: 58 }, '4': { loc: { start: { line: 58, column: 15 }, end: { line: 58, column: 119 } }, type: 'binary-expr', locations: [{ start: { line: 58, column: 15 }, end: { line: 58, column: 27 } }, { start: { line: 58, column: 31 }, end: { line: 58, column: 71 } }, { start: { line: 58, column: 75 }, end: { line: 58, column: 119 } }], line: 58 }, '5': { loc: { start: { line: 60, column: 11 }, end: { line: 62, column: 5 } }, type: 'if', locations: [{ start: { line: 60, column: 11 }, end: { line: 62, column: 5 } }, { start: { line: 60, column: 11 }, end: { line: 62, column: 5 } }], line: 60 }, '6': { loc: { start: { line: 60, column: 15 }, end: { line: 60, column: 87 } }, type: 'binary-expr', locations: [{ start: { line: 60, column: 15 }, end: { line: 60, column: 18 } }, { start: { line: 60, column: 22 }, end: { line: 60, column: 44 } }, { start: { line: 60, column: 48 }, end: { line: 60, column: 87 } }], line: 60 }, '7': { loc: { start: { line: 79, column: 24 }, end: { line: 79, column: 56 } }, type: 'cond-expr', locations: [{ start: { line: 79, column: 38 }, end: { line: 79, column: 45 } }, { start: { line: 79, column: 48 }, end: { line: 79, column: 56 } }], line: 79 }, '8': { loc: { start: { line: 88, column: 24 }, end: { line: 88, column: 56 } }, type: 'cond-expr', locations: [{ start: { line: 88, column: 38 }, end: { line: 88, column: 45 } }, { start: { line: 88, column: 48 }, end: { line: 88, column: 56 } }], line: 88 }, '9': { loc: { start: { line: 97, column: 28 }, end: { line: 97, column: 63 } }, type: 'cond-expr', locations: [{ start: { line: 97, column: 42 }, end: { line: 97, column: 50 } }, { start: { line: 97, column: 53 }, end: { line: 97, column: 63 } }], line: 97 }, '10': { loc: { start: { line: 100, column: 4 }, end: { line: 102, column: 5 } }, type: 'if', locations: [{ start: { line: 100, column: 4 }, end: { line: 102, column: 5 } }, { start: { line: 100, column: 4 }, end: { line: 102, column: 5 } }], line: 100 }, '11': { loc: { start: { line: 110, column: 4 }, end: { line: 112, column: 5 } }, type: 'if', locations: [{ start: { line: 110, column: 4 }, end: { line: 112, column: 5 } }, { start: { line: 110, column: 4 }, end: { line: 112, column: 5 } }], line: 110 }, '12': { loc: { start: { line: 116, column: 4 }, end: { line: 118, column: 5 } }, type: 'if', locations: [{ start: { line: 116, column: 4 }, end: { line: 118, column: 5 } }, { start: { line: 116, column: 4 }, end: { line: 118, column: 5 } }], line: 116 }, '13': { loc: { start: { line: 136, column: 4 }, end: { line: 142, column: 5 } }, type: 'if', locations: [{ start: { line: 136, column: 4 }, end: { line: 142, column: 5 } }, { start: { line: 136, column: 4 }, end: { line: 142, column: 5 } }], line: 136 }, '14': { loc: { start: { line: 144, column: 24 }, end: { line: 144, column: 50 } }, type: 'cond-expr', locations: [{ start: { line: 144, column: 38 }, end: { line: 144, column: 42 } }, { start: { line: 144, column: 45 }, end: { line: 144, column: 50 } }], line: 144 }, '15': { loc: { start: { line: 145, column: 23 }, end: { line: 145, column: 63 } }, type: 'cond-expr', locations: [{ start: { line: 145, column: 37 }, end: { line: 145, column: 47 } }, { start: { line: 145, column: 50 }, end: { line: 145, column: 63 } }], line: 145 }, '16': { loc: { start: { line: 157, column: 31 }, end: { line: 157, column: 100 } }, type: 'binary-expr', locations: [{ start: { line: 157, column: 32 }, end: { line: 157, column: 63 } }, { start: { line: 157, column: 69 }, end: { line: 157, column: 99 } }], line: 157 }, '17': { loc: { start: { line: 157, column: 32 }, end: { line: 157, column: 63 } }, type: 'cond-expr', locations: [{ start: { line: 157, column: 38 }, end: { line: 157, column: 55 } }, { start: { line: 157, column: 58 }, end: { line: 157, column: 63 } }], line: 157 }, '18': { loc: { start: { line: 157, column: 69 }, end: { line: 157, column: 99 } }, type: 'cond-expr', locations: [{ start: { line: 157, column: 75 }, end: { line: 157, column: 91 } }, { start: { line: 157, column: 94 }, end: { line: 157, column: 99 } }], line: 157 }, '19': { loc: { start: { line: 158, column: 31 }, end: { line: 158, column: 83 } }, type: 'cond-expr', locations: [{ start: { line: 158, column: 45 }, end: { line: 158, column: 75 } }, { start: { line: 158, column: 78 }, end: { line: 158, column: 83 } }], line: 158 }, '20': { loc: { start: { line: 191, column: 29 }, end: { line: 191, column: 58 } }, type: 'cond-expr', locations: [{ start: { line: 191, column: 43 }, end: { line: 191, column: 45 } }, { start: { line: 191, column: 48 }, end: { line: 191, column: 58 } }], line: 191 }, '21': { loc: { start: { line: 195, column: 9 }, end: { line: 195, column: 82 } }, type: 'cond-expr', locations: [{ start: { line: 195, column: 36 }, end: { line: 195, column: 62 } }, { start: { line: 195, column: 65 }, end: { line: 195, column: 82 } }], line: 195 } }, s: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0, '6': 0, '7': 0, '8': 0, '9': 0, '10': 0, '11': 0, '12': 0, '13': 0, '14': 0, '15': 0, '16': 0, '17': 0, '18': 0, '19': 0, '20': 0, '21': 0, '22': 0, '23': 0, '24': 0, '25': 0, '26': 0, '27': 0, '28': 0, '29': 0, '30': 0, '31': 0, '32': 0, '33': 0, '34': 0, '35': 0, '36': 0, '37': 0, '38': 0, '39': 0, '40': 0, '41': 0, '42': 0, '43': 0, '44': 0, '45': 0, '46': 0, '47': 0 }, f: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0, '6': 0, '7': 0, '8': 0, '9': 0, '10': 0, '11': 0, '12': 0, '13': 0 }, b: { '0': [0, 0, 0], '1': [0, 0], '2': [0, 0], '3': [0, 0], '4': [0, 0, 0], '5': [0, 0], '6': [0, 0, 0], '7': [0, 0], '8': [0, 0], '9': [0, 0], '10': [0, 0], '11': [0, 0], '12': [0, 0], '13': [0, 0], '14': [0, 0], '15': [0, 0], '16': [0, 0], '17': [0, 0], '18': [0, 0], '19': [0, 0], '20': [0, 0], '21': [0, 0] }, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var _createClass = function () {function defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}return function (Constructor, protoProps, staticProps) {if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;};}();var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_DaysViewHeading = require('./DaysViewHeading'); /* istanbul ignore next */var _DaysViewHeading2 = _interopRequireDefault(_DaysViewHeading);
+var /* istanbul ignore next */_DaysOfWeek = require('./DaysOfWeek'); /* istanbul ignore next */var _DaysOfWeek2 = _interopRequireDefault(_DaysOfWeek);
+var /* istanbul ignore next */_MonthSelector = require('./MonthSelector'); /* istanbul ignore next */var _MonthSelector2 = _interopRequireDefault(_MonthSelector);
+var /* istanbul ignore next */_Day = require('./Day'); /* istanbul ignore next */var _Day2 = _interopRequireDefault(_Day);
+var /* istanbul ignore next */_momentHelper = require('../utils/moment-helper');
+var /* istanbul ignore next */_momentJalaali = require('moment-jalaali'); /* istanbul ignore next */var _momentJalaali2 = _interopRequireDefault(_momentJalaali);
+var /* istanbul ignore next */_reactOnclickoutside = require('react-onclickoutside'); /* istanbul ignore next */var _reactOnclickoutside2 = _interopRequireDefault(_reactOnclickoutside);
+var /* istanbul ignore next */_DefaultStyles = require('./DefaultStyles'); /* istanbul ignore next */function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self, call) {if (!self) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call && (typeof call === "object" || typeof call === "function") ? call : self;}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;}var
+
+Calendar = exports.Calendar = function (_Component) {_inherits(Calendar, _Component);function Calendar() {var _ref;var _temp, _this, _ret;_classCallCheck(this, Calendar);for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {args[_key] = arguments[_key];}return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Calendar.__proto__ || Object.getPrototypeOf(Calendar)).call.apply(_ref, [this].concat(args))), _this), _this.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    state = {
+      month: /* istanbul ignore next */(++cov_1ahls872iq.b[0][0], /* istanbul ignore next */_this.props.defaultMonth) || /* istanbul ignore next */(++cov_1ahls872iq.b[0][1], /* istanbul ignore next */_this.props.selectedDay) || /* istanbul ignore next */(++cov_1ahls872iq.b[0][2], /* istanbul ignore next */(0, _momentJalaali2.default)( /* istanbul ignore next */_this.props.min)),
+      selectedDay: /* istanbul ignore next */(++cov_1ahls872iq.b[1][0], /* istanbul ignore next */_this.props.selectedDay) || /* istanbul ignore next */(++cov_1ahls872iq.b[1][1], null),
+      mode: 'days',
+      isGregorian: /* istanbul ignore next */_this.props.isGregorian }, _this.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    handleClickOnDay = function (selectedDay) {/* istanbul ignore next */++cov_1ahls872iq.f[8];var _ref2 = (++cov_1ahls872iq.s[21],
+      /* istanbul ignore next */_this.props),onSelect = _ref2.onSelect; /* istanbul ignore next */++cov_1ahls872iq.s[22];
+      /* istanbul ignore next */_this.selectDay(selectedDay); /* istanbul ignore next */++cov_1ahls872iq.s[23];
+      if (onSelect) {/* istanbul ignore next */++cov_1ahls872iq.b[11][0];++cov_1ahls872iq.s[24];
+        onSelect(selectedDay);
+      } else /* istanbul ignore next */{++cov_1ahls872iq.b[11][1];}
+    }, _this.
+
+
+
+
+
+
+
+    days = null, _this.
+    lastRenderedMonth = null, _temp), _possibleConstructorReturn(_this, _ret);}_createClass(Calendar, [{ key: 'getChildContext', value: function getChildContext() {/* istanbul ignore next */++cov_1ahls872iq.f[0];++cov_1ahls872iq.s[0];return { nextMonth: this.nextMonth.bind(this), prevMonth: this.prevMonth.bind(this), setCalendarMode: this.setMode.bind(this), setMonth: this.setMonth.bind(this), setType: this.setMonth.bind(this) };} }, { key: 'componentWillReceiveProps', value: function componentWillReceiveProps(_ref3) {/* istanbul ignore next */var selectedDay = _ref3.selectedDay,defaultMonth = _ref3.defaultMonth,min = _ref3.min; /* istanbul ignore next */++cov_1ahls872iq.f[1];++cov_1ahls872iq.s[1];if (this.props.selectedDay !== selectedDay) {/* istanbul ignore next */++cov_1ahls872iq.b[2][0];++cov_1ahls872iq.s[2];this.selectDay(selectedDay);} else {/* istanbul ignore next */++cov_1ahls872iq.b[2][1];++cov_1ahls872iq.s[3];if ( /* istanbul ignore next */(++cov_1ahls872iq.b[4][0], defaultMonth) && /* istanbul ignore next */(++cov_1ahls872iq.b[4][1], this.props.defaultMonth !== defaultMonth) && /* istanbul ignore next */(++cov_1ahls872iq.b[4][2], this.state.month === this.props.defaultMonth)) {/* istanbul ignore next */++cov_1ahls872iq.b[3][0];++cov_1ahls872iq.s[4];this.setMonth(defaultMonth);} else {/* istanbul ignore next */++cov_1ahls872iq.b[3][1];++cov_1ahls872iq.s[5];if ( /* istanbul ignore next */(++cov_1ahls872iq.b[6][0], min) && /* istanbul ignore next */(++cov_1ahls872iq.b[6][1], this.props.min !== min) && /* istanbul ignore next */(++cov_1ahls872iq.b[6][2], this.state.month.isSame(this.props.min))) {/* istanbul ignore next */++cov_1ahls872iq.b[5][0];++cov_1ahls872iq.s[6];this.setMonth(min.clone());} else /* istanbul ignore next */{++cov_1ahls872iq.b[5][1];}}}} }, { key: 'setMode', value: function setMode(mode) {/* istanbul ignore next */++cov_1ahls872iq.f[2];++cov_1ahls872iq.s[7];this.setState({ mode: mode });} }, { key: 'setMonth', value: function setMonth(month) {/* istanbul ignore next */++cov_1ahls872iq.f[3];++cov_1ahls872iq.s[8];this.setState({ month: month });} }, { key: 'setType', value: function setType(type) {/* istanbul ignore next */++cov_1ahls872iq.f[4];++cov_1ahls872iq.s[9];this.setState({ type: type });} }, { key: 'nextMonth', value: function nextMonth() {/* istanbul ignore next */++cov_1ahls872iq.f[5];var _ref4 = (++cov_1ahls872iq.s[10], this.state),isGregorian = _ref4.isGregorian;var monthFormat = /* istanbul ignore next */(++cov_1ahls872iq.s[11], isGregorian ? /* istanbul ignore next */(++cov_1ahls872iq.b[7][0], 'Month') : /* istanbul ignore next */(++cov_1ahls872iq.b[7][1], 'jMonth')); /* istanbul ignore next */++cov_1ahls872iq.s[12];this.setState({ month: this.state.month.clone().add(1, monthFormat) });} }, { key: 'prevMonth', value: function prevMonth() {/* istanbul ignore next */++cov_1ahls872iq.f[6];var _ref5 = (++cov_1ahls872iq.s[13], this.state),isGregorian = _ref5.isGregorian;var monthFormat = /* istanbul ignore next */(++cov_1ahls872iq.s[14], isGregorian ? /* istanbul ignore next */(++cov_1ahls872iq.b[8][0], 'Month') : /* istanbul ignore next */(++cov_1ahls872iq.b[8][1], 'jMonth')); /* istanbul ignore next */++cov_1ahls872iq.s[15];this.setState({ month: this.state.month.clone().subtract(1, monthFormat) });} }, { key: 'selectDay', value: function selectDay(selectedDay) {/* istanbul ignore next */++cov_1ahls872iq.f[7];var _ref6 = (++cov_1ahls872iq.s[16], this.state),month = _ref6.month,isGregorian = _ref6.isGregorian;var yearMonthFormat = /* istanbul ignore next */(++cov_1ahls872iq.s[17], isGregorian ? /* istanbul ignore next */(++cov_1ahls872iq.b[9][0], 'YYYYMM') : /* istanbul ignore next */(++cov_1ahls872iq.b[9][1], 'jYYYYjMM')); // Because there's no `m1.isSame(m2, 'jMonth')`
+      /* istanbul ignore next */++cov_1ahls872iq.s[18];if (selectedDay.format(yearMonthFormat) !== month.format(yearMonthFormat)) {/* istanbul ignore next */++cov_1ahls872iq.b[10][0];++cov_1ahls872iq.s[19];this.setState({ month: selectedDay });} else /* istanbul ignore next */{++cov_1ahls872iq.b[10][1];}++cov_1ahls872iq.s[20];this.setState({ selectedDay: selectedDay });} }, { key: 'handleClickOutside', value: function handleClickOutside(event) {/* istanbul ignore next */++cov_1ahls872iq.f[9];++cov_1ahls872iq.s[25];if (this.props.onClickOutside) {/* istanbul ignore next */++cov_1ahls872iq.b[12][0];++cov_1ahls872iq.s[26];this.props.onClickOutside(event);} else /* istanbul ignore next */{++cov_1ahls872iq.b[12][1];}} }, { key: 'renderMonthSelector', value: function renderMonthSelector()
+    {/* istanbul ignore next */++cov_1ahls872iq.f[10];var _ref7 = (++cov_1ahls872iq.s[27],
+      this.state),month = _ref7.month,isGregorian = _ref7.isGregorian; /* istanbul ignore next */var _ref8 = (++cov_1ahls872iq.s[28],
+      this.props),styles = _ref8.styles; /* istanbul ignore next */++cov_1ahls872iq.s[29];
+      return (/* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_MonthSelector2.default, /* istanbul ignore next */{ styles: styles, isGregorian: isGregorian, selectedMonth: month }));
+    } }, { key: 'renderDays', value: function renderDays()
+
+    {/* istanbul ignore next */var _this2 = this;++cov_1ahls872iq.f[11];var _ref9 = (++cov_1ahls872iq.s[30],
+      this.state),month = _ref9.month,selectedDay = _ref9.selectedDay,isGregorian = _ref9.isGregorian; /* istanbul ignore next */var _ref10 = (++cov_1ahls872iq.s[31],
+      this.props),children = _ref10.children,min = _ref10.min,max = _ref10.max,styles = _ref10.styles,outsideClickIgnoreClass = _ref10.outsideClickIgnoreClass;
+
+      var days = /* istanbul ignore next */void 0; /* istanbul ignore next */++cov_1ahls872iq.s[32];
+
+      if (this.lastRenderedMonth === month) {/* istanbul ignore next */++cov_1ahls872iq.b[13][0];++cov_1ahls872iq.s[33];
+        days = this.days;
+      } else {/* istanbul ignore next */++cov_1ahls872iq.b[13][1];++cov_1ahls872iq.s[34];
+        days = /* istanbul ignore next */(0, _momentHelper.getDaysOfMonth)(month, isGregorian); /* istanbul ignore next */++cov_1ahls872iq.s[35];
+        this.days = days; /* istanbul ignore next */++cov_1ahls872iq.s[36];
+        this.lastRenderedMonth = month;
+      }
+
+      var monthFormat = /* istanbul ignore next */(++cov_1ahls872iq.s[37], isGregorian ? /* istanbul ignore next */(++cov_1ahls872iq.b[14][0], 'MM') : /* istanbul ignore next */(++cov_1ahls872iq.b[14][1], 'jMM'));
+      var dateFormat = /* istanbul ignore next */(++cov_1ahls872iq.s[38], isGregorian ? /* istanbul ignore next */(++cov_1ahls872iq.b[15][0], 'YYYYMMDD') : /* istanbul ignore next */(++cov_1ahls872iq.b[15][1], 'jYYYYjMMjDD')); /* istanbul ignore next */++cov_1ahls872iq.s[39];
+
+
+      return (
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */null,
+          children,
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_DaysViewHeading2.default, /* istanbul ignore next */{ isGregorian: isGregorian, styles: styles, month: month }),
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_DaysOfWeek2.default, /* istanbul ignore next */{ styles: styles, isGregorian: isGregorian }),
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: styles.dayPickerContainer },
+
+            days.map(function (day) {/* istanbul ignore next */++cov_1ahls872iq.f[12];
+              var isCurrentMonth = /* istanbul ignore next */(++cov_1ahls872iq.s[40], day.format(monthFormat) === month.format(monthFormat));
+              var disabled = /* istanbul ignore next */(++cov_1ahls872iq.s[41], /* istanbul ignore next */(++cov_1ahls872iq.b[16][0], min ? /* istanbul ignore next */(++cov_1ahls872iq.b[17][0], day.isBefore(min)) : /* istanbul ignore next */(++cov_1ahls872iq.b[17][1], false)) || /* istanbul ignore next */(++cov_1ahls872iq.b[16][1], max ? /* istanbul ignore next */(++cov_1ahls872iq.b[18][0], day.isAfter(max)) : /* istanbul ignore next */(++cov_1ahls872iq.b[18][1], false)));
+              var selected = /* istanbul ignore next */(++cov_1ahls872iq.s[42], selectedDay ? /* istanbul ignore next */(++cov_1ahls872iq.b[19][0], selectedDay.isSame(day, 'day')) : /* istanbul ignore next */(++cov_1ahls872iq.b[19][1], false)); /* istanbul ignore next */++cov_1ahls872iq.s[43];
+
+              return (
+                /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Day2.default, /* istanbul ignore next */{
+                  isGregorian: isGregorian,
+                  key: day.format(dateFormat),
+                  onClick: /* istanbul ignore next */_this2.handleClickOnDay,
+                  day: day,
+                  disabled: disabled,
+                  selected: selected,
+                  isCurrentMonth: isCurrentMonth,
+                  styles: styles }));
+
+
+            }))));
+
+
+
+
+    } }, { key: 'render', value: function render()
+
+    {/* istanbul ignore next */++cov_1ahls872iq.f[13];var _ref11 = (++cov_1ahls872iq.s[44],
+
+
+
+
+
+
+
+
+      this.props),selectedDay = _ref11.selectedDay,min = _ref11.min,max = _ref11.max,onClickOutside = _ref11.onClickOutside,outsideClickIgnoreClass = _ref11.outsideClickIgnoreClass,styles = _ref11.styles,className = _ref11.className; /* istanbul ignore next */var _ref12 = (++cov_1ahls872iq.s[45],
+      this.state),mode = _ref12.mode,isGregorian = _ref12.isGregorian;
+
+      var jalaaliClassName = /* istanbul ignore next */(++cov_1ahls872iq.s[46], isGregorian ? /* istanbul ignore next */(++cov_1ahls872iq.b[20][0], '') : /* istanbul ignore next */(++cov_1ahls872iq.b[20][1], 'jalaali ')); /* istanbul ignore next */++cov_1ahls872iq.s[47];
+
+      return (
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: styles.calendarContainer + ' ' + jalaaliClassName + className },
+          mode === 'monthSelector' ? /* istanbul ignore next */(++cov_1ahls872iq.b[21][0], this.renderMonthSelector()) : /* istanbul ignore next */(++cov_1ahls872iq.b[21][1], this.renderDays())));
+
+
+    } }]);return Calendar;}(_react.Component); /* istanbul ignore next */Calendar.propTypes = { min: /* istanbul ignore next */_react.PropTypes.object, max: /* istanbul ignore next */_react.PropTypes.object, styles: /* istanbul ignore next */_react.PropTypes.object, selectedDay: /* istanbul ignore next */_react.PropTypes.object, defaultMonth: /* istanbul ignore next */_react.PropTypes.object, onSelect: /* istanbul ignore next */_react.PropTypes.func, onClickOutside: /* istanbul ignore next */_react.PropTypes.func, containerProps: /* istanbul ignore next */_react.PropTypes.object, isGregorian: /* istanbul ignore next */_react.PropTypes.bool }; /* istanbul ignore next */Calendar.childContextTypes = { nextMonth: /* istanbul ignore next */_react.PropTypes.func.isRequired, prevMonth: /* istanbul ignore next */_react.PropTypes.func.isRequired, setCalendarMode: /* istanbul ignore next */_react.PropTypes.func.isRequired, setMonth: /* istanbul ignore next */_react.PropTypes.func.isRequired, setType: /* istanbul ignore next */_react.PropTypes.func.isRequired }; /* istanbul ignore next */Calendar.defaultProps = { styles: /* istanbul ignore next */_DefaultStyles.defaultStyles, containerProps: {}, isGregorian: true }; /* istanbul ignore next */exports.default =
+
+
+/* istanbul ignore next */(0, _reactOnclickoutside2.default)(Calendar);

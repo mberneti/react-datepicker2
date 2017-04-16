@@ -1,0 +1,16 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_1e1liwrctw = function () {var path = '/mnt/g/Work/Current/projects/react-datepicker2/docs/src/hero_example.js',hash = '275c0f09499b2c92289bf518742a670a48d0a83e',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/mnt/g/Work/Current/projects/react-datepicker2/docs/src/hero_example.js', statementMap: { '0': { start: { line: 7, column: 4 }, end: { line: 9, column: 5 } }, '1': { start: { line: 12, column: 4 }, end: { line: 15, column: 6 } }, '2': { start: { line: 13, column: 25 }, end: { line: 13, column: 49 } } }, fnMap: { '0': { name: '(anonymous_0)', decl: { start: { line: 13, column: 16 }, end: { line: 13, column: 17 } }, loc: { start: { line: 13, column: 25 }, end: { line: 13, column: 49 } }, line: 13 } }, branchMap: {}, s: { '0': 0, '1': 0, '2': 0 }, f: { '0': 0 }, b: {}, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_moment = require('moment'); /* istanbul ignore next */var _moment2 = _interopRequireDefault(_moment);
+var /* istanbul ignore next */_src = require('../../src'); /* istanbul ignore next */var _src2 = _interopRequireDefault(_src);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}exports.default =
+
+/* istanbul ignore next */_react2.default.createClass({ /* istanbul ignore next */displayName: 'hero_example', /* istanbul ignore next */
+  getInitialState: function getInitialState() {/* istanbul ignore next */++cov_1e1liwrctw.s[0];
+    return {
+      value: /* istanbul ignore next */(0, _moment2.default)() };
+
+  }, /* istanbul ignore next */
+  render: function render() {/* istanbul ignore next */var _this = this;++cov_1e1liwrctw.s[1];
+    return (/* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_src2.default, /* istanbul ignore next */{
+        onChange: function /* istanbul ignore next */onChange(value) {/* istanbul ignore next */++cov_1e1liwrctw.f[0];++cov_1e1liwrctw.s[2];return (/* istanbul ignore next */_this.setState({ value: value }));},
+        value: this.state.value }));
+
+  } });

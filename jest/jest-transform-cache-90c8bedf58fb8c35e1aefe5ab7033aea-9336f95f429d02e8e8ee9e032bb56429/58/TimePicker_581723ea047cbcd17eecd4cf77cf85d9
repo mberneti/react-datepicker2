@@ -1,0 +1,232 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_ng9san7i8 = function () {var path = '/mnt/g/Work/Current/projects/react-datepicker2/src/components/TimePicker/TimePicker.js',hash = '3538795bfe161418c0b444fe7db3c3305c48753a',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/mnt/g/Work/Current/projects/react-datepicker2/src/components/TimePicker/TimePicker.js', statementMap: { '0': { start: { line: 11, column: 2 }, end: { line: 11, column: 26 } }, '1': { start: { line: 14, column: 15 }, end: { line: 230, column: 2 } }, '2': { start: { line: 47, column: 4 }, end: { line: 66, column: 6 } }, '3': { start: { line: 70, column: 4 }, end: { line: 70, column: 58 } }, '4': { start: { line: 71, column: 84 }, end: { line: 71, column: 94 } }, '5': { start: { line: 72, column: 4 }, end: { line: 75, column: 6 } }, '6': { start: { line: 79, column: 28 }, end: { line: 79, column: 37 } }, '7': { start: { line: 80, column: 4 }, end: { line: 84, column: 5 } }, '8': { start: { line: 81, column: 6 }, end: { line: 83, column: 9 } }, '9': { start: { line: 85, column: 4 }, end: { line: 87, column: 5 } }, '10': { start: { line: 86, column: 6 }, end: { line: 86, column: 30 } }, '11': { start: { line: 91, column: 4 }, end: { line: 91, column: 25 } }, '12': { start: { line: 95, column: 4 }, end: { line: 95, column: 24 } }, '13': { start: { line: 96, column: 4 }, end: { line: 96, column: 24 } }, '14': { start: { line: 100, column: 4 }, end: { line: 100, column: 23 } }, '15': { start: { line: 104, column: 4 }, end: { line: 104, column: 24 } }, '16': { start: { line: 105, column: 4 }, end: { line: 105, column: 29 } }, '17': { start: { line: 109, column: 4 }, end: { line: 111, column: 5 } }, '18': { start: { line: 110, column: 6 }, end: { line: 110, column: 25 } }, '19': { start: { line: 115, column: 4 }, end: { line: 119, column: 5 } }, '20': { start: { line: 116, column: 6 }, end: { line: 118, column: 9 } }, '21': { start: { line: 120, column: 4 }, end: { line: 120, column: 31 } }, '22': { start: { line: 124, column: 17 }, end: { line: 124, column: 34 } }, '23': { start: { line: 126, column: 4 }, end: { line: 134, column: 5 } }, '24': { start: { line: 127, column: 6 }, end: { line: 127, column: 32 } }, '25': { start: { line: 128, column: 11 }, end: { line: 134, column: 5 } }, '26': { start: { line: 129, column: 6 }, end: { line: 129, column: 23 } }, '27': { start: { line: 130, column: 11 }, end: { line: 134, column: 5 } }, '28': { start: { line: 131, column: 6 }, end: { line: 131, column: 23 } }, '29': { start: { line: 133, column: 6 }, end: { line: 133, column: 26 } }, '30': { start: { line: 136, column: 4 }, end: { line: 138, column: 5 } }, '31': { start: { line: 137, column: 8 }, end: { line: 137, column: 51 } }, '32': { start: { line: 140, column: 4 }, end: { line: 140, column: 18 } }, '33': { start: { line: 148, column: 8 }, end: { line: 148, column: 18 } }, '34': { start: { line: 149, column: 4 }, end: { line: 171, column: 6 } }, '35': { start: { line: 175, column: 32 }, end: { line: 175, column: 42 } }, '36': { start: { line: 176, column: 4 }, end: { line: 188, column: 5 } }, '37': { start: { line: 177, column: 6 }, end: { line: 179, column: 19 } }, '38': { start: { line: 180, column: 20 }, end: { line: 182, column: 7 } }, '39': { start: { line: 183, column: 6 }, end: { line: 187, column: 7 } }, '40': { start: { line: 184, column: 8 }, end: { line: 184, column: 22 } }, '41': { start: { line: 186, column: 8 }, end: { line: 186, column: 23 } }, '42': { start: { line: 196, column: 8 }, end: { line: 196, column: 18 } }, '43': { start: { line: 197, column: 28 }, end: { line: 197, column: 38 } }, '44': { start: { line: 199, column: 4 }, end: { line: 201, column: 5 } }, '45': { start: { line: 200, column: 6 }, end: { line: 200, column: 51 } }, '46': { start: { line: 202, column: 4 }, end: { line: 228, column: 6 } } }, fnMap: { '0': { name: 'noop', decl: { start: { line: 7, column: 9 }, end: { line: 7, column: 13 } }, loc: { start: { line: 7, column: 16 }, end: { line: 8, column: 1 } }, line: 7 }, '1': { name: 'refFn', decl: { start: { line: 10, column: 9 }, end: { line: 10, column: 14 } }, loc: { start: { line: 10, column: 33 }, end: { line: 12, column: 1 } }, line: 10 } }, branchMap: { '0': { loc: { start: { line: 71, column: 39 }, end: { line: 71, column: 57 } }, type: 'default-arg', locations: [{ start: { line: 71, column: 46 }, end: { line: 71, column: 57 } }], line: 71 }, '1': { loc: { start: { line: 71, column: 59 }, end: { line: 71, column: 79 } }, type: 'default-arg', locations: [{ start: { line: 71, column: 67 }, end: { line: 71, column: 79 } }], line: 71 }, '2': { loc: { start: { line: 80, column: 4 }, end: { line: 84, column: 5 } }, type: 'if', locations: [{ start: { line: 80, column: 4 }, end: { line: 84, column: 5 } }, { start: { line: 80, column: 4 }, end: { line: 84, column: 5 } }], line: 80 }, '3': { loc: { start: { line: 85, column: 4 }, end: { line: 87, column: 5 } }, type: 'if', locations: [{ start: { line: 85, column: 4 }, end: { line: 87, column: 5 } }, { start: { line: 85, column: 4 }, end: { line: 87, column: 5 } }], line: 85 }, '4': { loc: { start: { line: 109, column: 4 }, end: { line: 111, column: 5 } }, type: 'if', locations: [{ start: { line: 109, column: 4 }, end: { line: 111, column: 5 } }, { start: { line: 109, column: 4 }, end: { line: 111, column: 5 } }], line: 109 }, '5': { loc: { start: { line: 115, column: 4 }, end: { line: 119, column: 5 } }, type: 'if', locations: [{ start: { line: 115, column: 4 }, end: { line: 119, column: 5 } }, { start: { line: 115, column: 4 }, end: { line: 119, column: 5 } }], line: 115 }, '6': { loc: { start: { line: 126, column: 4 }, end: { line: 134, column: 5 } }, type: 'if', locations: [{ start: { line: 126, column: 4 }, end: { line: 134, column: 5 } }, { start: { line: 126, column: 4 }, end: { line: 134, column: 5 } }], line: 126 }, '7': { loc: { start: { line: 128, column: 11 }, end: { line: 134, column: 5 } }, type: 'if', locations: [{ start: { line: 128, column: 11 }, end: { line: 134, column: 5 } }, { start: { line: 128, column: 11 }, end: { line: 134, column: 5 } }], line: 128 }, '8': { loc: { start: { line: 130, column: 11 }, end: { line: 134, column: 5 } }, type: 'if', locations: [{ start: { line: 130, column: 11 }, end: { line: 134, column: 5 } }, { start: { line: 130, column: 11 }, end: { line: 134, column: 5 } }], line: 130 }, '9': { loc: { start: { line: 136, column: 4 }, end: { line: 138, column: 5 } }, type: 'if', locations: [{ start: { line: 136, column: 4 }, end: { line: 138, column: 5 } }, { start: { line: 136, column: 4 }, end: { line: 138, column: 5 } }], line: 136 }, '10': { loc: { start: { line: 176, column: 4 }, end: { line: 188, column: 5 } }, type: 'if', locations: [{ start: { line: 176, column: 4 }, end: { line: 188, column: 5 } }, { start: { line: 176, column: 4 }, end: { line: 188, column: 5 } }], line: 176 }, '11': { loc: { start: { line: 183, column: 6 }, end: { line: 187, column: 7 } }, type: 'if', locations: [{ start: { line: 183, column: 6 }, end: { line: 187, column: 7 } }, { start: { line: 183, column: 6 }, end: { line: 187, column: 7 } }], line: 183 }, '12': { loc: { start: { line: 199, column: 4 }, end: { line: 201, column: 5 } }, type: 'if', locations: [{ start: { line: 199, column: 4 }, end: { line: 201, column: 5 } }, { start: { line: 199, column: 4 }, end: { line: 201, column: 5 } }], line: 199 }, '13': { loc: { start: { line: 199, column: 8 }, end: { line: 199, column: 32 } }, type: 'binary-expr', locations: [{ start: { line: 199, column: 8 }, end: { line: 199, column: 17 } }, { start: { line: 199, column: 21 }, end: { line: 199, column: 32 } }], line: 199 }, '14': { loc: { start: { line: 210, column: 16 }, end: { line: 210, column: 41 } }, type: 'cond-expr', locations: [{ start: { line: 210, column: 27 }, end: { line: 210, column: 29 } }, { start: { line: 210, column: 32 }, end: { line: 210, column: 41 } }], line: 210 }, '15': { loc: { start: { line: 223, column: 39 }, end: { line: 223, column: 84 } }, type: 'binary-expr', locations: [{ start: { line: 223, column: 39 }, end: { line: 223, column: 44 } }, { start: { line: 223, column: 48 }, end: { line: 223, column: 78 } }, { start: { line: 223, column: 82 }, end: { line: 223, column: 84 } }], line: 223 } }, s: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0, '6': 0, '7': 0, '8': 0, '9': 0, '10': 0, '11': 0, '12': 0, '13': 0, '14': 0, '15': 0, '16': 0, '17': 0, '18': 0, '19': 0, '20': 0, '21': 0, '22': 0, '23': 0, '24': 0, '25': 0, '26': 0, '27': 0, '28': 0, '29': 0, '30': 0, '31': 0, '32': 0, '33': 0, '34': 0, '35': 0, '36': 0, '37': 0, '38': 0, '39': 0, '40': 0, '41': 0, '42': 0, '43': 0, '44': 0, '45': 0, '46': 0 }, f: { '0': 0, '1': 0 }, b: { '0': [0], '1': [0], '2': [0, 0], '3': [0, 0], '4': [0, 0], '5': [0, 0], '6': [0, 0], '7': [0, 0], '8': [0, 0], '9': [0, 0], '10': [0, 0], '11': [0, 0], '12': [0, 0], '13': [0, 0], '14': [0, 0], '15': [0, 0, 0] }, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_rcTrigger = require('rc-trigger'); /* istanbul ignore next */var _rcTrigger2 = _interopRequireDefault(_rcTrigger);
+var /* istanbul ignore next */_Panel = require('./Panel'); /* istanbul ignore next */var _Panel2 = _interopRequireDefault(_Panel);
+var /* istanbul ignore next */_placements = require('./placements'); /* istanbul ignore next */var _placements2 = _interopRequireDefault(_placements);
+var /* istanbul ignore next */_moment = require('moment'); /* istanbul ignore next */var _moment2 = _interopRequireDefault(_moment);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+function noop() {/* istanbul ignore next */++cov_ng9san7i8.f[0];
+}
+
+function refFn(field, component) {/* istanbul ignore next */++cov_ng9san7i8.f[1];++cov_ng9san7i8.s[0];
+  this[field] = component;
+}
+
+var Picker = /* istanbul ignore next */(++cov_ng9san7i8.s[1], /* istanbul ignore next */_react2.default.createClass({ /* istanbul ignore next */displayName: 'Picker',
+  propTypes: {
+    prefixCls: /* istanbul ignore next */_react.PropTypes.string,
+    clearText: /* istanbul ignore next */_react.PropTypes.string,
+    value: /* istanbul ignore next */_react.PropTypes.object,
+    defaultOpenValue: /* istanbul ignore next */_react.PropTypes.object,
+    disabled: /* istanbul ignore next */_react.PropTypes.bool,
+    allowEmpty: /* istanbul ignore next */_react.PropTypes.bool,
+    defaultValue: /* istanbul ignore next */_react.PropTypes.object,
+    open: /* istanbul ignore next */_react.PropTypes.bool,
+    defaultOpen: /* istanbul ignore next */_react.PropTypes.bool,
+    align: /* istanbul ignore next */_react.PropTypes.object,
+    placement: /* istanbul ignore next */_react.PropTypes.any,
+    transitionName: /* istanbul ignore next */_react.PropTypes.string,
+    getPopupContainer: /* istanbul ignore next */_react.PropTypes.func,
+    placeholder: /* istanbul ignore next */_react.PropTypes.string,
+    format: /* istanbul ignore next */_react.PropTypes.string,
+    showHour: /* istanbul ignore next */_react.PropTypes.bool,
+    style: /* istanbul ignore next */_react.PropTypes.object,
+    className: /* istanbul ignore next */_react.PropTypes.string,
+    showSecond: /* istanbul ignore next */_react.PropTypes.bool,
+    disabledHours: /* istanbul ignore next */_react.PropTypes.func,
+    disabledMinutes: /* istanbul ignore next */_react.PropTypes.func,
+    disabledSeconds: /* istanbul ignore next */_react.PropTypes.func,
+    hideDisabledOptions: /* istanbul ignore next */_react.PropTypes.bool,
+    onChange: /* istanbul ignore next */_react.PropTypes.func,
+    onOpen: /* istanbul ignore next */_react.PropTypes.func,
+    onClose: /* istanbul ignore next */_react.PropTypes.func,
+    showAMPM: /* istanbul ignore next */_react.PropTypes.bool,
+    panelClassName: /* istanbul ignore next */_react.PropTypes.string,
+    isGregorian: /* istanbul ignore next */_react.PropTypes.bool }, /* istanbul ignore next */
+
+  getDefaultProps: function getDefaultProps() {/* istanbul ignore next */++cov_ng9san7i8.s[2];
+    return {
+      clearText: 'clear',
+      prefixCls: 'rc-time-picker',
+      defaultOpen: false,
+      style: {},
+      className: '',
+      align: {},
+      defaultOpenValue: /* istanbul ignore next */(0, _moment2.default)(),
+      allowEmpty: true,
+      showHour: true,
+      showSecond: true,
+      disabledHours: noop,
+      disabledMinutes: noop,
+      disabledSeconds: noop,
+      hideDisabledOptions: false,
+      placement: 'bottomLeft',
+      onChange: noop,
+      onOpen: noop,
+      onClose: noop };
+
+  }, /* istanbul ignore next */
+
+  getInitialState: function getInitialState() {/* istanbul ignore next */++cov_ng9san7i8.s[3];
+    this.savePanelRef = refFn.bind(this, 'panelInstance'); /* istanbul ignore next */var _ref = (++cov_ng9san7i8.s[4],
+    this.props),defaultOpen = _ref.defaultOpen,defaultValue = _ref.defaultValue,_ref$open = _ref.open,open = _ref$open === undefined ? (++cov_ng9san7i8.b[0][0], defaultOpen) : _ref$open,_ref$value = _ref.value,value = _ref$value === undefined ? (++cov_ng9san7i8.b[1][0], defaultValue) : _ref$value; /* istanbul ignore next */++cov_ng9san7i8.s[5];
+    return {
+      open: open,
+      value: value };
+
+  }, /* istanbul ignore next */
+
+  componentWillReceiveProps: function componentWillReceiveProps(nextProps) {/* istanbul ignore next */var _ref2 = (++cov_ng9san7i8.s[6],
+    nextProps),value = _ref2.value,open = _ref2.open; /* istanbul ignore next */++cov_ng9san7i8.s[7];
+    if ('value' in nextProps) {/* istanbul ignore next */++cov_ng9san7i8.b[2][0];++cov_ng9san7i8.s[8];
+      this.setState({
+        value: value });
+
+    } else /* istanbul ignore next */{++cov_ng9san7i8.b[2][1];}++cov_ng9san7i8.s[9];
+    if (open !== undefined) {/* istanbul ignore next */++cov_ng9san7i8.b[3][0];++cov_ng9san7i8.s[10];
+      this.setState({ open: open });
+    } else /* istanbul ignore next */{++cov_ng9san7i8.b[3][1];}
+  }, /* istanbul ignore next */
+
+  onPanelChange: function onPanelChange(value) {/* istanbul ignore next */++cov_ng9san7i8.s[11];
+    this.setValue(value);
+  }, /* istanbul ignore next */
+
+  onPanelClear: function onPanelClear() {/* istanbul ignore next */++cov_ng9san7i8.s[12];
+    this.setValue(null); /* istanbul ignore next */++cov_ng9san7i8.s[13];
+    this.setOpen(false);
+  }, /* istanbul ignore next */
+
+  onVisibleChange: function onVisibleChange(open) {/* istanbul ignore next */++cov_ng9san7i8.s[14];
+    this.setOpen(open);
+  }, /* istanbul ignore next */
+
+  onEsc: function onEsc() {/* istanbul ignore next */++cov_ng9san7i8.s[15];
+    this.setOpen(false); /* istanbul ignore next */++cov_ng9san7i8.s[16];
+    this.refs.picker.focus();
+  }, /* istanbul ignore next */
+
+  onKeyDown: function onKeyDown(e) {/* istanbul ignore next */++cov_ng9san7i8.s[17];
+    if (e.keyCode === 40) {/* istanbul ignore next */++cov_ng9san7i8.b[4][0];++cov_ng9san7i8.s[18];
+      this.setOpen(true);
+    } else /* istanbul ignore next */{++cov_ng9san7i8.b[4][1];}
+  }, /* istanbul ignore next */
+
+  setValue: function setValue(value) {/* istanbul ignore next */++cov_ng9san7i8.s[19];
+    if (!('value' in this.props)) {/* istanbul ignore next */++cov_ng9san7i8.b[5][0];++cov_ng9san7i8.s[20];
+      this.setState({
+        value: value });
+
+    } else /* istanbul ignore next */{++cov_ng9san7i8.b[5][1];}++cov_ng9san7i8.s[21];
+    this.props.onChange(value);
+  }, /* istanbul ignore next */
+
+  getFormat: function getFormat() {
+    var format = /* istanbul ignore next */(++cov_ng9san7i8.s[22], this.props.format); /* istanbul ignore next */++cov_ng9san7i8.s[23];
+
+    if (this.props.format) {/* istanbul ignore next */++cov_ng9san7i8.b[6][0];++cov_ng9san7i8.s[24];
+      format = this.props.format;
+    } else {/* istanbul ignore next */++cov_ng9san7i8.b[6][1];++cov_ng9san7i8.s[25];if (!this.props.showSecond) {/* istanbul ignore next */++cov_ng9san7i8.b[7][0];++cov_ng9san7i8.s[26];
+          format = 'HH:mm';
+        } else {/* istanbul ignore next */++cov_ng9san7i8.b[7][1];++cov_ng9san7i8.s[27];if (!this.props.showHour) {/* istanbul ignore next */++cov_ng9san7i8.b[8][0];++cov_ng9san7i8.s[28];
+              format = 'mm:ss';
+            } else {/* istanbul ignore next */++cov_ng9san7i8.b[8][1];++cov_ng9san7i8.s[29];
+              format = 'HH:mm:ss';
+            }}} /* istanbul ignore next */++cov_ng9san7i8.s[30];
+
+    if (this.props.showAMPM) {/* istanbul ignore next */++cov_ng9san7i8.b[9][0];++cov_ng9san7i8.s[31];
+      format = format.replace('HH', 'hh') + ' A';
+    } else /* istanbul ignore next */{++cov_ng9san7i8.b[9][1];}++cov_ng9san7i8.s[32];
+
+    return format;
+  }, /* istanbul ignore next */
+
+  getPanelElement: function getPanelElement() {/* istanbul ignore next */var _ref3 = (++cov_ng9san7i8.s[33],
+
+
+
+
+    this.props),prefixCls = _ref3.prefixCls,placeholder = _ref3.placeholder,disabledHours = _ref3.disabledHours,disabledMinutes = _ref3.disabledMinutes,disabledSeconds = _ref3.disabledSeconds,hideDisabledOptions = _ref3.hideDisabledOptions,allowEmpty = _ref3.allowEmpty,showHour = _ref3.showHour,showSecond = _ref3.showSecond,showAMPM = _ref3.showAMPM,defaultOpenValue = _ref3.defaultOpenValue,clearText = _ref3.clearText,isGregorian = _ref3.isGregorian; /* istanbul ignore next */++cov_ng9san7i8.s[34];
+    return (
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Panel2.default, /* istanbul ignore next */{
+        isGregorian: isGregorian,
+        clearText: clearText,
+        prefixCls: /* istanbul ignore next */prefixCls + '-panel',
+        ref: this.savePanelRef,
+        value: this.state.value,
+        onChange: this.onPanelChange,
+        onClear: this.onPanelClear,
+        defaultOpenValue: defaultOpenValue,
+        showHour: showHour,
+        onEsc: this.onEsc,
+        showSecond: showSecond,
+        showAMPM: showAMPM,
+        allowEmpty: allowEmpty,
+        format: this.getFormat(),
+        placeholder: placeholder,
+        disabledHours: disabledHours,
+        disabledMinutes: disabledMinutes,
+        disabledSeconds: disabledSeconds,
+        hideDisabledOptions: hideDisabledOptions }));
+
+
+  }, /* istanbul ignore next */
+
+  setOpen: function setOpen(open, callback) {/* istanbul ignore next */var _ref4 = (++cov_ng9san7i8.s[35],
+    this.props),onOpen = _ref4.onOpen,onClose = _ref4.onClose; /* istanbul ignore next */++cov_ng9san7i8.s[36];
+    if (this.state.open !== open) {/* istanbul ignore next */++cov_ng9san7i8.b[10][0];++cov_ng9san7i8.s[37];
+      this.setState({
+        open: open },
+      callback);
+      var event = /* istanbul ignore next */(++cov_ng9san7i8.s[38], {
+        open: open }); /* istanbul ignore next */++cov_ng9san7i8.s[39];
+
+      if (open) {/* istanbul ignore next */++cov_ng9san7i8.b[11][0];++cov_ng9san7i8.s[40];
+        onOpen(event);
+      } else {/* istanbul ignore next */++cov_ng9san7i8.b[11][1];++cov_ng9san7i8.s[41];
+        onClose(event);
+      }
+    } else /* istanbul ignore next */{++cov_ng9san7i8.b[10][1];}
+  }, /* istanbul ignore next */
+
+  render: function render() {/* istanbul ignore next */var _ref5 = (++cov_ng9san7i8.s[42],
+
+
+
+
+    this.props),panelClassName = _ref5.panelClassName,prefixCls = _ref5.prefixCls,placeholder = _ref5.placeholder,placement = _ref5.placement,align = _ref5.align,disabled = _ref5.disabled,transitionName = _ref5.transitionName,style = _ref5.style,className = _ref5.className,showHour = _ref5.showHour,showSecond = _ref5.showSecond,getPopupContainer = _ref5.getPopupContainer; /* istanbul ignore next */var _ref6 = (++cov_ng9san7i8.s[43],
+    this.state),open = _ref6.open,value = _ref6.value;
+    var popupClassName = /* istanbul ignore next */void 0; /* istanbul ignore next */++cov_ng9san7i8.s[44];
+    if ( /* istanbul ignore next */(++cov_ng9san7i8.b[13][0], !showHour) || /* istanbul ignore next */(++cov_ng9san7i8.b[13][1], !showSecond)) {/* istanbul ignore next */++cov_ng9san7i8.b[12][0];++cov_ng9san7i8.s[45];
+      popupClassName = /* istanbul ignore next */prefixCls + '-panel-narrow';
+    } else /* istanbul ignore next */{++cov_ng9san7i8.b[12][1];}++cov_ng9san7i8.s[46];
+    return (
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_rcTrigger2.default, /* istanbul ignore next */{
+          prefixCls: /* istanbul ignore next */prefixCls + '-panel  ' + panelClassName,
+          popupClassName: popupClassName,
+          popup: this.getPanelElement(),
+          popupAlign: align,
+          builtinPlacements: /* istanbul ignore next */_placements2.default,
+          popupPlacement: placement,
+          action: disabled ? /* istanbul ignore next */(++cov_ng9san7i8.b[14][0], []) : /* istanbul ignore next */(++cov_ng9san7i8.b[14][1], ['click']),
+          destroyPopupOnHide: /* istanbul ignore next */true,
+          getPopupContainer: getPopupContainer,
+          popupTransitionName: transitionName,
+          popupVisible: open,
+          onPopupVisibleChange: this.onVisibleChange },
+
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'span', /* istanbul ignore next */{ className: /* istanbul ignore next */prefixCls + ' ' + className, style: style },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'input', /* istanbul ignore next */{
+            className: /* istanbul ignore next */prefixCls + '-input',
+            ref: 'picker', type: 'text', placeholder: placeholder,
+            readOnly: /* istanbul ignore next */true,
+            onKeyDown: this.onKeyDown,
+            disabled: disabled, value: /* istanbul ignore next */(++cov_ng9san7i8.b[15][0], value) && /* istanbul ignore next */(++cov_ng9san7i8.b[15][1], value.format(this.getFormat())) || /* istanbul ignore next */(++cov_ng9san7i8.b[15][2], '') }),
+
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'span', /* istanbul ignore next */{ className: /* istanbul ignore next */prefixCls + '-icon' }))));
+
+
+
+  } })); /* istanbul ignore next */exports.default =
+
+
+Picker;

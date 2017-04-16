@@ -1,0 +1,44 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_rp5l9qu0f = function () {var path = '/mnt/g/Work/Current/projects/react-datepicker2/docs/src/examples/switchIsGregorian.js',hash = '50d90331cebeec112a3fa1dbe7cb20330a6997ba',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/mnt/g/Work/Current/projects/react-datepicker2/docs/src/examples/switchIsGregorian.js', statementMap: { '0': { start: { line: 5, column: 18 }, end: { line: 25, column: 2 } }, '1': { start: { line: 7, column: 4 }, end: { line: 10, column: 5 } }, '2': { start: { line: 13, column: 4 }, end: { line: 23, column: 16 } }, '3': { start: { line: 17, column: 33 }, end: { line: 17, column: 57 } }, '4': { start: { line: 20, column: 35 }, end: { line: 20, column: 90 } }, '5': { start: { line: 27, column: 14 }, end: { line: 27, column: 34 } }, '6': { start: { line: 28, column: 13 }, end: { line: 42, column: 1 } }, '7': { start: { line: 43, column: 26 }, end: { line: 43, column: 52 } } }, fnMap: { '0': { name: '(anonymous_0)', decl: { start: { line: 17, column: 24 }, end: { line: 17, column: 25 } }, loc: { start: { line: 17, column: 33 }, end: { line: 17, column: 57 } }, line: 17 }, '1': { name: '(anonymous_1)', decl: { start: { line: 20, column: 29 }, end: { line: 20, column: 30 } }, loc: { start: { line: 20, column: 35 }, end: { line: 20, column: 90 } }, line: 20 } }, branchMap: { '0': { loc: { start: { line: 21, column: 15 }, end: { line: 21, column: 79 } }, type: 'cond-expr', locations: [{ start: { line: 21, column: 38 }, end: { line: 21, column: 57 } }, { start: { line: 21, column: 58 }, end: { line: 21, column: 79 } }], line: 21 } }, s: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0, '6': 0, '7': 0 }, f: { '0': 0, '1': 0 }, b: { '0': [0, 0] }, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_momentJalaali = require('moment-jalaali'); /* istanbul ignore next */var _momentJalaali2 = _interopRequireDefault(_momentJalaali);
+var /* istanbul ignore next */_DatePicker = require('../../../src/components/DatePicker'); /* istanbul ignore next */var _DatePicker2 = _interopRequireDefault(_DatePicker);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+var component = /* istanbul ignore next */(++cov_rp5l9qu0f.s[0], /* istanbul ignore next */_react2.default.createClass({ /* istanbul ignore next */displayName: 'component', /* istanbul ignore next */
+  getInitialState: function getInitialState() {/* istanbul ignore next */++cov_rp5l9qu0f.s[1];
+    return {
+      value: /* istanbul ignore next */(0, _momentJalaali2.default)(),
+      isGregorian: true };
+
+  }, /* istanbul ignore next */
+  render: function render() {/* istanbul ignore next */var _this = this;++cov_rp5l9qu0f.s[2];
+    return (/* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */null,
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_DatePicker2.default, /* istanbul ignore next */{
+          value: this.state.value,
+          isGregorian: this.state.isGregorian,
+          onChange: function /* istanbul ignore next */onChange(value) {/* istanbul ignore next */++cov_rp5l9qu0f.f[0];++cov_rp5l9qu0f.s[3];return (/* istanbul ignore next */_this.setState({ value: value }));} }),
+
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'br', /* istanbul ignore next */null),
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'button', /* istanbul ignore next */{ onClick: function /* istanbul ignore next */onClick() {/* istanbul ignore next */++cov_rp5l9qu0f.f[1];++cov_rp5l9qu0f.s[4];return (/* istanbul ignore next */_this.setState({ isGregorian: ! /* istanbul ignore next */_this.state.isGregorian }));} },
+          this.state.isGregorian ? /* istanbul ignore next */(++cov_rp5l9qu0f.b[0][0], 'switch to jalaali') : /* istanbul ignore next */(++cov_rp5l9qu0f.b[0][1], 'switch to gregorian'))));
+
+
+  } }));
+
+
+var title = /* istanbul ignore next */(++cov_rp5l9qu0f.s[5], 'Switch IsGregorian');
+var code = /* istanbul ignore next */(++cov_rp5l9qu0f.s[6], 'const component = React.createClass({\n  getInitialState() {\n    return {\n      value: moment()\n    }\n  },\n  render() {\n    return <DatePicker\n      isGregorian={false}\n      value={this.state.value}\n      onChange={value => this.setState({ value })}\n    />\n  }\n});\n');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var SwitchIsGregorian = /* istanbul ignore next */(++cov_rp5l9qu0f.s[7], { component: component, title: title, code: code }); /* istanbul ignore next */exports.default =
+SwitchIsGregorian;

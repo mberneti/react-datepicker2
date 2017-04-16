@@ -1,0 +1,60 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_1qyl3yj241 = function () {var path = '/mnt/g/Work/Current/projects/react-datepicker2/src/components/Day.js',hash = '1c00b08ba2eec8d1bdb21f526825c0e4f5396f0f',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/mnt/g/Work/Current/projects/react-datepicker2/src/components/Day.js', statementMap: { '0': { start: { line: 5, column: 15 }, end: { line: 11, column: 1 } }, '1': { start: { line: 24, column: 4 }, end: { line: 26, column: 61 } }, '2': { start: { line: 30, column: 4 }, end: { line: 30, column: 27 } }, '3': { start: { line: 31, column: 4 }, end: { line: 31, column: 28 } }, '4': { start: { line: 32, column: 4 }, end: { line: 32, column: 49 } }, '5': { start: { line: 33, column: 29 }, end: { line: 33, column: 39 } }, '6': { start: { line: 35, column: 4 }, end: { line: 37, column: 5 } }, '7': { start: { line: 36, column: 6 }, end: { line: 36, column: 19 } }, '8': { start: { line: 41, column: 94 }, end: { line: 41, column: 104 } }, '9': { start: { line: 43, column: 22 }, end: { line: 46, column: 6 } }, '10': { start: { line: 48, column: 4 }, end: { line: 59, column: 6 } } }, fnMap: { '0': { name: '(anonymous_0)', decl: { start: { line: 23, column: 2 }, end: { line: 23, column: 3 } }, loc: { start: { line: 23, column: 35 }, end: { line: 27, column: 3 } }, line: 23 }, '1': { name: '(anonymous_1)', decl: { start: { line: 29, column: 2 }, end: { line: 29, column: 3 } }, loc: { start: { line: 29, column: 21 }, end: { line: 38, column: 3 } }, line: 29 }, '2': { name: '(anonymous_2)', decl: { start: { line: 40, column: 2 }, end: { line: 40, column: 3 } }, loc: { start: { line: 40, column: 11 }, end: { line: 60, column: 3 } }, line: 40 } }, branchMap: { '0': { loc: { start: { line: 24, column: 11 }, end: { line: 26, column: 60 } }, type: 'binary-expr', locations: [{ start: { line: 24, column: 11 }, end: { line: 24, column: 53 } }, { start: { line: 25, column: 6 }, end: { line: 25, column: 48 } }, { start: { line: 26, column: 6 }, end: { line: 26, column: 60 } }], line: 24 }, '1': { loc: { start: { line: 35, column: 4 }, end: { line: 37, column: 5 } }, type: 'if', locations: [{ start: { line: 35, column: 4 }, end: { line: 37, column: 5 } }, { start: { line: 35, column: 4 }, end: { line: 37, column: 5 } }], line: 35 }, '2': { loc: { start: { line: 56, column: 12 }, end: { line: 56, column: 71 } }, type: 'cond-expr', locations: [{ start: { line: 56, column: 24 }, end: { line: 56, column: 39 } }, { start: { line: 56, column: 40 }, end: { line: 56, column: 71 } }], line: 56 } }, s: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0, '6': 0, '7': 0, '8': 0, '9': 0, '10': 0 }, f: { '0': 0, '1': 0, '2': 0 }, b: { '0': [0, 0, 0], '1': [0, 0], '2': [0, 0] }, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var _extends = Object.assign || function (target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i];for (var key in source) {if (Object.prototype.hasOwnProperty.call(source, key)) {target[key] = source[key];}}}return target;};var _createClass = function () {function defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}return function (Constructor, protoProps, staticProps) {if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;};}();var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_classnames2 = require('classnames'); /* istanbul ignore next */var _classnames3 = _interopRequireDefault(_classnames2);
+var /* istanbul ignore next */_persian = require('../utils/persian'); /* istanbul ignore next */function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}function _objectWithoutProperties(obj, keys) {var target = {};for (var i in obj) {if (keys.indexOf(i) >= 0) continue;if (!Object.prototype.hasOwnProperty.call(obj, i)) continue;target[i] = obj[i];}return target;}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self, call) {if (!self) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call && (typeof call === "object" || typeof call === "function") ? call : self;}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;}
+
+var styles = /* istanbul ignore next */(++cov_1qyl3yj241.s[0], {
+  wrapper: {},
+  button: {
+    outline: 'none',
+    cursor: 'pointer' } }); /* istanbul ignore next */var
+
+
+
+Day = function (_Component) {_inherits(Day, _Component);function Day() {_classCallCheck(this, Day);return _possibleConstructorReturn(this, (Day.__proto__ || Object.getPrototypeOf(Day)).apply(this, arguments));}_createClass(Day, [{ key: 'shouldComponentUpdate', value: function shouldComponentUpdate(
+
+
+
+
+
+
+
+
+
+    nextProps) {/* istanbul ignore next */++cov_1qyl3yj241.f[0];++cov_1qyl3yj241.s[1];
+      return (/* istanbul ignore next */(++cov_1qyl3yj241.b[0][0], nextProps.selected !== this.props.selected) || /* istanbul ignore next */(++cov_1qyl3yj241.b[0][1],
+        nextProps.disabled !== this.props.disabled) || /* istanbul ignore next */(++cov_1qyl3yj241.b[0][2],
+        nextProps.isCurrentMonth !== this.props.isCurrentMonth));
+    } }, { key: 'handleClick', value: function handleClick(
+
+    event) {/* istanbul ignore next */++cov_1qyl3yj241.f[1];++cov_1qyl3yj241.s[2];
+      event.preventDefault(); /* istanbul ignore next */++cov_1qyl3yj241.s[3];
+      event.stopPropagation(); /* istanbul ignore next */++cov_1qyl3yj241.s[4];
+      event.nativeEvent.stopImmediatePropagation(); /* istanbul ignore next */var _ref = (++cov_1qyl3yj241.s[5],
+      this.props),onClick = _ref.onClick,day = _ref.day; /* istanbul ignore next */++cov_1qyl3yj241.s[6];
+
+      if (onClick) {/* istanbul ignore next */++cov_1qyl3yj241.b[1][0];++cov_1qyl3yj241.s[7];
+        onClick(day);
+      } else /* istanbul ignore next */{++cov_1qyl3yj241.b[1][1];}
+    } }, { key: 'render', value: function render()
+
+    {/* istanbul ignore next */var _classnames;++cov_1qyl3yj241.f[2];var _ref2 = (++cov_1qyl3yj241.s[8],
+      this.props),day = _ref2.day,disabled = _ref2.disabled,selected = _ref2.selected,isCurrentMonth = _ref2.isCurrentMonth,onClick = _ref2.onClick,styles = _ref2.styles,isGregorian = _ref2.isGregorian,rest = _objectWithoutProperties(_ref2, ['day', 'disabled', 'selected', 'isCurrentMonth', 'onClick', 'styles', 'isGregorian']);
+
+      var className = /* istanbul ignore next */(++cov_1qyl3yj241.s[9], /* istanbul ignore next */(0, _classnames3.default)(styles.dayWrapper, /* istanbul ignore next */(_classnames = {}, _defineProperty(_classnames,
+      styles.selected, selected), _defineProperty(_classnames,
+      styles.currentMonth, isCurrentMonth), _classnames))); /* istanbul ignore next */++cov_1qyl3yj241.s[10];
+
+
+      return (
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: className },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'button', /* istanbul ignore next */_extends({
+              type: 'button',
+              onClick: this.handleClick.bind(this),
+              disabled: disabled },
+            rest),
+
+            isGregorian ? /* istanbul ignore next */(++cov_1qyl3yj241.b[2][0], day.format('D')) : /* istanbul ignore next */(++cov_1qyl3yj241.b[2][1], /* istanbul ignore next */(0, _persian.persianNumber)(day.format('jD'))))));
+
+
+
+    } }]);return Day;}(_react.Component); /* istanbul ignore next */Day.propTypes = { day: /* istanbul ignore next */_react.PropTypes.object.isRequired, isCurrentMonth: /* istanbul ignore next */_react.PropTypes.bool, disabled: /* istanbul ignore next */_react.PropTypes.bool, selected: /* istanbul ignore next */_react.PropTypes.bool, onClick: /* istanbul ignore next */_react.PropTypes.func, isGregorian: /* istanbul ignore next */_react.PropTypes.bool }; /* istanbul ignore next */exports.default = Day;

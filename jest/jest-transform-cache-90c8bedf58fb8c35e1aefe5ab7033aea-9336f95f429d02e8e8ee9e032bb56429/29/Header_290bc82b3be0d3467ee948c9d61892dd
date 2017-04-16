@@ -1,0 +1,175 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_noy3hhugf = function () {var path = '/mnt/g/Work/Current/projects/react-datepicker2/src/components/TimePicker/Header.js',hash = 'cf1585ea262a28032d488920204f4b02442f3dd5',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/mnt/g/Work/Current/projects/react-datepicker2/src/components/TimePicker/Header.js', statementMap: { '0': { start: { line: 4, column: 15 }, end: { line: 173, column: 2 } }, '1': { start: { line: 27, column: 30 }, end: { line: 27, column: 40 } }, '2': { start: { line: 28, column: 4 }, end: { line: 31, column: 6 } }, '3': { start: { line: 35, column: 30 }, end: { line: 35, column: 39 } }, '4': { start: { line: 36, column: 4 }, end: { line: 39, column: 7 } }, '5': { start: { line: 43, column: 16 }, end: { line: 43, column: 34 } }, '6': { start: { line: 44, column: 4 }, end: { line: 46, column: 7 } }, '7': { start: { line: 51, column: 8 }, end: { line: 51, column: 18 } }, '8': { start: { line: 53, column: 4 }, end: { line: 115, column: 5 } }, '9': { start: { line: 54, column: 28 }, end: { line: 54, column: 44 } }, '10': { start: { line: 55, column: 20 }, end: { line: 55, column: 48 } }, '11': { start: { line: 56, column: 21 }, end: { line: 56, column: 46 } }, '12': { start: { line: 57, column: 6 }, end: { line: 62, column: 7 } }, '13': { start: { line: 58, column: 8 }, end: { line: 60, column: 11 } }, '14': { start: { line: 61, column: 8 }, end: { line: 61, column: 15 } }, '15': { start: { line: 63, column: 6 }, end: { line: 63, column: 80 } }, '16': { start: { line: 66, column: 6 }, end: { line: 75, column: 7 } }, '17': { start: { line: 71, column: 8 }, end: { line: 73, column: 11 } }, '18': { start: { line: 74, column: 8 }, end: { line: 74, column: 15 } }, '19': { start: { line: 78, column: 34 }, end: { line: 78, column: 49 } }, '20': { start: { line: 79, column: 36 }, end: { line: 79, column: 65 } }, '21': { start: { line: 80, column: 36 }, end: { line: 80, column: 81 } }, '22': { start: { line: 81, column: 6 }, end: { line: 90, column: 7 } }, '23': { start: { line: 86, column: 8 }, end: { line: 88, column: 11 } }, '24': { start: { line: 89, column: 8 }, end: { line: 89, column: 15 } }, '25': { start: { line: 92, column: 6 }, end: { line: 107, column: 7 } }, '26': { start: { line: 93, column: 8 }, end: { line: 104, column: 9 } }, '27': { start: { line: 99, column: 31 }, end: { line: 99, column: 52 } }, '28': { start: { line: 100, column: 10 }, end: { line: 100, column: 42 } }, '29': { start: { line: 101, column: 10 }, end: { line: 101, column: 46 } }, '30': { start: { line: 102, column: 10 }, end: { line: 102, column: 46 } }, '31': { start: { line: 103, column: 10 }, end: { line: 103, column: 33 } }, '32': { start: { line: 105, column: 13 }, end: { line: 107, column: 7 } }, '33': { start: { line: 106, column: 8 }, end: { line: 106, column: 24 } }, '34': { start: { line: 108, column: 11 }, end: { line: 115, column: 5 } }, '35': { start: { line: 109, column: 6 }, end: { line: 109, column: 21 } }, '36': { start: { line: 111, column: 6 }, end: { line: 113, column: 9 } }, '37': { start: { line: 114, column: 6 }, end: { line: 114, column: 13 } }, '38': { start: { line: 117, column: 4 }, end: { line: 119, column: 7 } }, '39': { start: { line: 123, column: 4 }, end: { line: 125, column: 5 } }, '40': { start: { line: 124, column: 6 }, end: { line: 124, column: 25 } }, '41': { start: { line: 129, column: 4 }, end: { line: 129, column: 31 } }, '42': { start: { line: 130, column: 4 }, end: { line: 130, column: 25 } }, '43': { start: { line: 134, column: 38 }, end: { line: 134, column: 48 } }, '44': { start: { line: 135, column: 4 }, end: { line: 137, column: 5 } }, '45': { start: { line: 136, column: 6 }, end: { line: 136, column: 18 } }, '46': { start: { line: 138, column: 4 }, end: { line: 143, column: 8 } }, '47': { start: { line: 147, column: 4 }, end: { line: 147, column: 59 } }, '48': { start: { line: 151, column: 39 }, end: { line: 151, column: 49 } }, '49': { start: { line: 152, column: 29 }, end: { line: 152, column: 39 } }, '50': { start: { line: 153, column: 25 }, end: { line: 153, column: 68 } }, '51': { start: { line: 154, column: 4 }, end: { line: 161, column: 8 } }, '52': { start: { line: 165, column: 26 }, end: { line: 165, column: 36 } }, '53': { start: { line: 166, column: 4 }, end: { line: 171, column: 6 } } }, fnMap: {}, branchMap: { '0': { loc: { start: { line: 29, column: 11 }, end: { line: 29, column: 46 } }, type: 'binary-expr', locations: [{ start: { line: 29, column: 11 }, end: { line: 29, column: 16 } }, { start: { line: 29, column: 20 }, end: { line: 29, column: 40 } }, { start: { line: 29, column: 44 }, end: { line: 29, column: 46 } }], line: 29 }, '1': { loc: { start: { line: 37, column: 11 }, end: { line: 37, column: 46 } }, type: 'binary-expr', locations: [{ start: { line: 37, column: 11 }, end: { line: 37, column: 16 } }, { start: { line: 37, column: 20 }, end: { line: 37, column: 40 } }, { start: { line: 37, column: 44 }, end: { line: 37, column: 46 } }], line: 37 }, '2': { loc: { start: { line: 53, column: 4 }, end: { line: 115, column: 5 } }, type: 'if', locations: [{ start: { line: 53, column: 4 }, end: { line: 115, column: 5 } }, { start: { line: 53, column: 4 }, end: { line: 115, column: 5 } }], line: 53 }, '3': { loc: { start: { line: 57, column: 6 }, end: { line: 62, column: 7 } }, type: 'if', locations: [{ start: { line: 57, column: 6 }, end: { line: 62, column: 7 } }, { start: { line: 57, column: 6 }, end: { line: 62, column: 7 } }], line: 57 }, '4': { loc: { start: { line: 66, column: 6 }, end: { line: 75, column: 7 } }, type: 'if', locations: [{ start: { line: 66, column: 6 }, end: { line: 75, column: 7 } }, { start: { line: 66, column: 6 }, end: { line: 75, column: 7 } }], line: 66 }, '5': { loc: { start: { line: 67, column: 8 }, end: { line: 69, column: 49 } }, type: 'binary-expr', locations: [{ start: { line: 67, column: 8 }, end: { line: 67, column: 45 } }, { start: { line: 68, column: 8 }, end: { line: 68, column: 49 } }, { start: { line: 69, column: 8 }, end: { line: 69, column: 49 } }], line: 67 }, '6': { loc: { start: { line: 81, column: 6 }, end: { line: 90, column: 7 } }, type: 'if', locations: [{ start: { line: 81, column: 6 }, end: { line: 90, column: 7 } }, { start: { line: 81, column: 6 }, end: { line: 90, column: 7 } }], line: 81 }, '7': { loc: { start: { line: 82, column: 8 }, end: { line: 84, column: 85 } }, type: 'binary-expr', locations: [{ start: { line: 82, column: 9 }, end: { line: 82, column: 28 } }, { start: { line: 82, column: 32 }, end: { line: 82, column: 78 } }, { start: { line: 83, column: 9 }, end: { line: 83, column: 30 } }, { start: { line: 83, column: 34 }, end: { line: 83, column: 84 } }, { start: { line: 84, column: 9 }, end: { line: 84, column: 30 } }, { start: { line: 84, column: 34 }, end: { line: 84, column: 84 } }], line: 82 }, '8': { loc: { start: { line: 92, column: 6 }, end: { line: 107, column: 7 } }, type: 'if', locations: [{ start: { line: 92, column: 6 }, end: { line: 107, column: 7 } }, { start: { line: 92, column: 6 }, end: { line: 107, column: 7 } }], line: 92 }, '9': { loc: { start: { line: 93, column: 8 }, end: { line: 104, column: 9 } }, type: 'if', locations: [{ start: { line: 93, column: 8 }, end: { line: 104, column: 9 } }, { start: { line: 93, column: 8 }, end: { line: 104, column: 9 } }], line: 93 }, '10': { loc: { start: { line: 94, column: 10 }, end: { line: 96, column: 51 } }, type: 'binary-expr', locations: [{ start: { line: 94, column: 10 }, end: { line: 94, column: 47 } }, { start: { line: 95, column: 10 }, end: { line: 95, column: 51 } }, { start: { line: 96, column: 10 }, end: { line: 96, column: 51 } }], line: 94 }, '11': { loc: { start: { line: 105, column: 13 }, end: { line: 107, column: 7 } }, type: 'if', locations: [{ start: { line: 105, column: 13 }, end: { line: 107, column: 7 } }, { start: { line: 105, column: 13 }, end: { line: 107, column: 7 } }], line: 105 }, '12': { loc: { start: { line: 108, column: 11 }, end: { line: 115, column: 5 } }, type: 'if', locations: [{ start: { line: 108, column: 11 }, end: { line: 115, column: 5 } }, { start: { line: 108, column: 11 }, end: { line: 115, column: 5 } }], line: 108 }, '13': { loc: { start: { line: 123, column: 4 }, end: { line: 125, column: 5 } }, type: 'if', locations: [{ start: { line: 123, column: 4 }, end: { line: 125, column: 5 } }, { start: { line: 123, column: 4 }, end: { line: 125, column: 5 } }], line: 123 }, '14': { loc: { start: { line: 135, column: 4 }, end: { line: 137, column: 5 } }, type: 'if', locations: [{ start: { line: 135, column: 4 }, end: { line: 137, column: 5 } }, { start: { line: 135, column: 4 }, end: { line: 137, column: 5 } }], line: 135 }, '15': { loc: { start: { line: 147, column: 11 }, end: { line: 147, column: 58 } }, type: 'binary-expr', locations: [{ start: { line: 147, column: 11 }, end: { line: 147, column: 27 } }, { start: { line: 147, column: 31 }, end: { line: 147, column: 58 } }], line: 147 }, '16': { loc: { start: { line: 153, column: 25 }, end: { line: 153, column: 68 } }, type: 'cond-expr', locations: [{ start: { line: 153, column: 35 }, end: { line: 153, column: 63 } }, { start: { line: 153, column: 66 }, end: { line: 153, column: 68 } }], line: 153 } }, s: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0, '6': 0, '7': 0, '8': 0, '9': 0, '10': 0, '11': 0, '12': 0, '13': 0, '14': 0, '15': 0, '16': 0, '17': 0, '18': 0, '19': 0, '20': 0, '21': 0, '22': 0, '23': 0, '24': 0, '25': 0, '26': 0, '27': 0, '28': 0, '29': 0, '30': 0, '31': 0, '32': 0, '33': 0, '34': 0, '35': 0, '36': 0, '37': 0, '38': 0, '39': 0, '40': 0, '41': 0, '42': 0, '43': 0, '44': 0, '45': 0, '46': 0, '47': 0, '48': 0, '49': 0, '50': 0, '51': 0, '52': 0, '53': 0 }, f: {}, b: { '0': [0, 0, 0], '1': [0, 0, 0], '2': [0, 0], '3': [0, 0], '4': [0, 0], '5': [0, 0, 0], '6': [0, 0], '7': [0, 0, 0, 0, 0, 0], '8': [0, 0], '9': [0, 0], '10': [0, 0, 0], '11': [0, 0], '12': [0, 0], '13': [0, 0], '14': [0, 0], '15': [0, 0], '16': [0, 0] }, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_moment = require('moment'); /* istanbul ignore next */var _moment2 = _interopRequireDefault(_moment);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+var Header = /* istanbul ignore next */(++cov_noy3hhugf.s[0], /* istanbul ignore next */_react2.default.createClass({ /* istanbul ignore next */displayName: 'Header',
+  propTypes: {
+    format: /* istanbul ignore next */_react.PropTypes.string,
+    prefixCls: /* istanbul ignore next */_react.PropTypes.string,
+    disabledDate: /* istanbul ignore next */_react.PropTypes.func,
+    placeholder: /* istanbul ignore next */_react.PropTypes.string,
+    clearText: /* istanbul ignore next */_react.PropTypes.string,
+    value: /* istanbul ignore next */_react.PropTypes.object,
+    hourOptions: /* istanbul ignore next */_react.PropTypes.array,
+    minuteOptions: /* istanbul ignore next */_react.PropTypes.array,
+    secondOptions: /* istanbul ignore next */_react.PropTypes.array,
+    disabledHours: /* istanbul ignore next */_react.PropTypes.func,
+    disabledMinutes: /* istanbul ignore next */_react.PropTypes.func,
+    disabledSeconds: /* istanbul ignore next */_react.PropTypes.func,
+    onChange: /* istanbul ignore next */_react.PropTypes.func,
+    onClear: /* istanbul ignore next */_react.PropTypes.func,
+    onEsc: /* istanbul ignore next */_react.PropTypes.func,
+    allowEmpty: /* istanbul ignore next */_react.PropTypes.bool,
+    defaultOpenValue: /* istanbul ignore next */_react.PropTypes.object,
+    currentSelectPanel: /* istanbul ignore next */_react.PropTypes.string }, /* istanbul ignore next */
+
+
+  getInitialState: function getInitialState() {/* istanbul ignore next */var _ref = (++cov_noy3hhugf.s[1],
+    this.props),value = _ref.value,format = _ref.format; /* istanbul ignore next */++cov_noy3hhugf.s[2];
+    return {
+      str: /* istanbul ignore next */(++cov_noy3hhugf.b[0][0], value) && /* istanbul ignore next */(++cov_noy3hhugf.b[0][1], value.format(format)) || /* istanbul ignore next */(++cov_noy3hhugf.b[0][2], ''),
+      invalid: false };
+
+  }, /* istanbul ignore next */
+
+  componentWillReceiveProps: function componentWillReceiveProps(nextProps) {/* istanbul ignore next */var _ref2 = (++cov_noy3hhugf.s[3],
+    nextProps),value = _ref2.value,format = _ref2.format; /* istanbul ignore next */++cov_noy3hhugf.s[4];
+    this.setState({
+      str: /* istanbul ignore next */(++cov_noy3hhugf.b[1][0], value) && /* istanbul ignore next */(++cov_noy3hhugf.b[1][1], value.format(format)) || /* istanbul ignore next */(++cov_noy3hhugf.b[1][2], ''),
+      invalid: false });
+
+  }, /* istanbul ignore next */
+
+  onInputChange: function onInputChange(event) {
+    var str = /* istanbul ignore next */(++cov_noy3hhugf.s[5], event.target.value); /* istanbul ignore next */++cov_noy3hhugf.s[6];
+    this.setState({
+      str: str }); /* istanbul ignore next */var _ref3 = (++cov_noy3hhugf.s[7],
+
+
+
+
+
+    this.props),format = _ref3.format,hourOptions = _ref3.hourOptions,minuteOptions = _ref3.minuteOptions,secondOptions = _ref3.secondOptions,disabledHours = _ref3.disabledHours,disabledMinutes = _ref3.disabledMinutes,disabledSeconds = _ref3.disabledSeconds,onChange = _ref3.onChange,allowEmpty = _ref3.allowEmpty; /* istanbul ignore next */++cov_noy3hhugf.s[8];
+
+    if (str) {/* istanbul ignore next */++cov_noy3hhugf.b[2][0];
+      var originalValue = /* istanbul ignore next */(++cov_noy3hhugf.s[9], this.props.value);
+      var value = /* istanbul ignore next */(++cov_noy3hhugf.s[10], this.getProtoValue().clone());
+      var parsed = /* istanbul ignore next */(++cov_noy3hhugf.s[11], /* istanbul ignore next */(0, _moment2.default)(str, format, true)); /* istanbul ignore next */++cov_noy3hhugf.s[12];
+      if (!parsed.isValid()) {/* istanbul ignore next */++cov_noy3hhugf.b[3][0];++cov_noy3hhugf.s[13];
+        this.setState({
+          invalid: true }); /* istanbul ignore next */++cov_noy3hhugf.s[14];
+
+        return;
+      } else /* istanbul ignore next */{++cov_noy3hhugf.b[3][1];}++cov_noy3hhugf.s[15];
+      value.hour(parsed.hour()).minute(parsed.minute()).second(parsed.second());
+
+      // if time value not allowed, response warning.
+      /* istanbul ignore next */++cov_noy3hhugf.s[16];if (
+      /* istanbul ignore next */(++cov_noy3hhugf.b[5][0], hourOptions.indexOf(value.hour()) < 0) || /* istanbul ignore next */(++cov_noy3hhugf.b[5][1],
+      minuteOptions.indexOf(value.minute()) < 0) || /* istanbul ignore next */(++cov_noy3hhugf.b[5][2],
+      secondOptions.indexOf(value.second()) < 0))
+      {/* istanbul ignore next */++cov_noy3hhugf.b[4][0];++cov_noy3hhugf.s[17];
+        this.setState({
+          invalid: true }); /* istanbul ignore next */++cov_noy3hhugf.s[18];
+
+        return;
+      } else /* istanbul ignore next */{++cov_noy3hhugf.b[4][1];}
+
+      // if time value is disabled, response warning.
+      var disabledHourOptions = /* istanbul ignore next */(++cov_noy3hhugf.s[19], disabledHours());
+      var disabledMinuteOptions = /* istanbul ignore next */(++cov_noy3hhugf.s[20], disabledMinutes(value.hour()));
+      var disabledSecondOptions = /* istanbul ignore next */(++cov_noy3hhugf.s[21], disabledSeconds(value.hour(), value.minute())); /* istanbul ignore next */++cov_noy3hhugf.s[22];
+      if (
+      /* istanbul ignore next */(++cov_noy3hhugf.b[7][0], disabledHourOptions) && /* istanbul ignore next */(++cov_noy3hhugf.b[7][1], disabledHourOptions.indexOf(value.hour()) >= 0) ||
+      /* istanbul ignore next */(++cov_noy3hhugf.b[7][2], disabledMinuteOptions) && /* istanbul ignore next */(++cov_noy3hhugf.b[7][3], disabledMinuteOptions.indexOf(value.minute()) >= 0) ||
+      /* istanbul ignore next */(++cov_noy3hhugf.b[7][4], disabledSecondOptions) && /* istanbul ignore next */(++cov_noy3hhugf.b[7][5], disabledSecondOptions.indexOf(value.second()) >= 0))
+      {/* istanbul ignore next */++cov_noy3hhugf.b[6][0];++cov_noy3hhugf.s[23];
+        this.setState({
+          invalid: true }); /* istanbul ignore next */++cov_noy3hhugf.s[24];
+
+        return;
+      } else /* istanbul ignore next */{++cov_noy3hhugf.b[6][1];}++cov_noy3hhugf.s[25];
+
+      if (originalValue) {/* istanbul ignore next */++cov_noy3hhugf.b[8][0];++cov_noy3hhugf.s[26];
+        if (
+        /* istanbul ignore next */(++cov_noy3hhugf.b[10][0], originalValue.hour() !== value.hour()) || /* istanbul ignore next */(++cov_noy3hhugf.b[10][1],
+        originalValue.minute() !== value.minute()) || /* istanbul ignore next */(++cov_noy3hhugf.b[10][2],
+        originalValue.second() !== value.second()))
+        {/* istanbul ignore next */++cov_noy3hhugf.b[9][0];
+          // keep other fields for rc-calendar
+          var changedValue = /* istanbul ignore next */(++cov_noy3hhugf.s[27], originalValue.clone()); /* istanbul ignore next */++cov_noy3hhugf.s[28];
+          changedValue.hour(value.hour()); /* istanbul ignore next */++cov_noy3hhugf.s[29];
+          changedValue.minute(value.minute()); /* istanbul ignore next */++cov_noy3hhugf.s[30];
+          changedValue.second(value.second()); /* istanbul ignore next */++cov_noy3hhugf.s[31];
+          onChange(changedValue);
+        } else /* istanbul ignore next */{++cov_noy3hhugf.b[9][1];}
+      } else {/* istanbul ignore next */++cov_noy3hhugf.b[8][1];++cov_noy3hhugf.s[32];if (originalValue !== value) {/* istanbul ignore next */++cov_noy3hhugf.b[11][0];++cov_noy3hhugf.s[33];
+            onChange(value);
+          } else /* istanbul ignore next */{++cov_noy3hhugf.b[11][1];}}
+    } else {/* istanbul ignore next */++cov_noy3hhugf.b[2][1];++cov_noy3hhugf.s[34];if (allowEmpty) {/* istanbul ignore next */++cov_noy3hhugf.b[12][0];++cov_noy3hhugf.s[35];
+          onChange(null);
+        } else {/* istanbul ignore next */++cov_noy3hhugf.b[12][1];++cov_noy3hhugf.s[36];
+          this.setState({
+            invalid: true }); /* istanbul ignore next */++cov_noy3hhugf.s[37];
+
+          return;
+        }} /* istanbul ignore next */++cov_noy3hhugf.s[38];
+
+    this.setState({
+      invalid: false });
+
+  }, /* istanbul ignore next */
+
+  onKeyDown: function onKeyDown(e) {/* istanbul ignore next */++cov_noy3hhugf.s[39];
+    if (e.keyCode === 27) {/* istanbul ignore next */++cov_noy3hhugf.b[13][0];++cov_noy3hhugf.s[40];
+      this.props.onEsc();
+    } else /* istanbul ignore next */{++cov_noy3hhugf.b[13][1];}
+  }, /* istanbul ignore next */
+
+  onClear: function onClear() {/* istanbul ignore next */++cov_noy3hhugf.s[41];
+    this.setState({ str: '' }); /* istanbul ignore next */++cov_noy3hhugf.s[42];
+    this.props.onClear();
+  }, /* istanbul ignore next */
+
+  getClearButton: function getClearButton() {/* istanbul ignore next */var _ref4 = (++cov_noy3hhugf.s[43],
+    this.props),prefixCls = _ref4.prefixCls,allowEmpty = _ref4.allowEmpty; /* istanbul ignore next */++cov_noy3hhugf.s[44];
+    if (!allowEmpty) {/* istanbul ignore next */++cov_noy3hhugf.b[14][0];++cov_noy3hhugf.s[45];
+      return null;
+    } else /* istanbul ignore next */{++cov_noy3hhugf.b[14][1];}++cov_noy3hhugf.s[46];
+    return (/* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'a', /* istanbul ignore next */{
+        className: /* istanbul ignore next */prefixCls + '-clear-btn',
+        role: 'button',
+        title: this.props.clearText,
+        onMouseDown: this.onClear }));
+
+  }, /* istanbul ignore next */
+
+  getProtoValue: function getProtoValue() {/* istanbul ignore next */++cov_noy3hhugf.s[47];
+    return (/* istanbul ignore next */(++cov_noy3hhugf.b[15][0], this.props.value) || /* istanbul ignore next */(++cov_noy3hhugf.b[15][1], this.props.defaultOpenValue));
+  }, /* istanbul ignore next */
+
+  getInput: function getInput() {/* istanbul ignore next */var _ref5 = (++cov_noy3hhugf.s[48],
+    this.props),prefixCls = _ref5.prefixCls,placeholder = _ref5.placeholder; /* istanbul ignore next */var _ref6 = (++cov_noy3hhugf.s[49],
+    this.state),invalid = _ref6.invalid,str = _ref6.str;
+    var invalidClass = /* istanbul ignore next */(++cov_noy3hhugf.s[50], invalid ? /* istanbul ignore next */(++cov_noy3hhugf.b[16][0], prefixCls + '-input-invalid') : /* istanbul ignore next */(++cov_noy3hhugf.b[16][1], '')); /* istanbul ignore next */++cov_noy3hhugf.s[51];
+    return (/* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'input', /* istanbul ignore next */{
+        className: /* istanbul ignore next */prefixCls + '-input  ' + invalidClass,
+        ref: 'input',
+        onKeyDown: this.onKeyDown,
+        value: str,
+        placeholder: placeholder,
+        onChange: this.onInputChange }));
+
+  }, /* istanbul ignore next */
+
+  render: function render() {/* istanbul ignore next */var _ref7 = (++cov_noy3hhugf.s[52],
+    this.props),prefixCls = _ref7.prefixCls; /* istanbul ignore next */++cov_noy3hhugf.s[53];
+    return (
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: /* istanbul ignore next */prefixCls + '-input-wrap' },
+        this.getInput(),
+        this.getClearButton()));
+
+
+  } })); /* istanbul ignore next */exports.default =
+
+
+Header;

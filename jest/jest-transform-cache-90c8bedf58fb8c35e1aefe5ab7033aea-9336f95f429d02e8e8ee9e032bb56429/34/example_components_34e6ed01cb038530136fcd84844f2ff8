@@ -1,0 +1,56 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_29znl1ywim = function () {var path = '/mnt/g/Work/Current/projects/react-datepicker2/docs/src/example_components.js',hash = '999a473afef95b2bf552e12a15e86efe3966809f',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/mnt/g/Work/Current/projects/react-datepicker2/docs/src/example_components.js', statementMap: { '0': { start: { line: 15, column: 4 }, end: { line: 15, column: 33 } }, '1': { start: { line: 21, column: 4 }, end: { line: 32, column: 5 } }, '2': { start: { line: 22, column: 6 }, end: { line: 31, column: 29 } }, '3': { start: { line: 36, column: 4 }, end: { line: 42, column: 5 } }, '4': { start: { line: 37, column: 6 }, end: { line: 41, column: 11 } }, '5': { start: { line: 46, column: 4 }, end: { line: 55, column: 10 } } }, fnMap: { '0': { name: '(anonymous_0)', decl: { start: { line: 21, column: 29 }, end: { line: 21, column: 30 } }, loc: { start: { line: 22, column: 6 }, end: { line: 31, column: 29 } }, line: 22 }, '1': { name: '(anonymous_1)', decl: { start: { line: 36, column: 29 }, end: { line: 36, column: 30 } }, loc: { start: { line: 37, column: 6 }, end: { line: 41, column: 11 } }, line: 37 } }, branchMap: {}, s: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0 }, f: { '0': 0, '1': 0 }, b: {}, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_highlight = require('highlight.js'); /* istanbul ignore next */var _highlight2 = _interopRequireDefault(_highlight);
+var /* istanbul ignore next */_code_example_component = require('./code_example_component'); /* istanbul ignore next */var _code_example_component2 = _interopRequireDefault(_code_example_component);
+var /* istanbul ignore next */_reactSyntaxHighlight = require('react-syntax-highlight'); /* istanbul ignore next */var _reactSyntaxHighlight2 = _interopRequireDefault(_reactSyntaxHighlight);
+
+var /* istanbul ignore next */_default = require('./examples/default'); /* istanbul ignore next */var _default2 = _interopRequireDefault(_default);
+var /* istanbul ignore next */_jalaali = require('./examples/jalaali'); /* istanbul ignore next */var _jalaali2 = _interopRequireDefault(_jalaali);
+var /* istanbul ignore next */_disabledTimepicker = require('./examples/disabledTimepicker'); /* istanbul ignore next */var _disabledTimepicker2 = _interopRequireDefault(_disabledTimepicker);
+var /* istanbul ignore next */_switchIsGregorian = require('./examples/switchIsGregorian'); /* istanbul ignore next */var _switchIsGregorian2 = _interopRequireDefault(_switchIsGregorian);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}exports.default =
+
+/* istanbul ignore next */_react2.default.createClass({
+  displayName: 'exampleComponents', /* istanbul ignore next */
+
+  componentDidMount: function componentDidMount() {/* istanbul ignore next */++cov_29znl1ywim.s[0];
+    /* istanbul ignore next */_highlight2.default.initHighlightingOnLoad();
+  },
+
+  examples: [/* istanbul ignore next */_default2.default, /* istanbul ignore next */_jalaali2.default, /* istanbul ignore next */_disabledTimepicker2.default, /* istanbul ignore next */_switchIsGregorian2.default], /* istanbul ignore next */
+
+  renderExamples: function renderExamples() {/* istanbul ignore next */++cov_29znl1ywim.s[1];
+    return this.examples.map(function (example, index)
+    {/* istanbul ignore next */++cov_29znl1ywim.f[0];++cov_29znl1ywim.s[2];return (/* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_code_example_component2.default, /* istanbul ignore next */{ key: /* istanbul ignore next */'example-' + index, id: index, title: example.title },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'row' },
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'column' },
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactSyntaxHighlight2.default, /* istanbul ignore next */{ lang: 'jsx', value: example.code })),
+
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'column' },
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */example.component, /* istanbul ignore next */null)))));
+
+
+    });
+
+  }, /* istanbul ignore next */
+
+  renderLeftColumn: function renderLeftColumn() {/* istanbul ignore next */++cov_29znl1ywim.s[3];
+    return this.examples.map(function (example, index)
+    {/* istanbul ignore next */++cov_29znl1ywim.f[1];++cov_29znl1ywim.s[4];return (/* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'li', /* istanbul ignore next */{ className: 'examples__navigation-item', key: /* istanbul ignore next */'link-' + index },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'a', /* istanbul ignore next */{ href: /* istanbul ignore next */'#example-' + index },
+            example.title)));
+
+    });
+
+  }, /* istanbul ignore next */
+
+  render: function render() {/* istanbul ignore next */++cov_29znl1ywim.s[5];
+    return (/* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */null,
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'h1', /* istanbul ignore next */null, /* istanbul ignore next */'Examples'),
+        /* istanbul ignore next */_default2.default.component,
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'ul', /* istanbul ignore next */{ className: 'examples__navigation' },
+          this.renderLeftColumn()),
+
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'examples' },
+          this.renderExamples())));
+
+
+  } });

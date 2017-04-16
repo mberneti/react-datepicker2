@@ -1,0 +1,110 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_2m9ub5by37 = function () {var path = '/mnt/g/Work/Current/projects/react-datepicker2/src/components/TimePicker/Select.js',hash = '4798fd86585bf1a3afa22cf29d1ce6779fd35aa5',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/mnt/g/Work/Current/projects/react-datepicker2/src/components/TimePicker/Select.js', statementMap: { '0': { start: { line: 5, column: 17 }, end: { line: 23, column: 1 } }, '1': { start: { line: 6, column: 32 }, end: { line: 9, column: 5 } }, '2': { start: { line: 8, column: 6 }, end: { line: 8, column: 42 } }, '3': { start: { line: 11, column: 2 }, end: { line: 14, column: 3 } }, '4': { start: { line: 12, column: 4 }, end: { line: 12, column: 27 } }, '5': { start: { line: 13, column: 4 }, end: { line: 13, column: 11 } }, '6': { start: { line: 15, column: 21 }, end: { line: 15, column: 43 } }, '7': { start: { line: 16, column: 18 }, end: { line: 16, column: 44 } }, '8': { start: { line: 18, column: 2 }, end: { line: 22, column: 5 } }, '9': { start: { line: 19, column: 4 }, end: { line: 19, column: 52 } }, '10': { start: { line: 20, column: 4 }, end: { line: 20, column: 41 } }, '11': { start: { line: 20, column: 34 }, end: { line: 20, column: 41 } }, '12': { start: { line: 21, column: 4 }, end: { line: 21, column: 41 } }, '13': { start: { line: 25, column: 15 }, end: { line: 108, column: 2 } }, '14': { start: { line: 37, column: 4 }, end: { line: 37, column: 29 } }, '15': { start: { line: 42, column: 4 }, end: { line: 44, column: 5 } }, '16': { start: { line: 43, column: 6 }, end: { line: 43, column: 33 } }, '17': { start: { line: 48, column: 31 }, end: { line: 48, column: 41 } }, '18': { start: { line: 49, column: 4 }, end: { line: 49, column: 26 } }, '19': { start: { line: 53, column: 50 }, end: { line: 53, column: 60 } }, '20': { start: { line: 54, column: 4 }, end: { line: 76, column: 7 } }, '21': { start: { line: 55, column: 18 }, end: { line: 58, column: 8 } }, '22': { start: { line: 59, column: 20 }, end: { line: 59, column: 24 } }, '23': { start: { line: 60, column: 6 }, end: { line: 66, column: 7 } }, '24': { start: { line: 61, column: 20 }, end: { line: 61, column: 31 } }, '25': { start: { line: 62, column: 8 }, end: { line: 64, column: 9 } }, '26': { start: { line: 63, column: 10 }, end: { line: 63, column: 29 } }, '27': { start: { line: 65, column: 8 }, end: { line: 65, column: 50 } }, '28': { start: { line: 68, column: 6 }, end: { line: 75, column: 13 } }, '29': { start: { line: 81, column: 19 }, end: { line: 81, column: 45 } }, '30': { start: { line: 82, column: 17 }, end: { line: 82, column: 53 } }, '31': { start: { line: 83, column: 16 }, end: { line: 83, column: 40 } }, '32': { start: { line: 84, column: 4 }, end: { line: 86, column: 5 } }, '33': { start: { line: 85, column: 6 }, end: { line: 85, column: 16 } }, '34': { start: { line: 87, column: 22 }, end: { line: 87, column: 42 } }, '35': { start: { line: 88, column: 15 }, end: { line: 88, column: 34 } }, '36': { start: { line: 89, column: 4 }, end: { line: 89, column: 35 } }, '37': { start: { line: 93, column: 4 }, end: { line: 95, column: 5 } }, '38': { start: { line: 94, column: 6 }, end: { line: 94, column: 18 } }, '39': { start: { line: 97, column: 26 }, end: { line: 97, column: 36 } }, '40': { start: { line: 99, column: 4 }, end: { line: 106, column: 6 } } }, fnMap: { '0': { name: '(anonymous_0)', decl: { start: { line: 5, column: 17 }, end: { line: 5, column: 18 } }, loc: { start: { line: 5, column: 44 }, end: { line: 23, column: 1 } }, line: 5 }, '1': { name: 'requestAnimationFrameTimeout', decl: { start: { line: 7, column: 13 }, end: { line: 7, column: 41 } }, loc: { start: { line: 7, column: 44 }, end: { line: 9, column: 5 } }, line: 7 }, '2': { name: '(anonymous_2)', decl: { start: { line: 18, column: 24 }, end: { line: 18, column: 25 } }, loc: { start: { line: 18, column: 30 }, end: { line: 22, column: 3 } }, line: 18 }, '3': { name: '(anonymous_3)', decl: { start: { line: 54, column: 23 }, end: { line: 54, column: 24 } }, loc: { start: { line: 54, column: 40 }, end: { line: 76, column: 5 } }, line: 54 } }, branchMap: { '0': { loc: { start: { line: 6, column: 32 }, end: { line: 9, column: 5 } }, type: 'binary-expr', locations: [{ start: { line: 6, column: 32 }, end: { line: 6, column: 60 } }, { start: { line: 7, column: 4 }, end: { line: 9, column: 5 } }], line: 6 }, '1': { loc: { start: { line: 11, column: 2 }, end: { line: 14, column: 3 } }, type: 'if', locations: [{ start: { line: 11, column: 2 }, end: { line: 14, column: 3 } }, { start: { line: 11, column: 2 }, end: { line: 14, column: 3 } }], line: 11 }, '2': { loc: { start: { line: 20, column: 4 }, end: { line: 20, column: 41 } }, type: 'if', locations: [{ start: { line: 20, column: 4 }, end: { line: 20, column: 41 } }, { start: { line: 20, column: 4 }, end: { line: 20, column: 41 } }], line: 20 }, '3': { loc: { start: { line: 42, column: 4 }, end: { line: 44, column: 5 } }, type: 'if', locations: [{ start: { line: 42, column: 4 }, end: { line: 44, column: 5 } }, { start: { line: 42, column: 4 }, end: { line: 44, column: 5 } }], line: 42 }, '4': { loc: { start: { line: 60, column: 6 }, end: { line: 66, column: 7 } }, type: 'if', locations: [{ start: { line: 60, column: 6 }, end: { line: 66, column: 7 } }, { start: { line: 60, column: 6 }, end: { line: 66, column: 7 } }], line: 60 }, '5': { loc: { start: { line: 62, column: 8 }, end: { line: 64, column: 9 } }, type: 'if', locations: [{ start: { line: 62, column: 8 }, end: { line: 64, column: 9 } }, { start: { line: 62, column: 8 }, end: { line: 64, column: 9 } }], line: 62 }, '6': { loc: { start: { line: 74, column: 9 }, end: { line: 74, column: 68 } }, type: 'cond-expr', locations: [{ start: { line: 74, column: 45 }, end: { line: 74, column: 55 } }, { start: { line: 74, column: 58 }, end: { line: 74, column: 68 } }], line: 74 }, '7': { loc: { start: { line: 84, column: 4 }, end: { line: 86, column: 5 } }, type: 'if', locations: [{ start: { line: 84, column: 4 }, end: { line: 86, column: 5 } }, { start: { line: 84, column: 4 }, end: { line: 86, column: 5 } }], line: 84 }, '8': { loc: { start: { line: 93, column: 4 }, end: { line: 95, column: 5 } }, type: 'if', locations: [{ start: { line: 93, column: 4 }, end: { line: 95, column: 5 } }, { start: { line: 93, column: 4 }, end: { line: 95, column: 5 } }], line: 93 } }, s: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0, '6': 0, '7': 0, '8': 0, '9': 0, '10': 0, '11': 0, '12': 0, '13': 0, '14': 0, '15': 0, '16': 0, '17': 0, '18': 0, '19': 0, '20': 0, '21': 0, '22': 0, '23': 0, '24': 0, '25': 0, '26': 0, '27': 0, '28': 0, '29': 0, '30': 0, '31': 0, '32': 0, '33': 0, '34': 0, '35': 0, '36': 0, '37': 0, '38': 0, '39': 0, '40': 0 }, f: { '0': 0, '1': 0, '2': 0, '3': 0 }, b: { '0': [0, 0], '1': [0, 0], '2': [0, 0], '3': [0, 0], '4': [0, 0], '5': [0, 0], '6': [0, 0], '7': [0, 0], '8': [0, 0] }, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_reactDom = require('react-dom'); /* istanbul ignore next */var _reactDom2 = _interopRequireDefault(_reactDom);
+var /* istanbul ignore next */_classnames2 = require('classnames'); /* istanbul ignore next */var _classnames3 = _interopRequireDefault(_classnames2);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}++cov_2m9ub5by37.s[0];
+
+var scrollTo = function scrollTo(element, to, duration) {/* istanbul ignore next */++cov_2m9ub5by37.f[0];
+  var requestAnimationFrame = /* istanbul ignore next */(++cov_2m9ub5by37.s[1], /* istanbul ignore next */(++cov_2m9ub5by37.b[0][0], window.requestAnimationFrame) || /* istanbul ignore next */(++cov_2m9ub5by37.b[0][1],
+  function requestAnimationFrameTimeout() {/* istanbul ignore next */++cov_2m9ub5by37.f[1];++cov_2m9ub5by37.s[2];
+    return setTimeout(arguments[0], 10);
+  }));
+  // jump to target if duration zero
+  /* istanbul ignore next */++cov_2m9ub5by37.s[3];if (duration <= 0) {/* istanbul ignore next */++cov_2m9ub5by37.b[1][0];++cov_2m9ub5by37.s[4];
+    element.scrollTop = to; /* istanbul ignore next */++cov_2m9ub5by37.s[5];
+    return;
+  } else /* istanbul ignore next */{++cov_2m9ub5by37.b[1][1];}
+  var difference = /* istanbul ignore next */(++cov_2m9ub5by37.s[6], to - element.scrollTop);
+  var perTick = /* istanbul ignore next */(++cov_2m9ub5by37.s[7], difference / duration * 10); /* istanbul ignore next */++cov_2m9ub5by37.s[8];
+
+  requestAnimationFrame(function () {/* istanbul ignore next */++cov_2m9ub5by37.f[2];++cov_2m9ub5by37.s[9];
+    element.scrollTop = element.scrollTop + perTick; /* istanbul ignore next */++cov_2m9ub5by37.s[10];
+    if (element.scrollTop === to) {/* istanbul ignore next */++cov_2m9ub5by37.b[2][0];++cov_2m9ub5by37.s[11];return;} else /* istanbul ignore next */{++cov_2m9ub5by37.b[2][1];}++cov_2m9ub5by37.s[12];
+    scrollTo(element, to, duration - 10);
+  });
+};
+
+var Select = /* istanbul ignore next */(++cov_2m9ub5by37.s[13], /* istanbul ignore next */_react2.default.createClass({ /* istanbul ignore next */displayName: 'Select',
+  propTypes: {
+    prefixCls: /* istanbul ignore next */_react.PropTypes.string,
+    options: /* istanbul ignore next */_react.PropTypes.array,
+    selectedIndex: /* istanbul ignore next */_react.PropTypes.number,
+    type: /* istanbul ignore next */_react.PropTypes.string,
+    onSelect: /* istanbul ignore next */_react.PropTypes.func,
+    onMouseEnter: /* istanbul ignore next */_react.PropTypes.func }, /* istanbul ignore next */
+
+
+  componentDidMount: function componentDidMount() {/* istanbul ignore next */++cov_2m9ub5by37.s[14];
+    // jump to selected option
+    this.scrollToSelected(0);
+  }, /* istanbul ignore next */
+
+  componentDidUpdate: function componentDidUpdate(prevProps) {/* istanbul ignore next */++cov_2m9ub5by37.s[15];
+    // smooth scroll to selected option
+    if (prevProps.selectedIndex !== this.props.selectedIndex) {/* istanbul ignore next */++cov_2m9ub5by37.b[3][0];++cov_2m9ub5by37.s[16];
+      this.scrollToSelected(120);
+    } else /* istanbul ignore next */{++cov_2m9ub5by37.b[3][1];}
+  }, /* istanbul ignore next */
+
+  onSelect: function onSelect(value) {/* istanbul ignore next */var _ref = (++cov_2m9ub5by37.s[17],
+    this.props),onSelect = _ref.onSelect,type = _ref.type; /* istanbul ignore next */++cov_2m9ub5by37.s[18];
+    onSelect(type, value);
+  }, /* istanbul ignore next */
+
+  getOptions: function getOptions() {/* istanbul ignore next */var _this = this;var _ref2 = (++cov_2m9ub5by37.s[19],
+    this.props),options = _ref2.options,selectedIndex = _ref2.selectedIndex,prefixCls = _ref2.prefixCls; /* istanbul ignore next */++cov_2m9ub5by37.s[20];
+    return options.map(function (item, index) {/* istanbul ignore next */var _classnames;++cov_2m9ub5by37.f[3];
+      var cls = /* istanbul ignore next */(++cov_2m9ub5by37.s[21], /* istanbul ignore next */(0, _classnames3.default)( /* istanbul ignore next */(_classnames = {}, _defineProperty(_classnames,
+      prefixCls + '-select-option-selected', selectedIndex === index), _defineProperty(_classnames,
+      prefixCls + '-select-option-disabled', item.disabled), _classnames)));
+
+      var onclick = /* istanbul ignore next */(++cov_2m9ub5by37.s[22], null); /* istanbul ignore next */++cov_2m9ub5by37.s[23];
+      if (!item.disabled) {/* istanbul ignore next */++cov_2m9ub5by37.b[4][0];
+        var value = /* istanbul ignore next */(++cov_2m9ub5by37.s[24], +item.value); /* istanbul ignore next */++cov_2m9ub5by37.s[25];
+        if (Number.isNaN(value)) {/* istanbul ignore next */++cov_2m9ub5by37.b[5][0];++cov_2m9ub5by37.s[26];
+          value = item.value;
+        } else /* istanbul ignore next */{++cov_2m9ub5by37.b[5][1];}++cov_2m9ub5by37.s[27];
+        onclick = /* istanbul ignore next */_this.onSelect.bind( /* istanbul ignore next */_this, value);
+      } else /* istanbul ignore next */{++cov_2m9ub5by37.b[4][1];}++cov_2m9ub5by37.s[28];
+
+      return (/* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'li', /* istanbul ignore next */{
+            className: cls,
+            key: index,
+            onClick: onclick,
+            disabled: item.disabled },
+
+          typeof item.label !== 'undefined' ? /* istanbul ignore next */(++cov_2m9ub5by37.b[6][0], item.label) : /* istanbul ignore next */(++cov_2m9ub5by37.b[6][1], item.value)));
+
+    });
+  }, /* istanbul ignore next */
+
+  scrollToSelected: function scrollToSelected(duration) {
+    // move to selected item
+    var select = /* istanbul ignore next */(++cov_2m9ub5by37.s[29], /* istanbul ignore next */_reactDom2.default.findDOMNode(this));
+    var list = /* istanbul ignore next */(++cov_2m9ub5by37.s[30], /* istanbul ignore next */_reactDom2.default.findDOMNode(this.refs.list));
+    var index = /* istanbul ignore next */(++cov_2m9ub5by37.s[31], this.props.selectedIndex); /* istanbul ignore next */++cov_2m9ub5by37.s[32];
+    if (index < 0) {/* istanbul ignore next */++cov_2m9ub5by37.b[7][0];++cov_2m9ub5by37.s[33];
+      index = 0;
+    } else /* istanbul ignore next */{++cov_2m9ub5by37.b[7][1];}
+    var topOption = /* istanbul ignore next */(++cov_2m9ub5by37.s[34], list.children[index]);
+    var to = /* istanbul ignore next */(++cov_2m9ub5by37.s[35], topOption.offsetTop); /* istanbul ignore next */++cov_2m9ub5by37.s[36];
+    scrollTo(select, to, duration);
+  }, /* istanbul ignore next */
+
+  render: function render() {/* istanbul ignore next */++cov_2m9ub5by37.s[37];
+    if (this.props.options.length === 0) {/* istanbul ignore next */++cov_2m9ub5by37.b[8][0];++cov_2m9ub5by37.s[38];
+      return null;
+    } else /* istanbul ignore next */{++cov_2m9ub5by37.b[8][1];}var _ref3 = (++cov_2m9ub5by37.s[39],
+
+    this.props),prefixCls = _ref3.prefixCls; /* istanbul ignore next */++cov_2m9ub5by37.s[40];
+
+    return (
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{
+          className: /* istanbul ignore next */prefixCls + '-select',
+          onMouseEnter: this.props.onMouseEnter },
+
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'ul', /* istanbul ignore next */{ ref: 'list' }, this.getOptions())));
+
+
+  } })); /* istanbul ignore next */exports.default =
+
+
+Select;

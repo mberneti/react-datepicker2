@@ -1,0 +1,46 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_svyi9m6xk = function () {var path = '/mnt/g/Work/Current/projects/react-datepicker2/src/components/MonthsViewHeading.js',hash = '9667ccccc655404fb47285c9eca15e464d1670a3',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/mnt/g/Work/Current/projects/react-datepicker2/src/components/MonthsViewHeading.js', statementMap: { '0': { start: { line: 19, column: 47 }, end: { line: 19, column: 57 } }, '1': { start: { line: 21, column: 23 }, end: { line: 21, column: 53 } }, '2': { start: { line: 23, column: 4 }, end: { line: 45, column: 6 } } }, fnMap: { '0': { name: '(anonymous_0)', decl: { start: { line: 18, column: 2 }, end: { line: 18, column: 3 } }, loc: { start: { line: 18, column: 11 }, end: { line: 46, column: 3 } }, line: 18 } }, branchMap: { '0': { loc: { start: { line: 21, column: 23 }, end: { line: 21, column: 53 } }, type: 'cond-expr', locations: [{ start: { line: 21, column: 37 }, end: { line: 21, column: 43 } }, { start: { line: 21, column: 46 }, end: { line: 21, column: 53 } }], line: 21 }, '1': { loc: { start: { line: 26, column: 11 }, end: { line: 26, column: 85 } }, type: 'cond-expr', locations: [{ start: { line: 26, column: 23 }, end: { line: 26, column: 46 } }, { start: { line: 26, column: 47 }, end: { line: 26, column: 85 } }], line: 26 }, '2': { loc: { start: { line: 30, column: 17 }, end: { line: 30, column: 56 } }, type: 'cond-expr', locations: [{ start: { line: 30, column: 31 }, end: { line: 30, column: 44 } }, { start: { line: 30, column: 47 }, end: { line: 30, column: 56 } }], line: 30 }, '3': { loc: { start: { line: 38, column: 17 }, end: { line: 38, column: 54 } }, type: 'cond-expr', locations: [{ start: { line: 38, column: 31 }, end: { line: 38, column: 42 } }, { start: { line: 38, column: 45 }, end: { line: 38, column: 54 } }], line: 38 } }, s: { '0': 0, '1': 0, '2': 0 }, f: { '0': 0 }, b: { '0': [0, 0], '1': [0, 0], '2': [0, 0], '3': [0, 0] }, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();var _createClass = function () {function defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}return function (Constructor, protoProps, staticProps) {if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;};}();var /* istanbul ignore next */_react = require('react'); /* istanbul ignore next */var _react2 = _interopRequireDefault(_react);
+var /* istanbul ignore next */_persian = require('../utils/persian');
+var /* istanbul ignore next */_assets = require('../utils/assets'); /* istanbul ignore next */function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self, call) {if (!self) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call && (typeof call === "object" || typeof call === "function") ? call : self;}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;}var
+
+MonthsViewHeading = function (_Component) {_inherits(MonthsViewHeading, _Component);function MonthsViewHeading() {_classCallCheck(this, MonthsViewHeading);return _possibleConstructorReturn(this, (MonthsViewHeading.__proto__ || Object.getPrototypeOf(MonthsViewHeading)).apply(this, arguments));}_createClass(MonthsViewHeading, [{ key: 'render', value: function render()
+
+
+
+
+
+
+
+
+
+
+
+
+    {/* istanbul ignore next */++cov_svyi9m6xk.f[0];var _ref = (++cov_svyi9m6xk.s[0],
+      this.props),year = _ref.year,styles = _ref.styles,type = _ref.type,isGregorian = _ref.isGregorian;
+
+      var yearFormat = /* istanbul ignore next */(++cov_svyi9m6xk.s[1], isGregorian ? /* istanbul ignore next */(++cov_svyi9m6xk.b[0][0], 'YYYY') : /* istanbul ignore next */(++cov_svyi9m6xk.b[0][1], 'jYYYY')); /* istanbul ignore next */++cov_svyi9m6xk.s[2];
+
+      return (
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: styles.heading },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'span', /* istanbul ignore next */{ className: styles.title },
+            isGregorian ? /* istanbul ignore next */(++cov_svyi9m6xk.b[1][0], year.format(yearFormat)) : /* istanbul ignore next */(++cov_svyi9m6xk.b[1][1], /* istanbul ignore next */(0, _persian.persianNumber)(year.format(yearFormat)))),
+
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'button', /* istanbul ignore next */{
+            type: 'button',
+            title: isGregorian ? /* istanbul ignore next */(++cov_svyi9m6xk.b[2][0], "before year") : /* istanbul ignore next */(++cov_svyi9m6xk.b[2][1], "سال قبل"),
+            style: styles.navButton,
+            className: styles.prev,
+            onClick: this.props.onPrevYear,
+            dangerouslySetInnerHTML: /* istanbul ignore next */_assets.rightArrow }),
+
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'button', /* istanbul ignore next */{
+            type: 'button',
+            title: isGregorian ? /* istanbul ignore next */(++cov_svyi9m6xk.b[3][0], "next year") : /* istanbul ignore next */(++cov_svyi9m6xk.b[3][1], "سال بعد"),
+            style: styles.navButton,
+            className: styles.next,
+            onClick: this.props.onNextYear,
+            dangerouslySetInnerHTML: /* istanbul ignore next */_assets.leftArrow })));
+
+
+
+    } }]);return MonthsViewHeading;}(_react.Component); /* istanbul ignore next */MonthsViewHeading.propTypes = { year: /* istanbul ignore next */_react.PropTypes.object.isRequired, onNextYear: /* istanbul ignore next */_react.PropTypes.func.isRequired, onPrevYear: /* istanbul ignore next */_react.PropTypes.func.isRequired, isGregorian: /* istanbul ignore next */_react.PropTypes.bool }; /* istanbul ignore next */MonthsViewHeading.contextTypes = { styles: /* istanbul ignore next */_react.PropTypes.object, type: /* istanbul ignore next */_react.PropTypes.number }; /* istanbul ignore next */exports.default = MonthsViewHeading;

@@ -1,0 +1,29 @@
+/* istanbul ignore next */'use strict';Object.defineProperty(exports, "__esModule", { value: true });var cov_2oa2hq8i39 = function () {var path = '/mnt/g/Work/Current/projects/react-datepicker2/src/utils/persian.js',hash = '0e2bc96312f2c96ea765952ead6311c2e3388c66',global = new Function('return this')(),gcv = '__coverage__',coverageData = { path: '/mnt/g/Work/Current/projects/react-datepicker2/src/utils/persian.js', statementMap: { '0': { start: { line: 1, column: 26 }, end: { line: 1, column: 76 } }, '1': { start: { line: 2, column: 21 }, end: { line: 2, column: 81 } }, '2': { start: { line: 6, column: 2 }, end: { line: 12, column: 3 } }, '3': { start: { line: 7, column: 4 }, end: { line: 7, column: 30 } }, '4': { start: { line: 8, column: 9 }, end: { line: 12, column: 3 } }, '5': { start: { line: 9, column: 4 }, end: { line: 9, column: 16 } }, '6': { start: { line: 11, column: 4 }, end: { line: 11, column: 19 } }, '7': { start: { line: 14, column: 2 }, end: { line: 14, column: 16 } }, '8': { start: { line: 18, column: 15 }, end: { line: 18, column: 21 } }, '9': { start: { line: 20, column: 2 }, end: { line: 22, column: 3 } }, '10': { start: { line: 21, column: 4 }, end: { line: 21, column: 75 } }, '11': { start: { line: 24, column: 2 }, end: { line: 24, column: 16 } }, '12': { start: { line: 28, column: 2 }, end: { line: 28, column: 46 } } }, fnMap: { '0': { name: 'prepareNumber', decl: { start: { line: 4, column: 9 }, end: { line: 4, column: 22 } }, loc: { start: { line: 4, column: 30 }, end: { line: 15, column: 1 } }, line: 4 }, '1': { name: 'latinToPersian', decl: { start: { line: 17, column: 9 }, end: { line: 17, column: 23 } }, loc: { start: { line: 17, column: 32 }, end: { line: 25, column: 1 } }, line: 17 }, '2': { name: 'persianNumber', decl: { start: { line: 27, column: 16 }, end: { line: 27, column: 29 } }, loc: { start: { line: 27, column: 37 }, end: { line: 29, column: 1 } }, line: 27 } }, branchMap: { '0': { loc: { start: { line: 6, column: 2 }, end: { line: 12, column: 3 } }, type: 'if', locations: [{ start: { line: 6, column: 2 }, end: { line: 12, column: 3 } }, { start: { line: 6, column: 2 }, end: { line: 12, column: 3 } }], line: 6 }, '1': { loc: { start: { line: 8, column: 9 }, end: { line: 12, column: 3 } }, type: 'if', locations: [{ start: { line: 8, column: 9 }, end: { line: 12, column: 3 } }, { start: { line: 8, column: 9 }, end: { line: 12, column: 3 } }], line: 8 } }, s: { '0': 0, '1': 0, '2': 0, '3': 0, '4': 0, '5': 0, '6': 0, '7': 0, '8': 0, '9': 0, '10': 0, '11': 0, '12': 0 }, f: { '0': 0, '1': 0, '2': 0 }, b: { '0': [0, 0], '1': [0, 0] }, _coverageSchema: '332fd63041d2c1bcb487cc26dd0d5f7d97098a6c' },coverage = global[gcv] || (global[gcv] = {});if (coverage[path] && coverage[path].hash === hash) {return coverage[path];}coverageData.hash = hash;return coverage[path] = coverageData;}();exports.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+persianNumber = persianNumber;var latinToPersianMap = /* istanbul ignore next */(++cov_2oa2hq8i39.s[0], ['۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹', '۰']);var latinNumbers = /* istanbul ignore next */(++cov_2oa2hq8i39.s[1], [/1/g, /2/g, /3/g, /4/g, /5/g, /6/g, /7/g, /8/g, /9/g, /0/g]);function prepareNumber(input) {/* istanbul ignore next */++cov_2oa2hq8i39.f[0];var string = /* istanbul ignore next */void 0; /* istanbul ignore next */++cov_2oa2hq8i39.s[2];if (typeof input === 'number') {/* istanbul ignore next */++cov_2oa2hq8i39.b[0][0];++cov_2oa2hq8i39.s[3];string = input.toString();} else {/* istanbul ignore next */++cov_2oa2hq8i39.b[0][1];++cov_2oa2hq8i39.s[4];if (typeof input === 'undefined') {/* istanbul ignore next */++cov_2oa2hq8i39.b[1][0];++cov_2oa2hq8i39.s[5];string = '';} else {/* istanbul ignore next */++cov_2oa2hq8i39.b[1][1];++cov_2oa2hq8i39.s[6];string = input;}} /* istanbul ignore next */++cov_2oa2hq8i39.s[7];return string;}function latinToPersian(string) {/* istanbul ignore next */++cov_2oa2hq8i39.f[1];var result = /* istanbul ignore next */(++cov_2oa2hq8i39.s[8], string); /* istanbul ignore next */++cov_2oa2hq8i39.s[9];for (var index = 0; index < 10; index++) {/* istanbul ignore next */++cov_2oa2hq8i39.s[10];result = result.replace(latinNumbers[index], latinToPersianMap[index]);} /* istanbul ignore next */++cov_2oa2hq8i39.s[11];return result;}function persianNumber(input) {/* istanbul ignore next */++cov_2oa2hq8i39.f[2];++cov_2oa2hq8i39.s[12];
+  return latinToPersian(prepareNumber(input));
+}
