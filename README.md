@@ -22,7 +22,7 @@ npm install react-datepicker2 --save
 At this point you can import react-datepicker2 and its styles in your application as follows:
 
 ```js
-import Datepicker from 'react-datepicker2';
+import DatePicker from 'react-datepicker2';
 
 // Be sure to include styles at some point, probably during your bootstrapping
 import 'react-datepicker2/dist/react-datepicker2.min.css';
