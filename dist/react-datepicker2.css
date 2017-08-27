@@ -375,3 +375,7 @@ li.rc-time-picker-panel-select-option-disabled:hover {
     background: transparent;
     cursor: not-allowed;
 }
+
+.tether-element.tether-element-attached-top.tether-element-attached-center.tether-target-attached-bottom.tether-target-attached-center.tether-enabled {
+    z-index: 2000;
+}
