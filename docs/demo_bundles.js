@@ -30612,7 +30612,7 @@ var component = _react2.default.createClass({
   displayName: 'component',
   getInitialState: function getInitialState() {
     return {
-      value: (0, _moment2.default)()
+      value: (0, _moment2.default)('1396/7/6', 'jYYYY/jM/jD')
     };
   },
   render: function render() {
@@ -30628,7 +30628,7 @@ var component = _react2.default.createClass({
 });
 
 var title = 'Default';
-var code = 'const component = React.createClass({\n  getInitialState() {\n    return {\n      value: moment()\n    }\n  },\n  render() {\n    return <DatePicker\n      value={this.state.value}\n      onChange={value => this.setState({ value })}\n    />\n  }\n});\n';
+var code = 'const component = React.createClass({\n  getInitialState() {\n    return {\n      value: moment(\'1396/7/6\', \'jYYYY/jM/jD\')\n    }\n  },\n  render() {\n    return <DatePicker\n      value={this.state.value}\n      onChange={value => this.setState({ value })}\n    />\n  }\n});\n';
 var Default = { component: component, title: title, code: code };
 
 exports.default = Default;
