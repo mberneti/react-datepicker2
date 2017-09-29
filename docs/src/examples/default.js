@@ -5,7 +5,7 @@ import DatePicker from '../../../src/components/DatePicker';
 const component = React.createClass({
   getInitialState() {
     return {
-      value: moment()
+      value: moment('1396/7/6', 'jYYYY/jM/jD')
     }
   },
   render() {
@@ -20,7 +20,7 @@ const title = 'Default';
 const code = `const component = React.createClass({
   getInitialState() {
     return {
-      value: moment()
+      value: moment('1396/7/6', 'jYYYY/jM/jD')
     }
   },
   render() {
