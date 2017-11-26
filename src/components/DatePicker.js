@@ -66,6 +66,9 @@ export default class DatePicker extends Component {
     }
 
     this.setState({ isOpen });
+    if(this.props.onOpen){
+      this.props.onOpen(isOpen);
+    }
   }
 
   componentWillMount() {
