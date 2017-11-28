@@ -7657,7 +7657,7 @@ var DatePicker = function (_Component) {
 
       return _react2.default.createElement(
         _reactTether2.default,
-        { attachment: 'top center' },
+        { attachment: 'top center', className: this.props.datePickerClass ? this.props.datePickerClass : "" },
         this.renderInput(),
         isOpen ? this.renderCalendar() : null
       );
@@ -7683,7 +7683,8 @@ DatePicker.propTypes = {
   calendarContainerProps: _react.PropTypes.object,
   isGregorian: _react.PropTypes.bool, // jalaali or gregorian
   timePicker: _react.PropTypes.bool,
-  calendarClass: _react.PropTypes.string
+  calendarClass: _react.PropTypes.string,
+  datePickerClass: _react.PropTypes.string
 };
 DatePicker.defaultProps = {
   styles: undefined,
