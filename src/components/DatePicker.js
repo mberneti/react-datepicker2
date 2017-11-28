@@ -25,7 +25,8 @@ export default class DatePicker extends Component {
     calendarStyles: PropTypes.object,
     calendarContainerProps: PropTypes.object,
     isGregorian: PropTypes.bool,// jalaali or gregorian
-    timePicker: PropTypes.bool
+    timePicker: PropTypes.bool,
+    calendarClass: PropTypes.string
   };
 
   static defaultProps = {
@@ -214,6 +215,7 @@ export default class DatePicker extends Component {
           styles={styles}
           containerProps={calendarContainerProps}
           isGregorian={isGregorian}
+          calendarClass={this.props.calendarClass ? this.props.calendarClass : ""}
         >
           {
             TimePicker ? (

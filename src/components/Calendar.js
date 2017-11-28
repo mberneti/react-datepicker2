@@ -18,7 +18,8 @@ export class Calendar extends Component {
     onSelect: PropTypes.func,
     onClickOutside: PropTypes.func,
     containerProps: PropTypes.object,
-    isGregorian: PropTypes.bool
+    isGregorian: PropTypes.bool,
+    calendarClass: PropTypes.string
   };
 
   static childContextTypes = {
@@ -146,7 +147,7 @@ export class Calendar extends Component {
 
 
     return (
-      <div>
+      <div className={this.props.calendarClass}>
         {children}
         <DaysViewHeading isGregorian={isGregorian} styles={styles} month={month} />
         <DaysOfWeek styles={styles} isGregorian={isGregorian} />

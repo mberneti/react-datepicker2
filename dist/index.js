@@ -7623,7 +7623,8 @@ var DatePicker = function (_Component) {
             outsideClickIgnoreClass: outsideClickIgnoreClass,
             styles: styles,
             containerProps: calendarContainerProps,
-            isGregorian: isGregorian
+            isGregorian: isGregorian,
+            calendarClass: this.props.calendarClass ? this.props.calendarClass : ""
           },
           TimePicker ? _react2.default.createElement(TimePicker, {
             isGregorian: isGregorian,
@@ -7681,7 +7682,8 @@ DatePicker.propTypes = {
   calendarStyles: _react.PropTypes.object,
   calendarContainerProps: _react.PropTypes.object,
   isGregorian: _react.PropTypes.bool, // jalaali or gregorian
-  timePicker: _react.PropTypes.bool
+  timePicker: _react.PropTypes.bool,
+  calendarClass: _react.PropTypes.string
 };
 DatePicker.defaultProps = {
   styles: undefined,
@@ -20240,7 +20242,7 @@ var Calendar = exports.Calendar = function (_Component) {
 
       return _react2.default.createElement(
         'div',
-        null,
+        { className: this.props.calendarClass },
         children,
         _react2.default.createElement(_DaysViewHeading2.default, { isGregorian: isGregorian, styles: styles, month: month }),
         _react2.default.createElement(_DaysOfWeek2.default, { styles: styles, isGregorian: isGregorian }),
@@ -20303,7 +20305,8 @@ Calendar.propTypes = {
   onSelect: _react.PropTypes.func,
   onClickOutside: _react.PropTypes.func,
   containerProps: _react.PropTypes.object,
-  isGregorian: _react.PropTypes.bool
+  isGregorian: _react.PropTypes.bool,
+  calendarClass: _react.PropTypes.string
 };
 Calendar.childContextTypes = {
   nextMonth: _react.PropTypes.func.isRequired,
