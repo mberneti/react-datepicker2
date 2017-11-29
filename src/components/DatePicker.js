@@ -30,6 +30,7 @@ export default class DatePicker extends Component {
     datePickerClass: PropTypes.string,
     datePickerClass: PropTypes.string,
     tetherAttachment:PropTypes.string,
+    inputReadOnly:PropTypes.bool,
   };
 
   static defaultProps = {
@@ -196,6 +197,7 @@ export default class DatePicker extends Component {
           onChange={this.handleInputChange.bind(this)}
           onClick={this.handleInputClick.bind(this)}
           value={inputValue}
+          readOnly={this.props.inputReadOnly ? this.props.inputReadOnly : false }
         />
       </div>
     );
