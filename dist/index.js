@@ -7366,6 +7366,8 @@ var _inherits2 = __webpack_require__(4);
 
 var _inherits3 = _interopRequireDefault(_inherits2);
 
+var _DatePicker$propTypes;
+
 var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
@@ -7657,16 +7659,20 @@ var DatePicker = function (_Component) {
 
       return _react2.default.createElement(
         _reactTether2.default,
-        { attachment: 'top center', className: this.props.datePickerClass ? this.props.datePickerClass : "" },
-        this.renderInput(),
-        isOpen ? this.renderCalendar() : null
+        { attachment: this.props.tetherAttachment ? this.props.tetherAttachment : "top center" },
+        _react2.default.createElement(
+          'div',
+          { className: this.props.datePickerClass ? this.props.datePickerClass + " tether-content" : "tether-content" },
+          this.renderInput(),
+          isOpen ? this.renderCalendar() : null
+        )
       );
     }
   }]);
   return DatePicker;
 }(_react.Component);
 
-DatePicker.propTypes = {
+DatePicker.propTypes = (_DatePicker$propTypes = {
   value: _react.PropTypes.object,
   defaultValue: _react.PropTypes.object,
   onChange: _react.PropTypes.func,
@@ -7685,7 +7691,7 @@ DatePicker.propTypes = {
   timePicker: _react.PropTypes.bool,
   calendarClass: _react.PropTypes.string,
   datePickerClass: _react.PropTypes.string
-};
+}, (0, _defineProperty3.default)(_DatePicker$propTypes, 'datePickerClass', _react.PropTypes.string), (0, _defineProperty3.default)(_DatePicker$propTypes, 'tetherAttachment', _react.PropTypes.string), _DatePicker$propTypes);
 DatePicker.defaultProps = {
   styles: undefined,
   calendarContainerProps: {},

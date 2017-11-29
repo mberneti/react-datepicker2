@@ -27,7 +27,9 @@ export default class DatePicker extends Component {
     isGregorian: PropTypes.bool,// jalaali or gregorian
     timePicker: PropTypes.bool,
     calendarClass: PropTypes.string,
-    datePickerClass: PropTypes.string
+    datePickerClass: PropTypes.string,
+    datePickerClass: PropTypes.string,
+    tetherAttachment:PropTypes.string,
   };
 
   static defaultProps = {
@@ -249,9 +251,11 @@ export default class DatePicker extends Component {
     const { isOpen } = this.state;
 
     return (
-      <TetherComponent attachment="top center" className={this.props.datePickerClass ? this.props.datePickerClass : ""}>
+      <TetherComponent attachment={this.props.tetherAttachment ? this.props.tetherAttachment :"top center"}>
+        <div className={this.props.datePickerClass ? this.props.datePickerClass + " tether-content" : "tether-content"}>
         {this.renderInput()}
         {isOpen ? this.renderCalendar() : null}
+        </div>
       </TetherComponent>
     );
   }
