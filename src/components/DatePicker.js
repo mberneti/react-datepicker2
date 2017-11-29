@@ -30,6 +30,7 @@ export default class DatePicker extends Component {
     datePickerClass: PropTypes.string,
     datePickerClass: PropTypes.string,
     tetherAttachment:PropTypes.string,
+    inputReadOnly:PropTypes.boolean,
   };
 
   static defaultProps = {
@@ -196,6 +197,7 @@ export default class DatePicker extends Component {
           onChange={this.handleInputChange.bind(this)}
           onClick={this.handleInputClick.bind(this)}
           value={inputValue}
+          readOnly={this.props.inputReadOnly ? this.props.inputReadOnly : false }
         />
       </div>
     );
@@ -252,10 +254,8 @@ export default class DatePicker extends Component {
 
     return (
       <TetherComponent attachment={this.props.tetherAttachment ? this.props.tetherAttachment :"top center"}>
-        <div className={this.props.datePickerClass ? this.props.datePickerClass + " tether-content" : "tether-content"}>
         {this.renderInput()}
         {isOpen ? this.renderCalendar() : null}
-        </div>
       </TetherComponent>
     );
   }

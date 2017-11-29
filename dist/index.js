@@ -7590,7 +7590,8 @@ var DatePicker = function (_Component) {
           onBlur: this.handleBlur.bind(this),
           onChange: this.handleInputChange.bind(this),
           onClick: this.handleInputClick.bind(this),
-          value: inputValue
+          value: inputValue,
+          readOnly: this.props.inputReadOnly ? this.props.inputReadOnly : false
         })
       );
     }
@@ -7660,12 +7661,8 @@ var DatePicker = function (_Component) {
       return _react2.default.createElement(
         _reactTether2.default,
         { attachment: this.props.tetherAttachment ? this.props.tetherAttachment : "top center" },
-        _react2.default.createElement(
-          'div',
-          { className: this.props.datePickerClass ? this.props.datePickerClass + " tether-content" : "tether-content" },
-          this.renderInput(),
-          isOpen ? this.renderCalendar() : null
-        )
+        this.renderInput(),
+        isOpen ? this.renderCalendar() : null
       );
     }
   }]);
@@ -7691,7 +7688,7 @@ DatePicker.propTypes = (_DatePicker$propTypes = {
   timePicker: _react.PropTypes.bool,
   calendarClass: _react.PropTypes.string,
   datePickerClass: _react.PropTypes.string
-}, (0, _defineProperty3.default)(_DatePicker$propTypes, 'datePickerClass', _react.PropTypes.string), (0, _defineProperty3.default)(_DatePicker$propTypes, 'tetherAttachment', _react.PropTypes.string), _DatePicker$propTypes);
+}, (0, _defineProperty3.default)(_DatePicker$propTypes, 'datePickerClass', _react.PropTypes.string), (0, _defineProperty3.default)(_DatePicker$propTypes, 'tetherAttachment', _react.PropTypes.string), (0, _defineProperty3.default)(_DatePicker$propTypes, 'inputReadOnly', _react.PropTypes.boolean), _DatePicker$propTypes);
 DatePicker.defaultProps = {
   styles: undefined,
   calendarContainerProps: {},
