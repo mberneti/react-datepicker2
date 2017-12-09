@@ -1,3 +1,3 @@
 import DatePicker from './components/DatePicker';
 export default DatePicker;
-// export Calendar from './components/Calendar';
+export Calendar from './components/Calendar';
