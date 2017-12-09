@@ -7472,8 +7472,9 @@ var Calendar = exports.Calendar = function (_Component) {
             var isGregorian = this.state.isGregorian;
 
             var monthFormat = isGregorian ? 'Month' : 'jMonth';
-
-            this.props.onNextMonth(this.state.month.clone().add(1, monthFormat));
+            if (this.props.onNextMonth) {
+                this.props.onNextMonth(this.state.month.clone().add(1, monthFormat));
+            }
             this.setState({
                 month: this.state.month.clone().add(1, monthFormat)
             });
@@ -7485,7 +7486,9 @@ var Calendar = exports.Calendar = function (_Component) {
 
             var monthFormat = isGregorian ? 'Month' : 'jMonth';
 
-            this.props.onPrevMonth(this.state.month.clone().add(1, monthFormat));
+            if (this.props.onPrevMonth) {
+                this.props.onPrevMonth(this.state.month.clone().add(1, monthFormat));
+            }
             this.setState({
                 month: this.state.month.clone().subtract(1, monthFormat)
             });
