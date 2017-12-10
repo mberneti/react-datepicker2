@@ -16,6 +16,7 @@ export default class Day extends Component {
     isCurrentMonth: PropTypes.bool,
     disabled: PropTypes.bool,
     selected: PropTypes.bool,
+    hovered: PropTypes.bool,
     onClick: PropTypes.func,
     isGregorian: PropTypes.bool
   };
@@ -38,7 +39,7 @@ export default class Day extends Component {
   }
 
   render() {
-    const { day, disabled, selected, isCurrentMonth, onClick, styles,isGregorian, ...rest } = this.props;
+    const { day, disabled, selected, isCurrentMonth, onClick, styles , hovered ,isGregorian, ...rest } = this.props;
 
     const className = classnames(styles.dayWrapper, {
       [styles.selected]: selected,
@@ -51,6 +52,7 @@ export default class Day extends Component {
           type="button"
           onClick={this.handleClick.bind(this) }
           disabled={disabled}
+          style={hovered ? {backgroundColor: "#eeeeff"} : {}}
           {...rest}
         >
           { isGregorian?day.format('D'):persianNumber(day.format('jD')) }
