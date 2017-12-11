@@ -7400,7 +7400,7 @@ var _DefaultStyles = __webpack_require__(203);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Calendar = exports.Calendar = function (_Component) {
+var Calendar = function (_Component) {
     (0, _inherits3.default)(Calendar, _Component);
 
     function Calendar() {
@@ -7422,18 +7422,14 @@ var Calendar = exports.Calendar = function (_Component) {
             isGregorian: _this.props.isGregorian,
             hoveredDay: null,
             isRange: _this.props.isRange ? _this.props.isRange : false
-        }, _this.handleClickOnDay = function (selectedDay) {
-            if (selectedDayObj.startOf('day').isBefore((0, _momentJalaali2.default)().startOf('day'))) {
-                return;
-            }
-
+        }, _this.handleClickOnDayArray = function (selectedDayArray) {
             var onSelect = _this.props.onSelect;
 
-            _this.selectDay(selectedDayObj);
+            _this.selectDay(selectedDayArray);
             if (onSelect) {
-                onSelect(selectedDayObj);
+                onSelect(selectedDayArray);
             }
-        }, _this.handleClickOnDay = function (selectedDayObj) {
+        }, _this.handleClickOnDayObj = function (selectedDayObj) {
             var onSelect = _this.props.onSelect;
 
             _this.selectDay(selectedDayObj);
@@ -7526,9 +7522,9 @@ var Calendar = exports.Calendar = function (_Component) {
         value: function hover(selectedDay, hoveredDay, day, selected) {
             var hover = false;
             if (selectedDay.length === 1 && !!hoveredDay) {
-                console.log("here we die");
                 if (hoveredDay.isSameOrAfter(selectedDay[0]) && day.isBetween(selectedDay[0], hoveredDay, null, '(]')) {
                     hover = true;
+                    console.log("hoveredDay in", hoveredDay);
                 }
             } else if (selectedDay.length === 2) {
                 if (selectedDay[1].isSameOrAfter(selectedDay[0]) && day.isBetween(selectedDay[0], selectedDay[1], null, '()')) {
@@ -7623,27 +7619,17 @@ var Calendar = exports.Calendar = function (_Component) {
         }
     }, {
         key: 'selectedDay',
-        value: function (_selectedDay) {
-            function selectedDay(_x, _x2) {
-                return _selectedDay.apply(this, arguments);
-            }
-
-            selectedDay.toString = function () {
-                return _selectedDay.toString();
-            };
-
-            return selectedDay;
-        }(function (selectedDay, day) {
+        value: function selectedDay(_selectedDay, day) {
             var selected = false;
-            for (var i = 0; i < selectedDay.length; i++) {
-                if (selectedDay[i].isSame(day, 'day')) {
+            for (var i = 0; i < _selectedDay.length; i++) {
+                if (_selectedDay[i].isSame(day, 'day')) {
                     selected = true;
                     break;
                 }
             }
 
             return selected;
-        })
+        }
     }, {
         key: 'renderDays',
         value: function renderDays() {
@@ -7689,11 +7675,12 @@ var Calendar = exports.Calendar = function (_Component) {
                         var isCurrentMonth = day.format(monthFormat) === month.format(monthFormat);
                         var disabled = (min ? day.isBefore(min) : false) || (max ? day.isAfter(max) : false);
                         var selected = _this2.state.isRange === false ? selectedDayObj ? selectedDayObj.isSame(day, 'day') : false : _this2.selectedDay(selectedDayArray, day);
-                        var hover = _this2.hover(selectedDay, hoveredDay, day, selected);
+                        var hover = _this2.hover(selectedDayArray, hoveredDay, day, selected);
                         return _react2.default.createElement(_Day2.default, {
                             isGregorian: isGregorian,
                             key: day.format(dateFormat),
-                            onClick: _this2.handleClickOnDay,
+                            onClick: _this2.state.isRange ? _this2.handleClickOnDayArray : _this2.handleClickOnDayObj,
+                            onMouseOver: _this2.state.isRange ? _this2.handleMouseOverOnDay.bind(_this2) : null,
                             day: day,
                             disabled: disabled,
                             selected: selected,
@@ -7733,6 +7720,7 @@ var Calendar = exports.Calendar = function (_Component) {
     return Calendar;
 }(_react.Component);
 
+exports.Calendar = Calendar;
 Calendar.propTypes = {
     min: _react.PropTypes.object,
     max: _react.PropTypes.object,
@@ -20700,14 +20688,25 @@ var Day = function (_Component) {
   (0, _inherits3.default)(Day, _Component);
 
   function Day() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
     (0, _classCallCheck3.default)(this, Day);
-    return (0, _possibleConstructorReturn3.default)(this, (Day.__proto__ || (0, _getPrototypeOf2.default)(Day)).apply(this, arguments));
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = Day.__proto__ || (0, _getPrototypeOf2.default)(Day)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+      hovered: _this.props.hovered ? _this.props.hovered : false
+    }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
   }
 
   (0, _createClass3.default)(Day, [{
     key: 'shouldComponentUpdate',
     value: function shouldComponentUpdate(nextProps) {
-      return nextProps.selected !== this.props.selected || nextProps.disabled !== this.props.disabled || nextProps.isCurrentMonth !== this.props.isCurrentMonth;
+      return nextProps.selected !== this.props.selected || nextProps.disabled !== this.props.disabled || nextProps.isCurrentMonth !== this.props.isCurrentMonth || nextProps.hovered !== this.props.hovered;
     }
   }, {
     key: 'handleClick',
@@ -20725,20 +20724,34 @@ var Day = function (_Component) {
       }
     }
   }, {
+    key: 'handleMouseOverOnDay',
+    value: function handleMouseOverOnDay(event) {
+      event.preventDefault();
+      event.stopPropagation();
+      event.nativeEvent.stopImmediatePropagation();
+      var _props2 = this.props,
+          onMouseOver = _props2.onMouseOver,
+          day = _props2.day;
+
+      if (onMouseOver) {
+        onMouseOver(day);
+      }
+    }
+  }, {
     key: 'render',
     value: function render() {
       var _classnames;
 
-      var _props2 = this.props,
-          day = _props2.day,
-          disabled = _props2.disabled,
-          selected = _props2.selected,
-          isCurrentMonth = _props2.isCurrentMonth,
-          onClick = _props2.onClick,
-          styles = _props2.styles,
-          hovered = _props2.hovered,
-          isGregorian = _props2.isGregorian,
-          rest = (0, _objectWithoutProperties3.default)(_props2, ['day', 'disabled', 'selected', 'isCurrentMonth', 'onClick', 'styles', 'hovered', 'isGregorian']);
+      var _props3 = this.props,
+          day = _props3.day,
+          disabled = _props3.disabled,
+          selected = _props3.selected,
+          isCurrentMonth = _props3.isCurrentMonth,
+          onClick = _props3.onClick,
+          styles = _props3.styles,
+          hovered = _props3.hovered,
+          isGregorian = _props3.isGregorian,
+          rest = (0, _objectWithoutProperties3.default)(_props3, ['day', 'disabled', 'selected', 'isCurrentMonth', 'onClick', 'styles', 'hovered', 'isGregorian']);
 
 
       var className = (0, _classnames3.default)(styles.dayWrapper, (_classnames = {}, (0, _defineProperty3.default)(_classnames, styles.selected, selected), (0, _defineProperty3.default)(_classnames, styles.currentMonth, isCurrentMonth), _classnames));
@@ -20750,10 +20763,12 @@ var Day = function (_Component) {
           'button',
           (0, _extends3.default)({
             type: 'button',
+            disabled: disabled
+          }, rest, {
             onClick: this.handleClick.bind(this),
-            disabled: disabled,
+            onMouseOver: this.handleMouseOverOnDay.bind(this),
             style: hovered ? { backgroundColor: "#eeeeff" } : {}
-          }, rest),
+          }),
           isGregorian ? day.format('D') : (0, _persian.persianNumber)(day.format('jD'))
         )
       );
@@ -20769,6 +20784,7 @@ Day.propTypes = {
   selected: _react.PropTypes.bool,
   hovered: _react.PropTypes.bool,
   onClick: _react.PropTypes.func,
+  onMouseOver: _react.PropTypes.func,
   isGregorian: _react.PropTypes.bool
 };
 exports.default = Day;

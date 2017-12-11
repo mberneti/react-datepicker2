@@ -118,9 +118,9 @@ export class Calendar extends Component {
     hover(selectedDay, hoveredDay, day, selected) {
         let hover = false;
         if (selectedDay.length === 1 && !!hoveredDay) {
-            console.log("here we die");
             if (hoveredDay.isSameOrAfter(selectedDay[0]) && day.isBetween(selectedDay[0], hoveredDay, null, '(]')) {
                 hover = true;
+                console.log("hoveredDay in" , hoveredDay);
             }
         } else if (selectedDay.length === 2) {
             if (selectedDay[1].isSameOrAfter(selectedDay[0]) && day.isBetween(selectedDay[0], selectedDay[1], null, '()')) {
@@ -182,19 +182,15 @@ export class Calendar extends Component {
         }
     }
 
-    handleClickOnDay = selectedDay => {
-        if (selectedDayObj.startOf('day').isBefore(moment().startOf('day'))) {
-            return;
-        }
-
+    handleClickOnDayArray = selectedDayArray => {
         const {onSelect} = this.props;
-        this.selectDay(selectedDayObj);
+        this.selectDay(selectedDayArray);
         if (onSelect) {
-            onSelect(selectedDayObj);
+            onSelect(selectedDayArray);
         }
     }
 
-    handleClickOnDay = selectedDayObj => {
+    handleClickOnDayObj = selectedDayObj => {
         const {onSelect} = this.props;
         this.selectDay(selectedDayObj);
         if (onSelect) {
@@ -264,12 +260,13 @@ export class Calendar extends Component {
                             const isCurrentMonth = day.format(monthFormat) === month.format(monthFormat);
                             const disabled = (min ? day.isBefore(min) : false) || (max ? day.isAfter(max) : false);
                             const selected = (this.state.isRange === false) ? (selectedDayObj ?  selectedDayObj.isSame(day, 'day') : false) : this.selectedDay(selectedDayArray, day);
-                            let hover = this.hover(selectedDay, hoveredDay, day, selected);
+                            let hover = this.hover(selectedDayArray, hoveredDay, day, selected);
                             return (
                                 <Day
                                     isGregorian={isGregorian}
                                     key={day.format(dateFormat)}
-                                    onClick={this.handleClickOnDay}
+                                    onClick={(this.state.isRange) ? this.handleClickOnDayArray : this.handleClickOnDayObj}
+                                    onMouseOver={(this.state.isRange) ? this.handleMouseOverOnDay.bind(this) : null}
                                     day={day}
                                     disabled={disabled}
                                     selected={selected}
