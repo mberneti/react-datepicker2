@@ -7454,15 +7454,28 @@ var Calendar = function (_Component) {
         key: 'componentWillReceiveProps',
         value: function componentWillReceiveProps(_ref2) {
             var selectedDayObj = _ref2.selectedDayObj,
+                selectedDayArray = _ref2.selectedDayArray,
                 defaultMonth = _ref2.defaultMonth,
                 min = _ref2.min;
 
-            if (this.props.selectedDayObj !== selectedDayObj) {
-                this.selectDay(selectedDayObj);
-            } else if (defaultMonth && this.props.defaultMonth !== defaultMonth && this.state.month === this.props.defaultMonth) {
-                this.setMonth(defaultMonth);
-            } else if (min && this.props.min !== min && this.state.month.isSame(this.props.min)) {
-                this.setMonth(min.clone());
+            if (this.state.isRange === false) {
+                if (this.props.selectedDayObj !== selectedDayObj) {
+                    this.selectDay(selectedDayObj);
+                } else if (defaultMonth && this.props.defaultMonth !== defaultMonth && this.state.month === this.props.defaultMonth) {
+                    this.setMonth(defaultMonth);
+                } else if (min && this.props.min !== min && this.state.month.isSame(this.props.min)) {
+                    this.setMonth(min.clone());
+                }
+            } else {
+                console.log("selected day new", selectedDayArray);
+                console.log("selected day old", this.props.selectedDayArray);
+                if (this.props.selectedDayArray !== selectedDayArray) {
+                    this.setState({ selectedDayArray: selectedDayArray });
+                } else if (defaultMonth && this.props.defaultMonth !== defaultMonth && this.state.month === this.props.defaultMonth) {
+                    this.setMonth(defaultMonth);
+                } else if (min && this.props.min !== min && this.state.month.isSame(this.props.min)) {
+                    this.setMonth(min.clone());
+                }
             }
         }
     }, {
@@ -7524,7 +7537,6 @@ var Calendar = function (_Component) {
             if (selectedDay.length === 1 && !!hoveredDay) {
                 if (hoveredDay.isSameOrAfter(selectedDay[0]) && day.isBetween(selectedDay[0], hoveredDay, null, '(]')) {
                     hover = true;
-                    console.log("hoveredDay in", hoveredDay);
                 }
             } else if (selectedDay.length === 2) {
                 if (selectedDay[1].isSameOrAfter(selectedDay[0]) && day.isBetween(selectedDay[0], selectedDay[1], null, '()')) {
@@ -7585,7 +7597,6 @@ var Calendar = function (_Component) {
                         syncSelectedDay({ selectedDayArray: [givenDay] });
                     }
                 }
-
                 if (givenDay.format(_yearMonthFormat) !== _month.format(_yearMonthFormat)) {
                     this.setState({ month: givenDay });
                 }

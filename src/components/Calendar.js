@@ -61,14 +61,27 @@ export class Calendar extends Component {
         };
     }
 
-    componentWillReceiveProps({selectedDayObj, defaultMonth, min}) {
-        if (this.props.selectedDayObj !== selectedDayObj) {
-            this.selectDay(selectedDayObj);
-        } else if (defaultMonth && this.props.defaultMonth !== defaultMonth && this.state.month === this.props.defaultMonth) {
-            this.setMonth(defaultMonth);
-        } else if (min && this.props.min !== min && this.state.month.isSame(this.props.min)) {
-            this.setMonth(min.clone());
-        }
+    componentWillReceiveProps({selectedDayObj,selectedDayArray , defaultMonth, min}) {
+       if(this.state.isRange === false) {
+           if (this.props.selectedDayObj !== selectedDayObj) {
+               this.selectDay(selectedDayObj);
+           } else if (defaultMonth && this.props.defaultMonth !== defaultMonth && this.state.month === this.props.defaultMonth) {
+               this.setMonth(defaultMonth);
+           } else if (min && this.props.min !== min && this.state.month.isSame(this.props.min)) {
+               this.setMonth(min.clone());
+           }
+       }
+       else{
+           console.log("selected day new",selectedDayArray);
+           console.log("selected day old",this.props.selectedDayArray);
+           if (this.props.selectedDayArray !== selectedDayArray) {
+               this.setState({selectedDayArray: selectedDayArray});
+           }else if (defaultMonth && this.props.defaultMonth !== defaultMonth && this.state.month === this.props.defaultMonth) {
+               this.setMonth(defaultMonth);
+           } else if (min && this.props.min !== min && this.state.month.isSame(this.props.min)) {
+               this.setMonth(min.clone());
+           }
+       }
     }
 
     setMode(mode) {
@@ -120,7 +133,6 @@ export class Calendar extends Component {
         if (selectedDay.length === 1 && !!hoveredDay) {
             if (hoveredDay.isSameOrAfter(selectedDay[0]) && day.isBetween(selectedDay[0], hoveredDay, null, '(]')) {
                 hover = true;
-                console.log("hoveredDay in" , hoveredDay);
             }
         } else if (selectedDay.length === 2) {
             if (selectedDay[1].isSameOrAfter(selectedDay[0]) && day.isBetween(selectedDay[0], selectedDay[1], null, '()')) {
@@ -175,7 +187,6 @@ export class Calendar extends Component {
                     syncSelectedDay({selectedDayArray: [givenDay]});
                 }
             }
-
             if (givenDay.format(yearMonthFormat) !== month.format(yearMonthFormat)) {
                 this.setState({month: givenDay});
             }
