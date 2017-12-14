@@ -16,14 +16,20 @@ export default class Day extends Component {
     isCurrentMonth: PropTypes.bool,
     disabled: PropTypes.bool,
     selected: PropTypes.bool,
+    hovered: PropTypes.bool,
     onClick: PropTypes.func,
+    onMouseOver: PropTypes.func,
     isGregorian: PropTypes.bool
   };
 
+  state = {
+      hovered : this.props.hovered ? this.props.hovered : false,
+  };
   shouldComponentUpdate(nextProps) {
     return nextProps.selected !== this.props.selected ||
       nextProps.disabled !== this.props.disabled ||
-      nextProps.isCurrentMonth !== this.props.isCurrentMonth;
+      nextProps.isCurrentMonth !== this.props.isCurrentMonth ||
+      nextProps.hovered !== this.props.hovered;
   }
 
   handleClick(event) {
@@ -37,8 +43,17 @@ export default class Day extends Component {
     }
   }
 
+    handleMouseOverOnDay(event) {
+        event.preventDefault();
+        event.stopPropagation();
+        event.nativeEvent.stopImmediatePropagation();
+        const {onMouseOver, day} = this.props;
+        if (onMouseOver) {
+            onMouseOver(day);
+        }
+    }
   render() {
-    const { day, disabled, selected, isCurrentMonth, onClick, styles,isGregorian, ...rest } = this.props;
+    const { day, disabled, selected, isCurrentMonth, onClick, styles , hovered ,isGregorian, ...rest } = this.props;
 
     const className = classnames(styles.dayWrapper, {
       [styles.selected]: selected,
@@ -49,9 +64,11 @@ export default class Day extends Component {
       <div className={className}>
         <button
           type="button"
-          onClick={this.handleClick.bind(this) }
           disabled={disabled}
           {...rest}
+          onClick={this.handleClick.bind(this) }
+          onMouseOver={this.handleMouseOverOnDay.bind(this) }
+          style={hovered ? {backgroundColor: "#eeeeff"} : {}}
         >
           { isGregorian?day.format('D'):persianNumber(day.format('jD')) }
         </button>
