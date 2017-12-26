@@ -7,8 +7,9 @@ import Default from './examples/default'
 import Jalaali from './examples/jalaali'
 import DisabledTimepicker from './examples/disabledTimepicker'
 import SwitchIsGregorian from './examples/switchIsGregorian'
+var createReactClass = require('create-react-class');
 
-export default React.createClass({
+export default createReactClass({
   displayName: 'exampleComponents',
 
   componentDidMount() {

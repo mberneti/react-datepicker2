@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { persianNumber } from '../utils/persian';
 import { leftArrow, rightArrow } from '../utils/assets';
 

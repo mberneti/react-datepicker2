@@ -1,8 +1,9 @@
 import React from 'react'
 import moment from 'moment'
 import DatePicker from '../../src';
+var createReactClass = require('create-react-class');
 
-export default React.createClass({
+export default createReactClass({
   getInitialState() {
     return {
       value: moment()

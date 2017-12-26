@@ -1,8 +1,9 @@
 import React from 'react'
 import ExampleComponents from './example_components.js'
 import HeroExample from './hero_example.js'
+var createReactClass = require('create-react-class');
 
-export default React.createClass({
+export default createReactClass({
   displayName: 'Root',
 
   render () {

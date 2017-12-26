@@ -1,5 +1,7 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import Select from './Select';
+var createReactClass = require('create-react-class');
 
 const pad = value => value < 10 ? `0${value}` : `${value}`;
 
@@ -17,7 +19,7 @@ const formatOption = (option, disabledOptions) => {
   };
 };
 
-const Combobox = React.createClass({
+const Combobox = createReactClass({
   propTypes: {
     format: PropTypes.string,
     defaultOpenValue: PropTypes.object,

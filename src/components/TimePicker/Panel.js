@@ -1,7 +1,9 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import Header from './Header';
 import Combobox from './Combobox';
 import moment from 'moment';
+var createReactClass = require('create-react-class');
 
 function noop() {
 }
@@ -16,7 +18,7 @@ function generateOptions(length, disabledOptions, hideDisabledOptions) {
   return arr;
 }
 
-const Panel = React.createClass({
+const Panel = createReactClass({
   propTypes: {
     clearText: PropTypes.string,
     prefixCls: PropTypes.string,

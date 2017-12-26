@@ -29,7 +29,9 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
+    "create-react-class": "^15.6.2",
     "moment-jalaali": "^0.6.1",
+    "prop-types": "^15.6.0",
     "rc-trigger": "^1.9.1",
     "react-onclickoutside": "^5.9.0",
     "react-tether": "^0.5.6"
@@ -55,16 +57,16 @@
     "moment": "^2.18.1",
     "nodeunit": "^0.11.0",
     "path": "^0.12.7",
-    "react": "^15.4.2",
+    "react": "^16.2.0",
     "react-addons-test-utils": "^15.4.2",
-    "react-dom": "^15.4.2",
+    "react-dom": "^16.2.0",
     "react-syntax-highlight": "^0.0.5",
     "react-test-renderer": "^15.4.2",
     "webpack": "^2.3.1",
     "webpack-dev-server": "^2.4.2"
   },
   "peerDependencies": {
-    "react": "^0.14.0 || ^15.0.0",
-    "react-dom": "^0.14.0 || ^15.0.0"
+    "react": "^0.14.0 || ^15.0.0 || ^16.0.0",
+    "react-dom": "^0.14.0 || ^15.0.0 || ^16.0.0"
   }
 }

@@ -1,8 +1,9 @@
 import React from 'react'
 import moment from 'moment'
 import DatePicker from '../../../src/components/DatePicker';
+var createReactClass = require('create-react-class');
 
-const component = React.createClass({
+const component = createReactClass({
   getInitialState() {
     return {
       value: moment()
@@ -17,7 +18,7 @@ const component = React.createClass({
 });
 
 const title = 'Default';
-const code = `const component = React.createClass({
+const code = `const component = createReactClass({
   getInitialState() {
     return {
       value: moment()

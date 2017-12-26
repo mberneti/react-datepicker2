@@ -1,8 +1,10 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import Trigger from 'rc-trigger';
 import Panel from './Panel';
 import placements from './placements';
 import moment from 'moment';
+var createReactClass = require('create-react-class');
 
 function noop() {
 }
@@ -11,7 +13,7 @@ function refFn(field, component) {
   this[field] = component;
 }
 
-const Picker = React.createClass({
+const Picker = createReactClass({
   propTypes: {
     prefixCls: PropTypes.string,
     clearText: PropTypes.string,

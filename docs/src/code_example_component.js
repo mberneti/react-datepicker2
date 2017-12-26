@@ -1,12 +1,14 @@
 import React from 'react'
+import PropTypes from 'prop-types';
+var createReactClass = require('create-react-class');
 
-export default React.createClass({
+export default createReactClass({
   displayName: 'CodeExampleComponent',
 
   propTypes: {
-    children: React.PropTypes.element,
-    id: React.PropTypes.number,
-    title: React.PropTypes.string
+    children: PropTypes.element,
+    id: PropTypes.number,
+    title: PropTypes.string
   },
 
   render () {
