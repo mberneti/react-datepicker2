@@ -10,6 +10,12 @@ module.exports = {
     library: 'react-datepicker2'
   },
 
+  plugins: [
+    // Add only en and fa locale files of moment
+    new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /en|fa/),
+    // new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
+  ],
+
   externals: {
     'react': {
       'commonjs': 'react',
