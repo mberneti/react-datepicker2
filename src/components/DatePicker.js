@@ -149,7 +149,7 @@ export default class DatePicker extends Component {
           second: oldValue.seconds()
         });
     }
-
+    this.setOpen(false);
     this.setMomentValue(momentValue);
   }
 

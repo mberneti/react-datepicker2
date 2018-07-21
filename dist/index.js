@@ -7488,7 +7488,7 @@ var DatePicker = function (_Component) {
           second: oldValue.seconds()
         });
       }
-
+      this.setOpen(false);
       this.setMomentValue(momentValue);
     }
   }, {
