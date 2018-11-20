@@ -2,35 +2,31 @@ import React from 'react'
 import moment from 'moment'
 import DatePicker from '../../../src/components/DatePicker';
 
-const component = React.createClass({
-  getInitialState() {
-    return {
+class SampleComponent extends React.Component{
+  state = {
       value: moment()
-    }
-  },
+  }
   render() {
     return <DatePicker
       value={this.state.value}
       onChange={value => this.setState({ value })}
     />
   }
-});
+}
 
 const title = 'Default';
-const code = `const component = React.createClass({
-  getInitialState() {
-    return {
+const code = `class DefaultComponent extends React.Component{
+  state = {
       value: moment()
-    }
-  },
+  }
   render() {
     return <DatePicker
       value={this.state.value}
       onChange={value => this.setState({ value })}
     />
   }
-});
+}
 `;
-const Default = { component, title, code };
+const Default = { SampleComponent, title, code };
 
 export default Default;

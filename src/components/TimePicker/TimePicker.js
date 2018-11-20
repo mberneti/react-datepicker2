@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import Trigger from 'rc-trigger';
 import Panel from './Panel';
 import placements from './placements';
@@ -11,8 +12,8 @@ function refFn(field, component) {
   this[field] = component;
 }
 
-const Picker = React.createClass({
-  propTypes: {
+class Picker extends React.Component{
+  static propTypes = {
     prefixCls: PropTypes.string,
     clearText: PropTypes.string,
     value: PropTypes.object,
@@ -41,7 +42,8 @@ const Picker = React.createClass({
     onClose: PropTypes.func,
     showAMPM: PropTypes.bool,
     panelClassName: PropTypes.string,
-  isGregorian: PropTypes.bool  },
+    isGregorian: PropTypes.bool
+  };
 
   getDefaultProps() {
     return {
@@ -64,16 +66,17 @@ const Picker = React.createClass({
       onOpen: noop,
       onClose: noop,
     };
-  },
+  }
 
-  getInitialState() {
+  constructor(props) {
+    super(props);
     this.savePanelRef = refFn.bind(this, 'panelInstance');
     const { defaultOpen, defaultValue, open = defaultOpen, value = defaultValue } = this.props;
-    return {
+    this.state = {
       open,
       value,
     };
-  },
+  }
 
   componentWillReceiveProps(nextProps) {
     const { value, open } = nextProps;
@@ -85,31 +88,31 @@ const Picker = React.createClass({
     if (open !== undefined) {
       this.setState({ open });
     }
-  },
+  }
 
   onPanelChange(value) {
     this.setValue(value);
-  },
+  }
 
   onPanelClear() {
     this.setValue(null);
     this.setOpen(false);
-  },
+  }
 
   onVisibleChange(open) {
     this.setOpen(open);
-  },
+  }
 
   onEsc() {
     this.setOpen(false);
     this.refs.picker.focus();
-  },
+  }
 
   onKeyDown(e) {
     if (e.keyCode === 40) {
       this.setOpen(true);
     }
-  },
+  }
 
   setValue(value) {
     if (!('value' in this.props)) {
@@ -118,7 +121,7 @@ const Picker = React.createClass({
       });
     }
     this.props.onChange(value);
-  },
+  }
 
   getFormat() {
     let format = this.props.format;
@@ -132,13 +135,13 @@ const Picker = React.createClass({
     } else {
       format = 'HH:mm:ss';
     }
-    
+
     if (this.props.showAMPM) {
         format = format.replace('HH', 'hh') + ' A';
     }
 
     return format;
-  },
+  }
 
   getPanelElement() {
     const {
@@ -153,11 +156,11 @@ const Picker = React.createClass({
         prefixCls={`${prefixCls}-panel`}
         ref={this.savePanelRef}
         value={this.state.value}
-        onChange={this.onPanelChange}
-        onClear={this.onPanelClear}
+        onChange={this.onPanelChange.bind(this)}
+        onClear={this.onPanelClear.bind(this)}
         defaultOpenValue={defaultOpenValue}
         showHour={showHour}
-        onEsc={this.onEsc}
+        onEsc={this.onEsc.bind(this)}
         showSecond={showSecond}
         showAMPM={showAMPM}
         allowEmpty={allowEmpty}
@@ -169,7 +172,7 @@ const Picker = React.createClass({
         hideDisabledOptions={hideDisabledOptions}
       />
     );
-  },
+  }
 
   setOpen(open, callback) {
     const { onOpen, onClose } = this.props;
@@ -186,7 +189,7 @@ const Picker = React.createClass({
         onClose(event);
       }
     }
-  },
+  }
 
   render() {
     const {
@@ -212,21 +215,21 @@ const Picker = React.createClass({
         getPopupContainer={getPopupContainer}
         popupTransitionName={transitionName}
         popupVisible={open}
-        onPopupVisibleChange={this.onVisibleChange}
+        onPopupVisibleChange={this.onVisibleChange.bind(this)}
       >
         <span className={`${prefixCls} ${className}`} style={style}>
           <input
             className={`${prefixCls}-input`}
             ref="picker" type="text" placeholder={placeholder}
             readOnly
-            onKeyDown={this.onKeyDown}
+            onKeyDown={this.onKeyDown.bind(this)}
             disabled={disabled} value={value && value.format(this.getFormat()) || ''}
           />
           <span className={`${prefixCls}-icon`}/>
         </span>
       </Trigger>
     );
-  },
-});
+  }
+}
 
 export default Picker;

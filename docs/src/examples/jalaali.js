@@ -2,12 +2,10 @@ import React from 'react'
 import moment from 'moment-jalaali'
 import DatePicker from '../../../src/components/DatePicker';
 
-const component = React.createClass({
-  getInitialState() {
-    return {
+class SampleComponent extends React.Component{
+  state = {
       value: moment('1396/7/6', 'jYYYY/jM/jD')
-    }
-  },
+  }
   render() {
     return <DatePicker
       isGregorian={false}
@@ -15,15 +13,13 @@ const component = React.createClass({
       onChange={value => this.setState({ value })}
     />
   }
-});
+}
 
 const title = 'Jalaali';
-const code = `const component = React.createClass({
-  getInitialState() {
-    return {
+const code = `class JalaaliComponent extends React.Component{
+  state = {
       value: moment('1396/7/6', 'jYYYY/jM/jD')
-    }
-  },
+  }
   render() {
     return <DatePicker
       isGregorian={false}
@@ -31,7 +27,7 @@ const code = `const component = React.createClass({
       onChange={value => this.setState({ value })}
     />
   }
-});
+}
 `;
-const Jalaali = { component, title, code };
+const Jalaali = { SampleComponent, title, code };
 export default Jalaali;

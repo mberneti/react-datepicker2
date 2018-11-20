@@ -2,13 +2,12 @@ import React from 'react'
 import moment from 'moment-jalaali'
 import DatePicker from '../../../src/components/DatePicker';
 
-const component = React.createClass({
-  getInitialState() {
-    return {
+class SampleComponent extends React.Component{
+  state = {
       value: moment(),
       isGregorian:true
-    }
-  },
+  };
+
   render() {
     return <div>
             <DatePicker
@@ -22,15 +21,13 @@ const component = React.createClass({
             </button>
           </div>
   }
-});
+}
 
 const title = 'Switch IsGregorian';
-const code = `const component = React.createClass({
-  getInitialState() {
-    return {
+const code = `class SwitchIsGregorianComponent extends React.Component{
+  state = {
       value: moment()
-    }
-  },
+  }
   render() {
     return <DatePicker
       isGregorian={false}
@@ -38,7 +35,7 @@ const code = `const component = React.createClass({
       onChange={value => this.setState({ value })}
     />
   }
-});
+}
 `;
-const SwitchIsGregorian = { component, title, code };
+const SwitchIsGregorian = { SampleComponent, title, code };
 export default SwitchIsGregorian;

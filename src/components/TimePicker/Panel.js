@@ -1,10 +1,8 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import Header from './Header';
 import Combobox from './Combobox';
 import moment from 'moment';
-
-function noop() {
-}
 
 function generateOptions(length, disabledOptions, hideDisabledOptions) {
   const arr = [];
@@ -16,8 +14,8 @@ function generateOptions(length, disabledOptions, hideDisabledOptions) {
   return arr;
 }
 
-const Panel = React.createClass({
-  propTypes: {
+class Panel extends React.Component {
+  static propTypes = {
     clearText: PropTypes.string,
     prefixCls: PropTypes.string,
     defaultOpenValue: PropTypes.object,
@@ -36,7 +34,7 @@ const Panel = React.createClass({
     onClear: PropTypes.func,
     showAMPM: PropTypes.bool,
     isGregorian: PropTypes.bool
-  },
+  };
 
   getDefaultProps() {
     return {
@@ -45,14 +43,15 @@ const Panel = React.createClass({
       onClear: noop,
       defaultOpenValue: moment(),
     };
-  },
+  }
 
-  getInitialState() {
-    return {
+  constructor (props) {
+    super(props);
+    this.state = {
       value: this.props.value,
       selectionRange: [],
     };
-  },
+  }
 
   componentWillReceiveProps(nextProps) {
     const value = nextProps.value;
@@ -61,24 +60,24 @@ const Panel = React.createClass({
         value,
       });
     }
-  },
+  }
 
   onChange(newValue) {
     this.setState({ value: newValue });
     this.props.onChange(newValue);
-  },
+  }
 
   onClear() {
     this.props.onClear();
-  },
+  }
 
   onCurrentSelectPanelChange(currentSelectPanel) {
     this.setState({ currentSelectPanel });
-  },
+  }
 
   render() {
     const {
-      isGregorian,formatter, prefixCls, className, placeholder, disabledHours, disabledMinutes,
+      isGregorian, formatter, prefixCls, className, placeholder, disabledHours, disabledMinutes,
       disabledSeconds, hideDisabledOptions, allowEmpty, showHour, showSecond, showAMPM,
       format, defaultOpenValue, clearText, onEsc,
     } = this.props;
@@ -110,8 +109,8 @@ const Panel = React.createClass({
           disabledHours={disabledHours}
           disabledMinutes={disabledMinutes}
           disabledSeconds={disabledSeconds}
-          onChange={this.onChange}
-          onClear={this.onClear}
+          onChange={this.onChange.bind(this)}
+          onClear={this.onClear.bind(this)}
           allowEmpty={allowEmpty}
         />
         <Combobox
@@ -121,7 +120,7 @@ const Panel = React.createClass({
           value={value}
           defaultOpenValue={defaultOpenValue}
           format={format}
-          onChange={this.onChange}
+          onChange={this.onChange.bind(this)}
           showAMPM={showAMPM}
           showHour={showHour}
           showSecond={showSecond}
@@ -131,11 +130,11 @@ const Panel = React.createClass({
           disabledHours={disabledHours}
           disabledMinutes={disabledMinutes}
           disabledSeconds={disabledSeconds}
-          onCurrentSelectPanelChange={this.onCurrentSelectPanelChange}
+          onCurrentSelectPanelChange={this.onCurrentSelectPanelChange.bind(this)}
         />
       </div>
     );
-  },
-});
+  }
+}
 
 export default Panel;
