@@ -1,5 +1,5 @@
 import React from 'react'
-import moment from 'moment'
+import moment from 'moment-jalaali'
 import DatePicker from '../../src';
 
 export default React.createClass({
@@ -10,6 +10,7 @@ export default React.createClass({
   },
   render() {
     return <DatePicker
+      isGregorian={false}
       onChange={value => this.setState({ value })}
       value={this.state.value}
     />
