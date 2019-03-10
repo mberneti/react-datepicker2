@@ -1,8 +1,9 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import moment from 'moment';
+import PropTypes from "prop-types";
 
-const Header = React.createClass({
-  propTypes: {
+class Header extends React.Component {
+ static propTypes = {
     format: PropTypes.string,
     prefixCls: PropTypes.string,
     disabledDate: PropTypes.func,
@@ -21,15 +22,16 @@ const Header = React.createClass({
     allowEmpty: PropTypes.bool,
     defaultOpenValue: PropTypes.object,
     currentSelectPanel: PropTypes.string,
-  },
+  }; 
 
-  getInitialState() {
+  constructor(props) {
+    super(props);
     const { value, format } = this.props;
-    return {
+    this.state = {
       str: value && value.format(format) || '',
       invalid: false,
     };
-  },
+  }
 
   componentWillReceiveProps(nextProps) {
     const { value, format } = nextProps;
@@ -37,7 +39,7 @@ const Header = React.createClass({
       str: value && value.format(format) || '',
       invalid: false,
     });
-  },
+  }
 
   onInputChange(event) {
     const str = event.target.value;
@@ -117,18 +119,18 @@ const Header = React.createClass({
     this.setState({
       invalid: false,
     });
-  },
+  }
 
   onKeyDown(e) {
     if (e.keyCode === 27) {
       this.props.onEsc();
     }
-  },
+  }
 
   onClear() {
     this.setState({ str: '' });
     this.props.onClear();
-  },
+  }
 
   getClearButton() {
     const { prefixCls, allowEmpty } = this.props;
@@ -141,11 +143,11 @@ const Header = React.createClass({
       title={this.props.clearText}
       onMouseDown={this.onClear}
     />);
-  },
+  }
 
   getProtoValue() {
     return this.props.value || this.props.defaultOpenValue;
-  },
+  }
 
   getInput() {
     const { prefixCls, placeholder } = this.props;
@@ -159,7 +161,7 @@ const Header = React.createClass({
       placeholder={placeholder}
       onChange={this.onInputChange}
     />);
-  },
+  }
 
   render() {
     const { prefixCls } = this.props;
@@ -169,7 +171,7 @@ const Header = React.createClass({
         {this.getClearButton()}
       </div>
     );
-  },
-});
+  }
+}
 
 export default Header;

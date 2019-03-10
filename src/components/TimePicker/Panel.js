@@ -1,23 +1,27 @@
-import React, { PropTypes } from 'react';
-import Header from './Header';
-import Combobox from './Combobox';
-import moment from 'moment';
+import React from "react";
+import PropTypes from "prop-types";
+import Header from "./Header";
+import Combobox from "./Combobox";
+import moment from "moment";
 
-function noop() {
-}
+function noop() {}
 
 function generateOptions(length, disabledOptions, hideDisabledOptions) {
   const arr = [];
   for (let value = 0; value < length; value++) {
-    if (!disabledOptions || disabledOptions.indexOf(value) < 0 || !hideDisabledOptions) {
+    if (
+      !disabledOptions ||
+      disabledOptions.indexOf(value) < 0 ||
+      !hideDisabledOptions
+    ) {
       arr.push(value);
     }
   }
   return arr;
 }
 
-const Panel = React.createClass({
-  propTypes: {
+class Panel extends React.Component {
+  static propTypes = {
     clearText: PropTypes.string,
     prefixCls: PropTypes.string,
     defaultOpenValue: PropTypes.object,
@@ -36,62 +40,87 @@ const Panel = React.createClass({
     onClear: PropTypes.func,
     showAMPM: PropTypes.bool,
     isGregorian: PropTypes.bool
-  },
+  };
 
-  getDefaultProps() {
-    return {
-      prefixCls: 'rc-time-picker-panel',
-      onChange: noop,
-      onClear: noop,
-      defaultOpenValue: moment(),
-    };
-  },
+  static defaultProps = {
+    prefixCls: "rc-time-picker-panel",
+    onChange: noop,
+    onClear: noop,
+    defaultOpenValue: moment()
+  };
 
-  getInitialState() {
-    return {
+  constructor(props) {
+    super(props);
+    this.state = {
       value: this.props.value,
-      selectionRange: [],
+      selectionRange: []
     };
-  },
+  }
 
   componentWillReceiveProps(nextProps) {
     const value = nextProps.value;
     if (value) {
       this.setState({
-        value,
+        value
       });
     }
-  },
+  }
 
-  onChange(newValue) {
+  onChange = (newValue) => {
     this.setState({ value: newValue });
     this.props.onChange(newValue);
-  },
+  }
 
-  onClear() {
+  onClear = () => {
     this.props.onClear();
-  },
+  }
 
-  onCurrentSelectPanelChange(currentSelectPanel) {
+  onCurrentSelectPanelChange = (currentSelectPanel) => {
     this.setState({ currentSelectPanel });
-  },
+  }
 
   render() {
     const {
-      isGregorian,formatter, prefixCls, className, placeholder, disabledHours, disabledMinutes,
-      disabledSeconds, hideDisabledOptions, allowEmpty, showHour, showSecond, showAMPM,
-      format, defaultOpenValue, clearText, onEsc,
+      isGregorian,
+      formatter,
+      prefixCls,
+      className,
+      placeholder,
+      disabledHours,
+      disabledMinutes,
+      disabledSeconds,
+      hideDisabledOptions,
+      allowEmpty,
+      showHour,
+      showSecond,
+      showAMPM,
+      format,
+      defaultOpenValue,
+      clearText,
+      onEsc
     } = this.props;
-    const {
-      value, currentSelectPanel,
-    } = this.state;
+    const { value, currentSelectPanel } = this.state;
     const disabledHourOptions = disabledHours();
     const disabledMinuteOptions = disabledMinutes(value ? value.hour() : null);
-    const disabledSecondOptions = disabledSeconds(value ? value.hour() : null,
-      value ? value.minute() : null);
-    const hourOptions = generateOptions(24, disabledHourOptions, hideDisabledOptions);
-    const minuteOptions = generateOptions(60, disabledMinuteOptions, hideDisabledOptions);
-    const secondOptions = generateOptions(60, disabledSecondOptions, hideDisabledOptions);
+    const disabledSecondOptions = disabledSeconds(
+      value ? value.hour() : null,
+      value ? value.minute() : null
+    );
+    const hourOptions = generateOptions(
+      24,
+      disabledHourOptions,
+      hideDisabledOptions
+    );
+    const minuteOptions = generateOptions(
+      60,
+      disabledMinuteOptions,
+      hideDisabledOptions
+    );
+    const secondOptions = generateOptions(
+      60,
+      disabledSecondOptions,
+      hideDisabledOptions
+    );
 
     return (
       <div className={`${prefixCls}-inner ${className}`}>
@@ -135,7 +164,7 @@ const Panel = React.createClass({
         />
       </div>
     );
-  },
-});
+  }
+}
 
 export default Panel;

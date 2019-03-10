@@ -1,6 +1,6 @@
 {
   "name": "react-datepicker2",
-  "version": "v1.0.0-alpha3",
+  "version": "v2.0.0",
   "description": "react datepicker component. (include persian jalaali calendar)",
   "main": "dist/index.js",
   "style": "dist/react-datepicker2.min.css",
@@ -23,14 +23,16 @@
   "author": "mohammadreza berneti (mberneti)",
   "license": "MIT",
   "scripts": {
-    "test": "jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "test": "jest --coverage && minicat coverage/lcov.info | coveralls",
     "start": "webpack --config webpack.config.docs.js && webpack-dev-server --config webpack.config.dev.js",
     "build": "webpack --config webpack.config.prod.js"
   },
   "dependencies": {
     "classnames": "^2.2.5",
     "moment-jalaali": "^0.6.1",
+    "prop-types": "^15.7.2",
     "rc-trigger": "^1.9.1",
+    "react-highlight": "^0.12.0",
     "react-onclickoutside": "^5.9.0",
     "react-tether": "^0.5.6"
   },
@@ -52,14 +54,16 @@
     "install": "^0.8.7",
     "jest": "^19.0.2",
     "jscoverage": "^0.6.0",
+    "minicat": "^1.0.0",
     "moment": "^2.18.1",
     "nodeunit": "^0.11.0",
     "path": "^0.12.7",
-    "react": "^15.4.2",
+    "react": "^16.8.4",
     "react-addons-test-utils": "^15.4.2",
-    "react-dom": "^15.4.2",
-    "react-syntax-highlight": "^0.0.5",
-    "react-test-renderer": "^15.4.2",
+    "react-dom": "^16.8.4",
+    "react-switch": "^4.1.0",
+    "react-syntax-highlight": "^15.3.1",
+    "react-test-renderer": "^16.8.4",
     "webpack": "^2.3.1",
     "webpack-dev-server": "^2.4.2"
   },

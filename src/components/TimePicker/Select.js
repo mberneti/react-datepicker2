@@ -1,6 +1,7 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import ReactDom from 'react-dom';
 import classnames from 'classnames';
+import PropTypes from "prop-types";
 
 const scrollTo = (element, to, duration) => {
   const requestAnimationFrame = window.requestAnimationFrame ||
@@ -22,34 +23,34 @@ const scrollTo = (element, to, duration) => {
   });
 };
 
-const Select = React.createClass({
-  propTypes: {
+class Select extends React.Component {
+  static propTypes = {
     prefixCls: PropTypes.string,
     options: PropTypes.array,
     selectedIndex: PropTypes.number,
     type: PropTypes.string,
     onSelect: PropTypes.func,
     onMouseEnter: PropTypes.func,
-  },
+  };
 
   componentDidMount() {
     // jump to selected option
     this.scrollToSelected(0);
-  },
+  }
 
   componentDidUpdate(prevProps) {
     // smooth scroll to selected option
     if (prevProps.selectedIndex !== this.props.selectedIndex) {
       this.scrollToSelected(120);
     }
-  },
+  }
 
-  onSelect(value) {
+  onSelect = (value) => {
     const { onSelect, type } = this.props;
-    onSelect(type, value);
-  },
+    this.props.onSelect(type, value);
+  }
 
-  getOptions() {
+  getOptions = () => {
     const { options, selectedIndex, prefixCls } = this.props;
     return options.map((item, index) => {
       const cls = classnames({
@@ -74,9 +75,9 @@ const Select = React.createClass({
         {typeof item.label !== 'undefined' ? item.label : item.value}
       </li>);
     });
-  },
+  }
 
-  scrollToSelected(duration) {
+  scrollToSelected = (duration) => {
     // move to selected item
     const select = ReactDom.findDOMNode(this);
     const list = ReactDom.findDOMNode(this.refs.list);
@@ -87,7 +88,7 @@ const Select = React.createClass({
     const topOption = list.children[index];
     const to = topOption.offsetTop;
     scrollTo(select, to, duration);
-  },
+  }
 
   render() {
     if (this.props.options.length === 0) {
@@ -104,7 +105,7 @@ const Select = React.createClass({
         <ul ref="list">{this.getOptions()}</ul>
       </div>
     );
-  },
-});
+  }
+}
 
 export default Select;

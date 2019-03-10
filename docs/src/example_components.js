@@ -8,14 +8,15 @@ import Jalaali from './examples/jalaali'
 import DisabledTimepicker from './examples/disabledTimepicker'
 import SwitchIsGregorian from './examples/switchIsGregorian'
 
-export default React.createClass({
-  displayName: 'exampleComponents',
-
+export default class ExampleComponents extends React.Component {
+  constructor(props) {
+    super(props);
+    this.examples = [Default, Jalaali, DisabledTimepicker, SwitchIsGregorian];
+  }
+  
   componentDidMount() {
     hljs.initHighlightingOnLoad()
-  },
-
-  examples: [Default, Jalaali, DisabledTimepicker, SwitchIsGregorian],
+  }
 
   renderExamples() {
     return this.examples.map((example, index) =>
@@ -30,7 +31,7 @@ export default React.createClass({
         </div>
       </CodeExampleComponent>
     )
-  },
+  }
 
   renderLeftColumn() {
     return this.examples.map((example, index) =>
@@ -40,12 +41,11 @@ export default React.createClass({
         </a>
       </li>
     )
-  },
+  }
 
   render() {
     return <div>
       <h1>Examples</h1>
-      {Default.component}
       <ul className="examples__navigation">
         {this.renderLeftColumn()}
       </ul>
@@ -54,4 +54,4 @@ export default React.createClass({
       </div>
     </div>
   }
-})
+}

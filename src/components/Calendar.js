@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from "prop-types";
 import DaysViewHeading from './DaysViewHeading';
 import DaysOfWeek from './DaysOfWeek';
 import MonthSelector from './MonthSelector';
@@ -62,19 +63,19 @@ export class Calendar extends Component {
     }
   }
 
-  setMode(mode) {
+  setMode = (mode) => {
     this.setState({ mode });
   }
 
-  setMonth(month) {
+  setMonth = (month) => {
     this.setState({ month });
   }
 
-  setType(type) {
+  setType = (type) => {
     this.setState({ type });
   }
 
-  nextMonth() {
+  nextMonth = () => {
     const { isGregorian } = this.state;
     const monthFormat = isGregorian ? 'Month' : 'jMonth';
 
@@ -83,7 +84,7 @@ export class Calendar extends Component {
     });
   }
 
-  prevMonth() {
+  prevMonth = () => {
     const { isGregorian } = this.state;
     const monthFormat = isGregorian ? 'Month' : 'jMonth';
 
@@ -92,7 +93,7 @@ export class Calendar extends Component {
     });
   }
 
-  selectDay(selectedDay) {
+  selectDay = (selectedDay) => {
     const { month, isGregorian } = this.state;
     const yearMonthFormat = isGregorian ? 'YYYYMM' : 'jYYYYjMM';
 
@@ -112,7 +113,7 @@ export class Calendar extends Component {
     }
   };
 
-  handleClickOutside(event) {
+  handleClickOutside = (event) => {
     if (this.props.onClickOutside) {
       this.props.onClickOutside(event);
     }
@@ -121,13 +122,13 @@ export class Calendar extends Component {
   days = null;
   lastRenderedMonth = null;
 
-  renderMonthSelector() {
+  renderMonthSelector = () => {
     const { month, isGregorian } = this.state;
     const { styles } = this.props;
     return (<MonthSelector styles={styles} isGregorian={isGregorian} selectedMonth={month} />);
   }
 
-  renderDays() {
+  renderDays = () => {
     const { month, selectedDay, isGregorian } = this.state;
     const { children, min, max, styles, outsideClickIgnoreClass } = this.props;
 

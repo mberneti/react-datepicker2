@@ -1,5 +1,6 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import Select from './Select';
+import PropTypes from "prop-types";
 
 const pad = value => value < 10 ? `0${value}` : `${value}`;
 
@@ -17,8 +18,8 @@ const formatOption = (option, disabledOptions) => {
   };
 };
 
-const Combobox = React.createClass({
-  propTypes: {
+class Combobox extends React.Component {
+  static propTypes = {
     format: PropTypes.string,
     defaultOpenValue: PropTypes.object,
     prefixCls: PropTypes.string,
@@ -34,9 +35,9 @@ const Combobox = React.createClass({
     disabledSeconds: PropTypes.func,
     onCurrentSelectPanelChange: PropTypes.func,
     isGregorian: PropTypes.bool
-  },
+  };
 
-  onItemChange(type, itemValue) {
+  onItemChange = (type, itemValue) => {
     const { onChange, defaultOpenValue } = this.props;
     const value = (this.props.value || defaultOpenValue).clone();
 
@@ -62,13 +63,13 @@ const Combobox = React.createClass({
     }
 
     onChange(value);
-  },
+  }
 
-  onEnterSelectPanel(range) {
+  onEnterSelectPanel = (range) => {
     this.props.onCurrentSelectPanelChange(range);
-  },
+  }
 
-  getHourSelect(hour) {
+  getHourSelect = (hour) => {
     const { prefixCls, showAMPM, disabledHours, showHour } = this.props;
     if (!showHour) {
       return null;
@@ -100,9 +101,9 @@ const Combobox = React.createClass({
         onMouseEnter={this.onEnterSelectPanel.bind(this, 'hour')}
       />
     );
-  },
+  }
 
-  getMinuteSelect(minute) {
+  getMinuteSelect = (minute) => {
     const { prefixCls, minuteOptions, disabledMinutes, defaultOpenValue } = this.props;
     const value = this.props.value || defaultOpenValue;
     const disabledOptions = disabledMinutes(value.hour());
@@ -117,9 +118,9 @@ const Combobox = React.createClass({
         onMouseEnter={this.onEnterSelectPanel.bind(this, 'minute')}
       />
     );
-  },
+  }
 
-  getSecondSelect(second) {
+  getSecondSelect = (second) => {
     const { prefixCls, secondOptions, disabledSeconds, showSecond, defaultOpenValue } = this.props;
     if (!showSecond) {
       return null;
@@ -137,9 +138,9 @@ const Combobox = React.createClass({
         onMouseEnter={this.onEnterSelectPanel.bind(this, 'second')}
       />
     );
-  },
+  }
 
-  getAMPMSelect(period) {
+  getAMPMSelect = (period) => {
     const { prefixCls, showAMPM, defaultOpenValue,isGregorian } = this.props;
     
     if (!showAMPM) {
@@ -161,7 +162,7 @@ const Combobox = React.createClass({
         onMouseEnter={this.onEnterSelectPanel.bind(this, 'period')}
       />
     );
-  },
+  }
 
   render() {
     const { prefixCls, defaultOpenValue } = this.props;
@@ -174,7 +175,7 @@ const Combobox = React.createClass({
         {this.getAMPMSelect(value.hour() < 12 ? 'AM' : 'PM')}
       </div>
     );
-  },
-});
+  }
+}
 
 export default Combobox;

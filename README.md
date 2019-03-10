@@ -37,19 +37,18 @@ import DatePicker from 'react-datepicker2';
 
 import 'react-datepicker2/dist/react-datepicker2.min.css';
 
-export default React.createClass({
-  getInitialState() {
-    return {
-      value: moment()
-    }
-  },
+export default class ReactClass extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { value: moment() };
+  }
   render() {
     return <DatePicker
       onChange={value => this.setState({ value })}
       value={this.state.value}
     />
   }
-})
+}
 
 ```
 You can also use the standalone build by including react-datepicker2.js and react-datepicker2.css in your page. (If you do this though you'll also need to include the dependencies.) For example:
