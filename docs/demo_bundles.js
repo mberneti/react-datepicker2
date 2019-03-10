@@ -11224,6 +11224,8 @@ var _inherits2 = __webpack_require__(4);
 
 var _inherits3 = _interopRequireDefault(_inherits2);
 
+var _DatePicker$propTypes;
+
 var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
@@ -11274,6 +11276,9 @@ var DatePicker = function (_Component) {
       }
 
       _this.setState({ isOpen: isOpen });
+      if (_this.props.onOpen) {
+        _this.props.onOpen(isOpen);
+      }
     };
 
     _this.handleFocus = function () {
@@ -11319,7 +11324,8 @@ var DatePicker = function (_Component) {
           onBlur: _this.handleBlur.bind(_this),
           onChange: _this.handleInputChange.bind(_this),
           onClick: _this.handleInputClick.bind(_this),
-          value: inputValue
+          value: inputValue,
+          readOnly: _this.props.inputReadOnly ? _this.props.inputReadOnly : false
         })
       );
     };
@@ -11353,7 +11359,8 @@ var DatePicker = function (_Component) {
             outsideClickIgnoreClass: outsideClickIgnoreClass,
             styles: styles,
             containerProps: calendarContainerProps,
-            isGregorian: isGregorian
+            isGregorian: isGregorian,
+            calendarClass: _this.props.calendarClass ? _this.props.calendarClass : ""
           },
           TimePicker ? _react2.default.createElement(TimePicker, {
             isGregorian: isGregorian,
@@ -11509,7 +11516,7 @@ var DatePicker = function (_Component) {
 
 
       return _react2.default.createElement(_reactTether2.default, {
-        attachment: 'top center',
+        attachment: this.props.tetherAttachment ? this.props.tetherAttachment : "top center",
         constraints: [{
           to: 'scrollParent',
           attachment: 'together'
@@ -11527,7 +11534,7 @@ var DatePicker = function (_Component) {
   return DatePicker;
 }(_react.Component);
 
-DatePicker.propTypes = {
+DatePicker.propTypes = (_DatePicker$propTypes = {
   value: _propTypes2.default.object,
   defaultValue: _propTypes2.default.object,
   onChange: _propTypes2.default.func,
@@ -11543,8 +11550,10 @@ DatePicker.propTypes = {
   calendarStyles: _propTypes2.default.object,
   calendarContainerProps: _propTypes2.default.object,
   isGregorian: _propTypes2.default.bool, // jalaali or gregorian
-  timePicker: _propTypes2.default.bool
-};
+  timePicker: _propTypes2.default.bool,
+  calendarClass: _propTypes2.default.string,
+  datePickerClass: _propTypes2.default.string
+}, (0, _defineProperty3.default)(_DatePicker$propTypes, 'datePickerClass', _propTypes2.default.string), (0, _defineProperty3.default)(_DatePicker$propTypes, 'tetherAttachment', _propTypes2.default.string), (0, _defineProperty3.default)(_DatePicker$propTypes, 'inputReadOnly', _propTypes2.default.boolean), _DatePicker$propTypes);
 DatePicker.defaultProps = {
   styles: undefined,
   calendarContainerProps: {},
@@ -38028,7 +38037,7 @@ var Calendar = exports.Calendar = function (_Component) {
 
       return _react2.default.createElement(
         'div',
-        null,
+        { className: _this.props.calendarClass },
         children,
         _react2.default.createElement(_DaysViewHeading2.default, { isGregorian: isGregorian, styles: styles, month: month }),
         _react2.default.createElement(_DaysOfWeek2.default, { styles: styles, isGregorian: isGregorian }),
@@ -38119,7 +38128,8 @@ Calendar.propTypes = {
   onSelect: _propTypes2.default.func,
   onClickOutside: _propTypes2.default.func,
   containerProps: _propTypes2.default.object,
-  isGregorian: _propTypes2.default.bool
+  isGregorian: _propTypes2.default.bool,
+  calendarClass: _propTypes2.default.string
 };
 Calendar.childContextTypes = {
   nextMonth: _propTypes2.default.func.isRequired,
