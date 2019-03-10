@@ -2,15 +2,17 @@ sudo: false
 language: node_js
 before_install:
   - "npm i -g public-ip"
+  - "npm i -g npm"
 node_js:
   - "stable"
   - "4"
   - "5"
   - "6"
+  - "8"
   - "0.10"
   - "0.12"
 node_js:
-    - "v4"
+    - "v8"
 install:
     - npm install
 script:
