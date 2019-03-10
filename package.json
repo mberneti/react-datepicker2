@@ -1,6 +1,6 @@
 {
   "name": "react-datepicker2",
-  "version": "v2.0.0",
+  "version": "v2.0.1",
   "description": "react datepicker component. (include persian jalaali calendar)",
   "main": "dist/index.js",
   "style": "dist/react-datepicker2.min.css",
@@ -29,12 +29,12 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
-    "moment-jalaali": "^0.6.1",
+    "moment-jalaali": "^0.8.3",
     "prop-types": "^15.7.2",
     "rc-trigger": "^1.9.1",
     "react-highlight": "^0.12.0",
-    "react-onclickoutside": "^5.9.0",
-    "react-tether": "^0.5.6"
+    "react-onclickoutside": "^6.8.0",
+    "react-tether": "^2.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.24.0",

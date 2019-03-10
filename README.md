@@ -3,7 +3,7 @@
 [![npm](https://img.shields.io/npm/v/react-datepicker2.svg)](https://www.npmjs.com/package/react-datepicker2)
 [![npm](https://img.shields.io/npm/dt/react-datepicker2.svg)](https://www.npmjs.com/package/react-datepicker2)
 [![Build Status](https://travis-ci.org/mberneti/react-datepicker2.svg?branch=master)](https://travis-ci.org/mberneti/react-datepicker2)
-[![CircleCI](https://circleci.com/gh/mberneti/react-datepicker2.svg?style=svg)](https://circleci.com/gh/mberneti/react-datepicker2)
+[![Dependency Status](https://david-dm.org/mberneti/react-datepicker2.svg)](https://david-dm.org/mberneti/react-datepicker2)
 
 A simple and reusable Datepicker component for React (with persian jalali calendar support) [Demo](https://mberneti.github.io/react-datepicker2/).
 

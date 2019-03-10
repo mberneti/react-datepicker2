@@ -35,8 +35,13 @@ export default class DatePicker extends Component {
     isGregorian: true,
     timePicker: true
   };
-
-  state = {
+  
+  constructor(props) {
+    super(props);
+    // create a ref to store the textInput DOM element
+    this.textInput = React.createRef();
+    
+  this.state = {
     isOpen: false,
     momentValue: this.props.defaultValue || null,
     inputValue: this.getValue(this.props.defaultValue, this.props.isGregorian, this.props.timePicker),
@@ -45,6 +50,9 @@ export default class DatePicker extends Component {
     timePicker: this.props.timePicker,
     timePickerComponent: this.props.timePicker ? MyTimePicker : undefined
   };
+  }
+
+
 
   getInputFormat(isGregorian, timePicker) {
     if (timePicker)
@@ -59,7 +67,7 @@ export default class DatePicker extends Component {
     return isGregorian ? inputValue.locale('es').format(inputFormat) : inputValue.locale('fa').format(inputFormat);
   }
 
-  setOpen(isOpen) {
+  setOpen=(isOpen) =>{
 
     const { momentValue } = this.state;
     if (momentValue && this.props.onChange) {
@@ -114,16 +122,15 @@ export default class DatePicker extends Component {
     this.setState({ momentValue, inputValue });
   }
 
-  handleFocus() {
+  handleFocus = () =>{
     this.setOpen(true);
   }
 
-  handleBlur(event) {
+  handleBlur = (event) => {
     const { onBlur } = this.props;
     const { isOpen, momentValue, inputFormat } = this.state;
 
-    if (isOpen) {
-      this.refs.input.focus();
+    if (isOpen) {this.refs.input.focus();
     } else if (onBlur) {
       onBlur(event);
     }
@@ -172,7 +179,7 @@ export default class DatePicker extends Component {
     }
   }
 
-  renderInput() {
+  renderInput = (ref) => {
     const { isOpen, inputValue } = this.state;
 
     const className = classnames(this.props.className, {
@@ -180,11 +187,11 @@ export default class DatePicker extends Component {
     });
 
     return (
-      <div>
+      <div ref={ref}>
         <input
           className={`datepicker-input ${className}`}
           type="text"
-          ref="input"
+          ref={"input"} 
           onFocus={this.handleFocus.bind(this)}
           onBlur={this.handleBlur.bind(this)}
           onChange={this.handleInputChange.bind(this)}
@@ -195,12 +202,12 @@ export default class DatePicker extends Component {
     );
   }
 
-  renderCalendar() {
+  renderCalendar = (ref) => {
     const { momentValue, isGregorian, timePickerComponent: TimePicker } = this.state;
     const { onChange, min, max, defaultMonth, styles, calendarContainerProps } = this.props;
 
     return (
-      <div>
+      <div ref={ref}>
         <Calendar
           min={min}
           max={max}
@@ -244,10 +251,24 @@ export default class DatePicker extends Component {
     const { isOpen } = this.state;
 
     return (
-      <TetherComponent attachment="top center">
-        {this.renderInput()}
-        {isOpen ? this.renderCalendar() : null}
-      </TetherComponent>
+      <TetherComponent 
+      attachment="top center"
+      constraints={[
+          {
+            to: 'scrollParent',
+            attachment: 'together',
+          },
+        ]}
+        /* renderTarget: This is what the item will be tethered to, make sure to attach the ref */
+        renderTarget={ref => (
+          this.renderInput(ref)
+        )}
+        /* renderElement: If present, this item will be tethered to the the component returned by renderTarget */
+        renderElement={ref =>
+          isOpen && (
+            this.renderCalendar(ref)
+          )
+        } />
     );
   }
 }
