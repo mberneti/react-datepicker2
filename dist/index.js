@@ -11774,11 +11774,13 @@ var DatePicker = function (_Component) {
     _this.setOpen = function (isOpen) {
       var momentValue = _this.state.momentValue;
 
+
       if (momentValue && _this.props.onChange) {
         _this.props.onChange(momentValue);
       }
 
       _this.setState({ isOpen: isOpen });
+
       if (_this.props.onOpen) {
         _this.props.onOpen(isOpen);
       }
@@ -11788,30 +11790,10 @@ var DatePicker = function (_Component) {
       _this.setOpen(true);
     };
 
-    _this.handleBlur = function (event) {
-      var onBlur = _this.props.onBlur;
+    _this.renderInput = function (ref) {
       var _this$state = _this.state,
           isOpen = _this$state.isOpen,
-          momentValue = _this$state.momentValue,
-          inputFormat = _this$state.inputFormat;
-
-
-      if (isOpen) {
-        _this.refs.input.focus();
-      } else if (onBlur) {
-        onBlur(event);
-      }
-
-      if (momentValue) {
-        var inputValue = momentValue.format(inputFormat);
-        _this.setState({ inputValue: inputValue });
-      }
-    };
-
-    _this.renderInput = function (ref) {
-      var _this$state2 = _this.state,
-          isOpen = _this$state2.isOpen,
-          inputValue = _this$state2.inputValue;
+          inputValue = _this$state.inputValue;
 
 
       var className = (0, _classnames3.default)(_this.props.className, (0, _defineProperty3.default)({}, outsideClickIgnoreClass, isOpen));
@@ -11824,20 +11806,19 @@ var DatePicker = function (_Component) {
           type: 'text',
           ref: "input",
           onFocus: _this.handleFocus.bind(_this),
-          onBlur: _this.handleBlur.bind(_this),
           onChange: _this.handleInputChange.bind(_this),
           onClick: _this.handleInputClick.bind(_this),
           value: inputValue,
-          readOnly: _this.props.inputReadOnly ? _this.props.inputReadOnly : false
+          readOnly: _this.props.inputReadOnly === true
         })
       );
     };
 
     _this.renderCalendar = function (ref) {
-      var _this$state3 = _this.state,
-          momentValue = _this$state3.momentValue,
-          isGregorian = _this$state3.isGregorian,
-          TimePicker = _this$state3.timePickerComponent;
+      var _this$state2 = _this.state,
+          momentValue = _this$state2.momentValue,
+          isGregorian = _this$state2.isGregorian,
+          TimePicker = _this$state2.timePickerComponent;
       var _this$props = _this.props,
           onChange = _this$props.onChange,
           min = _this$props.min,
@@ -12056,7 +12037,7 @@ DatePicker.propTypes = (_DatePicker$propTypes = {
   timePicker: _propTypes2.default.bool,
   calendarClass: _propTypes2.default.string,
   datePickerClass: _propTypes2.default.string
-}, (0, _defineProperty3.default)(_DatePicker$propTypes, 'datePickerClass', _propTypes2.default.string), (0, _defineProperty3.default)(_DatePicker$propTypes, 'tetherAttachment', _propTypes2.default.string), (0, _defineProperty3.default)(_DatePicker$propTypes, 'inputReadOnly', _propTypes2.default.boolean), _DatePicker$propTypes);
+}, (0, _defineProperty3.default)(_DatePicker$propTypes, 'datePickerClass', _propTypes2.default.string), (0, _defineProperty3.default)(_DatePicker$propTypes, 'tetherAttachment', _propTypes2.default.string), (0, _defineProperty3.default)(_DatePicker$propTypes, 'inputReadOnly', _propTypes2.default.object), _DatePicker$propTypes);
 DatePicker.defaultProps = {
   styles: undefined,
   calendarContainerProps: {},

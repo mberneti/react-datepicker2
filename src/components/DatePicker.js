@@ -31,7 +31,7 @@ export default class DatePicker extends Component {
     datePickerClass: PropTypes.string,
     datePickerClass: PropTypes.string,
     tetherAttachment:PropTypes.string,
-    inputReadOnly:PropTypes.boolean,
+    inputReadOnly:PropTypes.object,
   };
 
   static defaultProps = {
@@ -75,11 +75,13 @@ export default class DatePicker extends Component {
   setOpen=(isOpen) =>{
 
     const { momentValue } = this.state;
+
     if (momentValue && this.props.onChange) {
       this.props.onChange(momentValue);
     }
 
     this.setState({ isOpen });
+
     if(this.props.onOpen){
       this.props.onOpen(isOpen);
     }
@@ -134,21 +136,6 @@ export default class DatePicker extends Component {
     this.setOpen(true);
   }
 
-  handleBlur = (event) => {
-    const { onBlur } = this.props;
-    const { isOpen, momentValue, inputFormat } = this.state;
-
-    if (isOpen) {this.refs.input.focus();
-    } else if (onBlur) {
-      onBlur(event);
-    }
-
-    if (momentValue) {
-      const inputValue = momentValue.format(inputFormat);
-      this.setState({ inputValue });
-    }
-  }
-
   handleClickOutsideCalendar() {
     this.setOpen(false);
   }
@@ -201,11 +188,10 @@ export default class DatePicker extends Component {
           type="text"
           ref={"input"} 
           onFocus={this.handleFocus.bind(this)}
-          onBlur={this.handleBlur.bind(this)}
           onChange={this.handleInputChange.bind(this)}
           onClick={this.handleInputClick.bind(this)}
           value={inputValue}
-          readOnly={this.props.inputReadOnly ? this.props.inputReadOnly : false }
+          readOnly={this.props.inputReadOnly === true }
         />
       </div>
     );
