@@ -125,8 +125,6 @@ export default class DatePicker extends Component {
       this.props.onChange(momentValue);
     }
 
-    // const inputValue = momentValue.format(inputFormat);
-
     const inputValue = this.getValue(momentValue, isGregorian, timePicker);
 
     this.setState({ momentValue, inputValue });
