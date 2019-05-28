@@ -23,19 +23,14 @@ At this point you can import react-datepicker2 and its styles in your applicatio
 
 ```js
 import DatePicker from 'react-datepicker2';
-
-// Be sure to include styles at some point, probably during your bootstrapping
-import 'react-datepicker2/dist/react-datepicker2.min.css';
 ```
 
-Below is a simple example on how to use the Datepicker in a React view. You will also need to require the css file from this package (or provide your own). The example below shows how to include the css from this package if your build system supports requiring css files (webpack is one that does).
+Below is a simple example on how to use the Datepicker in a React view.
 
 ```js
 import React from 'react'
 import moment from 'moment-jalaali'
 import DatePicker from 'react-datepicker2';
-
-import 'react-datepicker2/dist/react-datepicker2.min.css';
 
 export default class ReactClass extends React.Component {
   constructor(props) {
@@ -49,16 +44,6 @@ export default class ReactClass extends React.Component {
     />
   }
 }
-
-```
-You can also use the standalone build by including react-datepicker2.js and react-datepicker2.css in your page. (If you do this though you'll also need to include the dependencies.) For example:
-```html
-<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.min.js"></script>
-<script src="https://unpkg.com/classnames/index.js"></script>
-<script src="https://unpkg.com/react-datepicker2/dist/index.js"></script>
-
-<link rel="stylesheet" href="https://unpkg.com/react-datepicker2/dist/react-datepicker2.min.css">
 ```
 
 ## Configuration
@@ -76,9 +61,9 @@ The `master` branch contains the latest version of the Datepicker2 component. To
 ## Todo
 
 - [x] Write some tests
-- [x] Better documentation
+- [x] Improve documentation
+- [x] Remove css loading dependency
 - [ ] UI improvements
-- [ ] Remove classnames dependency
 
 ## Built With
 

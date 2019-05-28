@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Trigger from "rc-trigger";
-import Panel from "./Panel";
+import Panel from "./Panel"; 
 import placements from "./placements";
 import moment from "moment";
 
@@ -127,7 +127,7 @@ class Picker extends React.Component {
 
   onEsc = () => {
     this.setOpen(false);
-    this.refs.picker.focus();
+    this.picker.focus();
   }
 
   onKeyDown = (e) => {
@@ -186,7 +186,7 @@ class Picker extends React.Component {
         isGregorian={isGregorian}
         clearText={clearText}
         prefixCls={`${prefixCls}-panel`}
-        ref={this.savePanelRef}
+        ref={(refs) => { this.savePanelRef = refs;}}
         value={this.state.value}
         onChange={this.onPanelChange}
         onClear={this.onPanelClear}
@@ -195,7 +195,7 @@ class Picker extends React.Component {
         onEsc={this.onEsc}
         showSecond={showSecond}
         showAMPM={showAMPM}
-        allowEmpty={allowEmpty}
+        allowEmpty={true}
         format={this.getFormat()}
         placeholder={placeholder}
         disabledHours={disabledHours}
@@ -244,7 +244,7 @@ class Picker extends React.Component {
         <span className={`${prefixCls} ${className}`} style={style}>
           <input
             className={`${prefixCls}-input`}
-            ref="picker"
+            ref={(refs)=>{this.picker=refs;}}
             type="text"
             placeholder={placeholder}
             readOnly

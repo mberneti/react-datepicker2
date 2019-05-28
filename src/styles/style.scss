@@ -1,5 +1,4 @@
 .calendarContainer {
-    font-family: 'Open Sans','Vazir';
     border-radius: 3px;
     box-shadow: 0 3px 10px #dbdbdb;
     border: 1px solid #cccccc;
@@ -237,8 +236,7 @@
 }
 
 .rc-time-picker-panel {
-    font-family: 'Open Sans','Vazir';
-    z-index: 1070;
+    z-index: 2001;
     width: 170px;
     position: absolute;
     box-sizing: border-box;
@@ -376,4 +374,8 @@ li.rc-time-picker-panel-select-option-disabled {
 li.rc-time-picker-panel-select-option-disabled:hover {
     background: transparent;
     cursor: not-allowed;
+}
+
+.tether-element.tether-element-attached-top.tether-element-attached-center.tether-target-attached-bottom.tether-target-attached-center.tether-enabled {
+    z-index: 2000;
 }

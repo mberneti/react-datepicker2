@@ -1,33 +1,28 @@
 {
     "eslint.enable": false,
     "files.exclude": {
-        ".vscode/":true,
-        "coverage/":true,
-        
-        "**/bin/": true,
-        "**/*.html": true,
-        "**/*.min.css": true,
-        "**/node_modules/": true,
-        "**/bower_components/": true,
-        
-        "**/css/components/": true,
-        "**/wwwroot/demos/": true,
-        "**/docs/assets/": true,
-        "**/pricing-table.css": true,
-        "**/appLogin.css": true,
-        "**/bs-editable.css": true,
-        "**/sweetalert.css": true,
-        "**/bootstrap.css": true,
-        "**/bootstrap-editable.css": true,
-        "**/appLogin-light.css": true,
-        "**/dark-components.css": true,
+        ".vscode/": true,
         "**/admin/css/app.css": true,
-        
+        "**/appLogin-light.css": true,
+        "**/appLogin.css": true,
+        "**/assets/stylesheets/": true,
+        "**/bin/": true,
+        "**/bootstrap-editable.css": true,
+        "**/bootstrap.css": true,
+        "**/bower_components/": true,
+        "**/bs-editable.css": true,
+        "**/css/components/": true,
+        "**/dark-components.css": true,
+        "**/docs/assets/": true,
         "**/font-icons.css": true,
         "**/magnific-popup.css": true,
+        "**/node_modules/": true,
+        "**/pricing-table.css": true,
         "**/responsive.css": true,
+        "**/swagger2/swagger-ui.css": true,
+        "**/sweetalert.css": true,
         "**/swiper.css": true,
-        "**/assets/stylesheets/": true,
-        "**/swagger2/swagger-ui.css": true
+        "**/wwwroot/demos/": true,
+        "coverage/": true
     }
 }

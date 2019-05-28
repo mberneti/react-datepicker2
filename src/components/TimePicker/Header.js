@@ -155,7 +155,7 @@ class Header extends React.Component {
     const invalidClass = invalid ? `${prefixCls}-input-invalid` : '';
     return (<input
       className={`${prefixCls}-input  ${invalidClass}`}
-      ref="input"
+      ref={inst => { this.input = inst; }}
       onKeyDown={this.onKeyDown}
       value={str}
       placeholder={placeholder}

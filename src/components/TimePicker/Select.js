@@ -80,7 +80,7 @@ class Select extends React.Component {
   scrollToSelected = (duration) => {
     // move to selected item
     const select = ReactDom.findDOMNode(this);
-    const list = ReactDom.findDOMNode(this.refs.list);
+    const list = ReactDom.findDOMNode(this.list);
     let index = this.props.selectedIndex;
     if (index < 0) {
       index = 0;
@@ -102,7 +102,7 @@ class Select extends React.Component {
         className={`${prefixCls}-select`}
         onMouseEnter={this.props.onMouseEnter}
       >
-        <ul ref="list">{this.getOptions()}</ul>
+        <ul ref={inst => { this.list = inst; }}>{this.getOptions()}</ul>
       </div>
     );
   }

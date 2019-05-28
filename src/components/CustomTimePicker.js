@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from "prop-types";
 import moment from 'moment-jalaali';
 import TimePicker from './TimePicker';
-import { outsideClickIgnoreClass } from './DatePicker';
 import { persianNumber } from '../utils/persian';
 
 const disabledMinutes = () => {
@@ -14,6 +13,10 @@ export default class MyTimePicker extends Component {
     momentValue: PropTypes.object,
     setMomentValue: PropTypes.func,
     isGregorian: PropTypes.bool
+  };
+
+  static defaultProps = {
+    momentValue: moment()
   };
 
   handleChange(value) {
@@ -35,33 +38,31 @@ export default class MyTimePicker extends Component {
   }
 
   render() {
-    const { momentValue,isGregorian } = this.props;
+    const { momentValue, isGregorian, outsideClickIgnoreClass } = this.props;
 
-    const jalaaliClassName=isGregorian?'':'jalaali';
+    const jalaaliClassName = isGregorian ? '' : 'jalaali';
 
-    const timeLabel=isGregorian?'time:':'ساعت:';
+    const timeLabel = isGregorian ? 'time:' : 'ساعت:';
 
-    return momentValue ? (
-      <div className={`time-picker-container ${jalaaliClassName}`}>
-        <div className='time-label'>{timeLabel}</div>
-        <div className='time-picker-panel'>
-          <TimePicker
-            showAMPM
-            isGregorian={isGregorian}
-            showSecond={false}
-            allowEmpty={false}
-            value={momentValue}
-            className={outsideClickIgnoreClass}
-            popupClassName={outsideClickIgnoreClass}
-            panelClassName={`${outsideClickIgnoreClass} time-picker-panel`}
-            onChange={this.handleChange.bind(this)}
-            disabledMinutes={disabledMinutes}
-            formatter={value => persianNumber(value)}
-            hideDisabledOptions
-          />
-        </div>
-        <div style={{ clear: 'both' }}></div>
+    return <div className={`time-picker-container ${jalaaliClassName}`}>
+      <div className='time-label'>{timeLabel}</div>
+      <div className='time-picker-panel'>
+        <TimePicker
+          showAMPM
+          isGregorian={isGregorian}
+          showSecond={false}
+          allowEmpty={false}
+          value={momentValue}
+          className={outsideClickIgnoreClass}
+          popupClassName={outsideClickIgnoreClass}
+          panelClassName={`${outsideClickIgnoreClass} time-picker-panel`}
+          onChange={this.handleChange.bind(this)}
+          disabledMinutes={disabledMinutes}
+          formatter={value => persianNumber(value)}
+          hideDisabledOptions
+        />
       </div>
-    ) : null;
+      <div style={{ clear: 'both' }}></div>
+    </div>;
   }
 }

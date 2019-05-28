@@ -4,10 +4,11 @@ import moment from 'moment-jalaali';
 import TetherComponent from 'react-tether';
 import Calendar from './Calendar';
 import classnames from 'classnames';
-import MyTimePicker from './CustomTimePicker'
+import MyTimePicker from './CustomTimePicker';
 
-export const outsideClickIgnoreClass = 'ignore--click--outside'
 moment.loadPersian();
+
+const outsideClickIgnoreClass = 'ignore--click--outside';
 
 export default class DatePicker extends Component {
   static propTypes = {
@@ -184,7 +185,7 @@ export default class DatePicker extends Component {
         <input
           className={`datepicker-input ${className}`}
           type="text"
-          ref={"input"} 
+          ref={inst => { this.input = inst; }} 
           onFocus={this.handleFocus.bind(this)}
           onChange={this.handleInputChange.bind(this)}
           onClick={this.handleInputClick.bind(this)}
@@ -217,6 +218,7 @@ export default class DatePicker extends Component {
           {
             TimePicker ? (
               <TimePicker
+                outsideClickIgnoreClass={outsideClickIgnoreClass}
                 isGregorian={isGregorian}
                 min={min}
                 max={max}
@@ -246,6 +248,7 @@ export default class DatePicker extends Component {
 
     return (
       <TetherComponent 
+      ref={tether => (this.tether = tether)}
       attachment={this.props.tetherAttachment ? this.props.tetherAttachment :"top center"}
       constraints={[
           {
@@ -253,6 +256,8 @@ export default class DatePicker extends Component {
             attachment: 'together',
           },
         ]}
+        
+        onResize={() => this.tether && this.tether.position()}
         /* renderTarget: This is what the item will be tethered to, make sure to attach the ref */
         renderTarget={ref => (
           this.renderInput(ref)
