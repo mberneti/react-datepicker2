@@ -24,7 +24,7 @@
   "author": "mohammadreza berneti (mberneti)",
   "license": "MIT",
   "scripts": {
-    "test": "jest --coverage && minicat coverage/lcov.info | coveralls",
+    "test": "jest --runInBand --detectOpenHandles --no-cache --config ./jest.config.js --coverage && minicat coverage/lcov.info | coveralls",
     "start": "webpack-dev-server --mode development --config webpack.config.dev.js",
     "build": "npm-run-all build:dist build:docs",
     "build:dist": "npm run build:css && npm run build:js",
@@ -61,7 +61,6 @@
     "@babel/runtime": "^7.4.5",
     "autoprefixer": "^9.5.1",
     "babel-core": "^7.0.0-bridge.0",
-    "babel-jest": "^19.0.0",
     "babel-loader": "^8.0.6",
     "babel-plugin-module-resolver": "^3.2.0",
     "babel-plugin-transform-decorators-legacy": "^1.3.5",
@@ -114,12 +113,6 @@
   "peerDependencies": {
     "react": "^16.0.0",
     "react-dom": "^16.0.0"
-  },
-  "jest": {
-    "moduleNameMapper": {
-      "\\.(css|less|scss|sass)$": "identity-obj-proxy",
-      "\\.(gif|ttf|eot|svg)$": "<rootDir>/__mocks__/fileMock.js"
-    }
   },
   "browserslist": [
     "last 2 versions"
