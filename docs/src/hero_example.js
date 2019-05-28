@@ -17,7 +17,7 @@ const switchStyle = {
 export default class ReactClass extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { value: null, checked: false };
+    this.state = { value: moment(), checked: false };
     this.handleChange = this.handleChange.bind(this);
   }
 
