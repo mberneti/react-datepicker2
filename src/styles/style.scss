@@ -1,11 +1,17 @@
+$greycolor:#777;
+$fontFamily:'Open Sans','Vazir';
+$selectedColor:#4285f4;//337ab7
+$hoverColor:#d6f1ff;
+
 .calendarContainer {
-    border-radius: 3px;
-    box-shadow: 0 3px 10px #dbdbdb;
-    border: 1px solid #cccccc;
-    width: 300px;
+    border-radius: 4px;
+    -moz-box-shadow:   0px 3px 15px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+    width: 320px;
     margin: auto;
     text-align: center;
-    padding: 10px;
+    padding: 15px;
     background-color: #fff;
 }
 
@@ -29,16 +35,15 @@
 /* Heading */
 
 .calendarContainer .heading {
-    height: 42px;
+    height: auto;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
 .calendarContainer .heading>button {
-    border-radius: 3px;
     background: none;
     margin: 5px 0;
-    border: 1px solid #F7F7F7;
+    border: none;
     text-align: center;
     line-height: 30px;
     width: 36px;
@@ -51,11 +56,19 @@
 }
 
 .calendarContainer .heading>span {
-    line-height: 35px;
 }
 
 .calendarContainer .heading svg {
     width: 10px;
+    fill:$greycolor;
+}
+
+.calendarContainer .heading .prev,
+.calendarContainer .heading .next  {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    margin: 0;
 }
 
 .calendarContainer .heading .prev {
@@ -67,42 +80,55 @@
 }
 
 .calendarContainer .heading .title {
-    line-height: 32px;
+    height: auto;
+    border-radius: 4px;
     width: auto;
-    height: 32px;
-    font-size: 1em;
-    margin: 5px 0;
+    margin: 0 5px;
     border: 1px solid #F7F7F7;
     text-align: center;
     display: inline-block;
     font-weight: normal;
-    padding: 0 6px;
+    padding: 4px 15px 5px 15px;
+    line-height: 1.5;
+    font-family: $fontFamily;
+    font-size: 1.2em;
+    max-height: none;
+}
+.jalaali.calendarContainer .heading .title {
+    padding: 4px 15px 7px 15px;
 }
 
 
 /* Day wrapper styles */
 
 .calendarContainer .dayWrapper {
-    padding: 5;
     float: left;
     width: 14.28571429%;
 }
 
 
 /* Day wrapper button styles */
-
 .calendarContainer .dayWrapper button {
     border: none;
     background: none;
     outline: none;
     width: 100%;
-    height: 36px;
-    border-radius: 3px;
     cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.1em;
+    padding: 0;
+    line-height: 1.5;
+    padding: 0px 0px 2px 0px;
+}
+
+.jalaali.calendarContainer .dayWrapper button {
+    padding: 0px 0px 1px 2px;
 }
 
 .calendarContainer .dayWrapper button:hover {
-    background-color: #eeeeff;
+    background-color: $hoverColor;
 }
 
 .calendarContainer .dayWrapper button[disabled] {
@@ -124,16 +150,18 @@
 /* Days of week row */
 
 .calendarContainer .daysOfWeek {
-    border-bottom: 1px solid #EEE;
     margin-bottom: 5px;
     padding-bottom: 5px;
     display: flex;
     width: 100%;
+    color:lighten( $greycolor, 10% );
 }
 
 .calendarContainer .daysOfWeek>div {
     flex-grow: 1;
     justify-content: space-between;
+    font-family: $fontFamily;
+    width: 42px;
 }
 
 
@@ -168,7 +196,7 @@
 .calendarContainer .selected button:hover,
 .calendarContainer .selected button:active,
 .calendarContainer .selected button:focus {
-    background-color: #337ab7;
+    background-color: $selectedColor;
     color: #ffffff;
 }
 
@@ -184,7 +212,8 @@
 /*time picker style*/
 
 .time-picker-container {
-    margin-bottom: 10
+    margin-bottom: 10;
+    font-family: $fontFamily;
 }
 
 .time-picker-container>.time-label {
@@ -208,8 +237,12 @@
 }
 
 .rc-time-picker {
+    border-radius: 4px;
     display: inline-block;
     box-sizing: border-box;
+    width: 110px;
+    border: 1px solid #F7F7F7;
+    font-size: 1.2em;
 }
 
 .rc-time-picker * {
@@ -217,22 +250,38 @@
 }
 
 .rc-time-picker-input {
+    margin: 4px 0;
+    padding:0px 15px 1px 15px;
     direction: ltr;
     text-align: center;
     width: 100%;
     position: relative;
     display: inline-block;
-    padding: 4px 7px;
-    height: 28px;
-    cursor: text;
-    font-size: 12px;
+    cursor: pointer;
+    font-size: 1em;
     line-height: 1.5;
-    color: #666;
-    background-color: #fff;
-    background-image: none;
-    border: 1px solid #d9d9d9;
-    border-radius: 3px;
-    transition: border 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), background 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), box-shadow 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+    font-family: $fontFamily;
+
+    border:none;
+    background-image:none;
+    background-color:transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    
+}
+.jalaali.calendarContainer .rc-time-picker-input{
+    padding: 0px 15px 3px 15px;
+}
+.rc-time-picker-input:focus{
+    box-shadow: none;
+    border: none;
+    background-color: #f2f2f2;
+}
+
+.rc-time-picker:hover{
+    background-color: #f2f2f2;
 }
 
 .rc-time-picker-panel {
@@ -259,16 +308,25 @@
     background-clip: padding-box;
     border: 1px solid #ccc;
     line-height: 1.5;
+    font-family: $fontFamily;
 }
 
 .rc-time-picker-panel-input {
     margin: 0;
     padding: 0;
     width: 100%;
-    cursor: auto;
+    cursor: default;
     line-height: 1.5;
     outline: 0;
-    border: 1px solid transparent;
+    border: 1px solid transparent;    
+    padding: 4px 0;
+    font-size: 1.4em;
+    text-align: center;
+}
+
+.rc-time-picker-panel-input, .rc-time-picker-panel-input:hover {
+    box-shadow: none;
+    border: none;
 }
 
 .rc-time-picker-panel-input-wrap {

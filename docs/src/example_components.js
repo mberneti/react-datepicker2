@@ -7,11 +7,12 @@ import Default from './examples/default'
 import Jalaali from './examples/jalaali'
 import DisabledTimepicker from './examples/disabledTimepicker'
 import SwitchIsGregorian from './examples/switchIsGregorian'
+import calendarPicker from './examples/calendarPicker'
 
 export default class ExampleComponents extends React.Component {
   constructor(props) {
     super(props);
-    this.examples = [Default, Jalaali, DisabledTimepicker, SwitchIsGregorian];
+    this.examples = [Default, Jalaali, DisabledTimepicker, SwitchIsGregorian, calendarPicker];
   }
   
   componentDidMount() {

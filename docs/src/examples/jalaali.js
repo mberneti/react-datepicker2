@@ -2,7 +2,7 @@ import React from 'react'
 import moment from 'moment-jalaali'
 import DatePicker from '../../../src/components/DatePicker';
 
-class component extends React.Component{
+class component extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -11,6 +11,7 @@ class component extends React.Component{
   }
   render() {
     return <DatePicker
+      tetherAttachment="bottom center"
       isGregorian={false}
       value={this.state.value}
       onChange={value => this.setState({ value })}

@@ -1,6 +1,6 @@
 import React from "react";
 import moment from "moment-jalaali";
-import DatePicker from "../../src/index.dev.js";
+import DatePicker, { Calendar } from "../../src/index.dev.js";
 
 import Switch from 'react-switch';
 
@@ -29,7 +29,8 @@ export default class ReactClass extends React.Component {
     return (
       <React.Fragment>
         <div>
-          <DatePicker
+          <Calendar
+            timePicker={false}
             isGregorian={this.state.checked}
             onChange={value => this.setState({ value })}
             value={this.state.value}

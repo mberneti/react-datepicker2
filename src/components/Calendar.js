@@ -39,7 +39,7 @@ export class Calendar extends Component {
 
   state = {
     month: this.props.defaultMonth || this.props.selectedDay || moment(this.props.min),
-    selectedDay: this.props.selectedDay || null,
+    selectedDay: this.props.selectedDay || this.props.value || null,
     mode: 'days',
     isGregorian: this.props.isGregorian
   };
@@ -54,7 +54,12 @@ export class Calendar extends Component {
     };
   }
 
-  componentWillReceiveProps({ selectedDay, defaultMonth, min }) {
+  componentWillReceiveProps({ selectedDay, defaultMonth, min, isGregorian }) {
+
+    if (typeof isGregorian !=='undefined' && isGregorian !== this.state.isGregorian) {
+      this.setState({ isGregorian });
+    }
+    
     if (this.props.selectedDay !== selectedDay) {
       this.selectDay(selectedDay);
     } else if (defaultMonth && this.props.defaultMonth !== defaultMonth && this.state.month === this.props.defaultMonth) {
@@ -62,7 +67,7 @@ export class Calendar extends Component {
     } else if (min && this.props.min !== min && this.state.month.isSame(this.props.min)) {
       this.setMonth(min.clone());
     }
-  }
+  } 
 
   setMode = (mode) => {
     this.setState({ mode });
@@ -107,11 +112,13 @@ export class Calendar extends Component {
   }
 
   handleClickOnDay = selectedDay => {
-    const { onSelect } = this.props;
+    const { onSelect, onChange } = this.props;
     this.selectDay(selectedDay);
     if (onSelect) {
       onSelect(selectedDay);
     }
+    if (onChange)
+      onChange(selectedDay);
   };
 
   handleClickOutside = (event) => {
@@ -150,7 +157,7 @@ export class Calendar extends Component {
     return (
       <div className={this.props.calendarClass}>
         {children}
-        <DaysViewHeading isGregorian={isGregorian} styles={styles} month={month} />
+        <DaysViewHeading timePicker={this.props.timePicker} isGregorian={isGregorian} styles={styles} month={month} />
         <DaysOfWeek styles={styles} isGregorian={isGregorian} />
         <div className={styles.dayPickerContainer}>
           {

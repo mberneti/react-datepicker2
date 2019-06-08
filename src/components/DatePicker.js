@@ -6,8 +6,6 @@ import Calendar from './Calendar';
 import classnames from 'classnames';
 import MyTimePicker from './CustomTimePicker';
 
-moment.loadPersian();
-
 const outsideClickIgnoreClass = 'ignore--click--outside';
 
 export default class DatePicker extends Component {
@@ -31,8 +29,8 @@ export default class DatePicker extends Component {
     calendarClass: PropTypes.string,
     datePickerClass: PropTypes.string,
     datePickerClass: PropTypes.string,
-    tetherAttachment:PropTypes.string,
-    inputReadOnly:PropTypes.object,
+    tetherAttachment: PropTypes.string,
+    inputReadOnly: PropTypes.object,
   };
 
   static defaultProps = {
@@ -41,28 +39,26 @@ export default class DatePicker extends Component {
     isGregorian: true,
     timePicker: true
   };
-  
+
   constructor(props) {
     super(props);
     // create a ref to store the textInput DOM element
     this.textInput = React.createRef();
-    
-  this.state = {
-    isOpen: false,
-    momentValue: this.props.defaultValue || null,
-    inputValue: this.getValue(this.props.defaultValue, this.props.isGregorian, this.props.timePicker),
-    inputFormat: this.props.inputFormat || this.getInputFormat(this.props.isGregorian, this.props.timePicker),
-    isGregorian: this.props.isGregorian,
-    timePicker: this.props.timePicker,
-    timePickerComponent: this.props.timePicker ? MyTimePicker : undefined
-  };
+
+    this.state = {
+      isOpen: false,
+      momentValue: this.props.defaultValue || null,
+      inputValue: this.getValue(this.props.defaultValue, this.props.isGregorian, this.props.timePicker),
+      inputFormat: this.props.inputFormat || this.getInputFormat(this.props.isGregorian, this.props.timePicker),
+      isGregorian: this.props.isGregorian,
+      timePicker: this.props.timePicker,
+      timePickerComponent: this.props.timePicker ? MyTimePicker : undefined
+    };
   }
-
-
 
   getInputFormat(isGregorian, timePicker) {
     if (timePicker)
-      return isGregorian ? 'YYYY/M/D hh:mm A' : 'jYYYY/jM/jD hh:mm A';
+      return isGregorian ? 'YYYY/M/D' : 'jYYYY/jM/jD';
     return isGregorian ? 'YYYY/M/D' : 'jYYYY/jM/jD';
   }
 
@@ -73,7 +69,7 @@ export default class DatePicker extends Component {
     return isGregorian ? inputValue.locale('es').format(inputFormat) : inputValue.locale('fa').format(inputFormat);
   }
 
-  setOpen=(isOpen) =>{
+  setOpen = (isOpen) => {
 
     const { momentValue } = this.state;
 
@@ -83,7 +79,7 @@ export default class DatePicker extends Component {
 
     this.setState({ isOpen });
 
-    if(this.props.onOpen){
+    if (this.props.onOpen) {
       this.props.onOpen(isOpen);
     }
   }
@@ -131,12 +127,34 @@ export default class DatePicker extends Component {
     this.setState({ momentValue, inputValue });
   }
 
-  handleFocus = () =>{
+  handleFocus = () => {
     this.setOpen(true);
   }
 
   handleClickOutsideCalendar() {
     this.setOpen(false);
+  }
+
+  toEnglishDigits(str) {
+    if (!str)
+      return str;
+    const regex1 = /[\u0660-\u0669]/g;
+    const regex2 = /[\u06f0-\u06f9]/g;
+    return str.replace(regex1, function (c) {
+      return c.charCodeAt(0) - 0x0660;
+    }).replace(regex2, function (c) {
+      return c.charCodeAt(0) - 0x06f0;
+    });
+  }
+
+  toPersianDigits(str) {
+    if (!str)
+      return str;
+    const regex = /[0-9]/g;
+    var id= ['۰','۱','۲','۳','۴','۵','۶','۷','۸','۹'];
+    return str.replace(regex, function(w){
+        return id[+w]
+    });
   }
 
   handleSelectDay(selectedDay) {
@@ -157,7 +175,7 @@ export default class DatePicker extends Component {
 
   handleInputChange(event) {
     const { inputFormat } = this.state;
-    const inputValue = event.target.value;
+    const inputValue = this.toEnglishDigits(event.target.value);
     const momentValue = moment(inputValue, inputFormat);
 
     if (momentValue.isValid()) {
@@ -174,7 +192,7 @@ export default class DatePicker extends Component {
   }
 
   renderInput = (ref) => {
-    const { isOpen, inputValue } = this.state;
+    const { isOpen, inputValue, isGregorian } = this.state;
 
     const className = classnames(this.props.className, {
       [outsideClickIgnoreClass]: isOpen
@@ -185,12 +203,12 @@ export default class DatePicker extends Component {
         <input
           className={`datepicker-input ${className}`}
           type="text"
-          ref={inst => { this.input = inst; }} 
+          ref={inst => { this.input = inst; }}
           onFocus={this.handleFocus.bind(this)}
           onChange={this.handleInputChange.bind(this)}
           onClick={this.handleInputClick.bind(this)}
-          value={inputValue}
-          readOnly={this.props.inputReadOnly === true }
+          value={isGregorian ? inputValue : this.toPersianDigits(inputValue)}
+          readOnly={this.props.inputReadOnly === true}
         />
       </div>
     );
@@ -214,8 +232,7 @@ export default class DatePicker extends Component {
           containerProps={calendarContainerProps}
           isGregorian={isGregorian}
           calendarClass={this.props.calendarClass ? this.props.calendarClass : ""}
-        >
-          {
+          timePicker={
             TimePicker ? (
               <TimePicker
                 outsideClickIgnoreClass={outsideClickIgnoreClass}
@@ -227,6 +244,7 @@ export default class DatePicker extends Component {
               />
             ) : null
           }
+        >
         </Calendar>
       </div>
     );
@@ -247,16 +265,16 @@ export default class DatePicker extends Component {
     const { isOpen } = this.state;
 
     return (
-      <TetherComponent 
-      ref={tether => (this.tether = tether)}
-      attachment={this.props.tetherAttachment ? this.props.tetherAttachment :"top center"}
-      constraints={[
+      <TetherComponent
+        ref={tether => (this.tether = tether)}
+        attachment={this.props.tetherAttachment ? this.props.tetherAttachment : "top center"}
+        constraints={[
           {
-            to: 'scrollParent',
+            to: 'window',
             attachment: 'together',
           },
         ]}
-        
+        offset="-10px -10px"
         onResize={() => this.tether && this.tether.position()}
         /* renderTarget: This is what the item will be tethered to, make sure to attach the ref */
         renderTarget={ref => (

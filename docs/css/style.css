@@ -239,9 +239,8 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 .hero {
   color: #fff;
   background-color: #6abcf3; }
-  .hero__content {
-    text-align: center;
-    padding: 175px 0; }
+  .hero__content{height: 40vh;
+      color: #fff;text-align:center;padding:175px 0;}
   .hero__title {
     font-size: 34px;
     font-weight: 600;

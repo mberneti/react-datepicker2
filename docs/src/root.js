@@ -2,24 +2,29 @@ import React from 'react'
 import ExampleComponents from './example_components.js'
 import HeroExample from './hero_example.js'
 
+import background from "./images/hero_background.jpg";
+import { Parallax, Background } from 'react-parallax';
+
 export default class Root extends React.Component {
-  render () {
+  render() {
     return (
       <div>
         <div className="hero">
-          <div className="hero__content">
-            <h1 className="hero__title">
-              ReactJS Datepicker2
-            </h1>
-            <div className="hero__crafted-by">
-              <a href="https://berneti.ir" className="hero__crafted-by-link">
-                Crafted by <h3 className="logo">mberneti</h3>
-              </a>
+          <Parallax bgImage={background} strength={1000} blur={2} >
+            <div className="hero__content">
+              <h1 className="hero__title">
+                ReactJS Datepicker2
+              </h1>
+              <div className="hero__crafted-by">
+                <a href="https://berneti.ir" className="hero__crafted-by-link">
+                  Crafted by <h3 className="logo">mberneti</h3>
+                </a>
+              </div>
+              <div className="hero__example">
+                <HeroExample />
+              </div>
             </div>
-            <div className="hero__example">
-              <HeroExample />
-            </div>
-          </div>
+          </Parallax>
         </div>
         <div className="wrapper">
           <h1>ReactJS Datepicker2</h1>

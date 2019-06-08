@@ -40,14 +40,7 @@ export default class MyTimePicker extends Component {
   render() {
     const { momentValue, isGregorian, outsideClickIgnoreClass } = this.props;
 
-    const jalaaliClassName = isGregorian ? '' : 'jalaali';
-
-    const timeLabel = isGregorian ? 'time:' : 'ساعت:';
-
-    return <div className={`time-picker-container ${jalaaliClassName}`}>
-      <div className='time-label'>{timeLabel}</div>
-      <div className='time-picker-panel'>
-        <TimePicker
+    return <TimePicker
           showAMPM
           isGregorian={isGregorian}
           showSecond={false}
@@ -60,9 +53,6 @@ export default class MyTimePicker extends Component {
           disabledMinutes={disabledMinutes}
           formatter={value => persianNumber(value)}
           hideDisabledOptions
-        />
-      </div>
-      <div style={{ clear: 'both' }}></div>
-    </div>;
+        />;
   }
 }
