@@ -1,9 +1,9 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Trigger from "rc-trigger";
-import Panel from "./Panel"; 
-import placements from "./placements";
-import moment from "moment";
+import React from 'react';
+import PropTypes from 'prop-types';
+import Trigger from 'rc-trigger';
+import moment from 'moment-jalaali';
+import Panel from './Panel';
+import placements from './placements';
 
 function noop() {}
 
@@ -41,15 +41,15 @@ class Picker extends React.Component {
     onClose: PropTypes.func,
     showAMPM: PropTypes.bool,
     panelClassName: PropTypes.string,
-    isGregorian: PropTypes.bool
+    isGregorian: PropTypes.bool,
   };
 
   static defaultProps = {
-    clearText: "clear",
-    prefixCls: "rc-time-picker",
+    clearText: 'clear',
+    prefixCls: 'rc-time-picker',
     defaultOpen: false,
     style: {},
-    className: "",
+    className: '',
     align: {},
     defaultOpenValue: moment(),
     allowEmpty: true,
@@ -59,32 +59,27 @@ class Picker extends React.Component {
     disabledMinutes: noop,
     disabledSeconds: noop,
     hideDisabledOptions: false,
-    placement: "bottomLeft",
+    placement: 'bottomLeft',
     onChange: noop,
     onOpen: noop,
-    onClose: noop
+    onClose: noop,
   };
 
   constructor(props) {
     super(props);
-    this.savePanelRef = refFn.bind(this, "panelInstance");
-    const {
-      defaultOpen,
-      defaultValue,
-      open = defaultOpen,
-      value = defaultValue
-    } = this.props;
+    this.savePanelRef = refFn.bind(this, 'panelInstance');
+    const { defaultOpen, defaultValue, open = defaultOpen, value = defaultValue } = this.props;
     this.state = {
       open,
-      value
+      value,
     };
   }
 
   componentWillReceiveProps(nextProps) {
     const { value, open } = nextProps;
-    if ("value" in nextProps) {
+    if ('value' in nextProps) {
       this.setState({
-        value
+        value,
       });
     }
     if (open !== undefined) {
@@ -97,12 +92,12 @@ class Picker extends React.Component {
     if (this.state.open !== open) {
       this.setState(
         {
-          open
+          open,
         },
-        callback
+        callback,
       );
       const event = {
-        open
+        open,
       };
       if (open) {
         onOpen(event);
@@ -110,60 +105,60 @@ class Picker extends React.Component {
         onClose(event);
       }
     }
-  }
+  };
 
-  onPanelChange = (value) => {
+  onPanelChange = value => {
     this.setValue(value);
-  }
+  };
 
   onPanelClear = () => {
     this.setValue(null);
     this.setOpen(false);
-  }
+  };
 
-  onVisibleChange = (open) => {
+  onVisibleChange = open => {
     this.setOpen(open);
-  }
+  };
 
   onEsc = () => {
     this.setOpen(false);
     this.picker.focus();
-  }
+  };
 
-  onKeyDown = (e) => {
+  onKeyDown = e => {
     if (e.keyCode === 40) {
       this.setOpen(true);
     }
-  }
+  };
 
-  setValue = (value) => {
-    if (!("value" in this.props)) {
+  setValue = value => {
+    if (!('value' in this.props)) {
       this.setState({
-        value
+        value,
       });
     }
     this.props.onChange(value);
-  }
+  };
 
   getFormat = () => {
-    let format = this.props.format;
+    let { format } = this.props;
 
     if (this.props.format) {
       format = this.props.format;
     } else if (!this.props.showSecond) {
-      format = "HH:mm";
+      format = 'HH:mm';
     } else if (!this.props.showHour) {
-      format = "mm:ss";
+      format = 'mm:ss';
     } else {
-      format = "HH:mm:ss";
+      format = 'HH:mm:ss';
     }
 
     if (this.props.showAMPM) {
-      format = format.replace("HH", "hh") + " A";
+      format = `${format.replace('HH', 'hh')} A`;
     }
 
     return format;
-  }
+  };
 
   getPanelElement = () => {
     const {
@@ -179,14 +174,16 @@ class Picker extends React.Component {
       showAMPM,
       defaultOpenValue,
       clearText,
-      isGregorian
+      isGregorian,
     } = this.props;
     return (
       <Panel
         isGregorian={isGregorian}
         clearText={clearText}
         prefixCls={`${prefixCls}-panel`}
-        ref={(refs) => { this.savePanelRef = refs;}}
+        ref={refs => {
+          this.savePanelRef = refs;
+        }}
         value={this.state.value}
         onChange={this.onPanelChange}
         onClear={this.onPanelClear}
@@ -195,7 +192,7 @@ class Picker extends React.Component {
         onEsc={this.onEsc}
         showSecond={showSecond}
         showAMPM={showAMPM}
-        allowEmpty={true}
+        allowEmpty
         format={this.getFormat()}
         placeholder={placeholder}
         disabledHours={disabledHours}
@@ -204,7 +201,7 @@ class Picker extends React.Component {
         hideDisabledOptions={hideDisabledOptions}
       />
     );
-  }
+  };
 
   render() {
     const {
@@ -219,7 +216,7 @@ class Picker extends React.Component {
       className,
       showHour,
       showSecond,
-      getPopupContainer
+      getPopupContainer,
     } = this.props;
     const { open, value } = this.state;
     let popupClassName;
@@ -234,7 +231,7 @@ class Picker extends React.Component {
         popupAlign={align}
         builtinPlacements={placements}
         popupPlacement={placement}
-        action={disabled ? [] : ["click"]}
+        action={disabled ? [] : ['click']}
         destroyPopupOnHide
         getPopupContainer={getPopupContainer}
         popupTransitionName={transitionName}
@@ -244,13 +241,15 @@ class Picker extends React.Component {
         <span className={`${prefixCls} ${className}`} style={style}>
           <input
             className={`${prefixCls}-input`}
-            ref={(refs)=>{this.picker=refs;}}
+            ref={refs => {
+              this.picker = refs;
+            }}
             type="text"
             placeholder={placeholder}
             readOnly
             onKeyDown={this.onKeyDown}
             disabled={disabled}
-            value={(value && value.format(this.getFormat())) || ""}
+            value={(value && value.format(this.getFormat())) || ''}
           />
           <span className={`${prefixCls}-icon`} />
         </span>

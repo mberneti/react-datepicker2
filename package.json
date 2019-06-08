@@ -23,7 +23,7 @@
   ],
   "author": "mohammadreza berneti (mberneti)",
   "license": "MIT",
-  "scripts": {
+  "scripts": {    
     "test": "jest --runInBand --detectOpenHandles --no-cache --config ./jest.config.js --coverage && minicat coverage/lcov.info | coveralls",
     "start": "webpack-dev-server --mode development --config webpack.config.dev.js",
     "build": "npm-run-all build:dist build:docs",
@@ -34,8 +34,8 @@
     "compile": "node-sass --output-style=expanded --source-map=true src/styles/style.scss src/styles/style.css",
     "prefix": "postcss src/styles/style.css --use=autoprefixer --map=false --output=src/styles/style.css",
     "minify": "cleancss --level=1 --source-map --source-map-inline-sources --output src/style.min.css src/styles/style.css",
-    "lint": "eslint src/**/*.js",
-    "prettier": "prettier --write \"./src/**/*.js\""
+    "lint": "eslint src --fix",
+    "formatcodes": "prettier --write \"./src/**/*.js\""
   },
   "dependencies": {
     "classnames": "^2.2.5",
@@ -127,11 +127,5 @@
   },
   "browserslist": [
     "last 2 versions"
-  ],
-  "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "git add"
-    ]
-  }
+  ]
 }

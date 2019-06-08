@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 import { persianNumber } from '../utils/persian';
 import { leftArrow, rightArrow } from '../utils/assets';
 
 export default class Heading extends Component {
   static propTypes = {
     month: PropTypes.object.isRequired,
-    isGregorian: PropTypes.bool
+    isGregorian: PropTypes.bool,
   };
 
   static contextTypes = {
     styles: PropTypes.object,
     nextMonth: PropTypes.func.isRequired,
     prevMonth: PropTypes.func.isRequired,
-    setCalendarMode: PropTypes.func.isRequired
+    setCalendarMode: PropTypes.func.isRequired,
   };
 
   handleMonthClick(event) {
@@ -28,10 +28,12 @@ export default class Heading extends Component {
 
     return (
       <div className={styles.heading}>
-      <button className={styles.title} onClick={this.handleMonthClick.bind(this)}>
-        {this.props.isGregorian? month.locale('en').format('MMMM YYYY'):persianNumber(month.locale('fa').format('jMMMM jYYYY')) }
-      </button>
-          {this.props.timePicker}
+        <button className={styles.title} onClick={this.handleMonthClick.bind(this)}>
+          {this.props.isGregorian
+            ? month.locale('en').format('MMMM YYYY')
+            : persianNumber(month.locale('fa').format('jMMMM jYYYY'))}
+        </button>
+        {this.props.timePicker}
         <button
           type="button"
           title="ماه قبل"

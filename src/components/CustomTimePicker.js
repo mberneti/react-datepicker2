@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 import moment from 'moment-jalaali';
 import TimePicker from './TimePicker';
 import { persianNumber } from '../utils/persian';
@@ -12,11 +12,11 @@ export default class MyTimePicker extends Component {
   static propTypes = {
     momentValue: PropTypes.object,
     setMomentValue: PropTypes.func,
-    isGregorian: PropTypes.bool
+    isGregorian: PropTypes.bool,
   };
 
   static defaultProps = {
-    momentValue: moment()
+    momentValue: moment(),
   };
 
   handleChange(value) {
@@ -40,19 +40,21 @@ export default class MyTimePicker extends Component {
   render() {
     const { momentValue, isGregorian, outsideClickIgnoreClass } = this.props;
 
-    return <TimePicker
-          showAMPM
-          isGregorian={isGregorian}
-          showSecond={false}
-          allowEmpty={false}
-          value={momentValue}
-          className={outsideClickIgnoreClass}
-          popupClassName={outsideClickIgnoreClass}
-          panelClassName={`${outsideClickIgnoreClass} time-picker-panel`}
-          onChange={this.handleChange.bind(this)}
-          disabledMinutes={disabledMinutes}
-          formatter={value => persianNumber(value)}
-          hideDisabledOptions
-        />;
+    return (
+      <TimePicker
+        showAMPM
+        isGregorian={isGregorian}
+        showSecond={false}
+        allowEmpty={false}
+        value={momentValue}
+        className={outsideClickIgnoreClass}
+        popupClassName={outsideClickIgnoreClass}
+        panelClassName={`${outsideClickIgnoreClass} time-picker-panel`}
+        onChange={this.handleChange.bind(this)}
+        disabledMinutes={disabledMinutes}
+        formatter={value => persianNumber(value)}
+        hideDisabledOptions
+      />
+    );
   }
 }

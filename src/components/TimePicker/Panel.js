@@ -1,19 +1,15 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Header from "./Header";
-import Combobox from "./Combobox";
-import moment from "moment";
+import React from 'react';
+import PropTypes from 'prop-types';
+import moment from 'moment-jalaali';
+import Header from './Header';
+import Combobox from './Combobox';
 
 function noop() {}
 
 function generateOptions(length, disabledOptions, hideDisabledOptions) {
   const arr = [];
   for (let value = 0; value < length; value++) {
-    if (
-      !disabledOptions ||
-      disabledOptions.indexOf(value) < 0 ||
-      !hideDisabledOptions
-    ) {
+    if (!disabledOptions || disabledOptions.indexOf(value) < 0 || !hideDisabledOptions) {
       arr.push(value);
     }
   }
@@ -39,45 +35,45 @@ class Panel extends React.Component {
     showSecond: PropTypes.bool,
     onClear: PropTypes.func,
     showAMPM: PropTypes.bool,
-    isGregorian: PropTypes.bool
+    isGregorian: PropTypes.bool,
   };
 
   static defaultProps = {
-    prefixCls: "rc-time-picker-panel",
+    prefixCls: 'rc-time-picker-panel',
     onChange: noop,
     onClear: noop,
-    defaultOpenValue: moment()
+    defaultOpenValue: moment(),
   };
 
   constructor(props) {
     super(props);
     this.state = {
       value: this.props.value,
-      selectionRange: []
+      selectionRange: [],
     };
   }
 
   componentWillReceiveProps(nextProps) {
-    const value = nextProps.value;
+    const { value } = nextProps;
     if (value) {
       this.setState({
-        value
+        value,
       });
     }
   }
 
-  onChange = (newValue) => {
+  onChange = newValue => {
     this.setState({ value: newValue });
     this.props.onChange(newValue);
-  }
+  };
 
   onClear = () => {
     this.props.onClear();
-  }
+  };
 
-  onCurrentSelectPanelChange = (currentSelectPanel) => {
+  onCurrentSelectPanelChange = currentSelectPanel => {
     this.setState({ currentSelectPanel });
-  }
+  };
 
   render() {
     const {
@@ -97,30 +93,18 @@ class Panel extends React.Component {
       format,
       defaultOpenValue,
       clearText,
-      onEsc
+      onEsc,
     } = this.props;
     const { value, currentSelectPanel } = this.state;
     const disabledHourOptions = disabledHours();
     const disabledMinuteOptions = disabledMinutes(value ? value.hour() : null);
     const disabledSecondOptions = disabledSeconds(
       value ? value.hour() : null,
-      value ? value.minute() : null
+      value ? value.minute() : null,
     );
-    const hourOptions = generateOptions(
-      24,
-      disabledHourOptions,
-      hideDisabledOptions
-    );
-    const minuteOptions = generateOptions(
-      60,
-      disabledMinuteOptions,
-      hideDisabledOptions
-    );
-    const secondOptions = generateOptions(
-      60,
-      disabledSecondOptions,
-      hideDisabledOptions
-    );
+    const hourOptions = generateOptions(24, disabledHourOptions, hideDisabledOptions);
+    const minuteOptions = generateOptions(60, disabledMinuteOptions, hideDisabledOptions);
+    const secondOptions = generateOptions(60, disabledSecondOptions, hideDisabledOptions);
 
     return (
       <div className={`${prefixCls}-inner ${className}`}>

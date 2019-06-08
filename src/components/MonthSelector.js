@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 import moment from 'moment-jalaali';
 import classnames from 'classnames';
 import MonthsViewHeading from './MonthsViewHeading';
@@ -19,7 +19,7 @@ const monthsJalaali = [
   'آذر',
   'دی',
   'بهمن',
-  'اسفند'
+  'اسفند',
 ];
 
 const monthsGregorian = [
@@ -34,82 +34,79 @@ const monthsGregorian = [
   'September',
   'October',
   'November',
-  'December'
+  'December',
 ];
 
 export default class MonthSelector extends Component {
   static propTypes = {
     styles: PropTypes.object,
     selectedMonth: PropTypes.object.isRequired,
-    isGregorian: PropTypes.bool
+    isGregorian: PropTypes.bool,
   };
 
   static contextTypes = {
     setCalendarMode: PropTypes.func.isRequired,
-    setMonth: PropTypes.func.isRequired
+    setMonth: PropTypes.func.isRequired,
   };
 
   state = {
-    year: this.props.selectedMonth
+    year: this.props.selectedMonth,
   };
 
   nextYear() {
     this.setState({
-      year: this.state.year.clone().add(1, 'year')
+      year: this.state.year.clone().add(1, 'year'),
     });
   }
 
   prevYear() {
     this.setState({
-      year: this.state.year.clone().subtract(1, 'year')
+      year: this.state.year.clone().subtract(1, 'year'),
     });
   }
 
   handleClick(key) {
     const { setMonth, setCalendarMode } = this.context;
     const { isGregorian } = this.props;
-    const monthYearFormat= isGregorian ? 'M-YYYY' : 'jM-jYYYY';
+    const monthYearFormat = isGregorian ? 'M-YYYY' : 'jM-jYYYY';
     setMonth(moment(key, monthYearFormat));
     setCalendarMode('days');
   }
 
   render() {
     const { year } = this.state;
-    const { selectedMonth, styles,isGregorian } = this.props;
-              const yearFormat= isGregorian ? 'YYYY' : 'jYYYY';
-    const monthYearFormat= isGregorian ? 'M-YYYY' : 'jM-jYYYY';
-    const months=isGregorian ? monthsGregorian : monthsJalaali;
+    const { selectedMonth, styles, isGregorian } = this.props;
+    const yearFormat = isGregorian ? 'YYYY' : 'jYYYY';
+    const monthYearFormat = isGregorian ? 'M-YYYY' : 'jM-jYYYY';
+    const months = isGregorian ? monthsGregorian : monthsJalaali;
 
     return (
       <div className="month-selector">
         <MonthsViewHeading
-          isGregorian={ isGregorian }
+          isGregorian={isGregorian}
           styles={styles}
           year={year}
-          onNextYear={this.nextYear.bind(this) }
-          onPrevYear={this.prevYear.bind(this) }
+          onNextYear={this.nextYear.bind(this)}
+          onPrevYear={this.prevYear.bind(this)}
         />
         <div className={styles.monthsList}>
-          {
-            months.map((name, key) => {
-              const buttonFingerprint = (key + 1) + '-' + year.format(yearFormat);
-              const selectedMonthFingerprint = selectedMonth.format(monthYearFormat);
-              const isCurrent = selectedMonthFingerprint === buttonFingerprint;
+          {months.map((name, key) => {
+            const buttonFingerprint = `${key + 1}-${year.format(yearFormat)}`;
+            const selectedMonthFingerprint = selectedMonth.format(monthYearFormat);
+            const isCurrent = selectedMonthFingerprint === buttonFingerprint;
 
-              const className = classnames(styles.monthWrapper, {
-                [styles.selected]: isCurrent
-              });
+            const className = classnames(styles.monthWrapper, {
+              [styles.selected]: isCurrent,
+            });
 
-              return (
-                <div key={key} className={className}>
-                  <button onClick={this.handleClick.bind(this, buttonFingerprint)}>
-                    {name}
-                  </button>
-                </div>
-              );
-            })
-          }
+            return (
+              <div key={key} className={className}>
+                <button onClick={this.handleClick.bind(this, buttonFingerprint)}>{name}</button>
+              </div>
+            );
+          })}
         </div>
-      </div>);
+      </div>
+    );
   }
 }

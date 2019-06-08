@@ -1,5 +1,5 @@
 import React from 'react'
-import moment from 'moment'
+import moment from 'moment-jalaali'
 import DatePicker from '../../../src/components/DatePicker';
 
 class component extends React.Component { 

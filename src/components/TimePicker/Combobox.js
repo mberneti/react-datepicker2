@@ -1,8 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Select from './Select';
-import PropTypes from "prop-types";
 
-const pad = value => value < 10 ? `0${value}` : `${value}`;
+const pad = value => (value < 10 ? `0${value}` : `${value}`);
 
 const formatOption = (option, disabledOptions) => {
   const value = pad(option);
@@ -34,7 +34,7 @@ class Combobox extends React.Component {
     disabledMinutes: PropTypes.func,
     disabledSeconds: PropTypes.func,
     onCurrentSelectPanelChange: PropTypes.func,
-    isGregorian: PropTypes.bool
+    isGregorian: PropTypes.bool,
   };
 
   onItemChange = (type, itemValue) => {
@@ -55,40 +55,38 @@ class Combobox extends React.Component {
         const hour12style = hour24style < 12 ? hour24style : hour24style - 12;
 
         if (itemValue === 'PM') {
-            value.hour(hour12style + 12);
+          value.hour(hour12style + 12);
         } else {
-            value.hour(hour12style);
+          value.hour(hour12style);
         }
       }
     }
 
     onChange(value);
-  }
+  };
 
-  onEnterSelectPanel = (range) => {
+  onEnterSelectPanel = range => {
     this.props.onCurrentSelectPanelChange(range);
-  }
+  };
 
-  getHourSelect = (hour) => {
+  getHourSelect = hour => {
     const { prefixCls, showAMPM, disabledHours, showHour } = this.props;
     if (!showHour) {
       return null;
     }
 
     const disabledOptions = disabledHours();
-    let hourOptions = this.props.hourOptions;
+    let { hourOptions } = this.props;
     let formattedOptions = hourOptions.map(option => formatOption(option, disabledOptions));
 
     if (showAMPM) {
-      hourOptions = hourOptions.filter(value => hour < 12 ? value < 12 : value >= 12);
+      hourOptions = hourOptions.filter(value => (hour < 12 ? value < 12 : value >= 12));
       formattedOptions = formattedOptions
-        .map(
-          option => ({
-            ...option, 
-            label: option.value <= 12 ? option.value : pad(option.value - 12)
-          })
-        )
-        .filter(({value}) => hour < 12 ? Number(value) < 12 : Number(value) >= 12)
+        .map(option => ({
+          ...option,
+          label: option.value <= 12 ? option.value : pad(option.value - 12),
+        }))
+        .filter(({ value }) => (hour < 12 ? Number(value) < 12 : Number(value) >= 12));
     }
 
     return (
@@ -101,9 +99,9 @@ class Combobox extends React.Component {
         onMouseEnter={this.onEnterSelectPanel.bind(this, 'hour')}
       />
     );
-  }
+  };
 
-  getMinuteSelect = (minute) => {
+  getMinuteSelect = minute => {
     const { prefixCls, minuteOptions, disabledMinutes, defaultOpenValue } = this.props;
     const value = this.props.value || defaultOpenValue;
     const disabledOptions = disabledMinutes(value.hour());
@@ -118,9 +116,9 @@ class Combobox extends React.Component {
         onMouseEnter={this.onEnterSelectPanel.bind(this, 'minute')}
       />
     );
-  }
+  };
 
-  getSecondSelect = (second) => {
+  getSecondSelect = second => {
     const { prefixCls, secondOptions, disabledSeconds, showSecond, defaultOpenValue } = this.props;
     if (!showSecond) {
       return null;
@@ -138,18 +136,18 @@ class Combobox extends React.Component {
         onMouseEnter={this.onEnterSelectPanel.bind(this, 'second')}
       />
     );
-  }
+  };
 
-  getAMPMSelect = (period) => {
-    const { prefixCls, showAMPM, defaultOpenValue,isGregorian } = this.props;
-    
+  getAMPMSelect = period => {
+    const { prefixCls, showAMPM, defaultOpenValue, isGregorian } = this.props;
+
     if (!showAMPM) {
       return null;
     }
 
     const options = [
-      {value: 'AM', label: isGregorian?'AM': 'ق.ظ'},
-      {value: 'PM', label: isGregorian?'PM': 'ب.ظ'}
+      { value: 'AM', label: isGregorian ? 'AM' : 'ق.ظ' },
+      { value: 'PM', label: isGregorian ? 'PM' : 'ب.ظ' },
     ];
 
     return (
@@ -157,12 +155,12 @@ class Combobox extends React.Component {
         prefixCls={prefixCls}
         options={options}
         selectedIndex={period === 'AM' ? 0 : 1}
-        type="period"   
+        type="period"
         onSelect={this.onItemChange}
         onMouseEnter={this.onEnterSelectPanel.bind(this, 'period')}
       />
     );
-  }
+  };
 
   render() {
     const { prefixCls, defaultOpenValue } = this.props;

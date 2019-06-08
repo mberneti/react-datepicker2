@@ -1,9 +1,9 @@
 import React from 'react';
 import moment from 'moment';
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 class Header extends React.Component {
- static propTypes = {
+  static propTypes = {
     format: PropTypes.string,
     prefixCls: PropTypes.string,
     disabledDate: PropTypes.func,
@@ -22,13 +22,13 @@ class Header extends React.Component {
     allowEmpty: PropTypes.bool,
     defaultOpenValue: PropTypes.object,
     currentSelectPanel: PropTypes.string,
-  }; 
+  };
 
   constructor(props) {
     super(props);
     const { value, format } = this.props;
     this.state = {
-      str: value && value.format(format) || '',
+      str: (value && value.format(format)) || '',
       invalid: false,
     };
   }
@@ -36,7 +36,7 @@ class Header extends React.Component {
   componentWillReceiveProps(nextProps) {
     const { value, format } = nextProps;
     this.setState({
-      str: value && value.format(format) || '',
+      str: (value && value.format(format)) || '',
       invalid: false,
     });
   }
@@ -47,9 +47,15 @@ class Header extends React.Component {
       str,
     });
     const {
-      format, hourOptions, minuteOptions, secondOptions,
-      disabledHours, disabledMinutes,
-      disabledSeconds, onChange, allowEmpty,
+      format,
+      hourOptions,
+      minuteOptions,
+      secondOptions,
+      disabledHours,
+      disabledMinutes,
+      disabledSeconds,
+      onChange,
+      allowEmpty,
     } = this.props;
 
     if (str) {
@@ -62,7 +68,10 @@ class Header extends React.Component {
         });
         return;
       }
-      value.hour(parsed.hour()).minute(parsed.minute()).second(parsed.second());
+      value
+        .hour(parsed.hour())
+        .minute(parsed.minute())
+        .second(parsed.second());
 
       // if time value not allowed, response warning.
       if (
@@ -137,12 +146,14 @@ class Header extends React.Component {
     if (!allowEmpty) {
       return null;
     }
-    return (<a
-      className={`${prefixCls}-clear-btn`}
-      role="button"
-      title={this.props.clearText}
-      onMouseDown={this.onClear}
-    />);
+    return (
+      <a
+        className={`${prefixCls}-clear-btn`}
+        role="button"
+        title={this.props.clearText}
+        onMouseDown={this.onClear}
+      />
+    );
   }
 
   getProtoValue() {
@@ -153,14 +164,18 @@ class Header extends React.Component {
     const { prefixCls, placeholder } = this.props;
     const { invalid, str } = this.state;
     const invalidClass = invalid ? `${prefixCls}-input-invalid` : '';
-    return (<input
-      className={`${prefixCls}-input  ${invalidClass}`}
-      ref={inst => { this.input = inst; }}
-      onKeyDown={this.onKeyDown}
-      value={str}
-      placeholder={placeholder}
-      onChange={this.onInputChange}
-    />);
+    return (
+      <input
+        className={`${prefixCls}-input  ${invalidClass}`}
+        ref={inst => {
+          this.input = inst;
+        }}
+        onKeyDown={this.onKeyDown}
+        value={str}
+        placeholder={placeholder}
+        onChange={this.onInputChange}
+      />
+    );
   }
 
   render() {

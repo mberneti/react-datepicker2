@@ -9,5 +9,5 @@ export const defaultStyles = {
   daysOfWeek: 'daysOfWeek',
   monthsList: 'monthsList',
   selected: 'selected',
-  dayPickerContainer: 'dayPickerContainer'
+  dayPickerContainer: 'dayPickerContainer',
 };

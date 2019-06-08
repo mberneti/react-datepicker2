@@ -1,27 +1,27 @@
 const core = {
-  white: "#fff",
-  gray: "#484848",
-  grayLight: "#82888a",
-  grayLighter: "#cacccd",
-  grayLightest: "#f2f2f2",
+  white: '#fff',
+  gray: '#484848',
+  grayLight: '#82888a',
+  grayLighter: '#cacccd',
+  grayLightest: '#f2f2f2',
 
-  borderMedium: "#c4c4c4",
-  border: "#dbdbdb",
-  borderLight: "#e4e7e7",
-  borderLighter: "#eceeee",
-  borderBright: "#f4f5f5",
+  borderMedium: '#c4c4c4',
+  border: '#dbdbdb',
+  borderLight: '#e4e7e7',
+  borderLighter: '#eceeee',
+  borderBright: '#f4f5f5',
 
-  primary: "#00a699",
-  primaryShade_1: "#33dacd",
-  primaryShade_2: "#66e2da",
-  primaryShade_3: "#80e8e0",
-  primaryShade_4: "#b2f1ec",
-  primary_dark: "#008489",
+  primary: '#00a699',
+  primaryShade_1: '#33dacd',
+  primaryShade_2: '#66e2da',
+  primaryShade_3: '#80e8e0',
+  primaryShade_4: '#b2f1ec',
+  primary_dark: '#008489',
 
-  secondary: "#007a87",
+  secondary: '#007a87',
 
-  yellow: "#ffe8bc",
-  yellow_dark: "#ffce71"
+  yellow: '#ffe8bc',
+  yellow_dark: '#ffce71',
 };
 
 export default {
@@ -32,7 +32,7 @@ export default {
         border: 0,
         borderTop: 0,
         borderRight: 0,
-        borderBottom: "2px solid transparent",
+        borderBottom: '2px solid transparent',
         borderLeft: 0,
         outlineFocused: 0,
         borderFocused: 0,
@@ -40,13 +40,13 @@ export default {
         borderLeftFocused: 0,
         borderBottomFocused: `2px solid ${core.primary_dark}`,
         borderRightFocused: 0,
-        borderRadius: 0
+        borderRadius: 0,
       },
       pickerInput: {
         borderWidth: 1,
-        borderStyle: "solid",
-        borderRadius: 2
-      }
+        borderStyle: 'solid',
+        borderRadius: 2,
+      },
     },
 
     color: {
@@ -55,13 +55,13 @@ export default {
       disabled: core.grayLightest,
 
       background: core.white,
-      backgroundDark: "#f2f2f2",
+      backgroundDark: '#f2f2f2',
       backgroundFocused: core.white,
-      border: "rgb(219, 219, 219)",
+      border: 'rgb(219, 219, 219)',
       text: core.gray,
       textDisabled: core.border,
-      textFocused: "#007a87",
-      placeholderText: "#757575",
+      textFocused: '#007a87',
+      placeholderText: '#757575',
 
       outside: {
         backgroundColor: core.white,
@@ -69,7 +69,7 @@ export default {
         backgroundColor_hover: core.white,
         color: core.gray,
         color_active: core.gray,
-        color_hover: core.gray
+        color_hover: core.gray,
       },
 
       highlighted: {
@@ -78,7 +78,7 @@ export default {
         backgroundColor_hover: core.yellow_dark,
         color: core.gray,
         color_active: core.gray,
-        color_hover: core.gray
+        color_hover: core.gray,
       },
 
       minimumNights: {
@@ -88,7 +88,7 @@ export default {
         borderColor: core.borderLighter,
         color: core.grayLighter,
         color_active: core.grayLighter,
-        color_hover: core.grayLighter
+        color_hover: core.grayLighter,
       },
 
       hoveredSpan: {
@@ -100,7 +100,7 @@ export default {
         borderColor_hover: core.primaryShade_3,
         color: core.secondary,
         color_active: core.secondary,
-        color_hover: core.secondary
+        color_hover: core.secondary,
       },
 
       selectedSpan: {
@@ -112,7 +112,7 @@ export default {
         borderColor_hover: core.primary,
         color: core.white,
         color_active: core.white,
-        color_hover: core.white
+        color_hover: core.white,
       },
 
       selected: {
@@ -124,7 +124,7 @@ export default {
         borderColor_hover: core.primary,
         color: core.white,
         color_active: core.white,
-        color_hover: core.white
+        color_hover: core.white,
       },
 
       blocked_calendar: {
@@ -136,7 +136,7 @@ export default {
         borderColor_hover: core.grayLighter,
         color: core.grayLight,
         color_active: core.grayLight,
-        color_hover: core.grayLight
+        color_hover: core.grayLight,
       },
 
       blocked_out_of_range: {
@@ -148,8 +148,8 @@ export default {
         borderColor_hover: core.borderLight,
         color: core.grayLighter,
         color_active: core.grayLighter,
-        color_hover: core.grayLighter
-      }
+        color_hover: core.grayLighter,
+      },
     },
 
     spacing: {
@@ -168,13 +168,13 @@ export default {
       displayTextPaddingBottom_small: 5,
       displayTextPaddingHorizontal_small: undefined,
       displayTextPaddingLeft_small: 7,
-      displayTextPaddingRight_small: 7
+      displayTextPaddingRight_small: 7,
     },
 
     sizing: {
       inputWidth: 130,
       inputWidth_small: 97,
-      arrowWidth: 24
+      arrowWidth: 24,
     },
 
     noScrollBarOnVerticalScrollable: false,
@@ -184,12 +184,12 @@ export default {
       captionSize: 18,
       input: {
         size: 19,
-        lineHeight: "24px",
+        lineHeight: '24px',
         size_small: 15,
-        lineHeight_small: "18px",
-        letterSpacing_small: "0.2px",
-        styleDisabled: "italic"
-      }
-    }
-  }
+        lineHeight_small: '18px',
+        letterSpacing_small: '0.2px',
+        styleDisabled: 'italic',
+      },
+    },
+  },
 };

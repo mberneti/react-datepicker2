@@ -17,7 +17,7 @@ export function getDaysOfMonth(month, isGregorian) {
   current.subtract((current.day() + dayOffset) % 7, 'days');
 
   // Set end to the last day of week in the next month
-  end.add(6 - (end.day() + dayOffset) % 7, 'days');
+  end.add(6 - ((end.day() + dayOffset) % 7), 'days');
 
   while (current.isBefore(end)) {
     days.push(current.clone());
