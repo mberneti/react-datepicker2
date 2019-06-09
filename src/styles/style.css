@@ -9,8 +9,8 @@
 
 @font-face {
   font-family: 'Vazir';
-  src: url("https://mberneti.github.io/react-datepicker2/fonts/Vazir.eot");
-  src: local("Vazir"), url("https://mberneti.github.io/react-datepicker2/fonts/Vazir.eot?#iefix") format("embedded-opentype"), url("https://mberneti.github.io/react-datepicker2/fonts/Vazir.woff2") format("woff2"), url("https://mberneti.github.io/react-datepicker2/fonts/Vazir.woff") format("woff"), url("https://mberneti.github.io/react-datepicker2/fonts/Vazir.ttf") format("truetype");
+  src: url("https://mberneti.github.io/react-datepicker2/fonts/Vazir-WOL.eot");
+  src: local("Vazir"), url("https://mberneti.github.io/react-datepicker2/fonts/Vazir-WOL.eot?#iefix") format("embedded-opentype"), url("https://mberneti.github.io/react-datepicker2/fonts/Vazir-WOL.woff2") format("woff2"), url("https://mberneti.github.io/react-datepicker2/fonts/Vazir-WOL.woff") format("woff"), url("https://mberneti.github.io/react-datepicker2/fonts/Vazir-WOL.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
