@@ -19,8 +19,8 @@ module.exports = {
   module: {
     rules: [
       {
-          test: /\.(jpg|png|svg)$/,
-          loader: 'file-loader'
+        test: /\.(jpg|png|svg)$/,
+        loader: 'file-loader'
       },
       {
         test: /\.(ttf|eot|woff|woff2)$/,
@@ -36,7 +36,7 @@ module.exports = {
         use: [{
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env','@babel/preset-react']
+            presets: ['@babel/preset-env', '@babel/preset-react']
           }
         }],
         exclude: /node_modules/
@@ -62,4 +62,8 @@ module.exports = {
     extensions: ['.js', '.jsx'],
   },
   devtool: 'source-map',
+  devServer: {
+    // host: '0.0.0.0',//type your ip address for testing on local network
+    port: 8080
+  }
 }
