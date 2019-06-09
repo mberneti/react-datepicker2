@@ -1,13 +1,14 @@
+@import './font';
+
 $greycolor:#777;
-$fontFamily:'Open Sans','Vazir';
-$selectedColor:#4285f4;//337ab7
+$selectedColor:#4285f4; //337ab7
 $hoverColor:#d6f1ff;
 
 .calendarContainer {
     border-radius: 4px;
-    -moz-box-shadow:   0px 3px 15px rgba(0,0,0,0.2);
-    -webkit-box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
-    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
     width: 320px;
     margin: auto;
     text-align: center;
@@ -27,7 +28,7 @@ $hoverColor:#d6f1ff;
     clear: both;
 }
 
-.datepicker-input{
+.datepicker-input {
     box-sizing: border-box;
 }
 
@@ -55,16 +56,15 @@ $hoverColor:#d6f1ff;
     background-color: #f2f2f2;
 }
 
-.calendarContainer .heading>span {
-}
+.calendarContainer .heading>span {}
 
 .calendarContainer .heading svg {
     width: 10px;
-    fill:$greycolor;
+    fill: $greycolor;
 }
 
 .calendarContainer .heading .prev,
-.calendarContainer .heading .next  {
+.calendarContainer .heading .next {
     width: 42px;
     height: 42px;
     border-radius: 50%;
@@ -94,6 +94,7 @@ $hoverColor:#d6f1ff;
     font-size: 1.2em;
     max-height: none;
 }
+
 .jalaali.calendarContainer .heading .title {
     padding: 4px 15px 7px 15px;
 }
@@ -120,11 +121,11 @@ $hoverColor:#d6f1ff;
     font-size: 1.1em;
     padding: 0;
     line-height: 1.5;
-    padding: 0px 0px 2px 0px;
+    padding: 0px 0px 1px 0px;
 }
 
 .jalaali.calendarContainer .dayWrapper button {
-    padding: 0px 0px 1px 2px;
+    padding: 0px 0px 1px 0px;
 }
 
 .calendarContainer .dayWrapper button:hover {
@@ -154,7 +155,7 @@ $hoverColor:#d6f1ff;
     padding-bottom: 5px;
     display: flex;
     width: 100%;
-    color:lighten( $greycolor, 10% );
+    color: lighten($greycolor, 10%);
 }
 
 .calendarContainer .daysOfWeek>div {
@@ -251,7 +252,7 @@ $hoverColor:#d6f1ff;
 
 .rc-time-picker-input {
     margin: 4px 0;
-    padding:0px 15px 1px 15px;
+    padding: 0px 15px 1px 15px;
     direction: ltr;
     text-align: center;
     width: 100%;
@@ -263,24 +264,26 @@ $hoverColor:#d6f1ff;
 
     font-family: $fontFamily;
 
-    border:none;
-    background-image:none;
-    background-color:transparent;
+    border: none;
+    background-image: none;
+    background-color: transparent;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
-    
+
 }
-.jalaali.calendarContainer .rc-time-picker-input{
+
+.jalaali.calendarContainer .rc-time-picker-input {
     padding: 0px 15px 3px 15px;
 }
-.rc-time-picker-input:focus{
+
+.rc-time-picker-input:focus {
     box-shadow: none;
     border: none;
     background-color: #f2f2f2;
 }
 
-.rc-time-picker:hover{
+.rc-time-picker:hover {
     background-color: #f2f2f2;
 }
 
@@ -318,13 +321,14 @@ $hoverColor:#d6f1ff;
     cursor: default;
     line-height: 1.5;
     outline: 0;
-    border: 1px solid transparent;    
+    border: 1px solid transparent;
     padding: 4px 0;
     font-size: 1.4em;
     text-align: center;
 }
 
-.rc-time-picker-panel-input, .rc-time-picker-panel-input:hover {
+.rc-time-picker-panel-input,
+.rc-time-picker-panel-input:hover {
     box-shadow: none;
     border: none;
 }
