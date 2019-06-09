@@ -2,15 +2,15 @@
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 400;
-  src: local("Open Sans"), local("OpenSans"), url("https://mberneti.github.io/react-datepicker2/fonts/opensans7.woff2") format("woff2");
+  src: local("Open Sans"), local("OpenSans"), url("//mberneti.github.io/react-datepicker2/fonts/opensans7.woff2") format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
 
 @font-face {
   font-family: 'Vazir';
   font-weight: 400;
-  src: url("https://mberneti.github.io/react-datepicker2/fonts/Vazir-FD-WOL.eot");
-  src: local("Vazir"), url("https://mberneti.github.io/react-datepicker2/fonts/Vazir-FD-WOL.eot?#iefix") format("embedded-opentype"), url("https://mberneti.github.io/react-datepicker2/fonts/Vazir-FD-WOL.woff") format("woff"), url("https://mberneti.github.io/react-datepicker2/fonts/Vazir-FD-WOL.ttf") format("truetype");
+  src: url("//mberneti.github.io/react-datepicker2/fonts/Vazir-FD-WOL.eot");
+  src: local("Vazir"), url("//mberneti.github.io/react-datepicker2/fonts/Vazir-FD-WOL.eot?#iefix") format("embedded-opentype"), url("//mberneti.github.io/react-datepicker2/fonts/Vazir-FD-WOL.woff") format("woff"), url("//mberneti.github.io/react-datepicker2/fonts/Vazir-FD-WOL.ttf") format("truetype");
 }
 
 .calendarContainer {
@@ -27,6 +27,7 @@
 .calendarContainer * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: "Open Sans", "Vazir";
 }
 
 .calendarContainer .dayPickerContainer:after,

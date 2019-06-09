@@ -18,6 +18,7 @@ $hoverColor:#d6f1ff;
 
 .calendarContainer * {
     box-sizing: border-box;
+    font-family: $fontFamily;
 }
 
 .calendarContainer .dayPickerContainer:after,
