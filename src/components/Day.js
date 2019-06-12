@@ -49,14 +49,19 @@ export default class Day extends Component {
       onClick,
       styles,
       isGregorian,
+      isToday,
       ...rest
     } = this.props;
+
+    
 
     const className = classnames(styles.dayWrapper, {
       [styles.selected]: selected,
       [styles.currentMonth]: isCurrentMonth,
+      [styles.today]: isToday
     });
 
+    
     return (
       <div className={className}>
         <button type="button" onClick={this.handleClick.bind(this)} disabled={disabled} {...rest}>

@@ -443,3 +443,9 @@ li.rc-time-picker-panel-select-option-disabled:hover {
 .tether-element.tether-element-attached-top.tether-element-attached-center.tether-target-attached-bottom.tether-target-attached-center.tether-enabled {
     z-index: 2000;
 }
+
+.today {
+    button {
+        border: 3px solid #4285f4 !important;
+    }
+}
