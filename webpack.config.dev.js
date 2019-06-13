@@ -64,6 +64,6 @@ module.exports = {
   devtool: 'source-map',
   devServer: {
     // host: '0.0.0.0',//type your ip address for testing on local network
-    port: 8089
+    port: 8080
   }
 }

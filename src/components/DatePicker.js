@@ -270,7 +270,6 @@ export default class DatePicker extends Component {
     return (
       <TetherComponent
         ref={tether => (this.tether = tether)}
-        classPrefix="react-datepicker-calendar"
         attachment={this.props.tetherAttachment ? this.props.tetherAttachment : 'top center'}
         constraints={[
           {
