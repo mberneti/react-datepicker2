@@ -1,11 +1,6 @@
 @import './font';
 
-.calendarContainer *,
-.datepicker-input,
-.calendarContainer .heading .title,
-.calendarContainer .daysOfWeek>div,
-.time-picker-container,
-.rc-time-picker-input,
-.rc-time-picker-panel-inner {
+
+body {
     font-family: $fontFamily;
 }
