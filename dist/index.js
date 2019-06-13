@@ -17700,7 +17700,6 @@ function (_Component) {
         ref: function ref(tether) {
           return _this2.tether = tether;
         },
-        classPrefix: "react-datepicker-calendar",
         attachment: this.props.tetherAttachment ? this.props.tetherAttachment : 'top center',
         constraints: [{
           to: 'window',
