@@ -5,6 +5,8 @@ import HeroExample from './hero_example.js'
 import background from "./images/hero_background.jpg";
 import { Parallax, Background } from 'react-parallax';
 
+import "./styles/demo.scss"
+
 export default class Root extends React.Component {
   render() {
     return (
