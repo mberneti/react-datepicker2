@@ -17539,6 +17539,7 @@ function (_Component) {
       isOpen: false,
       momentValue: _this.props.defaultValue || null,
       inputValue: _this.getValue(_this.props.defaultValue, _this.props.isGregorian, _this.props.timePicker),
+      inputJalaaliFormat: _this.props.inputJalaaliFormat || _this.getInputFormat(_this.props.isGregorian, _this.props.timePicker),
       inputFormat: _this.props.inputFormat || _this.getInputFormat(_this.props.isGregorian, _this.props.timePicker),
       isGregorian: _this.props.isGregorian,
       timePicker: _this.props.timePicker,
@@ -17557,8 +17558,9 @@ function (_Component) {
     key: "getValue",
     value: function getValue(inputValue, isGregorian, timePicker) {
       if (!inputValue) return '';
-      var inputFormat = this.getInputFormat(isGregorian, timePicker);
-      return isGregorian ? inputValue.locale('es').format(inputFormat) : inputValue.locale('fa').format(inputFormat);
+      var inputFormat = this.state.inputFormat;
+      var inputJalaaliFormat = this.state.inputJalaaliFormat;
+      return isGregorian ? inputValue.locale('es').format(inputFormat) : inputValue.locale('fa').format(inputJalaaliFormat);
     }
   }, {
     key: "componentWillMount",
@@ -17575,11 +17577,13 @@ function (_Component) {
       }
 
       if ('isGregorian' in nextProps && nextProps.isGregorian !== this.props.isGregorian) {
-        var inputFormat = nextProps.isGregorian ? 'YYYY/M/D hh:mm A' : 'jYYYY/jM/jD hh:mm A';
+        var inputFormat = nextProps.inputFormat;
+        var inputJalaaliFormat = nextProps.inputJalaaliFormat;
         this.setState({
           isGregorian: nextProps.isGregorian,
           inputValue: this.getValue(nextProps.value, nextProps.isGregorian, nextProps.timePicker),
-          inputFormat: inputFormat
+          inputFormat: inputFormat,
+          inputJalaaliFormat: inputJalaaliFormat
         });
       }
 
@@ -17737,6 +17741,7 @@ defineProperty(DatePicker, "propTypes", (_defineProperty2 = {
   max: propTypes.object,
   defaultMonth: propTypes.object,
   inputFormat: propTypes.string,
+  inputJalaaliFormat: propTypes.string,
   removable: propTypes.bool,
   styles: propTypes.object,
   calendarStyles: propTypes.object,
