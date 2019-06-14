@@ -20,6 +20,7 @@ export default class DatePicker extends Component {
     max: PropTypes.object,
     defaultMonth: PropTypes.object,
     inputFormat: PropTypes.string,
+    inputJalaaliFormat: PropTypes.string,
     removable: PropTypes.bool,
     styles: PropTypes.object,
     calendarStyles: PropTypes.object,
@@ -53,6 +54,9 @@ export default class DatePicker extends Component {
         this.props.isGregorian,
         this.props.timePicker,
       ),
+      inputJalaaliFormat:
+        this.props.inputJalaaliFormat ||
+        this.getInputFormat(this.props.isGregorian, this.props.timePicker),
       inputFormat:
         this.props.inputFormat ||
         this.getInputFormat(this.props.isGregorian, this.props.timePicker),
@@ -69,10 +73,12 @@ export default class DatePicker extends Component {
 
   getValue(inputValue, isGregorian, timePicker) {
     if (!inputValue) return '';
-    const inputFormat = this.getInputFormat(isGregorian, timePicker);
+    const inputFormat = this.state.inputFormat;
+    const inputJalaaliFormat = this.state.inputJalaaliFormat;
+
     return isGregorian
       ? inputValue.locale('es').format(inputFormat)
-      : inputValue.locale('fa').format(inputFormat);
+      : inputValue.locale('fa').format(inputJalaaliFormat);
   }
 
   setOpen = isOpen => {
@@ -101,12 +107,14 @@ export default class DatePicker extends Component {
     }
 
     if ('isGregorian' in nextProps && nextProps.isGregorian !== this.props.isGregorian) {
-      const inputFormat = nextProps.isGregorian ? 'YYYY/M/D hh:mm A' : 'jYYYY/jM/jD hh:mm A';
+      const inputFormat = nextProps.inputFormat;
+      const inputJalaaliFormat = nextProps.inputJalaaliFormat;
 
       this.setState({
         isGregorian: nextProps.isGregorian,
         inputValue: this.getValue(nextProps.value, nextProps.isGregorian, nextProps.timePicker),
         inputFormat,
+        inputJalaaliFormat,
       });
     }
 
@@ -143,10 +151,10 @@ export default class DatePicker extends Component {
     const regex1 = /[\u0660-\u0669]/g;
     const regex2 = /[\u06f0-\u06f9]/g;
     return str
-      .replace(regex1, function(c) {
+      .replace(regex1, function (c) {
         return c.charCodeAt(0) - 0x0660;
       })
-      .replace(regex2, function(c) {
+      .replace(regex2, function (c) {
         return c.charCodeAt(0) - 0x06f0;
       });
   }
@@ -155,7 +163,7 @@ export default class DatePicker extends Component {
     if (!str) return str;
     const regex = /[0-9]/g;
     const id = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
-    return str.replace(regex, function(w) {
+    return str.replace(regex, function (w) {
       return id[+w];
     });
   }

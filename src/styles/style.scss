@@ -1,4 +1,3 @@
-@import './font';
 
 $greycolor:#777;
 $selectedColor:#4285f4; //337ab7
@@ -18,7 +17,6 @@ $hoverColor:#d6f1ff;
 
 .calendarContainer * {
     box-sizing: border-box;
-    font-family: $fontFamily;
 }
 
 .calendarContainer .dayPickerContainer:after,
@@ -31,7 +29,6 @@ $hoverColor:#d6f1ff;
 
 .datepicker-input {
     box-sizing: border-box;
-    font-family: $fontFamily;
 }
 
 
@@ -92,7 +89,6 @@ $hoverColor:#d6f1ff;
     font-weight: normal;
     padding: 4px 15px 5px 15px;
     line-height: 1.5;
-    font-family: $fontFamily;
     font-size: 1.2em;
     max-height: none;
 }
@@ -163,7 +159,6 @@ $hoverColor:#d6f1ff;
 .calendarContainer .daysOfWeek>div {
     flex-grow: 1;
     justify-content: space-between;
-    font-family: $fontFamily;
     width: 42px;
 }
 
@@ -216,7 +211,6 @@ $hoverColor:#d6f1ff;
 
 .time-picker-container {
     margin-bottom: 10;
-    font-family: $fontFamily;
 }
 
 .time-picker-container>.time-label {
@@ -263,8 +257,6 @@ $hoverColor:#d6f1ff;
     cursor: pointer;
     font-size: 1em;
     line-height: 1.5;
-
-    font-family: $fontFamily;
 
     border: none;
     background-image: none;
@@ -313,7 +305,6 @@ $hoverColor:#d6f1ff;
     background-clip: padding-box;
     border: 1px solid #ccc;
     line-height: 1.5;
-    font-family: $fontFamily;
 }
 
 .rc-time-picker-panel-input {
@@ -442,4 +433,8 @@ li.rc-time-picker-panel-select-option-disabled:hover {
 
 .tether-element.tether-element-attached-top.tether-element-attached-center.tether-target-attached-bottom.tether-target-attached-center.tether-enabled {
     z-index: 2000;
+}
+
+.calendarContainer *, .datepicker-input{
+    font-family: inherit;
 }
