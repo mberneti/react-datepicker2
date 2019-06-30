@@ -31,6 +31,9 @@ class Header extends React.Component {
       str: (value && value.format(format)) || '',
       invalid: false,
     };
+    this.onClear = this.onClear.bind(this)
+    this.onInputChange = this.onInputChange.bind(this)
+    this.onKeyDown = this.onKeyDown.bind(this)
   }
 
   componentWillReceiveProps(nextProps) {

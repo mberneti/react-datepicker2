@@ -31,8 +31,8 @@ export default class MyTimePicker extends Component {
       newValue = moment(value);
     }
 
-    newValue.hour(value.hour());
-    newValue.minute(value.minute());
+    newValue.hour(value ? value.hour() : null);
+    newValue.minute(value ? value.minute() : null);
 
     this.props.setMomentValue(newValue);
   }

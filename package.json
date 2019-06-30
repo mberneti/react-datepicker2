@@ -23,7 +23,7 @@
   ],
   "author": "mohammadreza berneti (mberneti)",
   "license": "MIT",
-  "scripts": {    
+  "scripts": {
     "test": "jest --runInBand --detectOpenHandles --no-cache --config ./jest.config.js --coverage && minicat coverage/lcov.info | coveralls",
     "start": "webpack-dev-server --mode development --config webpack.config.dev.js",
     "build": "npm-run-all build:dist build:docs",
