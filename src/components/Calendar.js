@@ -6,7 +6,7 @@ import DaysViewHeading from './DaysViewHeading';
 import DaysOfWeek from './DaysOfWeek';
 import MonthSelector from './MonthSelector';
 import Day from './Day';
-import { getDaysOfMonth } from '../utils/moment-helper';
+import { getDaysOfMonth, checkToday } from '../utils/moment-helper';
 import { defaultStyles } from './DefaultStyles';
 
 export class Calendar extends Component {
@@ -156,6 +156,9 @@ export class Calendar extends Component {
     const monthFormat = isGregorian ? 'MM' : 'jMM';
     const dateFormat = isGregorian ? 'YYYYMMDD' : 'jYYYYjMMjDD';
 
+
+
+
     return (
       <div className={this.props.calendarClass}>
         {children}
@@ -171,13 +174,15 @@ export class Calendar extends Component {
             const isCurrentMonth = day.format(monthFormat) === month.format(monthFormat);
             const disabled = (min ? day.isBefore(min) : false) || (max ? day.isAfter(max) : false);
             const selected = selectedDay ? selectedDay.isSame(day, 'day') : false;
-
+            const key = day.format(dateFormat)
+            const isToday = checkToday(day.format("YYYYMMDD"))
             return (
               <Day
                 isGregorian={isGregorian}
-                key={day.format(dateFormat)}
+                key={key}
                 onClick={this.handleClickOnDay}
                 day={day}
+                isToday={isToday}
                 disabled={disabled}
                 selected={selected}
                 isCurrentMonth={isCurrentMonth}

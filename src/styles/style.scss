@@ -1,4 +1,3 @@
-
 $greycolor:#777;
 $selectedColor:#4285f4; //337ab7
 $hoverColor:#d6f1ff;
@@ -435,6 +434,13 @@ li.rc-time-picker-panel-select-option-disabled:hover {
     z-index: 2000;
 }
 
-.calendarContainer *, .datepicker-input{
+.calendarContainer *,
+.datepicker-input {
     font-family: inherit;
+}
+
+.today {
+    button {
+        border: 3px solid #4285f4 !important;
+    }
 }

@@ -84,10 +84,6 @@ export default class DatePicker extends Component {
   setOpen = isOpen => {
     const { momentValue } = this.state;
 
-    if (momentValue && this.props.onChange) {
-      this.props.onChange(momentValue);
-    }
-
     this.setState({ isOpen });
 
     if (this.props.onOpen) {
