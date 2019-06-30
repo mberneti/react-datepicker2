@@ -5,15 +5,11 @@ import DatePicker from '../../../src/components/DatePicker';
 class component extends React.Component { 
   constructor(props) {
     super(props);
-    var today = new Date()
-    today.setYear(today.getFullYear() - 1);
-    
 
-    this.state = {value: moment(today)};
+    this.state = {value: moment()};
   }
   render() {
     return <DatePicker
-    isGregorian={false}
       value={this.state.value}
       onChange={value => this.setState({ value })}
     />
