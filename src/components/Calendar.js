@@ -212,6 +212,7 @@ export class Calendar extends Component {
     return (
       <div className={`${styles.calendarContainer} ${jalaaliClassName}${className}`}>
         {mode === 'monthSelector' ? this.renderMonthSelector() : this.renderDays()}
+        <button className="selectToday" onClick={() => this.handleClickOnDay(moment())}>{isGregorian ? "today" : "امروز"}</button>
       </div>
     );
   }

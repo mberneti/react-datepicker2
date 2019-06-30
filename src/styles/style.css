@@ -434,7 +434,31 @@ li.rc-time-picker-panel-select-option-disabled:hover {
   z-index: 2000;
 }
 
-.calendarContainer *, .datepicker-input {
+.calendarContainer *,
+.datepicker-input {
   font-family: inherit;
+}
+
+.today button {
+  border: 3px solid #4285f4 !important;
+}
+
+.selectToday {
+  display: block;
+  width: 100%;
+  background: #4285f4;
+  color: #fff;
+  outline: none;
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+  padding: 5px 0;
+  margin-top: 2rem;
+  -webkit-transition: 0.2s all ease-in-out;
+  transition: 0.2s all ease-in-out;
+}
+
+.selectToday:hover {
+  background: #1266f1;
 }
 /*# sourceMappingURL=style.css.map */

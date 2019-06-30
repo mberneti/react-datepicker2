@@ -444,3 +444,21 @@ li.rc-time-picker-panel-select-option-disabled:hover {
         border: 3px solid #4285f4 !important;
     }
 }
+
+.selectToday {
+    display: block;
+    width: 100%;
+    background: #4285f4;
+    color: #fff;
+    outline: none;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    padding: 5px 0;
+    margin-top: 2rem;
+    transition: 0.2s all ease-in-out;
+
+    &:hover {
+        background: darken(#4285f4, 10);
+    }
+}
