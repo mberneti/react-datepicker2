@@ -8,15 +8,23 @@ import Jalaali from './examples/jalaali';
 import DisabledTimepicker from './examples/disabledTimepicker';
 import SwitchIsGregorian from './examples/switchIsGregorian';
 import CalendarPicker from './examples/calendarPicker';
+import LimitWithMinMax from './examples/limitWithMinMax';
 import DisabledRange from './examples/disabledRange';
+import HighlightRange from './examples/HighlightRange';
+
+import { StickyContainer, Sticky } from 'react-sticky';
 
 
 export default class ExampleComponents extends React.Component {
   constructor(props) {
     super(props);
-    this.examples = [Default, Jalaali, DisabledTimepicker, SwitchIsGregorian, CalendarPicker, DisabledRange];
+    this.examples = [
+      Default,
+      Jalaali, DisabledTimepicker,
+      SwitchIsGregorian, CalendarPicker,
+      LimitWithMinMax, DisabledRange, HighlightRange];
   }
-  
+
   componentDidMount() {
     hljs.initHighlightingOnLoad()
   }
@@ -47,14 +55,29 @@ export default class ExampleComponents extends React.Component {
   }
 
   render() {
-    return <div>
-      <h1>Examples</h1>
-      <ul className="examples__navigation">
-        {this.renderLeftColumn()}
-      </ul>
-      <div className="examples">
-        {this.renderExamples()}
-      </div>
-    </div>
+    return ( 
+        <div> 
+        <StickyContainer>
+          <Sticky>
+          {({ style,isSticky }) => {
+              const border = isSticky?{border:'none'}:{};
+              return <h1 style={{...style,...border}}>Examples</h1>
+            }}
+          </Sticky>
+          <div className="examples__navigation-container">
+          <Sticky>
+          {({ style }) => (
+                <ul style={style} className="examples__navigation">
+                  {this.renderLeftColumn()}
+                </ul>
+            )}
+          </Sticky>
+            </div>
+              <div className="examples">
+                {this.renderExamples()}
+              </div>
+      </StickyContainer>
+        </div>
+    );
   }
 }

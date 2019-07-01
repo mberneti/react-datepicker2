@@ -12,16 +12,9 @@ class component extends React.Component {
     };
 
     this.disabledRanges = [
-      { 
-        disabled: true, 
-        start:moment().add(-1,'days'),
-        end:moment().add(1,'days') 
-      },
-      { 
-        disabled: true, 
-        start:moment().add(3,'days'), 
-        end:moment().add(6,'days') 
-      }
+      { color: 'brown', start:moment().add(-1,'days'), end:moment().add(1,'days') },
+      { color: '#00BCD4', start:moment(), end:moment().add(3,'days') },
+      { color: '#FF9800', start:moment().add(1,'days'), end:moment().add(6,'days') },
     ]
 
   }
@@ -43,7 +36,7 @@ class component extends React.Component {
   }
 }
 
-const title = 'Disable By Date Range';
+const title = 'Highlight By Date Range';
 const code = `class component extends React.Component {
   constructor(props) {
     super(props);
@@ -55,15 +48,20 @@ const code = `class component extends React.Component {
 
     this.disabledRanges = [
       { 
-        disabled: true, 
-        start:moment().add(-1,'days'),
+        color: 'brown', 
+        start:moment().add(-1,'days'), 
         end:moment().add(1,'days') 
       },
       { 
-        disabled: true, 
-        start:moment().add(3,'days'), 
+        color: '#00BCD4', 
+        start:moment(), 
+        end:moment().add(3,'days') 
+      },
+      { 
+        color: '#FF9800', 
+        start:moment().add(1,'days'), 
         end:moment().add(6,'days') 
-      }
+      },
     ]
 
   }
