@@ -8,6 +8,7 @@ import MonthSelector from './MonthSelector';
 import Day from './Day';
 import { getDaysOfMonth, checkToday } from '../utils/moment-helper';
 import { defaultStyles } from './DefaultStyles';
+import RangeList from '../utils/RangesList';
 
 export class Calendar extends Component {
   static propTypes = {
@@ -34,7 +35,7 @@ export class Calendar extends Component {
   static defaultProps = {
     styles: defaultStyles,
     containerProps: {},
-    isGregorian: true,
+    isGregorian: true
   };
 
   state = {
@@ -42,6 +43,7 @@ export class Calendar extends Component {
     selectedDay: this.props.selectedDay || this.props.value || null,
     mode: 'days',
     isGregorian: this.props.isGregorian,
+    ranges: this.props.ranges && new RangeList(this.props.ranges)
   };
 
   getChildContext() {
