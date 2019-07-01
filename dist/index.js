@@ -10518,7 +10518,8 @@ function getDaysOfMonth(month, isGregorian) {
 }
 function addZero(val) {
   val = Number(val);
-  if (val < 10) return "0" + val;else return val;
+  if (val < 10) return "0".concat(val);
+  return val;
 }
 function checkToday(compare) {
   var today = new Date();
@@ -10559,7 +10560,7 @@ function () {
       ranges.forEach(function (item) {
         _this.validateRangeObject(item);
 
-        var range = moment$1.range(item.start, item.end); //include start
+        var range = moment$1.range(item.start, item.end); // include start
 
         var start = range.start.add(-1, 'days');
 
@@ -10753,7 +10754,7 @@ function (_Component) {
         var isCurrentMonth = day.format(monthFormat) === month.format(monthFormat);
         var selected = selectedDay ? selectedDay.isSame(day, 'day') : false;
         var key = day.format(dateFormat);
-        var isToday = checkToday(day.format("YYYYMMDD")); // disabling by old min-max props
+        var isToday = checkToday(day.format('YYYYMMDD')); // disabling by old min-max props
 
         var disabled = (min ? day.isBefore(min) : false) || (max ? day.isAfter(max) : false); // new method for disabling and highlighting the ranges of days
 
@@ -10835,7 +10836,7 @@ function (_Component) {
         onClick: function onClick() {
           return _this2.handleClickOnDay(momentJalaali());
         }
-      }, isGregorian ? "today" : "امروز"));
+      }, isGregorian ? 'today' : 'امروز'));
     }
   }]);
 
