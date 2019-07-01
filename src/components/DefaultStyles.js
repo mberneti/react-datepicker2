@@ -10,5 +10,5 @@ export const defaultStyles = {
   monthsList: 'monthsList',
   selected: 'selected',
   today: 'today',
-  dayPickerContainer: 'dayPickerContainer',
+  dayPickerContainer: 'dayPickerContainer'
 };

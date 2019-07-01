@@ -8,7 +8,7 @@ const dayOfWeekNamesGregorian = ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'];
 export default class DaysOfWeek extends Component {
   static propTypes = {
     styles: PropTypes.object,
-    isGregorian: PropTypes.bool,
+    isGregorian: PropTypes.bool
   };
 
   render() {

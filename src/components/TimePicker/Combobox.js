@@ -14,7 +14,7 @@ const formatOption = (option, disabledOptions) => {
 
   return {
     value,
-    disabled,
+    disabled
   };
 };
 
@@ -34,7 +34,7 @@ class Combobox extends React.Component {
     disabledMinutes: PropTypes.func,
     disabledSeconds: PropTypes.func,
     onCurrentSelectPanelChange: PropTypes.func,
-    isGregorian: PropTypes.bool,
+    isGregorian: PropTypes.bool
   };
 
   onItemChange = (type, itemValue) => {
@@ -84,7 +84,7 @@ class Combobox extends React.Component {
       formattedOptions = formattedOptions
         .map(option => ({
           ...option,
-          label: option.value <= 12 ? option.value : pad(option.value - 12),
+          label: option.value <= 12 ? option.value : pad(option.value - 12)
         }))
         .filter(({ value }) => (hour < 12 ? Number(value) < 12 : Number(value) >= 12));
     }
@@ -147,7 +147,7 @@ class Combobox extends React.Component {
 
     const options = [
       { value: 'AM', label: isGregorian ? 'AM' : 'ق.ظ' },
-      { value: 'PM', label: isGregorian ? 'PM' : 'ب.ظ' },
+      { value: 'PM', label: isGregorian ? 'PM' : 'ب.ظ' }
     ];
 
     return (

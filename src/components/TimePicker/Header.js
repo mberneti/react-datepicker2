@@ -21,7 +21,7 @@ class Header extends React.Component {
     onEsc: PropTypes.func,
     allowEmpty: PropTypes.bool,
     defaultOpenValue: PropTypes.object,
-    currentSelectPanel: PropTypes.string,
+    currentSelectPanel: PropTypes.string
   };
 
   constructor(props) {
@@ -29,25 +29,25 @@ class Header extends React.Component {
     const { value, format } = this.props;
     this.state = {
       str: (value && value.format(format)) || '',
-      invalid: false,
+      invalid: false
     };
-    this.onClear = this.onClear.bind(this)
-    this.onInputChange = this.onInputChange.bind(this)
-    this.onKeyDown = this.onKeyDown.bind(this)
+    this.onClear = this.onClear.bind(this);
+    this.onInputChange = this.onInputChange.bind(this);
+    this.onKeyDown = this.onKeyDown.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
     const { value, format } = nextProps;
     this.setState({
       str: (value && value.format(format)) || '',
-      invalid: false,
+      invalid: false
     });
   }
 
   onInputChange(event) {
     const str = event.target.value;
     this.setState({
-      str,
+      str
     });
     const {
       format,
@@ -58,7 +58,7 @@ class Header extends React.Component {
       disabledMinutes,
       disabledSeconds,
       onChange,
-      allowEmpty,
+      allowEmpty
     } = this.props;
 
     if (str) {
@@ -67,7 +67,7 @@ class Header extends React.Component {
       const parsed = moment(str, format, true);
       if (!parsed.isValid()) {
         this.setState({
-          invalid: true,
+          invalid: true
         });
         return;
       }
@@ -83,7 +83,7 @@ class Header extends React.Component {
         secondOptions.indexOf(value.second()) < 0
       ) {
         this.setState({
-          invalid: true,
+          invalid: true
         });
         return;
       }
@@ -98,7 +98,7 @@ class Header extends React.Component {
         (disabledSecondOptions && disabledSecondOptions.indexOf(value.second()) >= 0)
       ) {
         this.setState({
-          invalid: true,
+          invalid: true
         });
         return;
       }
@@ -123,13 +123,13 @@ class Header extends React.Component {
       onChange(null);
     } else {
       this.setState({
-        invalid: true,
+        invalid: true
       });
       return;
     }
 
     this.setState({
-      invalid: false,
+      invalid: false
     });
   }
 

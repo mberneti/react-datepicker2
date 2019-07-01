@@ -28,17 +28,17 @@ export function getDaysOfMonth(month, isGregorian) {
 }
 
 export function addZero(val) {
-  val = Number(val)
-  if(val < 10)
-    return "0" + val
-  else return val
+  val = Number(val);
+  if (val < 10) return `0${val}`;
+  return val;
 }
 
 export function checkToday(compare) {
-  const today = new Date()
-  const todayString = String(today.getFullYear()) + 
-  addZero(String(today.getMonth() + 1)) + 
-  addZero(String(today.getDate()))
-  
-  return compare === todayString
+  const today = new Date();
+  const todayString =
+    String(today.getFullYear()) +
+    addZero(String(today.getMonth() + 1)) +
+    addZero(String(today.getDate()));
+
+  return compare === todayString;
 }

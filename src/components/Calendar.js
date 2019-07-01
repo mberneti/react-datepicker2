@@ -21,7 +21,7 @@ export class Calendar extends Component {
     onClickOutside: PropTypes.func,
     containerProps: PropTypes.object,
     isGregorian: PropTypes.bool,
-    calendarClass: PropTypes.string,
+    calendarClass: PropTypes.string
   };
 
   static childContextTypes = {
@@ -29,7 +29,7 @@ export class Calendar extends Component {
     prevMonth: PropTypes.func.isRequired,
     setCalendarMode: PropTypes.func.isRequired,
     setMonth: PropTypes.func.isRequired,
-    setType: PropTypes.func.isRequired,
+    setType: PropTypes.func.isRequired
   };
 
   static defaultProps = {
@@ -37,7 +37,7 @@ export class Calendar extends Component {
     containerProps: {},
     isGregorian: true
   };
- 
+
   state = {
     month: this.props.defaultMonth || this.props.selectedDay || moment(this.props.min),
     selectedDay: this.props.selectedDay || this.props.value || null,
@@ -52,7 +52,7 @@ export class Calendar extends Component {
       prevMonth: this.prevMonth.bind(this),
       setCalendarMode: this.setMode.bind(this),
       setMonth: this.setMonth.bind(this),
-      setType: this.setMonth.bind(this),
+      setType: this.setMonth.bind(this)
     };
   }
 
@@ -91,7 +91,7 @@ export class Calendar extends Component {
     const monthFormat = isGregorian ? 'Month' : 'jMonth';
 
     this.setState({
-      month: this.state.month.clone().add(1, monthFormat),
+      month: this.state.month.clone().add(1, monthFormat)
     });
   };
 
@@ -100,7 +100,7 @@ export class Calendar extends Component {
     const monthFormat = isGregorian ? 'Month' : 'jMonth';
 
     this.setState({
-      month: this.state.month.clone().subtract(1, monthFormat),
+      month: this.state.month.clone().subtract(1, monthFormat)
     });
   };
 
@@ -173,11 +173,11 @@ export class Calendar extends Component {
             const isCurrentMonth = day.format(monthFormat) === month.format(monthFormat);
             const selected = selectedDay ? selectedDay.isSame(day, 'day') : false;
             const key = day.format(dateFormat);
-            const isToday = checkToday(day.format("YYYYMMDD"));
+            const isToday = checkToday(day.format('YYYYMMDD'));
 
             // disabling by old min-max props
-            let disabled = (min ? day.isBefore(min) : false) || (max ? day.isAfter(max) : false);
-            
+            const disabled = (min ? day.isBefore(min) : false) || (max ? day.isAfter(max) : false);
+
             // new method for disabling and highlighting the ranges of days
             const dayState = this.state.ranges.getDayState(day);
 
@@ -209,7 +209,7 @@ export class Calendar extends Component {
       onClickOutside,
       outsideClickIgnoreClass,
       styles,
-      className,
+      className
     } = this.props;
     const { mode, isGregorian } = this.state;
 
@@ -218,7 +218,9 @@ export class Calendar extends Component {
     return (
       <div className={`${styles.calendarContainer} ${jalaaliClassName}${className}`}>
         {mode === 'monthSelector' ? this.renderMonthSelector() : this.renderDays()}
-        <button className="selectToday" onClick={() => this.handleClickOnDay(moment())}>{isGregorian ? "today" : "امروز"}</button>
+        <button className="selectToday" onClick={() => this.handleClickOnDay(moment())}>
+          {isGregorian ? 'today' : 'امروز'}
+        </button>
       </div>
     );
   }

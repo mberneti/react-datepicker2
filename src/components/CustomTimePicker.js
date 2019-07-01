@@ -12,11 +12,11 @@ export default class MyTimePicker extends Component {
   static propTypes = {
     momentValue: PropTypes.object,
     setMomentValue: PropTypes.func,
-    isGregorian: PropTypes.bool,
+    isGregorian: PropTypes.bool
   };
 
   static defaultProps = {
-    momentValue: moment(),
+    momentValue: moment()
   };
 
   handleChange(value) {

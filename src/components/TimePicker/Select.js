@@ -31,7 +31,7 @@ class Select extends React.Component {
     selectedIndex: PropTypes.number,
     type: PropTypes.string,
     onSelect: PropTypes.func,
-    onMouseEnter: PropTypes.func,
+    onMouseEnter: PropTypes.func
   };
 
   componentDidMount() {
@@ -56,7 +56,7 @@ class Select extends React.Component {
     return options.map((item, index) => {
       const cls = classnames({
         [`${prefixCls}-select-option-selected`]: selectedIndex === index,
-        [`${prefixCls}-select-option-disabled`]: item.disabled,
+        [`${prefixCls}-select-option-disabled`]: item.disabled
       });
       let onclick = null;
       if (!item.disabled) {

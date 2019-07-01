@@ -41,7 +41,7 @@ class Picker extends React.Component {
     onClose: PropTypes.func,
     showAMPM: PropTypes.bool,
     panelClassName: PropTypes.string,
-    isGregorian: PropTypes.bool,
+    isGregorian: PropTypes.bool
   };
 
   static defaultProps = {
@@ -62,7 +62,7 @@ class Picker extends React.Component {
     placement: 'bottomLeft',
     onChange: noop,
     onOpen: noop,
-    onClose: noop,
+    onClose: noop
   };
 
   constructor(props) {
@@ -71,7 +71,7 @@ class Picker extends React.Component {
     const { defaultOpen, defaultValue, open = defaultOpen, value = defaultValue } = this.props;
     this.state = {
       open,
-      value,
+      value
     };
   }
 
@@ -79,7 +79,7 @@ class Picker extends React.Component {
     const { value, open } = nextProps;
     if ('value' in nextProps) {
       this.setState({
-        value,
+        value
       });
     }
     if (open !== undefined) {
@@ -92,12 +92,12 @@ class Picker extends React.Component {
     if (this.state.open !== open) {
       this.setState(
         {
-          open,
+          open
         },
-        callback,
+        callback
       );
       const event = {
-        open,
+        open
       };
       if (open) {
         onOpen(event);
@@ -134,7 +134,7 @@ class Picker extends React.Component {
   setValue = value => {
     if (!('value' in this.props)) {
       this.setState({
-        value,
+        value
       });
     }
     this.props.onChange(value);
@@ -174,7 +174,7 @@ class Picker extends React.Component {
       showAMPM,
       defaultOpenValue,
       clearText,
-      isGregorian,
+      isGregorian
     } = this.props;
     return (
       <Panel
@@ -216,7 +216,7 @@ class Picker extends React.Component {
       className,
       showHour,
       showSecond,
-      getPopupContainer,
+      getPopupContainer
     } = this.props;
     const { open, value } = this.state;
     let popupClassName;

@@ -8,12 +8,12 @@ export default class MonthsViewHeading extends Component {
     year: PropTypes.object.isRequired,
     onNextYear: PropTypes.func.isRequired,
     onPrevYear: PropTypes.func.isRequired,
-    isGregorian: PropTypes.bool,
+    isGregorian: PropTypes.bool
   };
 
   static contextTypes = {
     styles: PropTypes.object,
-    type: PropTypes.number,
+    type: PropTypes.number
   };
 
   render() {

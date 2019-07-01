@@ -19,7 +19,7 @@ const monthsJalaali = [
   'آذر',
   'دی',
   'بهمن',
-  'اسفند',
+  'اسفند'
 ];
 
 const monthsGregorian = [
@@ -34,34 +34,34 @@ const monthsGregorian = [
   'September',
   'October',
   'November',
-  'December',
+  'December'
 ];
 
 export default class MonthSelector extends Component {
   static propTypes = {
     styles: PropTypes.object,
     selectedMonth: PropTypes.object.isRequired,
-    isGregorian: PropTypes.bool,
+    isGregorian: PropTypes.bool
   };
 
   static contextTypes = {
     setCalendarMode: PropTypes.func.isRequired,
-    setMonth: PropTypes.func.isRequired,
+    setMonth: PropTypes.func.isRequired
   };
 
   state = {
-    year: this.props.selectedMonth,
+    year: this.props.selectedMonth
   };
 
   nextYear() {
     this.setState({
-      year: this.state.year.clone().add(1, 'year'),
+      year: this.state.year.clone().add(1, 'year')
     });
   }
 
   prevYear() {
     this.setState({
-      year: this.state.year.clone().subtract(1, 'year'),
+      year: this.state.year.clone().subtract(1, 'year')
     });
   }
 
@@ -96,7 +96,7 @@ export default class MonthSelector extends Component {
             const isCurrent = selectedMonthFingerprint === buttonFingerprint;
 
             const className = classnames(styles.monthWrapper, {
-              [styles.selected]: isCurrent,
+              [styles.selected]: isCurrent
             });
 
             return (

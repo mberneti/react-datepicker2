@@ -6,14 +6,14 @@ import { leftArrow, rightArrow } from '../utils/assets';
 export default class Heading extends Component {
   static propTypes = {
     month: PropTypes.object.isRequired,
-    isGregorian: PropTypes.bool,
+    isGregorian: PropTypes.bool
   };
 
   static contextTypes = {
     styles: PropTypes.object,
     nextMonth: PropTypes.func.isRequired,
     prevMonth: PropTypes.func.isRequired,
-    setCalendarMode: PropTypes.func.isRequired,
+    setCalendarMode: PropTypes.func.isRequired
   };
 
   handleMonthClick(event) {

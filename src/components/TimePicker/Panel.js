@@ -35,21 +35,21 @@ class Panel extends React.Component {
     showSecond: PropTypes.bool,
     onClear: PropTypes.func,
     showAMPM: PropTypes.bool,
-    isGregorian: PropTypes.bool,
+    isGregorian: PropTypes.bool
   };
 
   static defaultProps = {
     prefixCls: 'rc-time-picker-panel',
     onChange: noop,
     onClear: noop,
-    defaultOpenValue: moment(),
+    defaultOpenValue: moment()
   };
 
   constructor(props) {
     super(props);
     this.state = {
       value: this.props.value,
-      selectionRange: [],
+      selectionRange: []
     };
   }
 
@@ -57,7 +57,7 @@ class Panel extends React.Component {
     const { value } = nextProps;
     if (value) {
       this.setState({
-        value,
+        value
       });
     }
   }
@@ -93,14 +93,14 @@ class Panel extends React.Component {
       format,
       defaultOpenValue,
       clearText,
-      onEsc,
+      onEsc
     } = this.props;
     const { value, currentSelectPanel } = this.state;
     const disabledHourOptions = disabledHours();
     const disabledMinuteOptions = disabledMinutes(value ? value.hour() : null);
     const disabledSecondOptions = disabledSeconds(
       value ? value.hour() : null,
-      value ? value.minute() : null,
+      value ? value.minute() : null
     );
     const hourOptions = generateOptions(24, disabledHourOptions, hideDisabledOptions);
     const minuteOptions = generateOptions(60, disabledMinuteOptions, hideDisabledOptions);
