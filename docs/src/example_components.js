@@ -1,18 +1,20 @@
-import React from 'react'
+import React from 'react';
 import hljs from 'highlight.js'
-import CodeExampleComponent from './code_example_component'
+import CodeExampleComponent from './code_example_component';
 import Highlight from 'react-syntax-highlight';
 
-import Default from './examples/default'
-import Jalaali from './examples/jalaali'
-import DisabledTimepicker from './examples/disabledTimepicker'
-import SwitchIsGregorian from './examples/switchIsGregorian'
-import calendarPicker from './examples/calendarPicker'
+import Default from './examples/default';
+import Jalaali from './examples/jalaali';
+import DisabledTimepicker from './examples/disabledTimepicker';
+import SwitchIsGregorian from './examples/switchIsGregorian';
+import CalendarPicker from './examples/calendarPicker';
+import DisabledRange from './examples/disabledRange';
+
 
 export default class ExampleComponents extends React.Component {
   constructor(props) {
     super(props);
-    this.examples = [Default, Jalaali, DisabledTimepicker, SwitchIsGregorian, calendarPicker];
+    this.examples = [Default, Jalaali, DisabledTimepicker, SwitchIsGregorian, CalendarPicker, DisabledRange];
   }
   
   componentDidMount() {
