@@ -1,7 +1,22 @@
+.examples__navigation-container {
+  display: none;
+
+  @include breakpoint(640px) {
+
+    width: 200px;
+    float: left;
+    display: block;
+    margin: 0;
+    margin-right: 20px;
+    overflow: hidden;
+  }
+}
+
 .examples__navigation {
   display: none;
 
   @include breakpoint(640px) {
+    top:90px!important;
     width: 200px;
     float: left;
     display: block;
