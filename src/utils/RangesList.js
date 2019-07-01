@@ -6,8 +6,9 @@ const moment = extendMoment(Moment);
 export default class RangesList {
   constructor(ranges) {
 
-    this.disabledList; // day
-    this.colorList = []; // day - color
+    this.rangeContainsConfig = { excludeStart: false, excludeEnd: false };
+
+    this.ranges = [];
 
     if (ranges) {
       ranges.forEach(item => {
@@ -16,17 +17,7 @@ export default class RangesList {
 
         const range = moment.range(item.start, item.end);
 
-        if (!!item.color) {
-          this.colorList.push({ color: item.color, range });
-        }
-
-        if (!!item.disabled) {
-          if (!this.disabledList) {
-            this.disabledList = range;
-          } else {
-            this.disabledList.add(range);
-          }
-        }
+        this.ranges.push({ color: item.color, range, disabled: !!item.disabled });
 
       });
     }
@@ -34,8 +25,13 @@ export default class RangesList {
   }
 
   getDayState(day) {
-    const disabled = this.disabledList && this.disabledList.contains(day);
-    const colors = this.colorList.filter(x => x.range.contains(day)).map(x => x. color);
+
+    const disabled = this.ranges
+      .some(x => x.disabled && x.range.contains(day, this.rangeContainsConfig));
+
+    const colors = this.ranges
+      .filter(x => x.color && x.range.contains(day, this.rangeContainsConfig))
+      .map(x => x.color);
 
     return { disabled, colors };
   }
@@ -48,6 +44,5 @@ export default class RangesList {
       throw `'end' property is a required property of 'range' object.
             range object: ${JSON.stringify(range)}`;
   }
-
 
 }

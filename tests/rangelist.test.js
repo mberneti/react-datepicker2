@@ -32,11 +32,11 @@ test('throw errors for invalid ranges', () => {
   expect(inValidEndRange).toThrow(/'end'/);
 });
 
-test('colorlist items count', () => {
+test('color ranges list items count', () => {
 
   const multipleRangeList = createMultipleRangeList();
 
-  expect(multipleRangeList.colorList.length)
+  expect(multipleRangeList.ranges.filter(x => x.color).length)
     .toEqual(2);
 })
 
