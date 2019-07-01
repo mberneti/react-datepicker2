@@ -5,6 +5,7 @@ import DatePicker from '../../../src/components/DatePicker';
 class component extends React.Component { 
   constructor(props) {
     super(props);
+
     this.state = {value: moment()};
   }
   render() {

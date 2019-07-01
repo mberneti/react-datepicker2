@@ -34,7 +34,7 @@ export default class Day extends Component {
     event.stopPropagation();
     event.nativeEvent.stopImmediatePropagation();
     const { onClick, day } = this.props;
-
+    
     if (onClick) {
       onClick(day);
     }
