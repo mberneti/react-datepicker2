@@ -10004,7 +10004,6 @@ function (_Component) {
       var _this$props = this.props,
           onClick = _this$props.onClick,
           day = _this$props.day;
-      console.log(day);
 
       if (onClick) {
         onClick(day);
