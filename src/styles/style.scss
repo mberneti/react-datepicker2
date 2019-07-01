@@ -480,6 +480,7 @@ li.rc-time-picker-panel-select-option-disabled:hover {
     width: 100%;
     position: absolute;
     cursor: pointer;
+    direction: ltr;
 
     .highLightDot {
         &:not(:first-child) {
