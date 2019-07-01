@@ -447,6 +447,12 @@ li.rc-time-picker-panel-select-option-disabled:hover {
     }
 }
 
+.jalaali.calendarContainer {
+    .selectToday {
+        padding: 4px 0 6px 0;
+    }
+}
+
 .selectToday {
     display: block;
     width: 100%;
@@ -456,9 +462,10 @@ li.rc-time-picker-panel-select-option-disabled:hover {
     border-radius: 5px;
     border: 0;
     cursor: pointer;
-    padding: 5px 0;
+    padding: 5px 0 7px 0;
     margin-top: 2rem;
     transition: 0.2s all ease-in-out;
+    transition-property: background;
 
     &:hover {
         background: darken(#4285f4, 10);
