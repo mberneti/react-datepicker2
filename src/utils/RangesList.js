@@ -6,7 +6,6 @@ const moment = extendMoment(Moment);
 export default class RangesList {
   constructor(ranges) {
 
-    this.rangeContainsConfig = { excludeStart: false, excludeEnd: false };
 
     this.ranges = [];
 
@@ -16,6 +15,9 @@ export default class RangesList {
         this.validateRangeObject(item);
 
         const range = moment.range(item.start, item.end);
+
+        //include start
+        const start = range.start.add(-1, 'days');
 
         this.ranges.push({ color: item.color, range, disabled: !!item.disabled });
 
@@ -27,10 +29,10 @@ export default class RangesList {
   getDayState(day) {
 
     const disabled = this.ranges
-      .some(x => x.disabled && x.range.contains(day, this.rangeContainsConfig));
+      .some(x => x.disabled && x.range.contains(day));
 
     const colors = this.ranges
-      .filter(x => x.color && x.range.contains(day, this.rangeContainsConfig))
+      .filter(x => x.color && x.range.contains(day))
       .map(x => x.color);
 
     return { disabled, colors };

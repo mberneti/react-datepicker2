@@ -32,6 +32,7 @@ export default class DatePicker extends Component {
     datePickerClass: PropTypes.string,
     tetherAttachment: PropTypes.string,
     inputReadOnly: PropTypes.object,
+    ranges: PropTypes.array,
   };
 
   static defaultProps = {
@@ -224,11 +225,13 @@ export default class DatePicker extends Component {
 
   renderCalendar = ref => {
     const { momentValue, isGregorian, timePickerComponent: TimePicker } = this.state;
-    const { onChange, min, max, defaultMonth, styles, calendarContainerProps } = this.props;
+    const { onChange, min, max, defaultMonth, styles, calendarContainerProps,
+    ranges } = this.props;
 
     return (
       <div ref={ref}>
         <Calendar
+          ranges={ranges}
           min={min}
           max={max}
           selectedDay={momentValue}

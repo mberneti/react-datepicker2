@@ -37,13 +37,13 @@ export class Calendar extends Component {
     containerProps: {},
     isGregorian: true
   };
-
+ 
   state = {
     month: this.props.defaultMonth || this.props.selectedDay || moment(this.props.min),
     selectedDay: this.props.selectedDay || this.props.value || null,
     mode: 'days',
     isGregorian: this.props.isGregorian,
-    ranges: this.props.ranges && new RangeList(this.props.ranges)
+    ranges: new RangeList(this.props.ranges)
   };
 
   getChildContext() {
@@ -158,9 +158,6 @@ export class Calendar extends Component {
     const monthFormat = isGregorian ? 'MM' : 'jMM';
     const dateFormat = isGregorian ? 'YYYYMMDD' : 'jYYYYjMMjDD';
 
-
-
-
     return (
       <div className={this.props.calendarClass}>
         {children}
@@ -174,10 +171,16 @@ export class Calendar extends Component {
         <div className={styles.dayPickerContainer}>
           {days.map(day => {
             const isCurrentMonth = day.format(monthFormat) === month.format(monthFormat);
-            const disabled = (min ? day.isBefore(min) : false) || (max ? day.isAfter(max) : false);
             const selected = selectedDay ? selectedDay.isSame(day, 'day') : false;
-            const key = day.format(dateFormat)
-            const isToday = checkToday(day.format("YYYYMMDD"))
+            const key = day.format(dateFormat);
+            const isToday = checkToday(day.format("YYYYMMDD"));
+
+            // disabling by old min-max props
+            let disabled = (min ? day.isBefore(min) : false) || (max ? day.isAfter(max) : false);
+            
+            // new method for disabling and highlighting the ranges of days
+            const dayState = this.state.ranges.getDayState(day);
+
             return (
               <Day
                 isGregorian={isGregorian}
@@ -185,7 +188,8 @@ export class Calendar extends Component {
                 onClick={this.handleClickOnDay}
                 day={day}
                 isToday={isToday}
-                disabled={disabled}
+                colors={dayState.colors}
+                disabled={disabled || dayState.disabled} // disabled by old method or new range method
                 selected={selected}
                 isCurrentMonth={isCurrentMonth}
                 styles={styles}

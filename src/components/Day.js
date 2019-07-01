@@ -8,7 +8,7 @@ const styles = {
   button: {
     outline: 'none',
     cursor: 'pointer',
-  },
+  }
 };
 
 export default class Day extends Component {
@@ -34,7 +34,7 @@ export default class Day extends Component {
     event.stopPropagation();
     event.nativeEvent.stopImmediatePropagation();
     const { onClick, day } = this.props;
-    
+
     if (onClick) {
       onClick(day);
     }
@@ -48,12 +48,13 @@ export default class Day extends Component {
       isCurrentMonth,
       onClick,
       styles,
-      isGregorian,
+      isGregorian, 
       isToday,
+      colors,
       ...rest
     } = this.props;
 
-    
+
 
     const className = classnames(styles.dayWrapper, {
       [styles.selected]: selected,
@@ -61,13 +62,16 @@ export default class Day extends Component {
       [styles.today]: isToday
     });
 
-    
+
     return (
       <div className={className}>
         <button type="button" onClick={this.handleClick.bind(this)} disabled={disabled} {...rest}>
           {isGregorian ? day.format('D') : persianNumber(day.format('jD'))}
         </button>
-      </div>
+        <div className="highLightDot-container" onClick={this.handleClick.bind(this)}>
+          {colors.map((x,i) => (<span key={(i)} className="highLightDot" style={{ backgroundColor: x }}></span>))}
+        </div>
+       </div>
     );
   }
 }
