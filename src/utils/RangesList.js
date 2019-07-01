@@ -1,7 +1,7 @@
 import Moment from 'moment-jalaali';
-import { extendMoment } from 'moment-range';
+const MomentRange = require('moment-range');
 
-const moment = extendMoment(Moment);
+const moment = MomentRange.extendMoment(Moment);
 
 export default class RangesList {
   constructor(ranges) {
