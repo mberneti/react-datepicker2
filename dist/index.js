@@ -10119,7 +10119,7 @@ function (_Component) {
       }, React__default.createElement("button", {
         className: styles.title,
         onClick: this.handleMonthClick.bind(this)
-      }, this.props.isGregorian ? month.locale('en').format('MMMM YYYY') : persianNumber(month.locale('fa').format('jMMMM jYYYY'))), this.props.timePicker, React__default.createElement("button", {
+      }, this.props.isGregorian ? month.locale('en').format('MMMM YYYY') : persianNumber(month.locale('fa').format('jMMMM jYYYY'))), this.props.timePicker, !this.props.isGregorian && React__default.createElement(React__default.Fragment, null, React__default.createElement("button", {
         type: "button",
         title: "\u0645\u0627\u0647 \u0642\u0628\u0644",
         className: styles.prev,
@@ -10131,7 +10131,19 @@ function (_Component) {
         className: styles.next,
         onClick: nextMonth,
         dangerouslySetInnerHTML: leftArrow
-      }));
+      })), this.props.isGregorian && React__default.createElement(React__default.Fragment, null, React__default.createElement("button", {
+        type: "button",
+        title: "next month",
+        className: styles.next,
+        onClick: prevMonth,
+        dangerouslySetInnerHTML: leftArrow
+      }), React__default.createElement("button", {
+        type: "button",
+        title: "prev month",
+        className: styles.prev,
+        onClick: nextMonth,
+        dangerouslySetInnerHTML: rightArrow
+      })));
     }
   }]);
 

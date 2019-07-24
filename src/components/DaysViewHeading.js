@@ -34,20 +34,42 @@ export default class Heading extends Component {
             : persianNumber(month.locale('fa').format('jMMMM jYYYY'))}
         </button>
         {this.props.timePicker}
-        <button
-          type="button"
-          title="ماه قبل"
-          className={styles.prev}
-          onClick={prevMonth}
-          dangerouslySetInnerHTML={rightArrow}
-        />
-        <button
-          type="button"
-          title="ماه بعد"
-          className={styles.next}
-          onClick={nextMonth}
-          dangerouslySetInnerHTML={leftArrow}
-        />
+        {!this.props.isGregorian && (
+          <React.Fragment>
+            <button
+              type="button"
+              title="ماه قبل"
+              className={styles.prev}
+              onClick={prevMonth}
+              dangerouslySetInnerHTML={rightArrow}
+            />
+            <button
+              type="button"
+              title="ماه بعد"
+              className={styles.next}
+              onClick={nextMonth}
+              dangerouslySetInnerHTML={leftArrow}
+            />
+          </React.Fragment>
+        )}
+        {this.props.isGregorian && (
+          <React.Fragment>
+            <button
+              type="button"
+              title="next month"
+              className={styles.next}
+              onClick={prevMonth}
+              dangerouslySetInnerHTML={leftArrow}
+            />
+            <button
+              type="button"
+              title="prev month"
+              className={styles.prev}
+              onClick={nextMonth}
+              dangerouslySetInnerHTML={rightArrow}
+            />
+          </React.Fragment>
+        )}
       </div>
     );
   }
