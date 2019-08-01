@@ -1,6 +1,3 @@
-### u can not see the demo page because of github problem with my country iran
-![Github law restrictions](https://img.techpowerup.org/190724/capture.png)
-
 # React DatePicker2
 
 [![npm](https://img.shields.io/npm/v/react-datepicker2.svg)](https://www.npmjs.com/package/react-datepicker2)
