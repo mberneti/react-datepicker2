@@ -74,8 +74,10 @@ export default class DatePicker extends Component {
 
   getValue(inputValue, isGregorian, timePicker) {
     if (!inputValue) return '';
-    const { inputFormat } = this.state;
-    const { inputJalaaliFormat } = this.state;
+    let { inputFormat } = this.state;
+    let { inputJalaaliFormat } = this.state;
+    if (!inputFormat) inputFormat = this.getInputFormat(isGregorian);
+    if (!inputJalaaliFormat) inputJalaaliFormat = this.getInputFormat(isGregorian);
 
     return isGregorian
       ? inputValue.locale('es').format(inputFormat)
