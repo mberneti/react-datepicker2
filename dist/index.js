@@ -17678,6 +17678,8 @@ function (_Component) {
       if (!inputValue) return '';
       var inputFormat = this.state.inputFormat;
       var inputJalaaliFormat = this.state.inputJalaaliFormat;
+      if (!inputFormat) inputFormat = this.getInputFormat(isGregorian);
+      if (!inputJalaaliFormat) inputJalaaliFormat = this.getInputFormat(isGregorian);
       return isGregorian ? inputValue.locale('es').format(inputFormat) : inputValue.locale('fa').format(inputJalaaliFormat);
     }
   }, {
