@@ -57,10 +57,10 @@ export default class DatePicker extends Component {
       ),
       inputJalaaliFormat:
         this.props.inputJalaaliFormat ||
-        this.getInputFormat(this.props.isGregorian, this.props.timePicker),
+        this.getInputFormat(false, this.props.timePicker),
       inputFormat:
         this.props.inputFormat ||
-        this.getInputFormat(this.props.isGregorian, this.props.timePicker),
+        this.getInputFormat(true, this.props.timePicker),
       isGregorian: this.props.isGregorian,
       timePicker: this.props.timePicker,
       timePickerComponent: this.props.timePicker ? MyTimePicker : undefined
@@ -74,10 +74,10 @@ export default class DatePicker extends Component {
 
   getValue(inputValue, isGregorian, timePicker) {
     if (!inputValue) return '';
-    let { inputFormat } = this.state;
+    let { inputFormat } = this.state; 
     let { inputJalaaliFormat } = this.state;
-    if (!inputFormat) inputFormat = this.getInputFormat(isGregorian);
-    if (!inputJalaaliFormat) inputJalaaliFormat = this.getInputFormat(isGregorian);
+    if (!inputFormat) inputFormat = this.getInputFormat(isGregorian, timePicker);
+    if (!inputJalaaliFormat) inputJalaaliFormat = this.getInputFormat(isGregorian, timePicker);
 
     return isGregorian
       ? inputValue.locale('es').format(inputFormat)
