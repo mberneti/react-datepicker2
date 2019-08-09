@@ -11,6 +11,7 @@ import CalendarPicker from './examples/calendarPicker';
 import LimitWithMinMax from './examples/limitWithMinMax';
 import DisabledRange from './examples/disabledRange';
 import HighlightRange from './examples/HighlightRange';
+import Disabled from './examples/Disabled';
 
 import { StickyContainer, Sticky } from 'react-sticky';
 
@@ -22,7 +23,9 @@ export default class ExampleComponents extends React.Component {
       Default,
       Jalaali, DisabledTimepicker,
       SwitchIsGregorian, CalendarPicker,
-      LimitWithMinMax, DisabledRange, HighlightRange];
+      LimitWithMinMax, 
+      DisabledRange, 
+      HighlightRange, Disabled];
   }
 
   componentDidMount() {
