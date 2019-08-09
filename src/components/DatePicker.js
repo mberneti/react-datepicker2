@@ -193,7 +193,7 @@ export default class DatePicker extends Component {
 
     this.setState({ inputValue });
   }
-
+ 
   handleInputClick() {
     if (!this.props.disabled) {
       this.setOpen(true);
@@ -220,6 +220,7 @@ export default class DatePicker extends Component {
           onClick={this.handleInputClick.bind(this)}
           value={isGregorian ? inputValue : this.toPersianDigits(inputValue)}
           readOnly={this.props.inputReadOnly === true}
+          disabled={this.props.disabled}
         />
       </div>
     );
