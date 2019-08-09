@@ -17609,7 +17609,8 @@ function (_Component) {
         onChange: _this.handleInputChange.bind(assertThisInitialized(_this)),
         onClick: _this.handleInputClick.bind(assertThisInitialized(_this)),
         value: isGregorian ? inputValue : _this.toPersianDigits(inputValue),
-        readOnly: _this.props.inputReadOnly === true
+        readOnly: _this.props.inputReadOnly === true,
+        disabled: _this.props.disabled
       }));
     });
 
