@@ -17658,8 +17658,8 @@ function (_Component) {
       isOpen: false,
       momentValue: _this.props.defaultValue || null,
       inputValue: _this.getValue(_this.props.defaultValue, _this.props.isGregorian, _this.props.timePicker),
-      inputJalaaliFormat: _this.props.inputJalaaliFormat || _this.getInputFormat(_this.props.isGregorian, _this.props.timePicker),
-      inputFormat: _this.props.inputFormat || _this.getInputFormat(_this.props.isGregorian, _this.props.timePicker),
+      inputJalaaliFormat: _this.props.inputJalaaliFormat || _this.getInputFormat(false, _this.props.timePicker),
+      inputFormat: _this.props.inputFormat || _this.getInputFormat(true, _this.props.timePicker),
       isGregorian: _this.props.isGregorian,
       timePicker: _this.props.timePicker,
       timePickerComponent: _this.props.timePicker ? MyTimePicker : undefined
@@ -17679,8 +17679,8 @@ function (_Component) {
       if (!inputValue) return '';
       var inputFormat = this.state.inputFormat;
       var inputJalaaliFormat = this.state.inputJalaaliFormat;
-      if (!inputFormat) inputFormat = this.getInputFormat(isGregorian);
-      if (!inputJalaaliFormat) inputJalaaliFormat = this.getInputFormat(isGregorian);
+      if (!inputFormat) inputFormat = this.getInputFormat(isGregorian, timePicker);
+      if (!inputJalaaliFormat) inputJalaaliFormat = this.getInputFormat(isGregorian, timePicker);
       return isGregorian ? inputValue.locale('es').format(inputFormat) : inputValue.locale('fa').format(inputJalaaliFormat);
     }
   }, {
