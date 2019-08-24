@@ -57,10 +57,10 @@ export default class DatePicker extends Component {
       ),
       inputJalaaliFormat:
         this.props.inputJalaaliFormat ||
-        this.getInputFormat(false, this.props.timePicker),
+        this.getInputFormat(this.props.isGregorian, this.props.timePicker),
       inputFormat:
         this.props.inputFormat ||
-        this.getInputFormat(true, this.props.timePicker),
+        this.getInputFormat(this.props.isGregorian, this.props.timePicker),
       isGregorian: this.props.isGregorian,
       timePicker: this.props.timePicker,
       timePickerComponent: this.props.timePicker ? MyTimePicker : undefined
@@ -184,8 +184,13 @@ export default class DatePicker extends Component {
 
   handleInputChange(event) {
     const { inputFormat } = this.state;
+    console.log(inputFormat);
+    
     const inputValue = this.toEnglishDigits(event.target.value);
     const momentValue = moment(inputValue, inputFormat);
+    
+    console.log(momentValue.isValid());
+    
 
     if (momentValue.isValid()) {
       this.setState({ momentValue });
