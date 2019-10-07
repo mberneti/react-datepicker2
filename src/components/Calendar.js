@@ -56,7 +56,7 @@ export class Calendar extends Component {
     };
   }
 
-  componentWillReceiveProps({ selectedDay, defaultMonth, min, isGregorian }) {
+  UNSAFE_componentWillReceiveProps({ selectedDay, defaultMonth, min, isGregorian }) {
     if (typeof isGregorian !== 'undefined' && isGregorian !== this.state.isGregorian) {
       this.setState({ isGregorian });
     }

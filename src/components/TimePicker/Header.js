@@ -36,7 +36,7 @@ class Header extends React.Component {
     this.onKeyDown = this.onKeyDown.bind(this);
   }
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     const { value, format } = nextProps;
     this.setState({
       str: (value && value.format(format)) || '',

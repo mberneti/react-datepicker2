@@ -53,7 +53,7 @@ class Panel extends React.Component {
     };
   }
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     const { value } = nextProps;
     if (value) {
       this.setState({

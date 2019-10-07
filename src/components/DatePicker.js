@@ -94,13 +94,13 @@ export default class DatePicker extends Component {
     }
   };
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     if (this.props.value) {
       this.setMomentValue(this.props.value);
     }
   }
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if ('value' in nextProps && nextProps.value !== this.props.value) {
       this.setMomentValue(nextProps.value);
     }
