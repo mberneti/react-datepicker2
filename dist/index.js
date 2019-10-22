@@ -8,7 +8,6 @@ var React = require('react');
 var React__default = _interopDefault(React);
 var ReactDOM = require('react-dom');
 var ReactDOM__default = _interopDefault(ReactDOM);
-var indexof = _interopDefault(require('indexof'));
 
 function styleInject(css, ref) {
   if ( ref === void 0 ) ref = {};
@@ -14393,16 +14392,6 @@ var componentIndexof = function(arr, obj){
   }
   return -1;
 };
-
-/**
- * Module dependencies.
- */
-
-try {
-  var index = indexof;
-} catch (err) {
-  var index = componentIndexof;
-}
 
 /**
  * Whitespace regexp.
