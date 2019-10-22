@@ -18,6 +18,7 @@ export class Calendar extends Component {
     selectedDay: PropTypes.object,
     defaultMonth: PropTypes.object,
     onSelect: PropTypes.func,
+    onMonthChange: PropTypes.func,
     onClickOutside: PropTypes.func,
     containerProps: PropTypes.object,
     isGregorian: PropTypes.bool,
@@ -79,7 +80,11 @@ export class Calendar extends Component {
   };
 
   setMonth = month => {
+    const { onMonthChange } = this.props;   
     this.setState({ month });
+    if (onMonthChange) {
+      onMonthChange(month);
+    }
   };
 
   setType = type => {
@@ -92,7 +97,7 @@ export class Calendar extends Component {
 
     this.setState({
       month: this.state.month.clone().add(1, monthFormat)
-    });
+    }, () => this.props.onMonthChange && this.props.onMonthChange(this.state.month));
   };
 
   prevMonth = () => {
@@ -101,7 +106,7 @@ export class Calendar extends Component {
 
     this.setState({
       month: this.state.month.clone().subtract(1, monthFormat)
-    });
+    }, () => this.props.onMonthChange && this.props.onMonthChange(this.state.month));
   };
 
   selectDay = selectedDay => {
