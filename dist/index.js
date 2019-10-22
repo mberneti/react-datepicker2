@@ -8,6 +8,7 @@ var React = require('react');
 var React__default = _interopDefault(React);
 var ReactDOM = require('react-dom');
 var ReactDOM__default = _interopDefault(ReactDOM);
+var indexof = _interopDefault(require('indexof'));
 
 function styleInject(css, ref) {
   if ( ref === void 0 ) ref = {};
@@ -55,7 +56,7 @@ function createCommonjsModule(fn, module) {
 
 var moment = createCommonjsModule(function (module, exports) {
 (function (global, factory) {
-    module.exports = factory();
+     module.exports = factory() ;
 }(commonjsGlobal, (function () {
     var hookCallback;
 
@@ -5932,9 +5933,6 @@ var global$1 = (typeof global !== "undefined" ? global :
             typeof self !== "undefined" ? self :
             typeof window !== "undefined" ? window : {});
 
-if (typeof global$1.setTimeout === 'function') ;
-if (typeof global$1.clearTimeout === 'function') ;
-
 // from https://github.com/kumavis/browser-process-hrtime/blob/master/index.js
 var performance$1 = global$1.performance || {};
 var performanceNow =
@@ -5947,11 +5945,11 @@ var performanceNow =
 
 var reactIs_production_min = createCommonjsModule(function (module, exports) {
 Object.defineProperty(exports,"__esModule",{value:!0});
-var b="function"===typeof Symbol&&Symbol.for,c=b?Symbol.for("react.element"):60103,d=b?Symbol.for("react.portal"):60106,e=b?Symbol.for("react.fragment"):60107,f=b?Symbol.for("react.strict_mode"):60108,g=b?Symbol.for("react.profiler"):60114,h=b?Symbol.for("react.provider"):60109,k=b?Symbol.for("react.context"):60110,l=b?Symbol.for("react.async_mode"):60111,m=b?Symbol.for("react.concurrent_mode"):60111,n=b?Symbol.for("react.forward_ref"):60112,p=b?Symbol.for("react.suspense"):60113,q=b?Symbol.for("react.memo"):
-60115,r=b?Symbol.for("react.lazy"):60116;function t(a){if("object"===typeof a&&null!==a){var u=a.$$typeof;switch(u){case c:switch(a=a.type,a){case l:case m:case e:case g:case f:case p:return a;default:switch(a=a&&a.$$typeof,a){case k:case n:case h:return a;default:return u}}case r:case q:case d:return u}}}function v(a){return t(a)===m}exports.typeOf=t;exports.AsyncMode=l;exports.ConcurrentMode=m;exports.ContextConsumer=k;exports.ContextProvider=h;exports.Element=c;exports.ForwardRef=n;
-exports.Fragment=e;exports.Lazy=r;exports.Memo=q;exports.Portal=d;exports.Profiler=g;exports.StrictMode=f;exports.Suspense=p;exports.isValidElementType=function(a){return "string"===typeof a||"function"===typeof a||a===e||a===m||a===g||a===f||a===p||"object"===typeof a&&null!==a&&(a.$$typeof===r||a.$$typeof===q||a.$$typeof===h||a.$$typeof===k||a.$$typeof===n)};exports.isAsyncMode=function(a){return v(a)||t(a)===l};exports.isConcurrentMode=v;exports.isContextConsumer=function(a){return t(a)===k};
-exports.isContextProvider=function(a){return t(a)===h};exports.isElement=function(a){return "object"===typeof a&&null!==a&&a.$$typeof===c};exports.isForwardRef=function(a){return t(a)===n};exports.isFragment=function(a){return t(a)===e};exports.isLazy=function(a){return t(a)===r};exports.isMemo=function(a){return t(a)===q};exports.isPortal=function(a){return t(a)===d};exports.isProfiler=function(a){return t(a)===g};exports.isStrictMode=function(a){return t(a)===f};
-exports.isSuspense=function(a){return t(a)===p};
+var b="function"===typeof Symbol&&Symbol.for,c=b?Symbol.for("react.element"):60103,d=b?Symbol.for("react.portal"):60106,e=b?Symbol.for("react.fragment"):60107,f=b?Symbol.for("react.strict_mode"):60108,g=b?Symbol.for("react.profiler"):60114,h=b?Symbol.for("react.provider"):60109,k=b?Symbol.for("react.context"):60110,l=b?Symbol.for("react.async_mode"):60111,m=b?Symbol.for("react.concurrent_mode"):60111,n=b?Symbol.for("react.forward_ref"):60112,p=b?Symbol.for("react.suspense"):60113,q=b?Symbol.for("react.suspense_list"):
+60120,r=b?Symbol.for("react.memo"):60115,t=b?Symbol.for("react.lazy"):60116,v=b?Symbol.for("react.fundamental"):60117,w=b?Symbol.for("react.responder"):60118,x=b?Symbol.for("react.scope"):60119;function y(a){if("object"===typeof a&&null!==a){var u=a.$$typeof;switch(u){case c:switch(a=a.type,a){case l:case m:case e:case g:case f:case p:return a;default:switch(a=a&&a.$$typeof,a){case k:case n:case h:return a;default:return u}}case t:case r:case d:return u}}}function z(a){return y(a)===m}
+exports.typeOf=y;exports.AsyncMode=l;exports.ConcurrentMode=m;exports.ContextConsumer=k;exports.ContextProvider=h;exports.Element=c;exports.ForwardRef=n;exports.Fragment=e;exports.Lazy=t;exports.Memo=r;exports.Portal=d;exports.Profiler=g;exports.StrictMode=f;exports.Suspense=p;
+exports.isValidElementType=function(a){return "string"===typeof a||"function"===typeof a||a===e||a===m||a===g||a===f||a===p||a===q||"object"===typeof a&&null!==a&&(a.$$typeof===t||a.$$typeof===r||a.$$typeof===h||a.$$typeof===k||a.$$typeof===n||a.$$typeof===v||a.$$typeof===w||a.$$typeof===x)};exports.isAsyncMode=function(a){return z(a)||y(a)===l};exports.isConcurrentMode=z;exports.isContextConsumer=function(a){return y(a)===k};exports.isContextProvider=function(a){return y(a)===h};
+exports.isElement=function(a){return "object"===typeof a&&null!==a&&a.$$typeof===c};exports.isForwardRef=function(a){return y(a)===n};exports.isFragment=function(a){return y(a)===e};exports.isLazy=function(a){return y(a)===t};exports.isMemo=function(a){return y(a)===r};exports.isPortal=function(a){return y(a)===d};exports.isProfiler=function(a){return y(a)===g};exports.isStrictMode=function(a){return y(a)===f};exports.isSuspense=function(a){return y(a)===p};
 });
 
 unwrapExports(reactIs_production_min);
@@ -5996,25 +5994,29 @@ Object.defineProperty(exports, '__esModule', { value: true });
 // The Symbol used to tag the ReactElement-like types. If there is no native Symbol
 // nor polyfill, then a plain number is used for performance.
 var hasSymbol = typeof Symbol === 'function' && Symbol.for;
-
 var REACT_ELEMENT_TYPE = hasSymbol ? Symbol.for('react.element') : 0xeac7;
 var REACT_PORTAL_TYPE = hasSymbol ? Symbol.for('react.portal') : 0xeaca;
 var REACT_FRAGMENT_TYPE = hasSymbol ? Symbol.for('react.fragment') : 0xeacb;
 var REACT_STRICT_MODE_TYPE = hasSymbol ? Symbol.for('react.strict_mode') : 0xeacc;
 var REACT_PROFILER_TYPE = hasSymbol ? Symbol.for('react.profiler') : 0xead2;
 var REACT_PROVIDER_TYPE = hasSymbol ? Symbol.for('react.provider') : 0xeacd;
-var REACT_CONTEXT_TYPE = hasSymbol ? Symbol.for('react.context') : 0xeace;
+var REACT_CONTEXT_TYPE = hasSymbol ? Symbol.for('react.context') : 0xeace; // TODO: We don't use AsyncMode or ConcurrentMode anymore. They were temporary
+// (unstable) APIs that have been removed. Can we remove the symbols?
+
 var REACT_ASYNC_MODE_TYPE = hasSymbol ? Symbol.for('react.async_mode') : 0xeacf;
 var REACT_CONCURRENT_MODE_TYPE = hasSymbol ? Symbol.for('react.concurrent_mode') : 0xeacf;
 var REACT_FORWARD_REF_TYPE = hasSymbol ? Symbol.for('react.forward_ref') : 0xead0;
 var REACT_SUSPENSE_TYPE = hasSymbol ? Symbol.for('react.suspense') : 0xead1;
+var REACT_SUSPENSE_LIST_TYPE = hasSymbol ? Symbol.for('react.suspense_list') : 0xead8;
 var REACT_MEMO_TYPE = hasSymbol ? Symbol.for('react.memo') : 0xead3;
 var REACT_LAZY_TYPE = hasSymbol ? Symbol.for('react.lazy') : 0xead4;
+var REACT_FUNDAMENTAL_TYPE = hasSymbol ? Symbol.for('react.fundamental') : 0xead5;
+var REACT_RESPONDER_TYPE = hasSymbol ? Symbol.for('react.responder') : 0xead6;
+var REACT_SCOPE_TYPE = hasSymbol ? Symbol.for('react.scope') : 0xead7;
 
 function isValidElementType(type) {
-  return typeof type === 'string' || typeof type === 'function' ||
-  // Note: its typeof might be other than 'symbol' or 'number' if it's a polyfill.
-  type === REACT_FRAGMENT_TYPE || type === REACT_CONCURRENT_MODE_TYPE || type === REACT_PROFILER_TYPE || type === REACT_STRICT_MODE_TYPE || type === REACT_SUSPENSE_TYPE || typeof type === 'object' && type !== null && (type.$$typeof === REACT_LAZY_TYPE || type.$$typeof === REACT_MEMO_TYPE || type.$$typeof === REACT_PROVIDER_TYPE || type.$$typeof === REACT_CONTEXT_TYPE || type.$$typeof === REACT_FORWARD_REF_TYPE);
+  return typeof type === 'string' || typeof type === 'function' || // Note: its typeof might be other than 'symbol' or 'number' if it's a polyfill.
+  type === REACT_FRAGMENT_TYPE || type === REACT_CONCURRENT_MODE_TYPE || type === REACT_PROFILER_TYPE || type === REACT_STRICT_MODE_TYPE || type === REACT_SUSPENSE_TYPE || type === REACT_SUSPENSE_LIST_TYPE || typeof type === 'object' && type !== null && (type.$$typeof === REACT_LAZY_TYPE || type.$$typeof === REACT_MEMO_TYPE || type.$$typeof === REACT_PROVIDER_TYPE || type.$$typeof === REACT_CONTEXT_TYPE || type.$$typeof === REACT_FORWARD_REF_TYPE || type.$$typeof === REACT_FUNDAMENTAL_TYPE || type.$$typeof === REACT_RESPONDER_TYPE || type.$$typeof === REACT_SCOPE_TYPE);
 }
 
 /**
@@ -6030,12 +6032,11 @@ function isValidElementType(type) {
  * paths. Removing the logging code for production environments will keep the
  * same logic and follow the same code paths.
  */
-
-var lowPriorityWarning = function () {};
+var lowPriorityWarningWithoutStack = function () {};
 
 {
   var printWarning = function (format) {
-    for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+    for (var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
       args[_key - 1] = arguments[_key];
     }
 
@@ -6043,9 +6044,11 @@ var lowPriorityWarning = function () {};
     var message = 'Warning: ' + format.replace(/%s/g, function () {
       return args[argIndex++];
     });
+
     if (typeof console !== 'undefined') {
       console.warn(message);
     }
+
     try {
       // --- Welcome to debugging React ---
       // This error was thrown as a convenience so that you can use this stack
@@ -6054,25 +6057,27 @@ var lowPriorityWarning = function () {};
     } catch (x) {}
   };
 
-  lowPriorityWarning = function (condition, format) {
+  lowPriorityWarningWithoutStack = function (condition, format) {
     if (format === undefined) {
-      throw new Error('`lowPriorityWarning(condition, format, ...args)` requires a warning ' + 'message argument');
+      throw new Error('`lowPriorityWarningWithoutStack(condition, format, ...args)` requires a warning ' + 'message argument');
     }
+
     if (!condition) {
-      for (var _len2 = arguments.length, args = Array(_len2 > 2 ? _len2 - 2 : 0), _key2 = 2; _key2 < _len2; _key2++) {
+      for (var _len2 = arguments.length, args = new Array(_len2 > 2 ? _len2 - 2 : 0), _key2 = 2; _key2 < _len2; _key2++) {
         args[_key2 - 2] = arguments[_key2];
       }
 
-      printWarning.apply(undefined, [format].concat(args));
+      printWarning.apply(void 0, [format].concat(args));
     }
   };
 }
 
-var lowPriorityWarning$1 = lowPriorityWarning;
+var lowPriorityWarningWithoutStack$1 = lowPriorityWarningWithoutStack;
 
 function typeOf(object) {
   if (typeof object === 'object' && object !== null) {
     var $$typeof = object.$$typeof;
+
     switch ($$typeof) {
       case REACT_ELEMENT_TYPE:
         var type = object.type;
@@ -6085,6 +6090,7 @@ function typeOf(object) {
           case REACT_STRICT_MODE_TYPE:
           case REACT_SUSPENSE_TYPE:
             return type;
+
           default:
             var $$typeofType = type && type.$$typeof;
 
@@ -6093,10 +6099,13 @@ function typeOf(object) {
               case REACT_FORWARD_REF_TYPE:
               case REACT_PROVIDER_TYPE:
                 return $$typeofType;
+
               default:
                 return $$typeof;
             }
+
         }
+
       case REACT_LAZY_TYPE:
       case REACT_MEMO_TYPE:
       case REACT_PORTAL_TYPE:
@@ -6105,9 +6114,8 @@ function typeOf(object) {
   }
 
   return undefined;
-}
+} // AsyncMode is deprecated along with isAsyncMode
 
-// AsyncMode is deprecated along with isAsyncMode
 var AsyncMode = REACT_ASYNC_MODE_TYPE;
 var ConcurrentMode = REACT_CONCURRENT_MODE_TYPE;
 var ContextConsumer = REACT_CONTEXT_TYPE;
@@ -6121,17 +6129,16 @@ var Portal = REACT_PORTAL_TYPE;
 var Profiler = REACT_PROFILER_TYPE;
 var StrictMode = REACT_STRICT_MODE_TYPE;
 var Suspense = REACT_SUSPENSE_TYPE;
+var hasWarnedAboutDeprecatedIsAsyncMode = false; // AsyncMode should be deprecated
 
-var hasWarnedAboutDeprecatedIsAsyncMode = false;
-
-// AsyncMode should be deprecated
 function isAsyncMode(object) {
   {
     if (!hasWarnedAboutDeprecatedIsAsyncMode) {
       hasWarnedAboutDeprecatedIsAsyncMode = true;
-      lowPriorityWarning$1(false, 'The ReactIs.isAsyncMode() alias has been deprecated, ' + 'and will be removed in React 17+. Update your code to use ' + 'ReactIs.isConcurrentMode() instead. It has the exact same API.');
+      lowPriorityWarningWithoutStack$1(false, 'The ReactIs.isAsyncMode() alias has been deprecated, ' + 'and will be removed in React 17+. Update your code to use ' + 'ReactIs.isConcurrentMode() instead. It has the exact same API.');
     }
   }
+
   return isConcurrentMode(object) || typeOf(object) === REACT_ASYNC_MODE_TYPE;
 }
 function isConcurrentMode(object) {
@@ -6606,7 +6613,7 @@ var factoryWithTypeCheckers = function(isValidElement, throwOnDirectAccess) {
           );
           err.name = 'Invariant Violation';
           throw err;
-        } else if (typeof console !== 'undefined') {
+        } else if ( typeof console !== 'undefined') {
           // Old behavior for people using React.PropTypes
           var cacheKey = componentName + ':' + propName;
           if (
@@ -6783,7 +6790,7 @@ var factoryWithTypeCheckers = function(isValidElement, throwOnDirectAccess) {
 
   function createUnionTypeChecker(arrayOfTypeCheckers) {
     if (!Array.isArray(arrayOfTypeCheckers)) {
-      printWarning$1('Invalid argument supplied to oneOfType, expected an instance of array.');
+       printWarning$1('Invalid argument supplied to oneOfType, expected an instance of array.') ;
       return emptyFunctionThatReturnsNull;
     }
 
@@ -7030,56 +7037,38 @@ var propTypes = createCommonjsModule(function (module) {
 });
 
 var tether = createCommonjsModule(function (module, exports) {
-/*! tether 1.4.6 */
+/*! tether 1.4.7 */
 
 (function(root, factory) {
   {
     module.exports = factory();
   }
-})(commonjsGlobal, function() {
+}(commonjsGlobal, function() {
 
-  var _createClass = (function() {
-    function defineProperties(target, props) {
-      for (var i = 0; i < props.length; i++) {
-        var descriptor = props[i];
-        descriptor.enumerable = descriptor.enumerable || false;
-        descriptor.configurable = true;
-        if ("value" in descriptor) descriptor.writable = true;
-        Object.defineProperty(target, descriptor.key, descriptor);
-      }
-    }
-    return function(Constructor, protoProps, staticProps) {
-      if (protoProps) defineProperties(Constructor.prototype, protoProps);
-      if (staticProps) defineProperties(Constructor, staticProps);
-      return Constructor;
-    };
-  })();
+var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
-  function _classCallCheck(instance, Constructor) {
-    if (!(instance instanceof Constructor)) {
-      throw new TypeError("Cannot call a class as a function");
-    }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+var TetherBase = undefined;
+if (typeof TetherBase === 'undefined') {
+  TetherBase = { modules: [] };
+}
+
+var zeroElement = null;
+
+// Same as native getBoundingClientRect, except it takes into account parent <frame> offsets
+// if the element lies within a nested document (<frame> or <iframe>-like).
+function getActualBoundingClientRect(node) {
+  var boundingRect = node.getBoundingClientRect();
+
+  // The original object returned by getBoundingClientRect is immutable, so we clone it
+  // We can't use extend because the properties are not considered part of the object by hasOwnProperty in IE9
+  var rect = {};
+  for (var k in boundingRect) {
+    rect[k] = boundingRect[k];
   }
 
-  var TetherBase = undefined;
-  if (typeof TetherBase === "undefined") {
-    TetherBase = { modules: [] };
-  }
-
-  var zeroElement = null;
-
-  // Same as native getBoundingClientRect, except it takes into account parent <frame> offsets
-  // if the element lies within a nested document (<frame> or <iframe>-like).
-  function getActualBoundingClientRect(node) {
-    var boundingRect = node.getBoundingClientRect();
-
-    // The original object returned by getBoundingClientRect is immutable, so we clone it
-    // We can't use extend because the properties are not considered part of the object by hasOwnProperty in IE9
-    var rect = {};
-    for (var k in boundingRect) {
-      rect[k] = boundingRect[k];
-    }
-
+  try {
     if (node.ownerDocument !== document) {
       var _frameElement = node.ownerDocument.defaultView.frameElement;
       if (_frameElement) {
@@ -7090,2173 +7079,1765 @@ var tether = createCommonjsModule(function (module, exports) {
         rect.right += frameRect.left;
       }
     }
-
-    return rect;
+  } catch (err) {
+    // Ignore "Access is denied" in IE11/Edge
   }
 
-  function getScrollParents(el) {
-    // In firefox if the el is inside an iframe with display: none; window.getComputedStyle() will return null;
-    // https://bugzilla.mozilla.org/show_bug.cgi?id=548397
-    var computedStyle = getComputedStyle(el) || {};
-    var position = computedStyle.position;
-    var parents = [];
+  return rect;
+}
 
-    if (position === "fixed") {
-      return [el];
+function getScrollParents(el) {
+  // In firefox if the el is inside an iframe with display: none; window.getComputedStyle() will return null;
+  // https://bugzilla.mozilla.org/show_bug.cgi?id=548397
+  var computedStyle = getComputedStyle(el) || {};
+  var position = computedStyle.position;
+  var parents = [];
+
+  if (position === 'fixed') {
+    return [el];
+  }
+
+  var parent = el;
+  while ((parent = parent.parentNode) && parent && parent.nodeType === 1) {
+    var style = undefined;
+    try {
+      style = getComputedStyle(parent);
+    } catch (err) {}
+
+    if (typeof style === 'undefined' || style === null) {
+      parents.push(parent);
+      return parents;
     }
 
-    var parent = el;
-    while ((parent = parent.parentNode) && parent && parent.nodeType === 1) {
-      var style = undefined;
-      try {
-        style = getComputedStyle(parent);
-      } catch (err) {}
+    var _style = style;
+    var overflow = _style.overflow;
+    var overflowX = _style.overflowX;
+    var overflowY = _style.overflowY;
 
-      if (typeof style === "undefined" || style === null) {
+    if (/(auto|scroll|overlay)/.test(overflow + overflowY + overflowX)) {
+      if (position !== 'absolute' || ['relative', 'absolute', 'fixed'].indexOf(style.position) >= 0) {
         parents.push(parent);
-        return parents;
-      }
-
-      var _style = style;
-      var overflow = _style.overflow;
-      var overflowX = _style.overflowX;
-      var overflowY = _style.overflowY;
-
-      if (/(auto|scroll|overlay)/.test(overflow + overflowY + overflowX)) {
-        if (
-          position !== "absolute" ||
-          ["relative", "absolute", "fixed"].indexOf(style.position) >= 0
-        ) {
-          parents.push(parent);
-        }
       }
     }
-
-    parents.push(el.ownerDocument.body);
-
-    // If the node is within a frame, account for the parent window scroll
-    if (el.ownerDocument !== document) {
-      parents.push(el.ownerDocument.defaultView);
-    }
-
-    return parents;
   }
 
-  var uniqueId = (function() {
-    var id = 0;
-    return function() {
-      return ++id;
-    };
-  })();
+  parents.push(el.ownerDocument.body);
 
-  var zeroPosCache = {};
-  var getOrigin = function getOrigin() {
-    // getBoundingClientRect is unfortunately too accurate.  It introduces a pixel or two of
-    // jitter as the user scrolls that messes with our ability to detect if two positions
-    // are equivilant or not.  We place an element at the top left of the page that will
-    // get the same jitter, so we can cancel the two out.
-    var node = zeroElement;
-    if (!node || !document.body.contains(node)) {
-      node = document.createElement("div");
-      node.setAttribute("data-tether-id", uniqueId());
-      extend(node.style, {
-        top: 0,
-        left: 0,
-        position: "absolute"
-      });
+  // If the node is within a frame, account for the parent window scroll
+  if (el.ownerDocument !== document) {
+    parents.push(el.ownerDocument.defaultView);
+  }
 
-      document.body.appendChild(node);
+  return parents;
+}
 
-      zeroElement = node;
-    }
-
-    var id = node.getAttribute("data-tether-id");
-    if (typeof zeroPosCache[id] === "undefined") {
-      zeroPosCache[id] = getActualBoundingClientRect(node);
-
-      // Clear the cache when this position call is done
-      defer(function() {
-        delete zeroPosCache[id];
-      });
-    }
-
-    return zeroPosCache[id];
+var uniqueId = (function () {
+  var id = 0;
+  return function () {
+    return ++id;
   };
+})();
 
-  function removeUtilElements() {
-    if (zeroElement) {
-      document.body.removeChild(zeroElement);
-    }
-    zeroElement = null;
-  }
-
-  function getBounds(el) {
-    var doc = undefined;
-    if (el === document) {
-      doc = document;
-      el = document.documentElement;
-    } else {
-      doc = el.ownerDocument;
-    }
-
-    var docEl = doc.documentElement;
-
-    var box = getActualBoundingClientRect(el);
-
-    var origin = getOrigin();
-
-    box.top -= origin.top;
-    box.left -= origin.left;
-
-    if (typeof box.width === "undefined") {
-      box.width = document.body.scrollWidth - box.left - box.right;
-    }
-    if (typeof box.height === "undefined") {
-      box.height = document.body.scrollHeight - box.top - box.bottom;
-    }
-
-    box.top = box.top - docEl.clientTop;
-    box.left = box.left - docEl.clientLeft;
-    box.right = doc.body.clientWidth - box.width - box.left;
-    box.bottom = doc.body.clientHeight - box.height - box.top;
-
-    return box;
-  }
-
-  function getOffsetParent(el) {
-    return el.offsetParent || document.documentElement;
-  }
-
-  var _scrollBarSize = null;
-  function getScrollBarSize() {
-    if (_scrollBarSize) {
-      return _scrollBarSize;
-    }
-    var inner = document.createElement("div");
-    inner.style.width = "100%";
-    inner.style.height = "200px";
-
-    var outer = document.createElement("div");
-    extend(outer.style, {
-      position: "absolute",
+var zeroPosCache = {};
+var getOrigin = function getOrigin() {
+  // getBoundingClientRect is unfortunately too accurate.  It introduces a pixel or two of
+  // jitter as the user scrolls that messes with our ability to detect if two positions
+  // are equivilant or not.  We place an element at the top left of the page that will
+  // get the same jitter, so we can cancel the two out.
+  var node = zeroElement;
+  if (!node || !document.body.contains(node)) {
+    node = document.createElement('div');
+    node.setAttribute('data-tether-id', uniqueId());
+    extend(node.style, {
       top: 0,
       left: 0,
-      pointerEvents: "none",
-      visibility: "hidden",
-      width: "200px",
-      height: "150px",
-      overflow: "hidden"
+      position: 'absolute'
     });
 
-    outer.appendChild(inner);
+    document.body.appendChild(node);
 
-    document.body.appendChild(outer);
+    zeroElement = node;
+  }
 
-    var widthContained = inner.offsetWidth;
-    outer.style.overflow = "scroll";
-    var widthScroll = inner.offsetWidth;
+  var id = node.getAttribute('data-tether-id');
+  if (typeof zeroPosCache[id] === 'undefined') {
+    zeroPosCache[id] = getActualBoundingClientRect(node);
 
-    if (widthContained === widthScroll) {
-      widthScroll = outer.clientWidth;
-    }
+    // Clear the cache when this position call is done
+    defer(function () {
+      delete zeroPosCache[id];
+    });
+  }
 
-    document.body.removeChild(outer);
+  return zeroPosCache[id];
+};
 
-    var width = widthContained - widthScroll;
+function removeUtilElements() {
+  if (zeroElement) {
+    document.body.removeChild(zeroElement);
+  }
+  zeroElement = null;
+}
+function getBounds(el) {
+  var doc = undefined;
+  if (el === document) {
+    doc = document;
+    el = document.documentElement;
+  } else {
+    doc = el.ownerDocument;
+  }
 
-    _scrollBarSize = { width: width, height: width };
+  var docEl = doc.documentElement;
+
+  var box = getActualBoundingClientRect(el);
+
+  var origin = getOrigin();
+
+  box.top -= origin.top;
+  box.left -= origin.left;
+
+  if (typeof box.width === 'undefined') {
+    box.width = document.body.scrollWidth - box.left - box.right;
+  }
+  if (typeof box.height === 'undefined') {
+    box.height = document.body.scrollHeight - box.top - box.bottom;
+  }
+
+  box.top = box.top - docEl.clientTop;
+  box.left = box.left - docEl.clientLeft;
+  box.right = doc.body.clientWidth - box.width - box.left;
+  box.bottom = doc.body.clientHeight - box.height - box.top;
+
+  return box;
+}
+
+function getOffsetParent(el) {
+  return el.offsetParent || document.documentElement;
+}
+
+var _scrollBarSize = null;
+function getScrollBarSize() {
+  if (_scrollBarSize) {
     return _scrollBarSize;
   }
+  var inner = document.createElement('div');
+  inner.style.width = '100%';
+  inner.style.height = '200px';
 
-  function extend() {
-    var out =
-      arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+  var outer = document.createElement('div');
+  extend(outer.style, {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    pointerEvents: 'none',
+    visibility: 'hidden',
+    width: '200px',
+    height: '150px',
+    overflow: 'hidden'
+  });
 
-    var args = [];
+  outer.appendChild(inner);
 
-    Array.prototype.push.apply(args, arguments);
+  document.body.appendChild(outer);
 
-    args.slice(1).forEach(function(obj) {
-      if (obj) {
-        for (var key in obj) {
-          if ({}.hasOwnProperty.call(obj, key)) {
-            out[key] = obj[key];
-          }
+  var widthContained = inner.offsetWidth;
+  outer.style.overflow = 'scroll';
+  var widthScroll = inner.offsetWidth;
+
+  if (widthContained === widthScroll) {
+    widthScroll = outer.clientWidth;
+  }
+
+  document.body.removeChild(outer);
+
+  var width = widthContained - widthScroll;
+
+  _scrollBarSize = { width: width, height: width };
+  return _scrollBarSize;
+}
+
+function extend() {
+  var out = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+
+  var args = [];
+
+  Array.prototype.push.apply(args, arguments);
+
+  args.slice(1).forEach(function (obj) {
+    if (obj) {
+      for (var key in obj) {
+        if (({}).hasOwnProperty.call(obj, key)) {
+          out[key] = obj[key];
         }
       }
-    });
-
-    return out;
-  }
-
-  function removeClass(el, name) {
-    if (typeof el.classList !== "undefined") {
-      name.split(" ").forEach(function(cls) {
-        if (cls.trim()) {
-          el.classList.remove(cls);
-        }
-      });
-    } else {
-      var regex = new RegExp(
-        "(^| )" + name.split(" ").join("|") + "( |$)",
-        "gi"
-      );
-      var className = getClassName(el).replace(regex, " ");
-      setClassName(el, className);
     }
-  }
+  });
 
-  function addClass(el, name) {
-    if (typeof el.classList !== "undefined") {
-      name.split(" ").forEach(function(cls) {
-        if (cls.trim()) {
-          el.classList.add(cls);
-        }
-      });
-    } else {
-      removeClass(el, name);
-      var cls = getClassName(el) + (" " + name);
-      setClassName(el, cls);
-    }
-  }
+  return out;
+}
 
-  function hasClass(el, name) {
-    if (typeof el.classList !== "undefined") {
-      return el.classList.contains(name);
-    }
-    var className = getClassName(el);
-    return new RegExp("(^| )" + name + "( |$)", "gi").test(className);
-  }
-
-  function getClassName(el) {
-    // Can't use just SVGAnimatedString here since nodes within a Frame in IE have
-    // completely separately SVGAnimatedString base classes
-    if (
-      el.className instanceof el.ownerDocument.defaultView.SVGAnimatedString
-    ) {
-      return el.className.baseVal;
-    }
-    return el.className;
-  }
-
-  function setClassName(el, className) {
-    el.setAttribute("class", className);
-  }
-
-  function updateClasses(el, add, all) {
-    // Of the set of 'all' classes, we need the 'add' classes, and only the
-    // 'add' classes to be set.
-    all.forEach(function(cls) {
-      if (add.indexOf(cls) === -1 && hasClass(el, cls)) {
-        removeClass(el, cls);
+function removeClass(el, name) {
+  if (typeof el.classList !== 'undefined') {
+    name.split(' ').forEach(function (cls) {
+      if (cls.trim()) {
+        el.classList.remove(cls);
       }
     });
+  } else {
+    var regex = new RegExp('(^| )' + name.split(' ').join('|') + '( |$)', 'gi');
+    var className = getClassName(el).replace(regex, ' ');
+    setClassName(el, className);
+  }
+}
 
-    add.forEach(function(cls) {
-      if (!hasClass(el, cls)) {
-        addClass(el, cls);
+function addClass(el, name) {
+  if (typeof el.classList !== 'undefined') {
+    name.split(' ').forEach(function (cls) {
+      if (cls.trim()) {
+        el.classList.add(cls);
       }
     });
+  } else {
+    removeClass(el, name);
+    var cls = getClassName(el) + (' ' + name);
+    setClassName(el, cls);
+  }
+}
+
+function hasClass(el, name) {
+  if (typeof el.classList !== 'undefined') {
+    return el.classList.contains(name);
+  }
+  var className = getClassName(el);
+  return new RegExp('(^| )' + name + '( |$)', 'gi').test(className);
+}
+
+function getClassName(el) {
+  // Can't use just SVGAnimatedString here since nodes within a Frame in IE have
+  // completely separately SVGAnimatedString base classes
+  if (el.className instanceof el.ownerDocument.defaultView.SVGAnimatedString) {
+    return el.className.baseVal;
+  }
+  return el.className;
+}
+
+function setClassName(el, className) {
+  el.setAttribute('class', className);
+}
+
+function updateClasses(el, add, all) {
+  // Of the set of 'all' classes, we need the 'add' classes, and only the
+  // 'add' classes to be set.
+  all.forEach(function (cls) {
+    if (add.indexOf(cls) === -1 && hasClass(el, cls)) {
+      removeClass(el, cls);
+    }
+  });
+
+  add.forEach(function (cls) {
+    if (!hasClass(el, cls)) {
+      addClass(el, cls);
+    }
+  });
+}
+
+var deferred = [];
+
+var defer = function defer(fn) {
+  deferred.push(fn);
+};
+
+var flush = function flush() {
+  var fn = undefined;
+  while (fn = deferred.pop()) {
+    fn();
+  }
+};
+
+var Evented = (function () {
+  function Evented() {
+    _classCallCheck(this, Evented);
   }
 
-  var deferred = [];
+  _createClass(Evented, [{
+    key: 'on',
+    value: function on(event, handler, ctx) {
+      var once = arguments.length <= 3 || arguments[3] === undefined ? false : arguments[3];
 
-  var defer = function defer(fn) {
-    deferred.push(fn);
-  };
-
-  var flush = function flush() {
-    var fn = undefined;
-    while ((fn = deferred.pop())) {
-      fn();
+      if (typeof this.bindings === 'undefined') {
+        this.bindings = {};
+      }
+      if (typeof this.bindings[event] === 'undefined') {
+        this.bindings[event] = [];
+      }
+      this.bindings[event].push({ handler: handler, ctx: ctx, once: once });
     }
-  };
-
-  var Evented = (function() {
-    function Evented() {
-      _classCallCheck(this, Evented);
+  }, {
+    key: 'once',
+    value: function once(event, handler, ctx) {
+      this.on(event, handler, ctx, true);
     }
+  }, {
+    key: 'off',
+    value: function off(event, handler) {
+      if (typeof this.bindings === 'undefined' || typeof this.bindings[event] === 'undefined') {
+        return;
+      }
 
-    _createClass(Evented, [
-      {
-        key: "on",
-        value: function on(event, handler, ctx) {
-          var once =
-            arguments.length <= 3 || arguments[3] === undefined
-              ? false
-              : arguments[3];
-
-          if (typeof this.bindings === "undefined") {
-            this.bindings = {};
-          }
-          if (typeof this.bindings[event] === "undefined") {
-            this.bindings[event] = [];
-          }
-          this.bindings[event].push({ handler: handler, ctx: ctx, once: once });
-        }
-      },
-      {
-        key: "once",
-        value: function once(event, handler, ctx) {
-          this.on(event, handler, ctx, true);
-        }
-      },
-      {
-        key: "off",
-        value: function off(event, handler) {
-          if (
-            typeof this.bindings === "undefined" ||
-            typeof this.bindings[event] === "undefined"
-          ) {
-            return;
-          }
-
-          if (typeof handler === "undefined") {
-            delete this.bindings[event];
+      if (typeof handler === 'undefined') {
+        delete this.bindings[event];
+      } else {
+        var i = 0;
+        while (i < this.bindings[event].length) {
+          if (this.bindings[event][i].handler === handler) {
+            this.bindings[event].splice(i, 1);
           } else {
-            var i = 0;
-            while (i < this.bindings[event].length) {
-              if (this.bindings[event][i].handler === handler) {
-                this.bindings[event].splice(i, 1);
-              } else {
-                ++i;
-              }
-            }
-          }
-        }
-      },
-      {
-        key: "trigger",
-        value: function trigger(event) {
-          if (typeof this.bindings !== "undefined" && this.bindings[event]) {
-            var i = 0;
-
-            for (
-              var _len = arguments.length,
-                args = Array(_len > 1 ? _len - 1 : 0),
-                _key = 1;
-              _key < _len;
-              _key++
-            ) {
-              args[_key - 1] = arguments[_key];
-            }
-
-            while (i < this.bindings[event].length) {
-              var _bindings$event$i = this.bindings[event][i];
-              var handler = _bindings$event$i.handler;
-              var ctx = _bindings$event$i.ctx;
-              var once = _bindings$event$i.once;
-
-              var context = ctx;
-              if (typeof context === "undefined") {
-                context = this;
-              }
-
-              handler.apply(context, args);
-
-              if (once) {
-                this.bindings[event].splice(i, 1);
-              } else {
-                ++i;
-              }
-            }
+            ++i;
           }
         }
       }
-    ]);
-
-    return Evented;
-  })();
-
-  TetherBase.Utils = {
-    getActualBoundingClientRect: getActualBoundingClientRect,
-    getScrollParents: getScrollParents,
-    getBounds: getBounds,
-    getOffsetParent: getOffsetParent,
-    extend: extend,
-    addClass: addClass,
-    removeClass: removeClass,
-    hasClass: hasClass,
-    updateClasses: updateClasses,
-    defer: defer,
-    flush: flush,
-    uniqueId: uniqueId,
-    Evented: Evented,
-    getScrollBarSize: getScrollBarSize,
-    removeUtilElements: removeUtilElements
-  };
-
-  var _slicedToArray = (function() {
-    function sliceIterator(arr, i) {
-      var _arr = [];
-      var _n = true;
-      var _d = false;
-      var _e = undefined;
-      try {
-        for (
-          var _i = arr[Symbol.iterator](), _s;
-          !(_n = (_s = _i.next()).done);
-          _n = true
-        ) {
-          _arr.push(_s.value);
-          if (i && _arr.length === i) break;
-        }
-      } catch (err) {
-        _d = true;
-        _e = err;
-      } finally {
-        try {
-          if (!_n && _i["return"]) _i["return"]();
-        } finally {
-          if (_d) throw _e;
-        }
-      }
-      return _arr;
     }
-    return function(arr, i) {
-      if (Array.isArray(arr)) {
-        return arr;
-      } else if (Symbol.iterator in Object(arr)) {
-        return sliceIterator(arr, i);
-      } else {
-        throw new TypeError(
-          "Invalid attempt to destructure non-iterable instance"
-        );
-      }
-    };
-  })();
+  }, {
+    key: 'trigger',
+    value: function trigger(event) {
+      if (typeof this.bindings !== 'undefined' && this.bindings[event]) {
+        var i = 0;
 
-  var _createClass = (function() {
-    function defineProperties(target, props) {
-      for (var i = 0; i < props.length; i++) {
-        var descriptor = props[i];
-        descriptor.enumerable = descriptor.enumerable || false;
-        descriptor.configurable = true;
-        if ("value" in descriptor) descriptor.writable = true;
-        Object.defineProperty(target, descriptor.key, descriptor);
+        for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+          args[_key - 1] = arguments[_key];
+        }
+
+        while (i < this.bindings[event].length) {
+          var _bindings$event$i = this.bindings[event][i];
+          var handler = _bindings$event$i.handler;
+          var ctx = _bindings$event$i.ctx;
+          var once = _bindings$event$i.once;
+
+          var context = ctx;
+          if (typeof context === 'undefined') {
+            context = this;
+          }
+
+          handler.apply(context, args);
+
+          if (once) {
+            this.bindings[event].splice(i, 1);
+          } else {
+            ++i;
+          }
+        }
       }
     }
-    return function(Constructor, protoProps, staticProps) {
-      if (protoProps) defineProperties(Constructor.prototype, protoProps);
-      if (staticProps) defineProperties(Constructor, staticProps);
-      return Constructor;
-    };
-  })();
+  }]);
 
-  var _get = function get(_x6, _x7, _x8) {
-    var _again = true;
-    _function: while (_again) {
-      var object = _x6,
-        property = _x7,
-        receiver = _x8;
-      _again = false;
-      if (object === null) object = Function.prototype;
-      var desc = Object.getOwnPropertyDescriptor(object, property);
-      if (desc === undefined) {
-        var parent = Object.getPrototypeOf(object);
-        if (parent === null) {
-          return undefined;
-        } else {
-          _x6 = parent;
-          _x7 = property;
-          _x8 = receiver;
-          _again = true;
-          desc = parent = undefined;
-          continue _function;
-        }
-      } else if ("value" in desc) {
-        return desc.value;
-      } else {
-        var getter = desc.get;
-        if (getter === undefined) {
-          return undefined;
-        }
-        return getter.call(receiver);
-      }
-    }
-  };
+  return Evented;
+})();
 
-  function _classCallCheck(instance, Constructor) {
-    if (!(instance instanceof Constructor)) {
-      throw new TypeError("Cannot call a class as a function");
+TetherBase.Utils = {
+  getActualBoundingClientRect: getActualBoundingClientRect,
+  getScrollParents: getScrollParents,
+  getBounds: getBounds,
+  getOffsetParent: getOffsetParent,
+  extend: extend,
+  addClass: addClass,
+  removeClass: removeClass,
+  hasClass: hasClass,
+  updateClasses: updateClasses,
+  defer: defer,
+  flush: flush,
+  uniqueId: uniqueId,
+  Evented: Evented,
+  getScrollBarSize: getScrollBarSize,
+  removeUtilElements: removeUtilElements
+};
+
+var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i['return']) _i['return'](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError('Invalid attempt to destructure non-iterable instance'); } }; })();
+
+var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+var _get = function get(_x6, _x7, _x8) { var _again = true; _function: while (_again) { var object = _x6, property = _x7, receiver = _x8; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x6 = parent; _x7 = property; _x8 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+if (typeof TetherBase === 'undefined') {
+  throw new Error('You must include the utils.js file before tether.js');
+}
+
+var _TetherBase$Utils = TetherBase.Utils;
+var getScrollParents = _TetherBase$Utils.getScrollParents;
+var getBounds = _TetherBase$Utils.getBounds;
+var getOffsetParent = _TetherBase$Utils.getOffsetParent;
+var extend = _TetherBase$Utils.extend;
+var addClass = _TetherBase$Utils.addClass;
+var removeClass = _TetherBase$Utils.removeClass;
+var updateClasses = _TetherBase$Utils.updateClasses;
+var defer = _TetherBase$Utils.defer;
+var flush = _TetherBase$Utils.flush;
+var getScrollBarSize = _TetherBase$Utils.getScrollBarSize;
+var removeUtilElements = _TetherBase$Utils.removeUtilElements;
+
+function within(a, b) {
+  var diff = arguments.length <= 2 || arguments[2] === undefined ? 1 : arguments[2];
+
+  return a + diff >= b && b >= a - diff;
+}
+
+var transformKey = (function () {
+  if (typeof document === 'undefined') {
+    return '';
+  }
+  var el = document.createElement('div');
+
+  var transforms = ['transform', 'WebkitTransform', 'OTransform', 'MozTransform', 'msTransform'];
+  for (var i = 0; i < transforms.length; ++i) {
+    var key = transforms[i];
+    if (el.style[key] !== undefined) {
+      return key;
     }
   }
+})();
 
-  function _inherits(subClass, superClass) {
-    if (typeof superClass !== "function" && superClass !== null) {
-      throw new TypeError(
-        "Super expression must either be null or a function, not " +
-          typeof superClass
-      );
+var tethers = [];
+
+var position = function position() {
+  tethers.forEach(function (tether) {
+    tether.position(false);
+  });
+  flush();
+};
+
+function now() {
+  if (typeof performance === 'object' && typeof performance.now === 'function') {
+    return performance.now();
+  }
+  return +new Date();
+}
+
+(function () {
+  var lastCall = null;
+  var lastDuration = null;
+  var pendingTimeout = null;
+
+  var tick = function tick() {
+    if (typeof lastDuration !== 'undefined' && lastDuration > 16) {
+      // We voluntarily throttle ourselves if we can't manage 60fps
+      lastDuration = Math.min(lastDuration - 16, 250);
+
+      // Just in case this is the last event, remember to position just once more
+      pendingTimeout = setTimeout(tick, 250);
+      return;
     }
-    subClass.prototype = Object.create(superClass && superClass.prototype, {
-      constructor: {
-        value: subClass,
-        enumerable: false,
-        writable: true,
-        configurable: true
+
+    if (typeof lastCall !== 'undefined' && now() - lastCall < 10) {
+      // Some browsers call events a little too frequently, refuse to run more than is reasonable
+      return;
+    }
+
+    if (pendingTimeout != null) {
+      clearTimeout(pendingTimeout);
+      pendingTimeout = null;
+    }
+
+    lastCall = now();
+    position();
+    lastDuration = now() - lastCall;
+  };
+
+  if (typeof window !== 'undefined' && typeof window.addEventListener !== 'undefined') {
+    ['resize', 'scroll', 'touchmove'].forEach(function (event) {
+      window.addEventListener(event, tick);
+    });
+  }
+})();
+
+var MIRROR_LR = {
+  center: 'center',
+  left: 'right',
+  right: 'left'
+};
+
+var MIRROR_TB = {
+  middle: 'middle',
+  top: 'bottom',
+  bottom: 'top'
+};
+
+var OFFSET_MAP = {
+  top: 0,
+  left: 0,
+  middle: '50%',
+  center: '50%',
+  bottom: '100%',
+  right: '100%'
+};
+
+var autoToFixedAttachment = function autoToFixedAttachment(attachment, relativeToAttachment) {
+  var left = attachment.left;
+  var top = attachment.top;
+
+  if (left === 'auto') {
+    left = MIRROR_LR[relativeToAttachment.left];
+  }
+
+  if (top === 'auto') {
+    top = MIRROR_TB[relativeToAttachment.top];
+  }
+
+  return { left: left, top: top };
+};
+
+var attachmentToOffset = function attachmentToOffset(attachment) {
+  var left = attachment.left;
+  var top = attachment.top;
+
+  if (typeof OFFSET_MAP[attachment.left] !== 'undefined') {
+    left = OFFSET_MAP[attachment.left];
+  }
+
+  if (typeof OFFSET_MAP[attachment.top] !== 'undefined') {
+    top = OFFSET_MAP[attachment.top];
+  }
+
+  return { left: left, top: top };
+};
+
+function addOffset() {
+  var out = { top: 0, left: 0 };
+
+  for (var _len = arguments.length, offsets = Array(_len), _key = 0; _key < _len; _key++) {
+    offsets[_key] = arguments[_key];
+  }
+
+  offsets.forEach(function (_ref) {
+    var top = _ref.top;
+    var left = _ref.left;
+
+    if (typeof top === 'string') {
+      top = parseFloat(top, 10);
+    }
+    if (typeof left === 'string') {
+      left = parseFloat(left, 10);
+    }
+
+    out.top += top;
+    out.left += left;
+  });
+
+  return out;
+}
+
+function offsetToPx(offset, size) {
+  if (typeof offset.left === 'string' && offset.left.indexOf('%') !== -1) {
+    offset.left = parseFloat(offset.left, 10) / 100 * size.width;
+  }
+  if (typeof offset.top === 'string' && offset.top.indexOf('%') !== -1) {
+    offset.top = parseFloat(offset.top, 10) / 100 * size.height;
+  }
+
+  return offset;
+}
+
+var parseOffset = function parseOffset(value) {
+  var _value$split = value.split(' ');
+
+  var _value$split2 = _slicedToArray(_value$split, 2);
+
+  var top = _value$split2[0];
+  var left = _value$split2[1];
+
+  return { top: top, left: left };
+};
+var parseAttachment = parseOffset;
+
+var TetherClass = (function (_Evented) {
+  _inherits(TetherClass, _Evented);
+
+  function TetherClass(options) {
+    var _this = this;
+
+    _classCallCheck(this, TetherClass);
+
+    _get(Object.getPrototypeOf(TetherClass.prototype), 'constructor', this).call(this);
+    this.position = this.position.bind(this);
+
+    tethers.push(this);
+
+    this.history = [];
+
+    this.setOptions(options, false);
+
+    TetherBase.modules.forEach(function (module) {
+      if (typeof module.initialize !== 'undefined') {
+        module.initialize.call(_this);
       }
     });
-    if (superClass)
-      Object.setPrototypeOf
-        ? Object.setPrototypeOf(subClass, superClass)
-        : (subClass.__proto__ = superClass);
+
+    this.position();
   }
 
-  if (typeof TetherBase === "undefined") {
-    throw new Error("You must include the utils.js file before tether.js");
-  }
+  _createClass(TetherClass, [{
+    key: 'getClass',
+    value: function getClass() {
+      var key = arguments.length <= 0 || arguments[0] === undefined ? '' : arguments[0];
+      var classes = this.options.classes;
 
-  var _TetherBase$Utils = TetherBase.Utils;
-  var getScrollParents = _TetherBase$Utils.getScrollParents;
-  var getBounds = _TetherBase$Utils.getBounds;
-  var getOffsetParent = _TetherBase$Utils.getOffsetParent;
-  var extend = _TetherBase$Utils.extend;
-  var addClass = _TetherBase$Utils.addClass;
-  var removeClass = _TetherBase$Utils.removeClass;
-  var updateClasses = _TetherBase$Utils.updateClasses;
-  var defer = _TetherBase$Utils.defer;
-  var flush = _TetherBase$Utils.flush;
-  var getScrollBarSize = _TetherBase$Utils.getScrollBarSize;
-  var removeUtilElements = _TetherBase$Utils.removeUtilElements;
-
-  function within(a, b) {
-    var diff =
-      arguments.length <= 2 || arguments[2] === undefined ? 1 : arguments[2];
-
-    return a + diff >= b && b >= a - diff;
-  }
-
-  var transformKey = (function() {
-    if (typeof document === "undefined") {
-      return "";
-    }
-    var el = document.createElement("div");
-
-    var transforms = [
-      "transform",
-      "WebkitTransform",
-      "OTransform",
-      "MozTransform",
-      "msTransform"
-    ];
-    for (var i = 0; i < transforms.length; ++i) {
-      var key = transforms[i];
-      if (el.style[key] !== undefined) {
+      if (typeof classes !== 'undefined' && classes[key]) {
+        return this.options.classes[key];
+      } else if (this.options.classPrefix) {
+        return this.options.classPrefix + '-' + key;
+      } else {
         return key;
       }
     }
-  })();
+  }, {
+    key: 'setOptions',
+    value: function setOptions(options) {
+      var _this2 = this;
 
-  var tethers = [];
+      var pos = arguments.length <= 1 || arguments[1] === undefined ? true : arguments[1];
 
-  var position = function position() {
-    tethers.forEach(function(tether) {
-      tether.position(false);
-    });
-    flush();
-  };
+      var defaults = {
+        offset: '0 0',
+        targetOffset: '0 0',
+        targetAttachment: 'auto auto',
+        classPrefix: 'tether'
+      };
 
-  function now() {
-    if (
-      typeof performance === "object" &&
-      typeof performance.now === "function"
-    ) {
-      return performance.now();
-    }
-    return +new Date();
-  }
+      this.options = extend(defaults, options);
 
-  (function() {
-    var lastCall = null;
-    var lastDuration = null;
-    var pendingTimeout = null;
+      var _options = this.options;
+      var element = _options.element;
+      var target = _options.target;
+      var targetModifier = _options.targetModifier;
 
-    var tick = function tick() {
-      if (typeof lastDuration !== "undefined" && lastDuration > 16) {
-        // We voluntarily throttle ourselves if we can't manage 60fps
-        lastDuration = Math.min(lastDuration - 16, 250);
+      this.element = element;
+      this.target = target;
+      this.targetModifier = targetModifier;
 
-        // Just in case this is the last event, remember to position just once more
-        pendingTimeout = setTimeout(tick, 250);
-        return;
+      if (this.target === 'viewport') {
+        this.target = document.body;
+        this.targetModifier = 'visible';
+      } else if (this.target === 'scroll-handle') {
+        this.target = document.body;
+        this.targetModifier = 'scroll-handle';
       }
 
-      if (typeof lastCall !== "undefined" && now() - lastCall < 10) {
-        // Some browsers call events a little too frequently, refuse to run more than is reasonable
-        return;
-      }
+      ['element', 'target'].forEach(function (key) {
+        if (typeof _this2[key] === 'undefined') {
+          throw new Error('Tether Error: Both element and target must be defined');
+        }
 
-      if (pendingTimeout != null) {
-        clearTimeout(pendingTimeout);
-        pendingTimeout = null;
-      }
-
-      lastCall = now();
-      position();
-      lastDuration = now() - lastCall;
-    };
-
-    if (
-      typeof window !== "undefined" &&
-      typeof window.addEventListener !== "undefined"
-    ) {
-      ["resize", "scroll", "touchmove"].forEach(function(event) {
-        window.addEventListener(event, tick);
-      });
-    }
-  })();
-
-  var MIRROR_LR = {
-    center: "center",
-    left: "right",
-    right: "left"
-  };
-
-  var MIRROR_TB = {
-    middle: "middle",
-    top: "bottom",
-    bottom: "top"
-  };
-
-  var OFFSET_MAP = {
-    top: 0,
-    left: 0,
-    middle: "50%",
-    center: "50%",
-    bottom: "100%",
-    right: "100%"
-  };
-
-  var autoToFixedAttachment = function autoToFixedAttachment(
-    attachment,
-    relativeToAttachment
-  ) {
-    var left = attachment.left;
-    var top = attachment.top;
-
-    if (left === "auto") {
-      left = MIRROR_LR[relativeToAttachment.left];
-    }
-
-    if (top === "auto") {
-      top = MIRROR_TB[relativeToAttachment.top];
-    }
-
-    return { left: left, top: top };
-  };
-
-  var attachmentToOffset = function attachmentToOffset(attachment) {
-    var left = attachment.left;
-    var top = attachment.top;
-
-    if (typeof OFFSET_MAP[attachment.left] !== "undefined") {
-      left = OFFSET_MAP[attachment.left];
-    }
-
-    if (typeof OFFSET_MAP[attachment.top] !== "undefined") {
-      top = OFFSET_MAP[attachment.top];
-    }
-
-    return { left: left, top: top };
-  };
-
-  function addOffset() {
-    var out = { top: 0, left: 0 };
-
-    for (
-      var _len = arguments.length, offsets = Array(_len), _key = 0;
-      _key < _len;
-      _key++
-    ) {
-      offsets[_key] = arguments[_key];
-    }
-
-    offsets.forEach(function(_ref) {
-      var top = _ref.top;
-      var left = _ref.left;
-
-      if (typeof top === "string") {
-        top = parseFloat(top, 10);
-      }
-      if (typeof left === "string") {
-        left = parseFloat(left, 10);
-      }
-
-      out.top += top;
-      out.left += left;
-    });
-
-    return out;
-  }
-
-  function offsetToPx(offset, size) {
-    if (typeof offset.left === "string" && offset.left.indexOf("%") !== -1) {
-      offset.left = (parseFloat(offset.left, 10) / 100) * size.width;
-    }
-    if (typeof offset.top === "string" && offset.top.indexOf("%") !== -1) {
-      offset.top = (parseFloat(offset.top, 10) / 100) * size.height;
-    }
-
-    return offset;
-  }
-
-  var parseOffset = function parseOffset(value) {
-    var _value$split = value.split(" ");
-
-    var _value$split2 = _slicedToArray(_value$split, 2);
-
-    var top = _value$split2[0];
-    var left = _value$split2[1];
-
-    return { top: top, left: left };
-  };
-  var parseAttachment = parseOffset;
-
-  var TetherClass = (function(_Evented) {
-    _inherits(TetherClass, _Evented);
-
-    function TetherClass(options) {
-      var _this = this;
-
-      _classCallCheck(this, TetherClass);
-
-      _get(
-        Object.getPrototypeOf(TetherClass.prototype),
-        "constructor",
-        this
-      ).call(this);
-      this.position = this.position.bind(this);
-
-      tethers.push(this);
-
-      this.history = [];
-
-      this.setOptions(options, false);
-
-      TetherBase.modules.forEach(function(module) {
-        if (typeof module.initialize !== "undefined") {
-          module.initialize.call(_this);
+        if (typeof _this2[key].jquery !== 'undefined') {
+          _this2[key] = _this2[key][0];
+        } else if (typeof _this2[key] === 'string') {
+          _this2[key] = document.querySelector(_this2[key]);
         }
       });
 
-      this.position();
-    }
-
-    _createClass(TetherClass, [
-      {
-        key: "getClass",
-        value: function getClass() {
-          var key =
-            arguments.length <= 0 || arguments[0] === undefined
-              ? ""
-              : arguments[0];
-          var classes = this.options.classes;
-
-          if (typeof classes !== "undefined" && classes[key]) {
-            return this.options.classes[key];
-          } else if (this.options.classPrefix) {
-            return this.options.classPrefix + "-" + key;
-          } else {
-            return key;
-          }
-        }
-      },
-      {
-        key: "setOptions",
-        value: function setOptions(options) {
-          var _this2 = this;
-
-          var pos =
-            arguments.length <= 1 || arguments[1] === undefined
-              ? true
-              : arguments[1];
-
-          var defaults = {
-            offset: "0 0",
-            targetOffset: "0 0",
-            targetAttachment: "auto auto",
-            classPrefix: "tether"
-          };
-
-          this.options = extend(defaults, options);
-
-          var _options = this.options;
-          var element = _options.element;
-          var target = _options.target;
-          var targetModifier = _options.targetModifier;
-
-          this.element = element;
-          this.target = target;
-          this.targetModifier = targetModifier;
-
-          if (this.target === "viewport") {
-            this.target = document.body;
-            this.targetModifier = "visible";
-          } else if (this.target === "scroll-handle") {
-            this.target = document.body;
-            this.targetModifier = "scroll-handle";
-          }
-
-          ["element", "target"].forEach(function(key) {
-            if (typeof _this2[key] === "undefined") {
-              throw new Error(
-                "Tether Error: Both element and target must be defined"
-              );
-            }
-
-            if (typeof _this2[key].jquery !== "undefined") {
-              _this2[key] = _this2[key][0];
-            } else if (typeof _this2[key] === "string") {
-              _this2[key] = document.querySelector(_this2[key]);
-            }
-          });
-
-          addClass(this.element, this.getClass("element"));
-          if (!(this.options.addTargetClasses === false)) {
-            addClass(this.target, this.getClass("target"));
-          }
-
-          if (!this.options.attachment) {
-            throw new Error("Tether Error: You must provide an attachment");
-          }
-
-          this.targetAttachment = parseAttachment(
-            this.options.targetAttachment
-          );
-          this.attachment = parseAttachment(this.options.attachment);
-          this.offset = parseOffset(this.options.offset);
-          this.targetOffset = parseOffset(this.options.targetOffset);
-
-          if (typeof this.scrollParents !== "undefined") {
-            this.disable();
-          }
-
-          if (this.targetModifier === "scroll-handle") {
-            this.scrollParents = [this.target];
-          } else {
-            this.scrollParents = getScrollParents(this.target);
-          }
-
-          if (!(this.options.enabled === false)) {
-            this.enable(pos);
-          }
-        }
-      },
-      {
-        key: "getTargetBounds",
-        value: function getTargetBounds() {
-          if (typeof this.targetModifier !== "undefined") {
-            if (this.targetModifier === "visible") {
-              if (this.target === document.body) {
-                return {
-                  top: pageYOffset,
-                  left: pageXOffset,
-                  height: innerHeight,
-                  width: innerWidth
-                };
-              } else {
-                var bounds = getBounds(this.target);
-
-                var out = {
-                  height: bounds.height,
-                  width: bounds.width,
-                  top: bounds.top,
-                  left: bounds.left
-                };
-
-                out.height = Math.min(
-                  out.height,
-                  bounds.height - (pageYOffset - bounds.top)
-                );
-                out.height = Math.min(
-                  out.height,
-                  bounds.height -
-                    (bounds.top + bounds.height - (pageYOffset + innerHeight))
-                );
-                out.height = Math.min(innerHeight, out.height);
-                out.height -= 2;
-
-                out.width = Math.min(
-                  out.width,
-                  bounds.width - (pageXOffset - bounds.left)
-                );
-                out.width = Math.min(
-                  out.width,
-                  bounds.width -
-                    (bounds.left + bounds.width - (pageXOffset + innerWidth))
-                );
-                out.width = Math.min(innerWidth, out.width);
-                out.width -= 2;
-
-                if (out.top < pageYOffset) {
-                  out.top = pageYOffset;
-                }
-                if (out.left < pageXOffset) {
-                  out.left = pageXOffset;
-                }
-
-                return out;
-              }
-            } else if (this.targetModifier === "scroll-handle") {
-              var bounds = undefined;
-              var target = this.target;
-              if (target === document.body) {
-                target = document.documentElement;
-
-                bounds = {
-                  left: pageXOffset,
-                  top: pageYOffset,
-                  height: innerHeight,
-                  width: innerWidth
-                };
-              } else {
-                bounds = getBounds(target);
-              }
-
-              var style = getComputedStyle(target);
-
-              var hasBottomScroll =
-                target.scrollWidth > target.clientWidth ||
-                [style.overflow, style.overflowX].indexOf("scroll") >= 0 ||
-                this.target !== document.body;
-
-              var scrollBottom = 0;
-              if (hasBottomScroll) {
-                scrollBottom = 15;
-              }
-
-              var height =
-                bounds.height -
-                parseFloat(style.borderTopWidth) -
-                parseFloat(style.borderBottomWidth) -
-                scrollBottom;
-
-              var out = {
-                width: 15,
-                height: height * 0.975 * (height / target.scrollHeight),
-                left:
-                  bounds.left +
-                  bounds.width -
-                  parseFloat(style.borderLeftWidth) -
-                  15
-              };
-
-              var fitAdj = 0;
-              if (height < 408 && this.target === document.body) {
-                fitAdj =
-                  -0.00011 * Math.pow(height, 2) - 0.00727 * height + 22.58;
-              }
-
-              if (this.target !== document.body) {
-                out.height = Math.max(out.height, 24);
-              }
-
-              var scrollPercentage =
-                this.target.scrollTop / (target.scrollHeight - height);
-              out.top =
-                scrollPercentage * (height - out.height - fitAdj) +
-                bounds.top +
-                parseFloat(style.borderTopWidth);
-
-              if (this.target === document.body) {
-                out.height = Math.max(out.height, 24);
-              }
-
-              return out;
-            }
-          } else {
-            return getBounds(this.target);
-          }
-        }
-      },
-      {
-        key: "clearCache",
-        value: function clearCache() {
-          this._cache = {};
-        }
-      },
-      {
-        key: "cache",
-        value: function cache(k, getter) {
-          // More than one module will often need the same DOM info, so
-          // we keep a cache which is cleared on each position call
-          if (typeof this._cache === "undefined") {
-            this._cache = {};
-          }
-
-          if (typeof this._cache[k] === "undefined") {
-            this._cache[k] = getter.call(this);
-          }
-
-          return this._cache[k];
-        }
-      },
-      {
-        key: "enable",
-        value: function enable() {
-          var _this3 = this;
-
-          var pos =
-            arguments.length <= 0 || arguments[0] === undefined
-              ? true
-              : arguments[0];
-
-          if (!(this.options.addTargetClasses === false)) {
-            addClass(this.target, this.getClass("enabled"));
-          }
-          addClass(this.element, this.getClass("enabled"));
-          this.enabled = true;
-
-          this.scrollParents.forEach(function(parent) {
-            if (parent !== _this3.target.ownerDocument) {
-              parent.addEventListener("scroll", _this3.position);
-            }
-          });
-
-          if (pos) {
-            this.position();
-          }
-        }
-      },
-      {
-        key: "disable",
-        value: function disable() {
-          var _this4 = this;
-
-          removeClass(this.target, this.getClass("enabled"));
-          removeClass(this.element, this.getClass("enabled"));
-          this.enabled = false;
-
-          if (typeof this.scrollParents !== "undefined") {
-            this.scrollParents.forEach(function(parent) {
-              parent.removeEventListener("scroll", _this4.position);
-            });
-          }
-        }
-      },
-      {
-        key: "destroy",
-        value: function destroy() {
-          var _this5 = this;
-
-          this.disable();
-
-          tethers.forEach(function(tether, i) {
-            if (tether === _this5) {
-              tethers.splice(i, 1);
-            }
-          });
-
-          // Remove any elements we were using for convenience from the DOM
-          if (tethers.length === 0) {
-            removeUtilElements();
-          }
-        }
-      },
-      {
-        key: "updateAttachClasses",
-        value: function updateAttachClasses(elementAttach, targetAttach) {
-          var _this6 = this;
-
-          elementAttach = elementAttach || this.attachment;
-          targetAttach = targetAttach || this.targetAttachment;
-          var sides = ["left", "top", "bottom", "right", "middle", "center"];
-
-          if (
-            typeof this._addAttachClasses !== "undefined" &&
-            this._addAttachClasses.length
-          ) {
-            // updateAttachClasses can be called more than once in a position call, so
-            // we need to clean up after ourselves such that when the last defer gets
-            // ran it doesn't add any extra classes from previous calls.
-            this._addAttachClasses.splice(0, this._addAttachClasses.length);
-          }
-
-          if (typeof this._addAttachClasses === "undefined") {
-            this._addAttachClasses = [];
-          }
-          var add = this._addAttachClasses;
-
-          if (elementAttach.top) {
-            add.push(
-              this.getClass("element-attached") + "-" + elementAttach.top
-            );
-          }
-          if (elementAttach.left) {
-            add.push(
-              this.getClass("element-attached") + "-" + elementAttach.left
-            );
-          }
-          if (targetAttach.top) {
-            add.push(this.getClass("target-attached") + "-" + targetAttach.top);
-          }
-          if (targetAttach.left) {
-            add.push(
-              this.getClass("target-attached") + "-" + targetAttach.left
-            );
-          }
-
-          var all = [];
-          sides.forEach(function(side) {
-            all.push(_this6.getClass("element-attached") + "-" + side);
-            all.push(_this6.getClass("target-attached") + "-" + side);
-          });
-
-          defer(function() {
-            if (!(typeof _this6._addAttachClasses !== "undefined")) {
-              return;
-            }
-
-            updateClasses(_this6.element, _this6._addAttachClasses, all);
-            if (!(_this6.options.addTargetClasses === false)) {
-              updateClasses(_this6.target, _this6._addAttachClasses, all);
-            }
-
-            delete _this6._addAttachClasses;
-          });
-        }
-      },
-      {
-        key: "position",
-        value: function position() {
-          var _this7 = this;
-
-          var flushChanges =
-            arguments.length <= 0 || arguments[0] === undefined
-              ? true
-              : arguments[0];
-
-          // flushChanges commits the changes immediately, leave true unless you are positioning multiple
-          // tethers (in which case call Tether.Utils.flush yourself when you're done)
-
-          if (!this.enabled) {
-            return;
-          }
-
-          this.clearCache();
-
-          // Turn 'auto' attachments into the appropriate corner or edge
-          var targetAttachment = autoToFixedAttachment(
-            this.targetAttachment,
-            this.attachment
-          );
-
-          this.updateAttachClasses(this.attachment, targetAttachment);
-
-          var elementPos = this.cache("element-bounds", function() {
-            return getBounds(_this7.element);
-          });
-
-          var width = elementPos.width;
-          var height = elementPos.height;
-
-          if (
-            width === 0 &&
-            height === 0 &&
-            typeof this.lastSize !== "undefined"
-          ) {
-            var _lastSize = this.lastSize;
-
-            // We cache the height and width to make it possible to position elements that are
-            // getting hidden.
-            width = _lastSize.width;
-            height = _lastSize.height;
-          } else {
-            this.lastSize = { width: width, height: height };
-          }
-
-          var targetPos = this.cache("target-bounds", function() {
-            return _this7.getTargetBounds();
-          });
-          var targetSize = targetPos;
-
-          // Get an actual px offset from the attachment
-          var offset = offsetToPx(attachmentToOffset(this.attachment), {
-            width: width,
-            height: height
-          });
-          var targetOffset = offsetToPx(
-            attachmentToOffset(targetAttachment),
-            targetSize
-          );
-
-          var manualOffset = offsetToPx(this.offset, {
-            width: width,
-            height: height
-          });
-          var manualTargetOffset = offsetToPx(this.targetOffset, targetSize);
-
-          // Add the manually provided offset
-          offset = addOffset(offset, manualOffset);
-          targetOffset = addOffset(targetOffset, manualTargetOffset);
-
-          // It's now our goal to make (element position + offset) == (target position + target offset)
-          var left = targetPos.left + targetOffset.left - offset.left;
-          var top = targetPos.top + targetOffset.top - offset.top;
-
-          for (var i = 0; i < TetherBase.modules.length; ++i) {
-            var _module2 = TetherBase.modules[i];
-            var ret = _module2.position.call(this, {
-              left: left,
-              top: top,
-              targetAttachment: targetAttachment,
-              targetPos: targetPos,
-              elementPos: elementPos,
-              offset: offset,
-              targetOffset: targetOffset,
-              manualOffset: manualOffset,
-              manualTargetOffset: manualTargetOffset,
-              scrollbarSize: scrollbarSize,
-              attachment: this.attachment
-            });
-
-            if (ret === false) {
-              return false;
-            } else if (typeof ret === "undefined" || typeof ret !== "object") {
-              continue;
-            } else {
-              top = ret.top;
-              left = ret.left;
-            }
-          }
-
-          // We describe the position three different ways to give the optimizer
-          // a chance to decide the best possible way to position the element
-          // with the fewest repaints.
-          var next = {
-            // It's position relative to the page (absolute positioning when
-            // the element is a child of the body)
-            page: {
-              top: top,
-              left: left
-            },
-
-            // It's position relative to the viewport (fixed positioning)
-            viewport: {
-              top: top - pageYOffset,
-              bottom: pageYOffset - top - height + innerHeight,
-              left: left - pageXOffset,
-              right: pageXOffset - left - width + innerWidth
-            }
-          };
-
-          var doc = this.target.ownerDocument;
-          var win = doc.defaultView;
-
-          var scrollbarSize = undefined;
-          if (win.innerHeight > doc.documentElement.clientHeight) {
-            scrollbarSize = this.cache("scrollbar-size", getScrollBarSize);
-            next.viewport.bottom -= scrollbarSize.height;
-          }
-
-          if (win.innerWidth > doc.documentElement.clientWidth) {
-            scrollbarSize = this.cache("scrollbar-size", getScrollBarSize);
-            next.viewport.right -= scrollbarSize.width;
-          }
-
-          if (
-            ["", "static"].indexOf(doc.body.style.position) === -1 ||
-            ["", "static"].indexOf(doc.body.parentElement.style.position) === -1
-          ) {
-            // Absolute positioning in the body will be relative to the page, not the 'initial containing block'
-            next.page.bottom = doc.body.scrollHeight - top - height;
-            next.page.right = doc.body.scrollWidth - left - width;
-          }
-
-          if (
-            typeof this.options.optimizations !== "undefined" &&
-            this.options.optimizations.moveElement !== false &&
-            !(typeof this.targetModifier !== "undefined")
-          ) {
-            (function() {
-              var offsetParent = _this7.cache(
-                "target-offsetparent",
-                function() {
-                  return getOffsetParent(_this7.target);
-                }
-              );
-              var offsetPosition = _this7.cache(
-                "target-offsetparent-bounds",
-                function() {
-                  return getBounds(offsetParent);
-                }
-              );
-              var offsetParentStyle = getComputedStyle(offsetParent);
-              var offsetParentSize = offsetPosition;
-
-              var offsetBorder = {};
-              ["Top", "Left", "Bottom", "Right"].forEach(function(side) {
-                offsetBorder[side.toLowerCase()] = parseFloat(
-                  offsetParentStyle["border" + side + "Width"]
-                );
-              });
-
-              offsetPosition.right =
-                doc.body.scrollWidth -
-                offsetPosition.left -
-                offsetParentSize.width +
-                offsetBorder.right;
-              offsetPosition.bottom =
-                doc.body.scrollHeight -
-                offsetPosition.top -
-                offsetParentSize.height +
-                offsetBorder.bottom;
-
-              if (
-                next.page.top >= offsetPosition.top + offsetBorder.top &&
-                next.page.bottom >= offsetPosition.bottom
-              ) {
-                if (
-                  next.page.left >= offsetPosition.left + offsetBorder.left &&
-                  next.page.right >= offsetPosition.right
-                ) {
-                  // We're within the visible part of the target's scroll parent
-                  var scrollTop = offsetParent.scrollTop;
-                  var scrollLeft = offsetParent.scrollLeft;
-
-                  // It's position relative to the target's offset parent (absolute positioning when
-                  // the element is moved to be a child of the target's offset parent).
-                  next.offset = {
-                    top:
-                      next.page.top -
-                      offsetPosition.top +
-                      scrollTop -
-                      offsetBorder.top,
-                    left:
-                      next.page.left -
-                      offsetPosition.left +
-                      scrollLeft -
-                      offsetBorder.left
-                  };
-                }
-              }
-            })();
-          }
-
-          // We could also travel up the DOM and try each containing context, rather than only
-          // looking at the body, but we're gonna get diminishing returns.
-
-          this.move(next);
-
-          this.history.unshift(next);
-
-          if (this.history.length > 3) {
-            this.history.pop();
-          }
-
-          if (flushChanges) {
-            flush();
-          }
-
-          return true;
-        }
-
-        // THE ISSUE
-      },
-      {
-        key: "move",
-        value: function move(pos) {
-          var _this8 = this;
-
-          if (!(typeof this.element.parentNode !== "undefined")) {
-            return;
-          }
-
-          var same = {};
-
-          for (var type in pos) {
-            same[type] = {};
-
-            for (var key in pos[type]) {
-              var found = false;
-
-              for (var i = 0; i < this.history.length; ++i) {
-                var point = this.history[i];
-                if (
-                  typeof point[type] !== "undefined" &&
-                  !within(point[type][key], pos[type][key])
-                ) {
-                  found = true;
-                  break;
-                }
-              }
-
-              if (!found) {
-                same[type][key] = true;
-              }
-            }
-          }
-
-          var css = { top: "", left: "", right: "", bottom: "" };
-
-          var transcribe = function transcribe(_same, _pos) {
-            var hasOptimizations =
-              typeof _this8.options.optimizations !== "undefined";
-            var gpu = hasOptimizations
-              ? _this8.options.optimizations.gpu
-              : null;
-            if (gpu !== false) {
-              var yPos = undefined,
-                xPos = undefined;
-              if (_same.top) {
-                css.top = 0;
-                yPos = _pos.top;
-              } else {
-                css.bottom = 0;
-                yPos = -_pos.bottom;
-              }
-
-              if (_same.left) {
-                css.left = 0;
-                xPos = _pos.left;
-              } else {
-                css.right = 0;
-                xPos = -_pos.right;
-              }
-
-              if (
-                typeof window.devicePixelRatio === "number" &&
-                devicePixelRatio % 1 === 0
-              ) {
-                xPos = Math.round(xPos * devicePixelRatio) / devicePixelRatio;
-                yPos = Math.round(yPos * devicePixelRatio) / devicePixelRatio;
-              }
-
-              css[transformKey] =
-                "translateX(" + xPos + "px) translateY(" + yPos + "px)";
-
-              if (transformKey !== "msTransform") {
-                // The Z transform will keep this in the GPU (faster, and prevents artifacts),
-                // but IE9 doesn't support 3d transforms and will choke.
-                css[transformKey] += " translateZ(0)";
-              }
-            } else {
-              if (_same.top) {
-                css.top = _pos.top + "px";
-              } else {
-                css.bottom = _pos.bottom + "px";
-              }
-
-              if (_same.left) {
-                css.left = _pos.left + "px";
-              } else {
-                css.right = _pos.right + "px";
-              }
-            }
-          };
-
-          var moved = false;
-          if (
-            (same.page.top || same.page.bottom) &&
-            (same.page.left || same.page.right)
-          ) {
-            css.position = "absolute";
-            transcribe(same.page, pos.page);
-          } else if (
-            (same.viewport.top || same.viewport.bottom) &&
-            (same.viewport.left || same.viewport.right)
-          ) {
-            css.position = "fixed";
-            transcribe(same.viewport, pos.viewport);
-          } else if (
-            typeof same.offset !== "undefined" &&
-            same.offset.top &&
-            same.offset.left
-          ) {
-            (function() {
-              css.position = "absolute";
-              var offsetParent = _this8.cache(
-                "target-offsetparent",
-                function() {
-                  return getOffsetParent(_this8.target);
-                }
-              );
-
-              if (getOffsetParent(_this8.element) !== offsetParent) {
-                defer(function() {
-                  _this8.element.parentNode.removeChild(_this8.element);
-                  offsetParent.appendChild(_this8.element);
-                });
-              }
-
-              transcribe(same.offset, pos.offset);
-              moved = true;
-            })();
-          } else {
-            css.position = "absolute";
-            transcribe({ top: true, left: true }, pos.page);
-          }
-
-          if (!moved) {
-            if (this.options.bodyElement) {
-              if (this.element.parentNode !== this.options.bodyElement) {
-                this.options.bodyElement.appendChild(this.element);
-              }
-            } else {
-              var isFullscreenElement = function isFullscreenElement(e) {
-                var d = e.ownerDocument;
-                var fe =
-                  d.fullscreenElement ||
-                  d.webkitFullscreenElement ||
-                  d.mozFullScreenElement ||
-                  d.msFullscreenElement;
-                return fe === e;
-              };
-
-              var offsetParentIsBody = true;
-
-              var currentNode = this.element.parentNode;
-              while (
-                currentNode &&
-                currentNode.nodeType === 1 &&
-                currentNode.tagName !== "BODY" &&
-                !isFullscreenElement(currentNode)
-              ) {
-                if (getComputedStyle(currentNode).position !== "static") {
-                  offsetParentIsBody = false;
-                  break;
-                }
-
-                currentNode = currentNode.parentNode;
-              }
-
-              if (!offsetParentIsBody) {
-                this.element.parentNode.removeChild(this.element);
-                this.element.ownerDocument.body.appendChild(this.element);
-              }
-            }
-          }
-
-          // Any css change will trigger a repaint, so let's avoid one if nothing changed
-          var writeCSS = {};
-          var write = false;
-          for (var key in css) {
-            var val = css[key];
-            var elVal = this.element.style[key];
-
-            if (elVal !== val) {
-              write = true;
-              writeCSS[key] = val;
-            }
-          }
-
-          if (write) {
-            defer(function() {
-              extend(_this8.element.style, writeCSS);
-              _this8.trigger("repositioned");
-            });
-          }
-        }
+      addClass(this.element, this.getClass('element'));
+      if (!(this.options.addTargetClasses === false)) {
+        addClass(this.target, this.getClass('target'));
       }
-    ]);
 
-    return TetherClass;
-  })(Evented);
-
-  TetherClass.modules = [];
-
-  TetherBase.position = position;
-
-  var Tether = extend(TetherClass, TetherBase);
-
-  var _slicedToArray = (function() {
-    function sliceIterator(arr, i) {
-      var _arr = [];
-      var _n = true;
-      var _d = false;
-      var _e = undefined;
-      try {
-        for (
-          var _i = arr[Symbol.iterator](), _s;
-          !(_n = (_s = _i.next()).done);
-          _n = true
-        ) {
-          _arr.push(_s.value);
-          if (i && _arr.length === i) break;
-        }
-      } catch (err) {
-        _d = true;
-        _e = err;
-      } finally {
-        try {
-          if (!_n && _i["return"]) _i["return"]();
-        } finally {
-          if (_d) throw _e;
-        }
+      if (!this.options.attachment) {
+        throw new Error('Tether Error: You must provide an attachment');
       }
-      return _arr;
-    }
-    return function(arr, i) {
-      if (Array.isArray(arr)) {
-        return arr;
-      } else if (Symbol.iterator in Object(arr)) {
-        return sliceIterator(arr, i);
+
+      this.targetAttachment = parseAttachment(this.options.targetAttachment);
+      this.attachment = parseAttachment(this.options.attachment);
+      this.offset = parseOffset(this.options.offset);
+      this.targetOffset = parseOffset(this.options.targetOffset);
+
+      if (typeof this.scrollParents !== 'undefined') {
+        this.disable();
+      }
+
+      if (this.targetModifier === 'scroll-handle') {
+        this.scrollParents = [this.target];
       } else {
-        throw new TypeError(
-          "Invalid attempt to destructure non-iterable instance"
-        );
+        this.scrollParents = getScrollParents(this.target);
       }
-    };
-  })();
 
-  var _TetherBase$Utils = TetherBase.Utils;
-  var getBounds = _TetherBase$Utils.getBounds;
-  var extend = _TetherBase$Utils.extend;
-  var updateClasses = _TetherBase$Utils.updateClasses;
-  var defer = _TetherBase$Utils.defer;
-
-  var BOUNDS_FORMAT = ["left", "top", "right", "bottom"];
-
-  function getBoundingRect(tether, to) {
-    if (to === "scrollParent") {
-      to = tether.scrollParents[0];
-    } else if (to === "window") {
-      to = [
-        pageXOffset,
-        pageYOffset,
-        innerWidth + pageXOffset,
-        innerHeight + pageYOffset
-      ];
+      if (!(this.options.enabled === false)) {
+        this.enable(pos);
+      }
     }
-
-    if (to === document) {
-      to = to.documentElement;
-    }
-
-    if (typeof to.nodeType !== "undefined") {
-      (function() {
-        var node = to;
-        var size = getBounds(to);
-        var pos = size;
-        var style = getComputedStyle(to);
-
-        to = [pos.left, pos.top, size.width + pos.left, size.height + pos.top];
-
-        // Account any parent Frames scroll offset
-        if (node.ownerDocument !== document) {
-          var win = node.ownerDocument.defaultView;
-          to[0] += win.pageXOffset;
-          to[1] += win.pageYOffset;
-          to[2] += win.pageXOffset;
-          to[3] += win.pageYOffset;
-        }
-
-        BOUNDS_FORMAT.forEach(function(side, i) {
-          side = side[0].toUpperCase() + side.substr(1);
-          if (side === "Top" || side === "Left") {
-            to[i] += parseFloat(style["border" + side + "Width"]);
+  }, {
+    key: 'getTargetBounds',
+    value: function getTargetBounds() {
+      if (typeof this.targetModifier !== 'undefined') {
+        if (this.targetModifier === 'visible') {
+          if (this.target === document.body) {
+            return { top: pageYOffset, left: pageXOffset, height: innerHeight, width: innerWidth };
           } else {
-            to[i] -= parseFloat(style["border" + side + "Width"]);
+            var bounds = getBounds(this.target);
+
+            var out = {
+              height: bounds.height,
+              width: bounds.width,
+              top: bounds.top,
+              left: bounds.left
+            };
+
+            out.height = Math.min(out.height, bounds.height - (pageYOffset - bounds.top));
+            out.height = Math.min(out.height, bounds.height - (bounds.top + bounds.height - (pageYOffset + innerHeight)));
+            out.height = Math.min(innerHeight, out.height);
+            out.height -= 2;
+
+            out.width = Math.min(out.width, bounds.width - (pageXOffset - bounds.left));
+            out.width = Math.min(out.width, bounds.width - (bounds.left + bounds.width - (pageXOffset + innerWidth)));
+            out.width = Math.min(innerWidth, out.width);
+            out.width -= 2;
+
+            if (out.top < pageYOffset) {
+              out.top = pageYOffset;
+            }
+            if (out.left < pageXOffset) {
+              out.left = pageXOffset;
+            }
+
+            return out;
           }
-        });
-      })();
+        } else if (this.targetModifier === 'scroll-handle') {
+          var bounds = undefined;
+          var target = this.target;
+          if (target === document.body) {
+            target = document.documentElement;
+
+            bounds = {
+              left: pageXOffset,
+              top: pageYOffset,
+              height: innerHeight,
+              width: innerWidth
+            };
+          } else {
+            bounds = getBounds(target);
+          }
+
+          var style = getComputedStyle(target);
+
+          var hasBottomScroll = target.scrollWidth > target.clientWidth || [style.overflow, style.overflowX].indexOf('scroll') >= 0 || this.target !== document.body;
+
+          var scrollBottom = 0;
+          if (hasBottomScroll) {
+            scrollBottom = 15;
+          }
+
+          var height = bounds.height - parseFloat(style.borderTopWidth) - parseFloat(style.borderBottomWidth) - scrollBottom;
+
+          var out = {
+            width: 15,
+            height: height * 0.975 * (height / target.scrollHeight),
+            left: bounds.left + bounds.width - parseFloat(style.borderLeftWidth) - 15
+          };
+
+          var fitAdj = 0;
+          if (height < 408 && this.target === document.body) {
+            fitAdj = -0.00011 * Math.pow(height, 2) - 0.00727 * height + 22.58;
+          }
+
+          if (this.target !== document.body) {
+            out.height = Math.max(out.height, 24);
+          }
+
+          var scrollPercentage = this.target.scrollTop / (target.scrollHeight - height);
+          out.top = scrollPercentage * (height - out.height - fitAdj) + bounds.top + parseFloat(style.borderTopWidth);
+
+          if (this.target === document.body) {
+            out.height = Math.max(out.height, 24);
+          }
+
+          return out;
+        }
+      } else {
+        return getBounds(this.target);
+      }
     }
-
-    return to;
-  }
-
-  TetherBase.modules.push({
-    position: function position(_ref) {
-      var _this = this;
-
-      var top = _ref.top;
-      var left = _ref.left;
-      var targetAttachment = _ref.targetAttachment;
-
-      if (!this.options.constraints) {
-        return true;
+  }, {
+    key: 'clearCache',
+    value: function clearCache() {
+      this._cache = {};
+    }
+  }, {
+    key: 'cache',
+    value: function cache(k, getter) {
+      // More than one module will often need the same DOM info, so
+      // we keep a cache which is cleared on each position call
+      if (typeof this._cache === 'undefined') {
+        this._cache = {};
       }
 
-      var _cache = this.cache("element-bounds", function() {
-        return getBounds(_this.element);
+      if (typeof this._cache[k] === 'undefined') {
+        this._cache[k] = getter.call(this);
+      }
+
+      return this._cache[k];
+    }
+  }, {
+    key: 'enable',
+    value: function enable() {
+      var _this3 = this;
+
+      var pos = arguments.length <= 0 || arguments[0] === undefined ? true : arguments[0];
+
+      if (!(this.options.addTargetClasses === false)) {
+        addClass(this.target, this.getClass('enabled'));
+      }
+      addClass(this.element, this.getClass('enabled'));
+      this.enabled = true;
+
+      this.scrollParents.forEach(function (parent) {
+        if (parent !== _this3.target.ownerDocument) {
+          parent.addEventListener('scroll', _this3.position);
+        }
       });
 
-      var height = _cache.height;
-      var width = _cache.width;
+      if (pos) {
+        this.position();
+      }
+    }
+  }, {
+    key: 'disable',
+    value: function disable() {
+      var _this4 = this;
 
-      if (width === 0 && height === 0 && typeof this.lastSize !== "undefined") {
+      removeClass(this.target, this.getClass('enabled'));
+      removeClass(this.element, this.getClass('enabled'));
+      this.enabled = false;
+
+      if (typeof this.scrollParents !== 'undefined') {
+        this.scrollParents.forEach(function (parent) {
+          parent.removeEventListener('scroll', _this4.position);
+        });
+      }
+    }
+  }, {
+    key: 'destroy',
+    value: function destroy() {
+      var _this5 = this;
+
+      this.disable();
+
+      tethers.forEach(function (tether, i) {
+        if (tether === _this5) {
+          tethers.splice(i, 1);
+        }
+      });
+
+      // Remove any elements we were using for convenience from the DOM
+      if (tethers.length === 0) {
+        removeUtilElements();
+      }
+    }
+  }, {
+    key: 'updateAttachClasses',
+    value: function updateAttachClasses(elementAttach, targetAttach) {
+      var _this6 = this;
+
+      elementAttach = elementAttach || this.attachment;
+      targetAttach = targetAttach || this.targetAttachment;
+      var sides = ['left', 'top', 'bottom', 'right', 'middle', 'center'];
+
+      if (typeof this._addAttachClasses !== 'undefined' && this._addAttachClasses.length) {
+        // updateAttachClasses can be called more than once in a position call, so
+        // we need to clean up after ourselves such that when the last defer gets
+        // ran it doesn't add any extra classes from previous calls.
+        this._addAttachClasses.splice(0, this._addAttachClasses.length);
+      }
+
+      if (typeof this._addAttachClasses === 'undefined') {
+        this._addAttachClasses = [];
+      }
+      var add = this._addAttachClasses;
+
+      if (elementAttach.top) {
+        add.push(this.getClass('element-attached') + '-' + elementAttach.top);
+      }
+      if (elementAttach.left) {
+        add.push(this.getClass('element-attached') + '-' + elementAttach.left);
+      }
+      if (targetAttach.top) {
+        add.push(this.getClass('target-attached') + '-' + targetAttach.top);
+      }
+      if (targetAttach.left) {
+        add.push(this.getClass('target-attached') + '-' + targetAttach.left);
+      }
+
+      var all = [];
+      sides.forEach(function (side) {
+        all.push(_this6.getClass('element-attached') + '-' + side);
+        all.push(_this6.getClass('target-attached') + '-' + side);
+      });
+
+      defer(function () {
+        if (!(typeof _this6._addAttachClasses !== 'undefined')) {
+          return;
+        }
+
+        updateClasses(_this6.element, _this6._addAttachClasses, all);
+        if (!(_this6.options.addTargetClasses === false)) {
+          updateClasses(_this6.target, _this6._addAttachClasses, all);
+        }
+
+        delete _this6._addAttachClasses;
+      });
+    }
+  }, {
+    key: 'position',
+    value: function position() {
+      var _this7 = this;
+
+      var flushChanges = arguments.length <= 0 || arguments[0] === undefined ? true : arguments[0];
+
+      // flushChanges commits the changes immediately, leave true unless you are positioning multiple
+      // tethers (in which case call Tether.Utils.flush yourself when you're done)
+
+      if (!this.enabled) {
+        return;
+      }
+
+      this.clearCache();
+
+      // Turn 'auto' attachments into the appropriate corner or edge
+      var targetAttachment = autoToFixedAttachment(this.targetAttachment, this.attachment);
+
+      this.updateAttachClasses(this.attachment, targetAttachment);
+
+      var elementPos = this.cache('element-bounds', function () {
+        return getBounds(_this7.element);
+      });
+
+      var width = elementPos.width;
+      var height = elementPos.height;
+
+      if (width === 0 && height === 0 && typeof this.lastSize !== 'undefined') {
         var _lastSize = this.lastSize;
 
-        // Handle the item getting hidden as a result of our positioning without glitching
-        // the classes in and out
+        // We cache the height and width to make it possible to position elements that are
+        // getting hidden.
         width = _lastSize.width;
         height = _lastSize.height;
+      } else {
+        this.lastSize = { width: width, height: height };
       }
 
-      var targetSize = this.cache("target-bounds", function() {
-        return _this.getTargetBounds();
+      var targetPos = this.cache('target-bounds', function () {
+        return _this7.getTargetBounds();
       });
+      var targetSize = targetPos;
 
-      var targetHeight = targetSize.height;
-      var targetWidth = targetSize.width;
+      // Get an actual px offset from the attachment
+      var offset = offsetToPx(attachmentToOffset(this.attachment), { width: width, height: height });
+      var targetOffset = offsetToPx(attachmentToOffset(targetAttachment), targetSize);
 
-      var allClasses = [
-        this.getClass("pinned"),
-        this.getClass("out-of-bounds")
-      ];
+      var manualOffset = offsetToPx(this.offset, { width: width, height: height });
+      var manualTargetOffset = offsetToPx(this.targetOffset, targetSize);
 
-      this.options.constraints.forEach(function(constraint) {
-        var outOfBoundsClass = constraint.outOfBoundsClass;
-        var pinnedClass = constraint.pinnedClass;
+      // Add the manually provided offset
+      offset = addOffset(offset, manualOffset);
+      targetOffset = addOffset(targetOffset, manualTargetOffset);
 
-        if (outOfBoundsClass) {
-          allClasses.push(outOfBoundsClass);
-        }
-        if (pinnedClass) {
-          allClasses.push(pinnedClass);
-        }
-      });
+      // It's now our goal to make (element position + offset) == (target position + target offset)
+      var left = targetPos.left + targetOffset.left - offset.left;
+      var top = targetPos.top + targetOffset.top - offset.top;
 
-      allClasses.forEach(function(cls) {
-        ["left", "top", "right", "bottom"].forEach(function(side) {
-          allClasses.push(cls + "-" + side);
+      for (var i = 0; i < TetherBase.modules.length; ++i) {
+        var _module2 = TetherBase.modules[i];
+        var ret = _module2.position.call(this, {
+          left: left,
+          top: top,
+          targetAttachment: targetAttachment,
+          targetPos: targetPos,
+          elementPos: elementPos,
+          offset: offset,
+          targetOffset: targetOffset,
+          manualOffset: manualOffset,
+          manualTargetOffset: manualTargetOffset,
+          scrollbarSize: scrollbarSize,
+          attachment: this.attachment
         });
-      });
 
-      var addClasses = [];
-
-      var tAttachment = extend({}, targetAttachment);
-      var eAttachment = extend({}, this.attachment);
-
-      this.options.constraints.forEach(function(constraint) {
-        var to = constraint.to;
-        var attachment = constraint.attachment;
-        var pin = constraint.pin;
-
-        if (typeof attachment === "undefined") {
-          attachment = "";
-        }
-
-        var changeAttachX = undefined,
-          changeAttachY = undefined;
-        if (attachment.indexOf(" ") >= 0) {
-          var _attachment$split = attachment.split(" ");
-
-          var _attachment$split2 = _slicedToArray(_attachment$split, 2);
-
-          changeAttachY = _attachment$split2[0];
-          changeAttachX = _attachment$split2[1];
+        if (ret === false) {
+          return false;
+        } else if (typeof ret === 'undefined' || typeof ret !== 'object') {
+          continue;
         } else {
-          changeAttachX = changeAttachY = attachment;
+          top = ret.top;
+          left = ret.left;
         }
+      }
 
-        var bounds = getBoundingRect(_this, to);
+      // We describe the position three different ways to give the optimizer
+      // a chance to decide the best possible way to position the element
+      // with the fewest repaints.
+      var next = {
+        // It's position relative to the page (absolute positioning when
+        // the element is a child of the body)
+        page: {
+          top: top,
+          left: left
+        },
 
-        if (changeAttachY === "target" || changeAttachY === "both") {
-          if (top < bounds[1] && tAttachment.top === "top") {
-            top += targetHeight;
-            tAttachment.top = "bottom";
-          }
-
-          if (top + height > bounds[3] && tAttachment.top === "bottom") {
-            top -= targetHeight;
-            tAttachment.top = "top";
-          }
+        // It's position relative to the viewport (fixed positioning)
+        viewport: {
+          top: top - pageYOffset,
+          bottom: pageYOffset - top - height + innerHeight,
+          left: left - pageXOffset,
+          right: pageXOffset - left - width + innerWidth
         }
+      };
 
-        if (changeAttachY === "together") {
-          if (tAttachment.top === "top") {
-            if (eAttachment.top === "bottom" && top < bounds[1]) {
-              top += targetHeight;
-              tAttachment.top = "bottom";
+      var doc = this.target.ownerDocument;
+      var win = doc.defaultView;
 
-              top += height;
-              eAttachment.top = "top";
-            } else if (
-              eAttachment.top === "top" &&
-              top + height > bounds[3] &&
-              top - (height - targetHeight) >= bounds[1]
-            ) {
-              top -= height - targetHeight;
-              tAttachment.top = "bottom";
+      var scrollbarSize = undefined;
+      if (win.innerHeight > doc.documentElement.clientHeight) {
+        scrollbarSize = this.cache('scrollbar-size', getScrollBarSize);
+        next.viewport.bottom -= scrollbarSize.height;
+      }
 
-              eAttachment.top = "bottom";
-            }
-          }
+      if (win.innerWidth > doc.documentElement.clientWidth) {
+        scrollbarSize = this.cache('scrollbar-size', getScrollBarSize);
+        next.viewport.right -= scrollbarSize.width;
+      }
 
-          if (tAttachment.top === "bottom") {
-            if (eAttachment.top === "top" && top + height > bounds[3]) {
-              top -= targetHeight;
-              tAttachment.top = "top";
+      if (['', 'static'].indexOf(doc.body.style.position) === -1 || ['', 'static'].indexOf(doc.body.parentElement.style.position) === -1) {
+        // Absolute positioning in the body will be relative to the page, not the 'initial containing block'
+        next.page.bottom = doc.body.scrollHeight - top - height;
+        next.page.right = doc.body.scrollWidth - left - width;
+      }
 
-              top -= height;
-              eAttachment.top = "bottom";
-            } else if (
-              eAttachment.top === "bottom" &&
-              top < bounds[1] &&
-              top + (height * 2 - targetHeight) <= bounds[3]
-            ) {
-              top += height - targetHeight;
-              tAttachment.top = "top";
-
-              eAttachment.top = "top";
-            }
-          }
-
-          if (tAttachment.top === "middle") {
-            if (top + height > bounds[3] && eAttachment.top === "top") {
-              top -= height;
-              eAttachment.top = "bottom";
-            } else if (top < bounds[1] && eAttachment.top === "bottom") {
-              top += height;
-              eAttachment.top = "top";
-            }
-          }
-        }
-
-        if (changeAttachX === "target" || changeAttachX === "both") {
-          if (left < bounds[0] && tAttachment.left === "left") {
-            left += targetWidth;
-            tAttachment.left = "right";
-          }
-
-          if (left + width > bounds[2] && tAttachment.left === "right") {
-            left -= targetWidth;
-            tAttachment.left = "left";
-          }
-        }
-
-        if (changeAttachX === "together") {
-          if (left < bounds[0] && tAttachment.left === "left") {
-            if (eAttachment.left === "right") {
-              left += targetWidth;
-              tAttachment.left = "right";
-
-              left += width;
-              eAttachment.left = "left";
-            } else if (eAttachment.left === "left") {
-              left += targetWidth;
-              tAttachment.left = "right";
-
-              left -= width;
-              eAttachment.left = "right";
-            }
-          } else if (left + width > bounds[2] && tAttachment.left === "right") {
-            if (eAttachment.left === "left") {
-              left -= targetWidth;
-              tAttachment.left = "left";
-
-              left -= width;
-              eAttachment.left = "right";
-            } else if (eAttachment.left === "right") {
-              left -= targetWidth;
-              tAttachment.left = "left";
-
-              left += width;
-              eAttachment.left = "left";
-            }
-          } else if (tAttachment.left === "center") {
-            if (left + width > bounds[2] && eAttachment.left === "left") {
-              left -= width;
-              eAttachment.left = "right";
-            } else if (left < bounds[0] && eAttachment.left === "right") {
-              left += width;
-              eAttachment.left = "left";
-            }
-          }
-        }
-
-        if (changeAttachY === "element" || changeAttachY === "both") {
-          if (top < bounds[1] && eAttachment.top === "bottom") {
-            top += height;
-            eAttachment.top = "top";
-          }
-
-          if (top + height > bounds[3] && eAttachment.top === "top") {
-            top -= height;
-            eAttachment.top = "bottom";
-          }
-        }
-
-        if (changeAttachX === "element" || changeAttachX === "both") {
-          if (left < bounds[0]) {
-            if (eAttachment.left === "right") {
-              left += width;
-              eAttachment.left = "left";
-            } else if (eAttachment.left === "center") {
-              left += width / 2;
-              eAttachment.left = "left";
-            }
-          }
-
-          if (left + width > bounds[2]) {
-            if (eAttachment.left === "left") {
-              left -= width;
-              eAttachment.left = "right";
-            } else if (eAttachment.left === "center") {
-              left -= width / 2;
-              eAttachment.left = "right";
-            }
-          }
-        }
-
-        if (typeof pin === "string") {
-          pin = pin.split(",").map(function(p) {
-            return p.trim();
+      if (typeof this.options.optimizations !== 'undefined' && this.options.optimizations.moveElement !== false && !(typeof this.targetModifier !== 'undefined')) {
+        (function () {
+          var offsetParent = _this7.cache('target-offsetparent', function () {
+            return getOffsetParent(_this7.target);
           });
-        } else if (pin === true) {
-          pin = ["top", "left", "right", "bottom"];
+          var offsetPosition = _this7.cache('target-offsetparent-bounds', function () {
+            return getBounds(offsetParent);
+          });
+          var offsetParentStyle = getComputedStyle(offsetParent);
+          var offsetParentSize = offsetPosition;
+
+          var offsetBorder = {};
+          ['Top', 'Left', 'Bottom', 'Right'].forEach(function (side) {
+            offsetBorder[side.toLowerCase()] = parseFloat(offsetParentStyle['border' + side + 'Width']);
+          });
+
+          offsetPosition.right = doc.body.scrollWidth - offsetPosition.left - offsetParentSize.width + offsetBorder.right;
+          offsetPosition.bottom = doc.body.scrollHeight - offsetPosition.top - offsetParentSize.height + offsetBorder.bottom;
+
+          if (next.page.top >= offsetPosition.top + offsetBorder.top && next.page.bottom >= offsetPosition.bottom) {
+            if (next.page.left >= offsetPosition.left + offsetBorder.left && next.page.right >= offsetPosition.right) {
+              // We're within the visible part of the target's scroll parent
+              var scrollTop = offsetParent.scrollTop;
+              var scrollLeft = offsetParent.scrollLeft;
+
+              // It's position relative to the target's offset parent (absolute positioning when
+              // the element is moved to be a child of the target's offset parent).
+              next.offset = {
+                top: next.page.top - offsetPosition.top + scrollTop - offsetBorder.top,
+                left: next.page.left - offsetPosition.left + scrollLeft - offsetBorder.left
+              };
+            }
+          }
+        })();
+      }
+
+      // We could also travel up the DOM and try each containing context, rather than only
+      // looking at the body, but we're gonna get diminishing returns.
+
+      this.move(next);
+
+      this.history.unshift(next);
+
+      if (this.history.length > 3) {
+        this.history.pop();
+      }
+
+      if (flushChanges) {
+        flush();
+      }
+
+      return true;
+    }
+
+    // THE ISSUE
+  }, {
+    key: 'move',
+    value: function move(pos) {
+      var _this8 = this;
+
+      if (!(typeof this.element.parentNode !== 'undefined')) {
+        return;
+      }
+
+      var same = {};
+
+      for (var type in pos) {
+        same[type] = {};
+
+        for (var key in pos[type]) {
+          var found = false;
+
+          for (var i = 0; i < this.history.length; ++i) {
+            var point = this.history[i];
+            if (typeof point[type] !== 'undefined' && !within(point[type][key], pos[type][key])) {
+              found = true;
+              break;
+            }
+          }
+
+          if (!found) {
+            same[type][key] = true;
+          }
+        }
+      }
+
+      var css = { top: '', left: '', right: '', bottom: '' };
+
+      var transcribe = function transcribe(_same, _pos) {
+        var hasOptimizations = typeof _this8.options.optimizations !== 'undefined';
+        var gpu = hasOptimizations ? _this8.options.optimizations.gpu : null;
+        if (gpu !== false) {
+          var yPos = undefined,
+              xPos = undefined;
+          if (_same.top) {
+            css.top = 0;
+            yPos = _pos.top;
+          } else {
+            css.bottom = 0;
+            yPos = -_pos.bottom;
+          }
+
+          if (_same.left) {
+            css.left = 0;
+            xPos = _pos.left;
+          } else {
+            css.right = 0;
+            xPos = -_pos.right;
+          }
+
+          if (typeof window.devicePixelRatio === 'number' && devicePixelRatio % 1 === 0) {
+            xPos = Math.round(xPos * devicePixelRatio) / devicePixelRatio;
+            yPos = Math.round(yPos * devicePixelRatio) / devicePixelRatio;
+          }
+
+          css[transformKey] = 'translateX(' + xPos + 'px) translateY(' + yPos + 'px)';
+
+          if (transformKey !== 'msTransform') {
+            // The Z transform will keep this in the GPU (faster, and prevents artifacts),
+            // but IE9 doesn't support 3d transforms and will choke.
+            css[transformKey] += " translateZ(0)";
+          }
+        } else {
+          if (_same.top) {
+            css.top = _pos.top + 'px';
+          } else {
+            css.bottom = _pos.bottom + 'px';
+          }
+
+          if (_same.left) {
+            css.left = _pos.left + 'px';
+          } else {
+            css.right = _pos.right + 'px';
+          }
+        }
+      };
+
+      var moved = false;
+      if ((same.page.top || same.page.bottom) && (same.page.left || same.page.right)) {
+        css.position = 'absolute';
+        transcribe(same.page, pos.page);
+      } else if ((same.viewport.top || same.viewport.bottom) && (same.viewport.left || same.viewport.right)) {
+        css.position = 'fixed';
+        transcribe(same.viewport, pos.viewport);
+      } else if (typeof same.offset !== 'undefined' && same.offset.top && same.offset.left) {
+        (function () {
+          css.position = 'absolute';
+          var offsetParent = _this8.cache('target-offsetparent', function () {
+            return getOffsetParent(_this8.target);
+          });
+
+          if (getOffsetParent(_this8.element) !== offsetParent) {
+            defer(function () {
+              _this8.element.parentNode.removeChild(_this8.element);
+              offsetParent.appendChild(_this8.element);
+            });
+          }
+
+          transcribe(same.offset, pos.offset);
+          moved = true;
+        })();
+      } else {
+        css.position = 'absolute';
+        transcribe({ top: true, left: true }, pos.page);
+      }
+
+      if (!moved) {
+        if (this.options.bodyElement) {
+          if (this.element.parentNode !== this.options.bodyElement) {
+            this.options.bodyElement.appendChild(this.element);
+          }
+        } else {
+          var isFullscreenElement = function isFullscreenElement(e) {
+            var d = e.ownerDocument;
+            var fe = d.fullscreenElement || d.webkitFullscreenElement || d.mozFullScreenElement || d.msFullscreenElement;
+            return fe === e;
+          };
+
+          var offsetParentIsBody = true;
+
+          var currentNode = this.element.parentNode;
+          while (currentNode && currentNode.nodeType === 1 && currentNode.tagName !== 'BODY' && !isFullscreenElement(currentNode)) {
+            if (getComputedStyle(currentNode).position !== 'static') {
+              offsetParentIsBody = false;
+              break;
+            }
+
+            currentNode = currentNode.parentNode;
+          }
+
+          if (!offsetParentIsBody) {
+            this.element.parentNode.removeChild(this.element);
+            this.element.ownerDocument.body.appendChild(this.element);
+          }
+        }
+      }
+
+      // Any css change will trigger a repaint, so let's avoid one if nothing changed
+      var writeCSS = {};
+      var write = false;
+      for (var key in css) {
+        var val = css[key];
+        var elVal = this.element.style[key];
+
+        if (elVal !== val) {
+          write = true;
+          writeCSS[key] = val;
+        }
+      }
+
+      if (write) {
+        defer(function () {
+          extend(_this8.element.style, writeCSS);
+          _this8.trigger('repositioned');
+        });
+      }
+    }
+  }]);
+
+  return TetherClass;
+})(Evented);
+
+TetherClass.modules = [];
+
+TetherBase.position = position;
+
+var Tether = extend(TetherClass, TetherBase);
+
+var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i['return']) _i['return'](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError('Invalid attempt to destructure non-iterable instance'); } }; })();
+
+var _TetherBase$Utils = TetherBase.Utils;
+var getBounds = _TetherBase$Utils.getBounds;
+var extend = _TetherBase$Utils.extend;
+var updateClasses = _TetherBase$Utils.updateClasses;
+var defer = _TetherBase$Utils.defer;
+
+var BOUNDS_FORMAT = ['left', 'top', 'right', 'bottom'];
+
+function getBoundingRect(tether, to) {
+  if (to === 'scrollParent') {
+    to = tether.scrollParents[0];
+  } else if (to === 'window') {
+    to = [pageXOffset, pageYOffset, innerWidth + pageXOffset, innerHeight + pageYOffset];
+  }
+
+  if (to === document) {
+    to = to.documentElement;
+  }
+
+  if (typeof to.nodeType !== 'undefined') {
+    (function () {
+      var node = to;
+      var size = getBounds(to);
+      var pos = size;
+      var style = getComputedStyle(to);
+
+      to = [pos.left, pos.top, size.width + pos.left, size.height + pos.top];
+
+      // Account any parent Frames scroll offset
+      if (node.ownerDocument !== document) {
+        var win = node.ownerDocument.defaultView;
+        to[0] += win.pageXOffset;
+        to[1] += win.pageYOffset;
+        to[2] += win.pageXOffset;
+        to[3] += win.pageYOffset;
+      }
+
+      BOUNDS_FORMAT.forEach(function (side, i) {
+        side = side[0].toUpperCase() + side.substr(1);
+        if (side === 'Top' || side === 'Left') {
+          to[i] += parseFloat(style['border' + side + 'Width']);
+        } else {
+          to[i] -= parseFloat(style['border' + side + 'Width']);
+        }
+      });
+    })();
+  }
+
+  return to;
+}
+
+TetherBase.modules.push({
+  position: function position(_ref) {
+    var _this = this;
+
+    var top = _ref.top;
+    var left = _ref.left;
+    var targetAttachment = _ref.targetAttachment;
+
+    if (!this.options.constraints) {
+      return true;
+    }
+
+    var _cache = this.cache('element-bounds', function () {
+      return getBounds(_this.element);
+    });
+
+    var height = _cache.height;
+    var width = _cache.width;
+
+    if (width === 0 && height === 0 && typeof this.lastSize !== 'undefined') {
+      var _lastSize = this.lastSize;
+
+      // Handle the item getting hidden as a result of our positioning without glitching
+      // the classes in and out
+      width = _lastSize.width;
+      height = _lastSize.height;
+    }
+
+    var targetSize = this.cache('target-bounds', function () {
+      return _this.getTargetBounds();
+    });
+
+    var targetHeight = targetSize.height;
+    var targetWidth = targetSize.width;
+
+    var allClasses = [this.getClass('pinned'), this.getClass('out-of-bounds')];
+
+    this.options.constraints.forEach(function (constraint) {
+      var outOfBoundsClass = constraint.outOfBoundsClass;
+      var pinnedClass = constraint.pinnedClass;
+
+      if (outOfBoundsClass) {
+        allClasses.push(outOfBoundsClass);
+      }
+      if (pinnedClass) {
+        allClasses.push(pinnedClass);
+      }
+    });
+
+    allClasses.forEach(function (cls) {
+      ['left', 'top', 'right', 'bottom'].forEach(function (side) {
+        allClasses.push(cls + '-' + side);
+      });
+    });
+
+    var addClasses = [];
+
+    var tAttachment = extend({}, targetAttachment);
+    var eAttachment = extend({}, this.attachment);
+
+    this.options.constraints.forEach(function (constraint) {
+      var to = constraint.to;
+      var attachment = constraint.attachment;
+      var pin = constraint.pin;
+
+      if (typeof attachment === 'undefined') {
+        attachment = '';
+      }
+
+      var changeAttachX = undefined,
+          changeAttachY = undefined;
+      if (attachment.indexOf(' ') >= 0) {
+        var _attachment$split = attachment.split(' ');
+
+        var _attachment$split2 = _slicedToArray(_attachment$split, 2);
+
+        changeAttachY = _attachment$split2[0];
+        changeAttachX = _attachment$split2[1];
+      } else {
+        changeAttachX = changeAttachY = attachment;
+      }
+
+      var bounds = getBoundingRect(_this, to);
+
+      if (changeAttachY === 'target' || changeAttachY === 'both') {
+        if (top < bounds[1] && tAttachment.top === 'top') {
+          top += targetHeight;
+          tAttachment.top = 'bottom';
         }
 
-        pin = pin || [];
+        if (top + height > bounds[3] && tAttachment.top === 'bottom') {
+          top -= targetHeight;
+          tAttachment.top = 'top';
+        }
+      }
 
-        var pinned = [];
-        var oob = [];
+      if (changeAttachY === 'together') {
+        if (tAttachment.top === 'top') {
+          if (eAttachment.top === 'bottom' && top < bounds[1]) {
+            top += targetHeight;
+            tAttachment.top = 'bottom';
 
-        if (top < bounds[1]) {
-          if (pin.indexOf("top") >= 0) {
-            top = bounds[1];
-            pinned.push("top");
-          } else {
-            oob.push("top");
+            top += height;
+            eAttachment.top = 'top';
+          } else if (eAttachment.top === 'top' && top + height > bounds[3] && top - (height - targetHeight) >= bounds[1]) {
+            top -= height - targetHeight;
+            tAttachment.top = 'bottom';
+
+            eAttachment.top = 'bottom';
           }
         }
 
-        if (top + height > bounds[3]) {
-          if (pin.indexOf("bottom") >= 0) {
-            top = bounds[3] - height;
-            pinned.push("bottom");
-          } else {
-            oob.push("bottom");
+        if (tAttachment.top === 'bottom') {
+          if (eAttachment.top === 'top' && top + height > bounds[3]) {
+            top -= targetHeight;
+            tAttachment.top = 'top';
+
+            top -= height;
+            eAttachment.top = 'bottom';
+          } else if (eAttachment.top === 'bottom' && top < bounds[1] && top + (height * 2 - targetHeight) <= bounds[3]) {
+            top += height - targetHeight;
+            tAttachment.top = 'top';
+
+            eAttachment.top = 'top';
           }
         }
 
+        if (tAttachment.top === 'middle') {
+          if (top + height > bounds[3] && eAttachment.top === 'top') {
+            top -= height;
+            eAttachment.top = 'bottom';
+          } else if (top < bounds[1] && eAttachment.top === 'bottom') {
+            top += height;
+            eAttachment.top = 'top';
+          }
+        }
+      }
+
+      if (changeAttachX === 'target' || changeAttachX === 'both') {
+        if (left < bounds[0] && tAttachment.left === 'left') {
+          left += targetWidth;
+          tAttachment.left = 'right';
+        }
+
+        if (left + width > bounds[2] && tAttachment.left === 'right') {
+          left -= targetWidth;
+          tAttachment.left = 'left';
+        }
+      }
+
+      if (changeAttachX === 'together') {
+        if (left < bounds[0] && tAttachment.left === 'left') {
+          if (eAttachment.left === 'right') {
+            left += targetWidth;
+            tAttachment.left = 'right';
+
+            left += width;
+            eAttachment.left = 'left';
+          } else if (eAttachment.left === 'left') {
+            left += targetWidth;
+            tAttachment.left = 'right';
+
+            left -= width;
+            eAttachment.left = 'right';
+          }
+        } else if (left + width > bounds[2] && tAttachment.left === 'right') {
+          if (eAttachment.left === 'left') {
+            left -= targetWidth;
+            tAttachment.left = 'left';
+
+            left -= width;
+            eAttachment.left = 'right';
+          } else if (eAttachment.left === 'right') {
+            left -= targetWidth;
+            tAttachment.left = 'left';
+
+            left += width;
+            eAttachment.left = 'left';
+          }
+        } else if (tAttachment.left === 'center') {
+          if (left + width > bounds[2] && eAttachment.left === 'left') {
+            left -= width;
+            eAttachment.left = 'right';
+          } else if (left < bounds[0] && eAttachment.left === 'right') {
+            left += width;
+            eAttachment.left = 'left';
+          }
+        }
+      }
+
+      if (changeAttachY === 'element' || changeAttachY === 'both') {
+        if (top < bounds[1] && eAttachment.top === 'bottom') {
+          top += height;
+          eAttachment.top = 'top';
+        }
+
+        if (top + height > bounds[3] && eAttachment.top === 'top') {
+          top -= height;
+          eAttachment.top = 'bottom';
+        }
+      }
+
+      if (changeAttachX === 'element' || changeAttachX === 'both') {
         if (left < bounds[0]) {
-          if (pin.indexOf("left") >= 0) {
-            left = bounds[0];
-            pinned.push("left");
-          } else {
-            oob.push("left");
+          if (eAttachment.left === 'right') {
+            left += width;
+            eAttachment.left = 'left';
+          } else if (eAttachment.left === 'center') {
+            left += width / 2;
+            eAttachment.left = 'left';
           }
         }
 
         if (left + width > bounds[2]) {
-          if (pin.indexOf("right") >= 0) {
-            left = bounds[2] - width;
-            pinned.push("right");
+          if (eAttachment.left === 'left') {
+            left -= width;
+            eAttachment.left = 'right';
+          } else if (eAttachment.left === 'center') {
+            left -= width / 2;
+            eAttachment.left = 'right';
+          }
+        }
+      }
+
+      if (typeof pin === 'string') {
+        pin = pin.split(',').map(function (p) {
+          return p.trim();
+        });
+      } else if (pin === true) {
+        pin = ['top', 'left', 'right', 'bottom'];
+      }
+
+      pin = pin || [];
+
+      var pinned = [];
+      var oob = [];
+
+      if (top < bounds[1]) {
+        if (pin.indexOf('top') >= 0) {
+          top = bounds[1];
+          pinned.push('top');
+        } else {
+          oob.push('top');
+        }
+      }
+
+      if (top + height > bounds[3]) {
+        if (pin.indexOf('bottom') >= 0) {
+          top = bounds[3] - height;
+          pinned.push('bottom');
+        } else {
+          oob.push('bottom');
+        }
+      }
+
+      if (left < bounds[0]) {
+        if (pin.indexOf('left') >= 0) {
+          left = bounds[0];
+          pinned.push('left');
+        } else {
+          oob.push('left');
+        }
+      }
+
+      if (left + width > bounds[2]) {
+        if (pin.indexOf('right') >= 0) {
+          left = bounds[2] - width;
+          pinned.push('right');
+        } else {
+          oob.push('right');
+        }
+      }
+
+      if (pinned.length) {
+        (function () {
+          var pinnedClass = undefined;
+          if (typeof _this.options.pinnedClass !== 'undefined') {
+            pinnedClass = _this.options.pinnedClass;
           } else {
-            oob.push("right");
+            pinnedClass = _this.getClass('pinned');
           }
-        }
 
-        if (pinned.length) {
-          (function() {
-            var pinnedClass = undefined;
-            if (typeof _this.options.pinnedClass !== "undefined") {
-              pinnedClass = _this.options.pinnedClass;
-            } else {
-              pinnedClass = _this.getClass("pinned");
-            }
-
-            addClasses.push(pinnedClass);
-            pinned.forEach(function(side) {
-              addClasses.push(pinnedClass + "-" + side);
-            });
-          })();
-        }
-
-        if (oob.length) {
-          (function() {
-            var oobClass = undefined;
-            if (typeof _this.options.outOfBoundsClass !== "undefined") {
-              oobClass = _this.options.outOfBoundsClass;
-            } else {
-              oobClass = _this.getClass("out-of-bounds");
-            }
-
-            addClasses.push(oobClass);
-            oob.forEach(function(side) {
-              addClasses.push(oobClass + "-" + side);
-            });
-          })();
-        }
-
-        if (pinned.indexOf("left") >= 0 || pinned.indexOf("right") >= 0) {
-          eAttachment.left = tAttachment.left = false;
-        }
-        if (pinned.indexOf("top") >= 0 || pinned.indexOf("bottom") >= 0) {
-          eAttachment.top = tAttachment.top = false;
-        }
-
-        if (
-          tAttachment.top !== targetAttachment.top ||
-          tAttachment.left !== targetAttachment.left ||
-          eAttachment.top !== _this.attachment.top ||
-          eAttachment.left !== _this.attachment.left
-        ) {
-          _this.updateAttachClasses(eAttachment, tAttachment);
-          _this.trigger("update", {
-            attachment: eAttachment,
-            targetAttachment: tAttachment
+          addClasses.push(pinnedClass);
+          pinned.forEach(function (side) {
+            addClasses.push(pinnedClass + '-' + side);
           });
-        }
-      });
+        })();
+      }
 
-      defer(function() {
-        if (!(_this.options.addTargetClasses === false)) {
-          updateClasses(_this.target, addClasses, allClasses);
-        }
-        updateClasses(_this.element, addClasses, allClasses);
-      });
-
-      return { top: top, left: left };
-    }
-  });
-
-  var _TetherBase$Utils = TetherBase.Utils;
-  var getBounds = _TetherBase$Utils.getBounds;
-  var updateClasses = _TetherBase$Utils.updateClasses;
-  var defer = _TetherBase$Utils.defer;
-
-  TetherBase.modules.push({
-    position: function position(_ref) {
-      var _this = this;
-
-      var top = _ref.top;
-      var left = _ref.left;
-
-      var _cache = this.cache("element-bounds", function() {
-        return getBounds(_this.element);
-      });
-
-      var height = _cache.height;
-      var width = _cache.width;
-
-      var targetPos = this.getTargetBounds();
-
-      var bottom = top + height;
-      var right = left + width;
-
-      var abutted = [];
-      if (top <= targetPos.bottom && bottom >= targetPos.top) {
-        ["left", "right"].forEach(function(side) {
-          var targetPosSide = targetPos[side];
-          if (targetPosSide === left || targetPosSide === right) {
-            abutted.push(side);
+      if (oob.length) {
+        (function () {
+          var oobClass = undefined;
+          if (typeof _this.options.outOfBoundsClass !== 'undefined') {
+            oobClass = _this.options.outOfBoundsClass;
+          } else {
+            oobClass = _this.getClass('out-of-bounds');
           }
+
+          addClasses.push(oobClass);
+          oob.forEach(function (side) {
+            addClasses.push(oobClass + '-' + side);
+          });
+        })();
+      }
+
+      if (pinned.indexOf('left') >= 0 || pinned.indexOf('right') >= 0) {
+        eAttachment.left = tAttachment.left = false;
+      }
+      if (pinned.indexOf('top') >= 0 || pinned.indexOf('bottom') >= 0) {
+        eAttachment.top = tAttachment.top = false;
+      }
+
+      if (tAttachment.top !== targetAttachment.top || tAttachment.left !== targetAttachment.left || eAttachment.top !== _this.attachment.top || eAttachment.left !== _this.attachment.left) {
+        _this.updateAttachClasses(eAttachment, tAttachment);
+        _this.trigger('update', {
+          attachment: eAttachment,
+          targetAttachment: tAttachment
         });
       }
+    });
 
-      if (left <= targetPos.right && right >= targetPos.left) {
-        ["top", "bottom"].forEach(function(side) {
-          var targetPosSide = targetPos[side];
-          if (targetPosSide === top || targetPosSide === bottom) {
-            abutted.push(side);
-          }
-        });
+    defer(function () {
+      if (!(_this.options.addTargetClasses === false)) {
+        updateClasses(_this.target, addClasses, allClasses);
       }
+      updateClasses(_this.element, addClasses, allClasses);
+    });
 
-      var allClasses = [];
-      var addClasses = [];
-
-      var sides = ["left", "top", "right", "bottom"];
-      allClasses.push(this.getClass("abutted"));
-      sides.forEach(function(side) {
-        allClasses.push(_this.getClass("abutted") + "-" + side);
-      });
-
-      if (abutted.length) {
-        addClasses.push(this.getClass("abutted"));
-      }
-
-      abutted.forEach(function(side) {
-        addClasses.push(_this.getClass("abutted") + "-" + side);
-      });
-
-      defer(function() {
-        if (!(_this.options.addTargetClasses === false)) {
-          updateClasses(_this.target, addClasses, allClasses);
-        }
-        updateClasses(_this.element, addClasses, allClasses);
-      });
-
-      return true;
-    }
-  });
-
-  var _slicedToArray = (function() {
-    function sliceIterator(arr, i) {
-      var _arr = [];
-      var _n = true;
-      var _d = false;
-      var _e = undefined;
-      try {
-        for (
-          var _i = arr[Symbol.iterator](), _s;
-          !(_n = (_s = _i.next()).done);
-          _n = true
-        ) {
-          _arr.push(_s.value);
-          if (i && _arr.length === i) break;
-        }
-      } catch (err) {
-        _d = true;
-        _e = err;
-      } finally {
-        try {
-          if (!_n && _i["return"]) _i["return"]();
-        } finally {
-          if (_d) throw _e;
-        }
-      }
-      return _arr;
-    }
-    return function(arr, i) {
-      if (Array.isArray(arr)) {
-        return arr;
-      } else if (Symbol.iterator in Object(arr)) {
-        return sliceIterator(arr, i);
-      } else {
-        throw new TypeError(
-          "Invalid attempt to destructure non-iterable instance"
-        );
-      }
-    };
-  })();
-
-  TetherBase.modules.push({
-    position: function position(_ref) {
-      var top = _ref.top;
-      var left = _ref.left;
-
-      if (!this.options.shift) {
-        return;
-      }
-
-      var shift = this.options.shift;
-      if (typeof this.options.shift === "function") {
-        shift = this.options.shift.call(this, { top: top, left: left });
-      }
-
-      var shiftTop = undefined,
-        shiftLeft = undefined;
-      if (typeof shift === "string") {
-        shift = shift.split(" ");
-        shift[1] = shift[1] || shift[0];
-
-        var _shift = shift;
-
-        var _shift2 = _slicedToArray(_shift, 2);
-
-        shiftTop = _shift2[0];
-        shiftLeft = _shift2[1];
-
-        shiftTop = parseFloat(shiftTop, 10);
-        shiftLeft = parseFloat(shiftLeft, 10);
-      } else {
-        shiftTop = shift.top;
-        shiftLeft = shift.left;
-      }
-
-      top += shiftTop;
-      left += shiftLeft;
-
-      return { top: top, left: left };
-    }
-  });
-  return Tether;
+    return { top: top, left: left };
+  }
 });
+
+var _TetherBase$Utils = TetherBase.Utils;
+var getBounds = _TetherBase$Utils.getBounds;
+var updateClasses = _TetherBase$Utils.updateClasses;
+var defer = _TetherBase$Utils.defer;
+
+TetherBase.modules.push({
+  position: function position(_ref) {
+    var _this = this;
+
+    var top = _ref.top;
+    var left = _ref.left;
+
+    var _cache = this.cache('element-bounds', function () {
+      return getBounds(_this.element);
+    });
+
+    var height = _cache.height;
+    var width = _cache.width;
+
+    var targetPos = this.getTargetBounds();
+
+    var bottom = top + height;
+    var right = left + width;
+
+    var abutted = [];
+    if (top <= targetPos.bottom && bottom >= targetPos.top) {
+      ['left', 'right'].forEach(function (side) {
+        var targetPosSide = targetPos[side];
+        if (targetPosSide === left || targetPosSide === right) {
+          abutted.push(side);
+        }
+      });
+    }
+
+    if (left <= targetPos.right && right >= targetPos.left) {
+      ['top', 'bottom'].forEach(function (side) {
+        var targetPosSide = targetPos[side];
+        if (targetPosSide === top || targetPosSide === bottom) {
+          abutted.push(side);
+        }
+      });
+    }
+
+    var allClasses = [];
+    var addClasses = [];
+
+    var sides = ['left', 'top', 'right', 'bottom'];
+    allClasses.push(this.getClass('abutted'));
+    sides.forEach(function (side) {
+      allClasses.push(_this.getClass('abutted') + '-' + side);
+    });
+
+    if (abutted.length) {
+      addClasses.push(this.getClass('abutted'));
+    }
+
+    abutted.forEach(function (side) {
+      addClasses.push(_this.getClass('abutted') + '-' + side);
+    });
+
+    defer(function () {
+      if (!(_this.options.addTargetClasses === false)) {
+        updateClasses(_this.target, addClasses, allClasses);
+      }
+      updateClasses(_this.element, addClasses, allClasses);
+    });
+
+    return true;
+  }
+});
+
+var _slicedToArray = (function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i['return']) _i['return'](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError('Invalid attempt to destructure non-iterable instance'); } }; })();
+
+TetherBase.modules.push({
+  position: function position(_ref) {
+    var top = _ref.top;
+    var left = _ref.left;
+
+    if (!this.options.shift) {
+      return;
+    }
+
+    var shift = this.options.shift;
+    if (typeof this.options.shift === 'function') {
+      shift = this.options.shift.call(this, { top: top, left: left });
+    }
+
+    var shiftTop = undefined,
+        shiftLeft = undefined;
+    if (typeof shift === 'string') {
+      shift = shift.split(' ');
+      shift[1] = shift[1] || shift[0];
+
+      var _shift = shift;
+
+      var _shift2 = _slicedToArray(_shift, 2);
+
+      shiftTop = _shift2[0];
+      shiftLeft = _shift2[1];
+
+      shiftTop = parseFloat(shiftTop, 10);
+      shiftLeft = parseFloat(shiftLeft, 10);
+    } else {
+      shiftTop = shift.top;
+      shiftLeft = shift.left;
+    }
+
+    top += shiftTop;
+    left += shiftLeft;
+
+    return { top: top, left: left };
+  }
+});
+return Tether;
+
+}));
 });
 
 var TetherComponent_1 = createCommonjsModule(function (module, exports) {
@@ -9285,6 +8866,14 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -9371,6 +8960,23 @@ function (_Component) {
       // If the container related props have changed, then update the container
       if (prevProps.renderElementTag !== this.props.renderElementTag || prevProps.renderElementTo !== this.props.renderElementTo) {
         this._createContainer();
+      } // Verify if className props have changed
+
+
+      if (this._elementParentNode && prevProps.className !== this.props.className) {
+        var _this$_elementParentN, _this$_elementParentN2;
+
+        // Add a bunch of checks against weird classNames
+        var prevClasses = (prevProps.className || '').split(' ').filter(function (value) {
+          return value.length > 0;
+        });
+        var currClasses = (this.props.className || '').split(' ').filter(function (value) {
+          return value.length > 0;
+        });
+
+        (_this$_elementParentN = this._elementParentNode.classList).remove.apply(_this$_elementParentN, _toConsumableArray(prevClasses));
+
+        (_this$_elementParentN2 = this._elementParentNode.classList).add.apply(_this$_elementParentN2, _toConsumableArray(currClasses));
       }
 
       this._update();
@@ -9490,9 +9096,12 @@ function (_Component) {
       // Create element node container if it hasn't been yet
       this._removeContainer();
 
-      var renderElementTag = this.props.renderElementTag; // Create a node that we can stick our content Component in
+      var _this$props = this.props,
+          renderElementTag = _this$props.renderElementTag,
+          className = _this$props.className; // Create a node that we can stick our content Component in
 
       this._elementParentNode = document.createElement(renderElementTag);
+      this._elementParentNode.className = className || '';
     }
   }, {
     key: "_addContainerToDOM",
@@ -9527,16 +9136,16 @@ function (_Component) {
   }, {
     key: "_updateTether",
     value: function _updateTether() {
-      var _this$props = this.props,
-          children = _this$props.children,
-          renderElementTag = _this$props.renderElementTag,
-          renderElementTo = _this$props.renderElementTo,
-          id = _this$props.id,
-          className = _this$props.className,
-          style = _this$props.style,
-          renderTarget = _this$props.renderTarget,
-          renderElement = _this$props.renderElement,
-          options = _objectWithoutProperties(_this$props, ["children", "renderElementTag", "renderElementTo", "id", "className", "style", "renderTarget", "renderElement"]);
+      var _this$props2 = this.props,
+          children = _this$props2.children,
+          renderElementTag = _this$props2.renderElementTag,
+          renderElementTo = _this$props2.renderElementTo,
+          id = _this$props2.id,
+          className = _this$props2.className,
+          style = _this$props2.style,
+          renderTarget = _this$props2.renderTarget,
+          renderElement = _this$props2.renderElement,
+          options = _objectWithoutProperties(_this$props2, ["children", "renderElementTag", "renderElementTo", "id", "className", "style", "renderTarget", "renderElement"]);
 
       var tetherOptions = _objectSpread({
         target: this._targetNode.current,
@@ -9547,12 +9156,6 @@ function (_Component) {
 
       if (this._elementParentNode.id !== idStr) {
         this._elementParentNode.id = idStr;
-      }
-
-      var classStr = className || '';
-
-      if (this._elementParentNode.className !== classStr) {
-        this._elementParentNode.className = classStr;
       }
 
       if (style) {
@@ -9696,7 +9299,7 @@ var classnames = createCommonjsModule(function (module) {
 		return classes.join(' ');
 	}
 
-	if (module.exports) {
+	if ( module.exports) {
 		classNames.default = classNames;
 		module.exports = classNames;
 	} else {
@@ -9889,6 +9492,20 @@ function onClickOutsideHOC(WrappedComponent, config) {
         throw new Error("WrappedComponent: " + componentName + " lacks a handleClickOutside(event) function for processing outside click events.");
       };
 
+      _this.__getComponentNode = function () {
+        var instance = _this.getInstance();
+
+        if (config && typeof config.setClickOutsideRef === 'function') {
+          return config.setClickOutsideRef()(instance);
+        }
+
+        if (typeof instance.setClickOutsideRef === 'function') {
+          return instance.setClickOutsideRef();
+        }
+
+        return ReactDOM.findDOMNode(instance);
+      };
+
       _this.enableOnClickOutside = function () {
         if (typeof document === 'undefined' || enabledInstances[_this._uid]) {
           return;
@@ -9994,14 +9611,14 @@ function onClickOutsideHOC(WrappedComponent, config) {
         }
       }
 
-      this.componentNode = ReactDOM.findDOMNode(this.getInstance()); // return early so we dont initiate onClickOutside
+      this.componentNode = this.__getComponentNode(); // return early so we dont initiate onClickOutside
 
       if (this.props.disableOnClickOutside) return;
       this.enableOnClickOutside();
     };
 
     _proto.componentDidUpdate = function componentDidUpdate() {
-      this.componentNode = ReactDOM.findDOMNode(this.getInstance());
+      this.componentNode = this.__getComponentNode();
     };
     /**
      * Remove all document's event listeners for this component
@@ -10645,9 +10262,15 @@ function (_Component) {
     });
 
     defineProperty(assertThisInitialized(_this), "setMonth", function (month) {
+      var onMonthChange = _this.props.onMonthChange;
+
       _this.setState({
         month: month
       });
+
+      if (onMonthChange) {
+        onMonthChange(month);
+      }
     });
 
     defineProperty(assertThisInitialized(_this), "setType", function (type) {
@@ -10662,6 +10285,8 @@ function (_Component) {
 
       _this.setState({
         month: _this.state.month.clone().add(1, monthFormat)
+      }, function () {
+        return _this.props.onMonthChange && _this.props.onMonthChange(_this.state.month);
       });
     });
 
@@ -10671,6 +10296,8 @@ function (_Component) {
 
       _this.setState({
         month: _this.state.month.clone().subtract(1, monthFormat)
+      }, function () {
+        return _this.props.onMonthChange && _this.props.onMonthChange(_this.state.month);
       });
     });
 
@@ -10803,8 +10430,8 @@ function (_Component) {
       };
     }
   }, {
-    key: "componentWillReceiveProps",
-    value: function componentWillReceiveProps(_ref) {
+    key: "UNSAFE_componentWillReceiveProps",
+    value: function UNSAFE_componentWillReceiveProps(_ref) {
       var selectedDay = _ref.selectedDay,
           defaultMonth = _ref.defaultMonth,
           min = _ref.min,
@@ -10862,6 +10489,7 @@ defineProperty(Calendar, "propTypes", {
   selectedDay: propTypes.object,
   defaultMonth: propTypes.object,
   onSelect: propTypes.func,
+  onMonthChange: propTypes.func,
   onClickOutside: propTypes.func,
   containerProps: propTypes.object,
   isGregorian: propTypes.bool,
@@ -10924,7 +10552,7 @@ if (typeof __g == 'number') __g = global; // eslint-disable-line no-undef
 });
 
 var _core = createCommonjsModule(function (module) {
-var core = module.exports = { version: '2.6.8' };
+var core = module.exports = { version: '2.6.10' };
 if (typeof __e == 'number') __e = core; // eslint-disable-line no-undef
 });
 var _core_1 = _core.version;
@@ -11179,7 +10807,7 @@ var store = _global[SHARED] || (_global[SHARED] = {});
   return store[key] || (store[key] = value !== undefined ? value : {});
 })('versions', []).push({
   version: _core.version,
-  mode: 'pure',
+  mode:  'pure' ,
   copyright: '© 2019 Denis Pushkarev (zloirock.ru)'
 });
 });
@@ -11491,7 +11119,7 @@ var _iterDefine = function (Base, NAME, Constructor, next, DEFAULT, IS_SET, FORC
     $default = function values() { return $native.call(this); };
   }
   // Define iterator
-  if ((FORCED) && (BUGGY || VALUES_BUG || !proto[ITERATOR])) {
+  if (( FORCED) && (BUGGY || VALUES_BUG || !proto[ITERATOR])) {
     _hide(proto, ITERATOR, $default);
   }
   if (DEFAULT) {
@@ -11642,7 +11270,7 @@ var _meta_5 = _meta.onFreeze;
 
 var defineProperty$1 = _objectDp.f;
 var _wksDefine = function (name) {
-  var $Symbol = _core.Symbol || (_core.Symbol = {});
+  var $Symbol = _core.Symbol || (_core.Symbol =  {} );
   if (name.charAt(0) != '_' && !(name in $Symbol)) defineProperty$1($Symbol, name, { value: _wksExt.f(name) });
 };
 
@@ -12112,12 +11740,171 @@ exports.default = function (subClass, superClass) {
 
 var _inherits$1 = unwrapExports(inherits$1);
 
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+function componentWillMount() {
+  // Call this.constructor.gDSFP to support sub-classes.
+  var state = this.constructor.getDerivedStateFromProps(this.props, this.state);
+  if (state !== null && state !== undefined) {
+    this.setState(state);
+  }
+}
+
+function componentWillReceiveProps(nextProps) {
+  // Call this.constructor.gDSFP to support sub-classes.
+  // Use the setState() updater to ensure state isn't stale in certain edge cases.
+  function updater(prevState) {
+    var state = this.constructor.getDerivedStateFromProps(nextProps, prevState);
+    return state !== null && state !== undefined ? state : null;
+  }
+  // Binding "this" is important for shallow renderer support.
+  this.setState(updater.bind(this));
+}
+
+function componentWillUpdate(nextProps, nextState) {
+  try {
+    var prevProps = this.props;
+    var prevState = this.state;
+    this.props = nextProps;
+    this.state = nextState;
+    this.__reactInternalSnapshotFlag = true;
+    this.__reactInternalSnapshot = this.getSnapshotBeforeUpdate(
+      prevProps,
+      prevState
+    );
+  } finally {
+    this.props = prevProps;
+    this.state = prevState;
+  }
+}
+
+// React may warn about cWM/cWRP/cWU methods being deprecated.
+// Add a flag to suppress these warnings for this special case.
+componentWillMount.__suppressDeprecationWarning = true;
+componentWillReceiveProps.__suppressDeprecationWarning = true;
+componentWillUpdate.__suppressDeprecationWarning = true;
+
+function polyfill(Component) {
+  var prototype = Component.prototype;
+
+  if (!prototype || !prototype.isReactComponent) {
+    throw new Error('Can only polyfill class components');
+  }
+
+  if (
+    typeof Component.getDerivedStateFromProps !== 'function' &&
+    typeof prototype.getSnapshotBeforeUpdate !== 'function'
+  ) {
+    return Component;
+  }
+
+  // If new component APIs are defined, "unsafe" lifecycles won't be called.
+  // Error if any of these lifecycles are present,
+  // Because they would work differently between older and newer (16.3+) versions of React.
+  var foundWillMountName = null;
+  var foundWillReceivePropsName = null;
+  var foundWillUpdateName = null;
+  if (typeof prototype.componentWillMount === 'function') {
+    foundWillMountName = 'componentWillMount';
+  } else if (typeof prototype.UNSAFE_componentWillMount === 'function') {
+    foundWillMountName = 'UNSAFE_componentWillMount';
+  }
+  if (typeof prototype.componentWillReceiveProps === 'function') {
+    foundWillReceivePropsName = 'componentWillReceiveProps';
+  } else if (typeof prototype.UNSAFE_componentWillReceiveProps === 'function') {
+    foundWillReceivePropsName = 'UNSAFE_componentWillReceiveProps';
+  }
+  if (typeof prototype.componentWillUpdate === 'function') {
+    foundWillUpdateName = 'componentWillUpdate';
+  } else if (typeof prototype.UNSAFE_componentWillUpdate === 'function') {
+    foundWillUpdateName = 'UNSAFE_componentWillUpdate';
+  }
+  if (
+    foundWillMountName !== null ||
+    foundWillReceivePropsName !== null ||
+    foundWillUpdateName !== null
+  ) {
+    var componentName = Component.displayName || Component.name;
+    var newApiName =
+      typeof Component.getDerivedStateFromProps === 'function'
+        ? 'getDerivedStateFromProps()'
+        : 'getSnapshotBeforeUpdate()';
+
+    throw Error(
+      'Unsafe legacy lifecycles will not be called for components using new component APIs.\n\n' +
+        componentName +
+        ' uses ' +
+        newApiName +
+        ' but also contains the following legacy lifecycles:' +
+        (foundWillMountName !== null ? '\n  ' + foundWillMountName : '') +
+        (foundWillReceivePropsName !== null
+          ? '\n  ' + foundWillReceivePropsName
+          : '') +
+        (foundWillUpdateName !== null ? '\n  ' + foundWillUpdateName : '') +
+        '\n\nThe above lifecycles should be removed. Learn more about this warning here:\n' +
+        'https://fb.me/react-async-component-lifecycle-hooks'
+    );
+  }
+
+  // React <= 16.2 does not support static getDerivedStateFromProps.
+  // As a workaround, use cWM and cWRP to invoke the new static lifecycle.
+  // Newer versions of React will ignore these lifecycles if gDSFP exists.
+  if (typeof Component.getDerivedStateFromProps === 'function') {
+    prototype.componentWillMount = componentWillMount;
+    prototype.componentWillReceiveProps = componentWillReceiveProps;
+  }
+
+  // React <= 16.2 does not support getSnapshotBeforeUpdate.
+  // As a workaround, use cWU to invoke the new lifecycle.
+  // Newer versions of React will ignore that lifecycle if gSBU exists.
+  if (typeof prototype.getSnapshotBeforeUpdate === 'function') {
+    if (typeof prototype.componentDidUpdate !== 'function') {
+      throw new Error(
+        'Cannot polyfill getSnapshotBeforeUpdate() for components that do not define componentDidUpdate() on the prototype'
+      );
+    }
+
+    prototype.componentWillUpdate = componentWillUpdate;
+
+    var componentDidUpdate = prototype.componentDidUpdate;
+
+    prototype.componentDidUpdate = function componentDidUpdatePolyfill(
+      prevProps,
+      prevState,
+      maybeSnapshot
+    ) {
+      // 16.3+ will not execute our will-update method;
+      // It will pass a snapshot value to did-update though.
+      // Older versions will require our polyfilled will-update value.
+      // We need to handle both cases, but can't just check for the presence of "maybeSnapshot",
+      // Because for <= 15.x versions this might be a "prevContext" object.
+      // We also can't just check "__reactInternalSnapshot",
+      // Because get-snapshot might return a falsy value.
+      // So check for the explicit __reactInternalSnapshotFlag flag to determine behavior.
+      var snapshot = this.__reactInternalSnapshotFlag
+        ? this.__reactInternalSnapshot
+        : maybeSnapshot;
+
+      componentDidUpdate.call(this, prevProps, prevState, snapshot);
+    };
+  }
+
+  return Component;
+}
+
 function contains(root, n) {
   var node = n;
+
   while (node) {
     if (node === root) {
       return true;
     }
+
     node = node.parentNode;
   }
 
@@ -12524,6 +12311,235 @@ function addEventListenerWrap(target, eventType, cb, option) {
   return addDOMEventListener(target, eventType, callback, option);
 }
 
+function _typeof$1(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof$1 = function _typeof(obj) { return typeof obj; }; } else { _typeof$1 = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof$1(obj); }
+
+function _classCallCheck$2(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties$1(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass$1(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties$1(Constructor.prototype, protoProps); if (staticProps) _defineProperties$1(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn$2(self, call) { if (call && (_typeof$1(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized$1(self); }
+
+function _assertThisInitialized$1(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits$2(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+var ContainerRender =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits$2(ContainerRender, _React$Component);
+
+  function ContainerRender() {
+    var _getPrototypeOf2;
+
+    var _this;
+
+    _classCallCheck$2(this, ContainerRender);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _possibleConstructorReturn$2(this, (_getPrototypeOf2 = _getPrototypeOf(ContainerRender)).call.apply(_getPrototypeOf2, [this].concat(args)));
+
+    _this.removeContainer = function () {
+      if (_this.container) {
+        ReactDOM__default.unmountComponentAtNode(_this.container);
+
+        _this.container.parentNode.removeChild(_this.container);
+
+        _this.container = null;
+      }
+    };
+
+    _this.renderComponent = function (props, ready) {
+      var _this$props = _this.props,
+          visible = _this$props.visible,
+          getComponent = _this$props.getComponent,
+          forceRender = _this$props.forceRender,
+          getContainer = _this$props.getContainer,
+          parent = _this$props.parent;
+
+      if (visible || parent._component || forceRender) {
+        if (!_this.container) {
+          _this.container = getContainer();
+        }
+
+        ReactDOM__default.unstable_renderSubtreeIntoContainer(parent, getComponent(props), _this.container, function callback() {
+          if (ready) {
+            ready.call(this);
+          }
+        });
+      }
+    };
+
+    return _this;
+  }
+
+  _createClass$1(ContainerRender, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      if (this.props.autoMount) {
+        this.renderComponent();
+      }
+    }
+  }, {
+    key: "componentDidUpdate",
+    value: function componentDidUpdate() {
+      if (this.props.autoMount) {
+        this.renderComponent();
+      }
+    }
+  }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      if (this.props.autoDestroy) {
+        this.removeContainer();
+      }
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return this.props.children({
+        renderComponent: this.renderComponent,
+        removeContainer: this.removeContainer
+      });
+    }
+  }]);
+
+  return ContainerRender;
+}(React__default.Component);
+
+ContainerRender.propTypes = {
+  autoMount: propTypes.bool,
+  autoDestroy: propTypes.bool,
+  visible: propTypes.bool,
+  forceRender: propTypes.bool,
+  parent: propTypes.any,
+  getComponent: propTypes.func.isRequired,
+  getContainer: propTypes.func.isRequired,
+  children: propTypes.func.isRequired
+};
+ContainerRender.defaultProps = {
+  autoMount: true,
+  autoDestroy: true,
+  forceRender: false
+};
+
+function _typeof$2(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof$2 = function _typeof(obj) { return typeof obj; }; } else { _typeof$2 = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof$2(obj); }
+
+function _classCallCheck$3(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties$2(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass$2(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties$2(Constructor.prototype, protoProps); if (staticProps) _defineProperties$2(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn$3(self, call) { if (call && (_typeof$2(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized$2(self); }
+
+function _assertThisInitialized$2(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf$1(o) { _getPrototypeOf$1 = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf$1(o); }
+
+function _inherits$3(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf$1(subClass, superClass); }
+
+function _setPrototypeOf$1(o, p) { _setPrototypeOf$1 = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf$1(o, p); }
+
+var Portal =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits$3(Portal, _React$Component);
+
+  function Portal() {
+    _classCallCheck$3(this, Portal);
+
+    return _possibleConstructorReturn$3(this, _getPrototypeOf$1(Portal).apply(this, arguments));
+  }
+
+  _createClass$2(Portal, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.createContainer();
+    }
+  }, {
+    key: "componentDidUpdate",
+    value: function componentDidUpdate(prevProps) {
+      var didUpdate = this.props.didUpdate;
+
+      if (didUpdate) {
+        didUpdate(prevProps);
+      }
+    }
+  }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      this.removeContainer();
+    }
+  }, {
+    key: "createContainer",
+    value: function createContainer() {
+      this._container = this.props.getContainer();
+      this.forceUpdate();
+    }
+  }, {
+    key: "removeContainer",
+    value: function removeContainer() {
+      if (this._container) {
+        this._container.parentNode.removeChild(this._container);
+      }
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      if (this._container) {
+        return ReactDOM__default.createPortal(this.props.children, this._container);
+      }
+
+      return null;
+    }
+  }]);
+
+  return Portal;
+}(React__default.Component);
+
+Portal.propTypes = {
+  getContainer: propTypes.func.isRequired,
+  children: propTypes.node.isRequired,
+  didUpdate: propTypes.func
+};
+
+function isPointsEq(a1, a2, isAlignPoint) {
+  if (isAlignPoint) {
+    return a1[0] === a2[0];
+  }
+  return a1[0] === a2[0] && a1[1] === a2[1];
+}
+
+function getAlignFromPlacement(builtinPlacements, placementStr, align) {
+  var baseAlign = builtinPlacements[placementStr] || {};
+  return _extends$1({}, baseAlign, align);
+}
+
+function getAlignPopupClassName(builtinPlacements, prefixCls, align, isAlignPoint) {
+  var points = align.points;
+  for (var placement in builtinPlacements) {
+    if (builtinPlacements.hasOwnProperty(placement)) {
+      if (isPointsEq(builtinPlacements[placement].points, points, isAlignPoint)) {
+        return prefixCls + '-placement-' + placement;
+      }
+    }
+  }
+  return '';
+}
+
+function saveRef(name, component) {
+  this[name] = component;
+}
+
 // 19.1.2.4 / 15.2.3.6 Object.defineProperty(O, P, Attributes)
 _export(_export.S + _export.F * !_descriptors, 'Object', { defineProperty: _objectDp.f });
 
@@ -12567,189 +12583,72 @@ exports.default = function () {
 }();
 });
 
-var _createClass$1 = unwrapExports(createClass$1);
+var _createClass$3 = unwrapExports(createClass$1);
 
-var ContainerRender = function (_React$Component) {
-  _inherits$1(ContainerRender, _React$Component);
-
-  function ContainerRender() {
-    var _ref;
-
-    var _temp, _this, _ret;
-
-    _classCallCheck$1(this, ContainerRender);
-
-    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    return _ret = (_temp = (_this = _possibleConstructorReturn$1(this, (_ref = ContainerRender.__proto__ || Object.getPrototypeOf(ContainerRender)).call.apply(_ref, [this].concat(args))), _this), _this.removeContainer = function () {
-      if (_this.container) {
-        ReactDOM__default.unmountComponentAtNode(_this.container);
-        _this.container.parentNode.removeChild(_this.container);
-        _this.container = null;
-      }
-    }, _this.renderComponent = function (props, ready) {
-      var _this$props = _this.props,
-          visible = _this$props.visible,
-          getComponent = _this$props.getComponent,
-          forceRender = _this$props.forceRender,
-          getContainer = _this$props.getContainer,
-          parent = _this$props.parent;
-
-      if (visible || parent._component || forceRender) {
-        if (!_this.container) {
-          _this.container = getContainer();
-        }
-        ReactDOM__default.unstable_renderSubtreeIntoContainer(parent, getComponent(props), _this.container, function callback() {
-          if (ready) {
-            ready.call(this);
-          }
-        });
-      }
-    }, _temp), _possibleConstructorReturn$1(_this, _ret);
+function _typeof$3(obj) {
+  if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
+    _typeof$3 = function (obj) {
+      return typeof obj;
+    };
+  } else {
+    _typeof$3 = function (obj) {
+      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+    };
   }
 
-  _createClass$1(ContainerRender, [{
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-      if (this.props.autoMount) {
-        this.renderComponent();
-      }
-    }
-  }, {
-    key: 'componentDidUpdate',
-    value: function componentDidUpdate() {
-      if (this.props.autoMount) {
-        this.renderComponent();
-      }
-    }
-  }, {
-    key: 'componentWillUnmount',
-    value: function componentWillUnmount() {
-      if (this.props.autoDestroy) {
-        this.removeContainer();
-      }
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      return this.props.children({
-        renderComponent: this.renderComponent,
-        removeContainer: this.removeContainer
+  return _typeof$3(obj);
+}
+
+function _defineProperty$1(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
+
+function ownKeys(object, enumerableOnly) {
+  var keys = Object.keys(object);
+
+  if (Object.getOwnPropertySymbols) {
+    var symbols = Object.getOwnPropertySymbols(object);
+    if (enumerableOnly) symbols = symbols.filter(function (sym) {
+      return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+    });
+    keys.push.apply(keys, symbols);
+  }
+
+  return keys;
+}
+
+function _objectSpread2(target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i] != null ? arguments[i] : {};
+
+    if (i % 2) {
+      ownKeys(source, true).forEach(function (key) {
+        _defineProperty$1(target, key, source[key]);
+      });
+    } else if (Object.getOwnPropertyDescriptors) {
+      Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+    } else {
+      ownKeys(source).forEach(function (key) {
+        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
       });
     }
-  }]);
-
-  return ContainerRender;
-}(React__default.Component);
-
-ContainerRender.propTypes = {
-  autoMount: propTypes.bool,
-  autoDestroy: propTypes.bool,
-  visible: propTypes.bool,
-  forceRender: propTypes.bool,
-  parent: propTypes.any,
-  getComponent: propTypes.func.isRequired,
-  getContainer: propTypes.func.isRequired,
-  children: propTypes.func.isRequired
-};
-ContainerRender.defaultProps = {
-  autoMount: true,
-  autoDestroy: true,
-  forceRender: false
-};
-
-var Portal = function (_React$Component) {
-  _inherits$1(Portal, _React$Component);
-
-  function Portal() {
-    _classCallCheck$1(this, Portal);
-
-    return _possibleConstructorReturn$1(this, (Portal.__proto__ || Object.getPrototypeOf(Portal)).apply(this, arguments));
   }
 
-  _createClass$1(Portal, [{
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-      this.createContainer();
-    }
-  }, {
-    key: 'componentDidUpdate',
-    value: function componentDidUpdate(prevProps) {
-      var didUpdate = this.props.didUpdate;
-
-      if (didUpdate) {
-        didUpdate(prevProps);
-      }
-    }
-  }, {
-    key: 'componentWillUnmount',
-    value: function componentWillUnmount() {
-      this.removeContainer();
-    }
-  }, {
-    key: 'createContainer',
-    value: function createContainer() {
-      this._container = this.props.getContainer();
-      this.forceUpdate();
-    }
-  }, {
-    key: 'removeContainer',
-    value: function removeContainer() {
-      if (this._container) {
-        this._container.parentNode.removeChild(this._container);
-      }
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      if (this._container) {
-        return ReactDOM__default.createPortal(this.props.children, this._container);
-      }
-      return null;
-    }
-  }]);
-
-  return Portal;
-}(React__default.Component);
-
-Portal.propTypes = {
-  getContainer: propTypes.func.isRequired,
-  children: propTypes.node.isRequired,
-  didUpdate: propTypes.func
-};
-
-function isPointsEq(a1, a2, isAlignPoint) {
-  if (isAlignPoint) {
-    return a1[0] === a2[0];
-  }
-  return a1[0] === a2[0] && a1[1] === a2[1];
+  return target;
 }
 
-function getAlignFromPlacement(builtinPlacements, placementStr, align) {
-  var baseAlign = builtinPlacements[placementStr] || {};
-  return _extends$1({}, baseAlign, align);
-}
-
-function getAlignPopupClassName(builtinPlacements, prefixCls, align, isAlignPoint) {
-  var points = align.points;
-  for (var placement in builtinPlacements) {
-    if (builtinPlacements.hasOwnProperty(placement)) {
-      if (isPointsEq(builtinPlacements[placement].points, points, isAlignPoint)) {
-        return prefixCls + '-placement-' + placement;
-      }
-    }
-  }
-  return '';
-}
-
-function saveRef(name, component) {
-  this[name] = component;
-}
-
-var vendorPrefix = void 0;
-
+var vendorPrefix;
 var jsCssMap = {
   Webkit: '-webkit-',
   Moz: '-moz-',
@@ -12762,29 +12661,33 @@ function getVendorPrefix() {
   if (vendorPrefix !== undefined) {
     return vendorPrefix;
   }
+
   vendorPrefix = '';
   var style = document.createElement('p').style;
   var testProp = 'Transform';
+
   for (var key in jsCssMap) {
     if (key + testProp in style) {
       vendorPrefix = key;
     }
   }
+
   return vendorPrefix;
 }
 
 function getTransitionName() {
-  return getVendorPrefix() ? getVendorPrefix() + 'TransitionProperty' : 'transitionProperty';
+  return getVendorPrefix() ? "".concat(getVendorPrefix(), "TransitionProperty") : 'transitionProperty';
 }
 
 function getTransformName() {
-  return getVendorPrefix() ? getVendorPrefix() + 'Transform' : 'transform';
+  return getVendorPrefix() ? "".concat(getVendorPrefix(), "Transform") : 'transform';
 }
-
 function setTransitionProperty(node, value) {
   var name = getTransitionName();
+
   if (name) {
     node.style[name] = value;
+
     if (name !== 'transitionProperty') {
       node.style.transitionProperty = value;
     }
@@ -12793,8 +12696,10 @@ function setTransitionProperty(node, value) {
 
 function setTransform(node, value) {
   var name = getTransformName();
+
   if (name) {
     node.style[name] = value;
+
     if (name !== 'transform') {
       node.style.transform = value;
     }
@@ -12804,29 +12709,33 @@ function setTransform(node, value) {
 function getTransitionProperty(node) {
   return node.style.transitionProperty || node.style[getTransitionName()];
 }
-
 function getTransformXY(node) {
   var style = window.getComputedStyle(node, null);
   var transform = style.getPropertyValue('transform') || style.getPropertyValue(getTransformName());
+
   if (transform && transform !== 'none') {
     var matrix = transform.replace(/[^0-9\-.,]/g, '').split(',');
-    return { x: parseFloat(matrix[12] || matrix[4], 0), y: parseFloat(matrix[13] || matrix[5], 0) };
+    return {
+      x: parseFloat(matrix[12] || matrix[4], 0),
+      y: parseFloat(matrix[13] || matrix[5], 0)
+    };
   }
+
   return {
     x: 0,
     y: 0
   };
 }
-
 var matrix2d = /matrix\((.*)\)/;
 var matrix3d = /matrix3d\((.*)\)/;
-
 function setTransformXY(node, xy) {
   var style = window.getComputedStyle(node, null);
   var transform = style.getPropertyValue('transform') || style.getPropertyValue(getTransformName());
+
   if (transform && transform !== 'none') {
-    var arr = void 0;
+    var arr;
     var match2d = transform.match(matrix2d);
+
     if (match2d) {
       match2d = match2d[1];
       arr = match2d.split(',').map(function (item) {
@@ -12834,7 +12743,7 @@ function setTransformXY(node, xy) {
       });
       arr[4] = xy.x;
       arr[5] = xy.y;
-      setTransform(node, 'matrix(' + arr.join(',') + ')');
+      setTransform(node, "matrix(".concat(arr.join(','), ")"));
     } else {
       var match3d = transform.match(matrix3d)[1];
       arr = match3d.split(',').map(function (item) {
@@ -12842,76 +12751,72 @@ function setTransformXY(node, xy) {
       });
       arr[12] = xy.x;
       arr[13] = xy.y;
-      setTransform(node, 'matrix3d(' + arr.join(',') + ')');
+      setTransform(node, "matrix3d(".concat(arr.join(','), ")"));
     }
   } else {
-    setTransform(node, 'translateX(' + xy.x + 'px) translateY(' + xy.y + 'px) translateZ(0)');
+    setTransform(node, "translateX(".concat(xy.x, "px) translateY(").concat(xy.y, "px) translateZ(0)"));
   }
 }
 
-var _typeof$1 = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
 var RE_NUM = /[\-+]?(?:\d*\.|)\d+(?:[eE][\-+]?\d+|)/.source;
+var getComputedStyleX; // https://stackoverflow.com/a/3485654/3040605
 
-var getComputedStyleX = void 0;
-
-// https://stackoverflow.com/a/3485654/3040605
 function forceRelayout(elem) {
   var originalStyle = elem.style.display;
   elem.style.display = 'none';
   elem.offsetHeight; // eslint-disable-line
+
   elem.style.display = originalStyle;
 }
 
 function css$1(el, name, v) {
   var value = v;
-  if ((typeof name === 'undefined' ? 'undefined' : _typeof$1(name)) === 'object') {
+
+  if (_typeof$3(name) === 'object') {
     for (var i in name) {
       if (name.hasOwnProperty(i)) {
         css$1(el, i, name[i]);
       }
     }
+
     return undefined;
   }
+
   if (typeof value !== 'undefined') {
     if (typeof value === 'number') {
-      value = value + 'px';
+      value = "".concat(value, "px");
     }
+
     el.style[name] = value;
     return undefined;
   }
+
   return getComputedStyleX(el, name);
 }
 
 function getClientPosition(elem) {
-  var box = void 0;
-  var x = void 0;
-  var y = void 0;
+  var box;
+  var x;
+  var y;
   var doc = elem.ownerDocument;
   var body = doc.body;
-  var docElem = doc && doc.documentElement;
-  // 根据 GBS 最新数据，A-Grade Browsers 都已支持 getBoundingClientRect 方法，不用再考虑传统的实现方式
-  box = elem.getBoundingClientRect();
+  var docElem = doc && doc.documentElement; // 根据 GBS 最新数据，A-Grade Browsers 都已支持 getBoundingClientRect 方法，不用再考虑传统的实现方式
 
-  // 注：jQuery 还考虑减去 docElem.clientLeft/clientTop
+  box = elem.getBoundingClientRect(); // 注：jQuery 还考虑减去 docElem.clientLeft/clientTop
   // 但测试发现，这样反而会导致当 html 和 body 有边距/边框样式时，获取的值不正确
   // 此外，ie6 会忽略 html 的 margin 值，幸运地是没有谁会去设置 html 的 margin
 
   x = box.left;
-  y = box.top;
-
-  // In IE, most of the time, 2 extra pixels are added to the top and left
+  y = box.top; // In IE, most of the time, 2 extra pixels are added to the top and left
   // due to the implicit 2-pixel inset border.  In IE6/7 quirks mode and
   // IE6 standards mode, this border can be overridden by setting the
   // document element's border to zero -- thus, we cannot rely on the
   // offset always being 2 pixels.
-
   // In quirks mode, the offset can be determined by querying the body's
   // clientLeft/clientTop, but in standards mode, it is found by querying
   // the document element's clientLeft/clientTop.  Since we already called
   // getClientBoundingRect we have already forced a reflow, so it is not
   // too expensive just to query them all.
-
   // ie 下应该减去窗口的边框吧，毕竟默认 absolute 都是相对窗口定位的
   // 窗口边框标准是设 documentElement ,quirks 时设置 body
   // 最好禁止在 body 和 html 上边框 ，但 ie < 9 html 默认有 2px ，减去
@@ -12922,7 +12827,6 @@ function getClientPosition(elem) {
 
   x -= docElem.clientLeft || body.clientLeft || 0;
   y -= docElem.clientTop || body.clientTop || 0;
-
   return {
     left: x,
     top: y
@@ -12930,17 +12834,20 @@ function getClientPosition(elem) {
 }
 
 function getScroll(w, top) {
-  var ret = w['page' + (top ? 'Y' : 'X') + 'Offset'];
-  var method = 'scroll' + (top ? 'Top' : 'Left');
+  var ret = w["page".concat(top ? 'Y' : 'X', "Offset")];
+  var method = "scroll".concat(top ? 'Top' : 'Left');
+
   if (typeof ret !== 'number') {
-    var d = w.document;
-    // ie6,7,8 standard mode
+    var d = w.document; // ie6,7,8 standard mode
+
     ret = d.documentElement[method];
+
     if (typeof ret !== 'number') {
       // quirks mode
       ret = d.body[method];
     }
   }
+
   return ret;
 }
 
@@ -12960,13 +12867,15 @@ function getOffset(el) {
   pos.top += getScrollTop(w);
   return pos;
 }
-
 /**
  * A crude way of determining if an object is a window
  * @member util
  */
+
+
 function isWindow(obj) {
   // must use == for ie8
+
   /* eslint eqeqeq:0 */
   return obj !== null && obj !== undefined && obj == obj.window;
 }
@@ -12975,9 +12884,11 @@ function getDocument(node) {
   if (isWindow(node)) {
     return node.document;
   }
+
   if (node.nodeType === 9) {
     return node;
   }
+
   return node.ownerDocument;
 }
 
@@ -12985,9 +12896,8 @@ function _getComputedStyle(elem, name, cs) {
   var computedStyle = cs;
   var val = '';
   var d = getDocument(elem);
-  computedStyle = computedStyle || d.defaultView.getComputedStyle(elem, null);
+  computedStyle = computedStyle || d.defaultView.getComputedStyle(elem, null); // https://github.com/kissyteam/kissy/issues/61
 
-  // https://github.com/kissyteam/kissy/issues/61
   if (computedStyle) {
     val = computedStyle.getPropertyValue(name) || computedStyle[name];
   }
@@ -12995,7 +12905,8 @@ function _getComputedStyle(elem, name, cs) {
   return val;
 }
 
-var _RE_NUM_NO_PX = new RegExp('^(' + RE_NUM + ')(?!px)[a-z%]+$', 'i');
+var _RE_NUM_NO_PX = new RegExp("^(".concat(RE_NUM, ")(?!px)[a-z%]+$"), 'i');
+
 var RE_POS = /^(top|right|bottom|left)$/;
 var CURRENT_STYLE = 'currentStyle';
 var RUNTIME_STYLE = 'runtimeStyle';
@@ -13005,36 +12916,31 @@ var PX = 'px';
 function _getComputedStyleIE(elem, name) {
   // currentStyle maybe null
   // http://msdn.microsoft.com/en-us/library/ms535231.aspx
-  var ret = elem[CURRENT_STYLE] && elem[CURRENT_STYLE][name];
-
-  // 当 width/height 设置为百分比时，通过 pixelLeft 方式转换的 width/height 值
+  var ret = elem[CURRENT_STYLE] && elem[CURRENT_STYLE][name]; // 当 width/height 设置为百分比时，通过 pixelLeft 方式转换的 width/height 值
   // 一开始就处理了! CUSTOM_STYLE.height,CUSTOM_STYLE.width ,cssHook 解决@2011-08-19
   // 在 ie 下不对，需要直接用 offset 方式
   // borderWidth 等值也有问题，但考虑到 borderWidth 设为百分比的概率很小，这里就不考虑了
-
   // From the awesome hack by Dean Edwards
   // http://erik.eae.net/archives/2007/07/27/18.54.15/#comment-102291
   // If we're not dealing with a regular pixel number
   // but a number that has a weird ending, we need to convert it to pixels
   // exclude left right for relativity
+
   if (_RE_NUM_NO_PX.test(ret) && !RE_POS.test(name)) {
     // Remember the original values
     var style = elem.style;
     var left = style[LEFT];
-    var rsLeft = elem[RUNTIME_STYLE][LEFT];
+    var rsLeft = elem[RUNTIME_STYLE][LEFT]; // prevent flashing of content
 
-    // prevent flashing of content
-    elem[RUNTIME_STYLE][LEFT] = elem[CURRENT_STYLE][LEFT];
+    elem[RUNTIME_STYLE][LEFT] = elem[CURRENT_STYLE][LEFT]; // Put in the new values to get a computed value out
 
-    // Put in the new values to get a computed value out
     style[LEFT] = name === 'fontSize' ? '1em' : ret || 0;
-    ret = style.pixelLeft + PX;
+    ret = style.pixelLeft + PX; // Revert the changed values
 
-    // Revert the changed values
     style[LEFT] = left;
-
     elem[RUNTIME_STYLE][LEFT] = rsLeft;
   }
+
   return ret === '' ? 'auto' : ret;
 }
 
@@ -13046,6 +12952,7 @@ function getOffsetDirection(dir, option) {
   if (dir === 'left') {
     return option.useCssRight ? 'right' : dir;
   }
+
   return option.useCssBottom ? 'bottom' : dir;
 }
 
@@ -13059,14 +12966,15 @@ function oppositeOffsetDirection(dir) {
   } else if (dir === 'bottom') {
     return 'top';
   }
-}
+} // 设置 elem 相对 elem.ownerDocument 的坐标
 
-// 设置 elem 相对 elem.ownerDocument 的坐标
+
 function setLeftTop(elem, offset, option) {
   // set position first, in-case top/left are set even on static elem
   if (css$1(elem, 'position') === 'static') {
     elem.style.position = 'relative';
   }
+
   var presetH = -999;
   var presetV = -999;
   var horizontalProperty = getOffsetDirection('left', option);
@@ -13081,29 +12989,36 @@ function setLeftTop(elem, offset, option) {
   if (verticalProperty !== 'top') {
     presetV = 999;
   }
+
   var originalTransition = '';
   var originalOffset = getOffset(elem);
+
   if ('left' in offset || 'top' in offset) {
     originalTransition = getTransitionProperty(elem) || '';
     setTransitionProperty(elem, 'none');
   }
+
   if ('left' in offset) {
     elem.style[oppositeHorizontalProperty] = '';
-    elem.style[horizontalProperty] = presetH + 'px';
+    elem.style[horizontalProperty] = "".concat(presetH, "px");
   }
+
   if ('top' in offset) {
     elem.style[oppositeVerticalProperty] = '';
-    elem.style[verticalProperty] = presetV + 'px';
-  }
-  // force relayout
+    elem.style[verticalProperty] = "".concat(presetV, "px");
+  } // force relayout
+
+
   forceRelayout(elem);
   var old = getOffset(elem);
   var originalStyle = {};
+
   for (var key in offset) {
     if (offset.hasOwnProperty(key)) {
       var dir = getOffsetDirection(key, option);
       var preset = key === 'left' ? presetH : presetV;
       var off = originalOffset[key] - old[key];
+
       if (dir === key) {
         originalStyle[dir] = preset + off;
       } else {
@@ -13111,17 +13026,23 @@ function setLeftTop(elem, offset, option) {
       }
     }
   }
-  css$1(elem, originalStyle);
-  // force relayout
+
+  css$1(elem, originalStyle); // force relayout
+
   forceRelayout(elem);
+
   if ('left' in offset || 'top' in offset) {
     setTransitionProperty(elem, originalTransition);
   }
+
   var ret = {};
+
   for (var _key in offset) {
     if (offset.hasOwnProperty(_key)) {
       var _dir = getOffsetDirection(_key, option);
+
       var _off = offset[_key] - originalOffset[_key];
+
       if (_key === _dir) {
         ret[_dir] = originalStyle[_dir] + _off;
       } else {
@@ -13129,26 +13050,32 @@ function setLeftTop(elem, offset, option) {
       }
     }
   }
+
   css$1(elem, ret);
 }
 
 function setTransform$1(elem, offset) {
   var originalOffset = getOffset(elem);
   var originalXY = getTransformXY(elem);
-  var resultXY = { x: originalXY.x, y: originalXY.y };
+  var resultXY = {
+    x: originalXY.x,
+    y: originalXY.y
+  };
+
   if ('left' in offset) {
     resultXY.x = originalXY.x + offset.left - originalOffset.left;
   }
+
   if ('top' in offset) {
     resultXY.y = originalXY.y + offset.top - originalOffset.top;
   }
+
   setTransformXY(elem, resultXY);
 }
 
 function setOffset(elem, offset, option) {
   if (option.ignoreShake) {
     var oriOffset = getOffset(elem);
-
     var oLeft = oriOffset.left.toFixed(0);
     var oTop = oriOffset.top.toFixed(0);
     var tLeft = offset.left.toFixed(0);
@@ -13162,7 +13089,7 @@ function setOffset(elem, offset, option) {
   if (option.useCssRight || option.useCssBottom) {
     setLeftTop(elem, offset, option);
   } else if (option.useCssTransform && getTransformName() in document.body.style) {
-    setTransform$1(elem, offset, option);
+    setTransform$1(elem, offset);
   } else {
     setLeftTop(elem, offset, option);
   }
@@ -13187,9 +13114,8 @@ var MARGIN_INDEX = 0;
 function swap(elem, options, callback) {
   var old = {};
   var style = elem.style;
-  var name = void 0;
+  var name; // Remember the old values, and insert the new ones
 
-  // Remember the old values, and insert the new ones
   for (name in options) {
     if (options.hasOwnProperty(name)) {
       old[name] = style[name];
@@ -13197,9 +13123,8 @@ function swap(elem, options, callback) {
     }
   }
 
-  callback.call(elem);
+  callback.call(elem); // Revert the old values
 
-  // Revert the old values
   for (name in options) {
     if (options.hasOwnProperty(name)) {
       style[name] = old[name];
@@ -13209,52 +13134,67 @@ function swap(elem, options, callback) {
 
 function getPBMWidth(elem, props, which) {
   var value = 0;
-  var prop = void 0;
-  var j = void 0;
-  var i = void 0;
+  var prop;
+  var j;
+  var i;
+
   for (j = 0; j < props.length; j++) {
     prop = props[j];
+
     if (prop) {
       for (i = 0; i < which.length; i++) {
         var cssProp = void 0;
+
         if (prop === 'border') {
-          cssProp = '' + prop + which[i] + 'Width';
+          cssProp = "".concat(prop).concat(which[i], "Width");
         } else {
           cssProp = prop + which[i];
         }
+
         value += parseFloat(getComputedStyleX(elem, cssProp)) || 0;
       }
     }
   }
+
   return value;
 }
 
-var domUtils = {};
+var domUtils = {
+  getParent: function getParent(element) {
+    var parent = element;
 
+    do {
+      if (parent.nodeType === 11 && parent.host) {
+        parent = parent.host;
+      } else {
+        parent = parent.parentNode;
+      }
+    } while (parent && parent.nodeType !== 1 && parent.nodeType !== 9);
+
+    return parent;
+  }
+};
 each(['Width', 'Height'], function (name) {
-  domUtils['doc' + name] = function (refWin) {
+  domUtils["doc".concat(name)] = function (refWin) {
     var d = refWin.document;
-    return Math.max(
-    // firefox chrome documentElement.scrollHeight< body.scrollHeight
+    return Math.max( // firefox chrome documentElement.scrollHeight< body.scrollHeight
     // ie standard mode : documentElement.scrollHeight> body.scrollHeight
-    d.documentElement['scroll' + name],
-    // quirks : documentElement.scrollHeight 最大等于可视窗口多一点？
-    d.body['scroll' + name], domUtils['viewport' + name](d));
+    d.documentElement["scroll".concat(name)], // quirks : documentElement.scrollHeight 最大等于可视窗口多一点？
+    d.body["scroll".concat(name)], domUtils["viewport".concat(name)](d));
   };
 
-  domUtils['viewport' + name] = function (win) {
+  domUtils["viewport".concat(name)] = function (win) {
     // pc browser includes scrollbar in window.innerWidth
-    var prop = 'client' + name;
+    var prop = "client".concat(name);
     var doc = win.document;
     var body = doc.body;
     var documentElement = doc.documentElement;
-    var documentElementProp = documentElement[prop];
-    // 标准模式取 documentElement
+    var documentElementProp = documentElement[prop]; // 标准模式取 documentElement
     // backcompat 取 body
+
     return doc.compatMode === 'CSS1Compat' && documentElementProp || body && body[prop] || documentElementProp;
   };
 });
-
 /*
  得到元素的大小信息
  @param elem
@@ -13263,63 +13203,74 @@ each(['Width', 'Height'], function (name) {
  'border' : (css width) + padding + border
  'margin' : (css width) + padding + border + margin
  */
+
 function getWH(elem, name, ex) {
   var extra = ex;
+
   if (isWindow(elem)) {
     return name === 'width' ? domUtils.viewportWidth(elem) : domUtils.viewportHeight(elem);
   } else if (elem.nodeType === 9) {
     return name === 'width' ? domUtils.docWidth(elem) : domUtils.docHeight(elem);
   }
+
   var which = name === 'width' ? ['Left', 'Right'] : ['Top', 'Bottom'];
   var borderBoxValue = name === 'width' ? elem.getBoundingClientRect().width : elem.getBoundingClientRect().height;
   var computedStyle = getComputedStyleX(elem);
-  var isBorderBox = isBorderBoxFn(elem, computedStyle);
+  var isBorderBox = isBorderBoxFn(elem);
   var cssBoxValue = 0;
+
   if (borderBoxValue === null || borderBoxValue === undefined || borderBoxValue <= 0) {
-    borderBoxValue = undefined;
-    // Fall back to computed then un computed css if necessary
+    borderBoxValue = undefined; // Fall back to computed then un computed css if necessary
+
     cssBoxValue = getComputedStyleX(elem, name);
+
     if (cssBoxValue === null || cssBoxValue === undefined || Number(cssBoxValue) < 0) {
       cssBoxValue = elem.style[name] || 0;
-    }
-    // Normalize '', auto, and prepare for extra
+    } // Normalize '', auto, and prepare for extra
+
+
     cssBoxValue = parseFloat(cssBoxValue) || 0;
   }
+
   if (extra === undefined) {
     extra = isBorderBox ? BORDER_INDEX : CONTENT_INDEX;
   }
+
   var borderBoxValueOrIsBorderBox = borderBoxValue !== undefined || isBorderBox;
   var val = borderBoxValue || cssBoxValue;
+
   if (extra === CONTENT_INDEX) {
     if (borderBoxValueOrIsBorderBox) {
-      return val - getPBMWidth(elem, ['border', 'padding'], which, computedStyle);
+      return val - getPBMWidth(elem, ['border', 'padding'], which);
     }
+
     return cssBoxValue;
   } else if (borderBoxValueOrIsBorderBox) {
     if (extra === BORDER_INDEX) {
       return val;
     }
-    return val + (extra === PADDING_INDEX ? -getPBMWidth(elem, ['border'], which, computedStyle) : getPBMWidth(elem, ['margin'], which, computedStyle));
+
+    return val + (extra === PADDING_INDEX ? -getPBMWidth(elem, ['border'], which) : getPBMWidth(elem, ['margin'], which));
   }
-  return cssBoxValue + getPBMWidth(elem, BOX_MODELS.slice(extra), which, computedStyle);
+
+  return cssBoxValue + getPBMWidth(elem, BOX_MODELS.slice(extra), which);
 }
 
 var cssShow = {
   position: 'absolute',
   visibility: 'hidden',
   display: 'block'
-};
+}; // fix #119 : https://github.com/kissyteam/kissy/issues/119
 
-// fix #119 : https://github.com/kissyteam/kissy/issues/119
 function getWHIgnoreDisplay() {
-  for (var _len = arguments.length, args = Array(_len), _key2 = 0; _key2 < _len; _key2++) {
+  for (var _len = arguments.length, args = new Array(_len), _key2 = 0; _key2 < _len; _key2++) {
     args[_key2] = arguments[_key2];
   }
 
-  var val = void 0;
-  var elem = args[0];
-  // in case elem is window
+  var val;
+  var elem = args[0]; // in case elem is window
   // elem.offsetWidth === undefined
+
   if (elem.offsetWidth !== 0) {
     val = getWH.apply(undefined, args);
   } else {
@@ -13327,29 +13278,37 @@ function getWHIgnoreDisplay() {
       val = getWH.apply(undefined, args);
     });
   }
+
   return val;
 }
 
 each(['width', 'height'], function (name) {
   var first = name.charAt(0).toUpperCase() + name.slice(1);
-  domUtils['outer' + first] = function (el, includeMargin) {
+
+  domUtils["outer".concat(first)] = function (el, includeMargin) {
     return el && getWHIgnoreDisplay(el, name, includeMargin ? MARGIN_INDEX : BORDER_INDEX);
   };
+
   var which = name === 'width' ? ['Left', 'Right'] : ['Top', 'Bottom'];
 
   domUtils[name] = function (elem, v) {
     var val = v;
+
     if (val !== undefined) {
       if (elem) {
         var computedStyle = getComputedStyleX(elem);
         var isBorderBox = isBorderBoxFn(elem);
+
         if (isBorderBox) {
-          val += getPBMWidth(elem, ['padding', 'border'], which, computedStyle);
+          val += getPBMWidth(elem, ['padding', 'border'], which);
         }
+
         return css$1(elem, name, val);
       }
+
       return undefined;
     }
+
     return elem && getWHIgnoreDisplay(elem, name, CONTENT_INDEX);
   };
 });
@@ -13360,6 +13319,7 @@ function mix(to, from) {
       to[i] = from[i];
     }
   }
+
   return to;
 }
 
@@ -13368,10 +13328,10 @@ var utils = {
     if (node && node.document && node.setTimeout) {
       return node;
     }
+
     var doc = node.ownerDocument || node;
     return doc.defaultView || doc.parentWindow;
   },
-
   getDocument: getDocument,
   offset: function offset(el, value, option) {
     if (typeof value !== 'undefined') {
@@ -13380,19 +13340,21 @@ var utils = {
       return getOffset(el);
     }
   },
-
   isWindow: isWindow,
   each: each,
   css: css$1,
   clone: function clone(obj) {
-    var i = void 0;
+    var i;
     var ret = {};
+
     for (i in obj) {
       if (obj.hasOwnProperty(i)) {
         ret[i] = obj[i];
       }
     }
+
     var overflow = obj.overflow;
+
     if (overflow) {
       for (i in obj) {
         if (obj.hasOwnProperty(i)) {
@@ -13400,9 +13362,9 @@ var utils = {
         }
       }
     }
+
     return ret;
   },
-
   mix: mix,
   getWindowScrollLeft: function getWindowScrollLeft(w) {
     return getScrollLeft(w);
@@ -13413,31 +13375,28 @@ var utils = {
   merge: function merge() {
     var ret = {};
 
-    for (var _len2 = arguments.length, args = Array(_len2), _key3 = 0; _key3 < _len2; _key3++) {
-      args[_key3] = arguments[_key3];
+    for (var i = 0; i < arguments.length; i++) {
+      utils.mix(ret, i < 0 || arguments.length <= i ? undefined : arguments[i]);
     }
 
-    for (var i = 0; i < args.length; i++) {
-      utils.mix(ret, args[i]);
-    }
     return ret;
   },
-
   viewportWidth: 0,
   viewportHeight: 0
 };
-
 mix(utils, domUtils);
 
 /**
  * 得到会导致元素显示不全的祖先元素
  */
 
+var getParent = utils.getParent;
+
 function getOffsetParent(element) {
   if (utils.isWindow(element) || element.nodeType === 9) {
     return null;
-  }
-  // ie 这个也不是完全可行
+  } // ie 这个也不是完全可行
+
   /*
    <div style="width: 50px;height: 100px;overflow: hidden">
    <div style="width: 50px;height: 100px;position: relative;" id="d6">
@@ -13452,25 +13411,30 @@ function getOffsetParent(element) {
   //            return element.offsetParent;
   //        }
   // 统一的 offsetParent 方法
+
+
   var doc = utils.getDocument(element);
   var body = doc.body;
-  var parent = void 0;
+  var parent;
   var positionStyle = utils.css(element, 'position');
   var skipStatic = positionStyle === 'fixed' || positionStyle === 'absolute';
 
   if (!skipStatic) {
-    return element.nodeName.toLowerCase() === 'html' ? null : element.parentNode;
+    return element.nodeName.toLowerCase() === 'html' ? null : getParent(element);
   }
 
-  for (parent = element.parentNode; parent && parent !== body; parent = parent.parentNode) {
+  for (parent = getParent(element); parent && parent !== body; parent = getParent(parent)) {
     positionStyle = utils.css(parent, 'position');
+
     if (positionStyle !== 'static') {
       return parent;
     }
   }
+
   return null;
 }
 
+var getParent$1 = utils.getParent;
 function isAncestorFixed(element) {
   if (utils.isWindow(element) || element.nodeType === 9) {
     return false;
@@ -13479,18 +13443,22 @@ function isAncestorFixed(element) {
   var doc = utils.getDocument(element);
   var body = doc.body;
   var parent = null;
-  for (parent = element.parentNode; parent && parent !== body; parent = parent.parentNode) {
+
+  for (parent = getParent$1(element); parent && parent !== body; parent = getParent$1(parent)) {
     var positionStyle = utils.css(parent, 'position');
+
     if (positionStyle === 'fixed') {
       return true;
     }
   }
+
   return false;
 }
 
 /**
  * 获得元素的显示部分的区域
  */
+
 function getVisibleRectForElement(element) {
   var visibleRect = {
     left: 0,
@@ -13502,40 +13470,40 @@ function getVisibleRectForElement(element) {
   var doc = utils.getDocument(element);
   var win = doc.defaultView || doc.parentWindow;
   var body = doc.body;
-  var documentElement = doc.documentElement;
-
-  // Determine the size of the visible rect by climbing the dom accounting for
+  var documentElement = doc.documentElement; // Determine the size of the visible rect by climbing the dom accounting for
   // all scrollable containers.
+
   while (el) {
     // clientWidth is zero for inline block elements in ie.
-    if ((navigator.userAgent.indexOf('MSIE') === -1 || el.clientWidth !== 0) &&
-    // body may have overflow set on it, yet we still get the entire
+    if ((navigator.userAgent.indexOf('MSIE') === -1 || el.clientWidth !== 0) && // body may have overflow set on it, yet we still get the entire
     // viewport. In some browsers, el.offsetParent may be
     // document.documentElement, so check for that too.
     el !== body && el !== documentElement && utils.css(el, 'overflow') !== 'visible') {
-      var pos = utils.offset(el);
-      // add border
+      var pos = utils.offset(el); // add border
+
       pos.left += el.clientLeft;
       pos.top += el.clientTop;
       visibleRect.top = Math.max(visibleRect.top, pos.top);
-      visibleRect.right = Math.min(visibleRect.right,
-      // consider area without scrollBar
+      visibleRect.right = Math.min(visibleRect.right, // consider area without scrollBar
       pos.left + el.clientWidth);
       visibleRect.bottom = Math.min(visibleRect.bottom, pos.top + el.clientHeight);
       visibleRect.left = Math.max(visibleRect.left, pos.left);
     } else if (el === body || el === documentElement) {
       break;
     }
-    el = getOffsetParent(el);
-  }
 
-  // Set element position to fixed
+    el = getOffsetParent(el);
+  } // Set element position to fixed
   // make sure absolute element itself don't affect it's visible area
   // https://github.com/ant-design/ant-design/issues/7601
+
+
   var originalPosition = null;
+
   if (!utils.isWindow(element) && element.nodeType !== 9) {
     originalPosition = element.style.position;
     var position = utils.css(element, 'position');
+
     if (position === 'absolute') {
       element.style.position = 'fixed';
     }
@@ -13546,19 +13514,20 @@ function getVisibleRectForElement(element) {
   var viewportWidth = utils.viewportWidth(win);
   var viewportHeight = utils.viewportHeight(win);
   var documentWidth = documentElement.scrollWidth;
-  var documentHeight = documentElement.scrollHeight;
-
-  // scrollXXX on html is sync with body which means overflow: hidden on body gets wrong scrollXXX.
+  var documentHeight = documentElement.scrollHeight; // scrollXXX on html is sync with body which means overflow: hidden on body gets wrong scrollXXX.
   // We should cut this ourself.
+
   var bodyStyle = window.getComputedStyle(body);
+
   if (bodyStyle.overflowX === 'hidden') {
     documentWidth = win.innerWidth;
   }
+
   if (bodyStyle.overflowY === 'hidden') {
     documentHeight = win.innerHeight;
-  }
+  } // Reset element position after calculate the visible area
 
-  // Reset element position after calculate the visible area
+
   if (element.style) {
     element.style.position = originalPosition;
   }
@@ -13573,7 +13542,6 @@ function getVisibleRectForElement(element) {
     // Clip by document's size.
     var maxVisibleWidth = Math.max(documentWidth, scrollX + viewportWidth);
     visibleRect.right = Math.min(visibleRect.right, maxVisibleWidth);
-
     var maxVisibleHeight = Math.max(documentHeight, scrollY + viewportHeight);
     visibleRect.bottom = Math.min(visibleRect.bottom, maxVisibleHeight);
   }
@@ -13590,30 +13558,30 @@ function adjustForViewport(elFuturePos, elRegion, visibleRect, overflow) {
 
   if (overflow.adjustX && pos.left < visibleRect.left) {
     pos.left = visibleRect.left;
-  }
+  } // Left edge inside and right edge outside viewport, try to resize it.
 
-  // Left edge inside and right edge outside viewport, try to resize it.
+
   if (overflow.resizeWidth && pos.left >= visibleRect.left && pos.left + size.width > visibleRect.right) {
     size.width -= pos.left + size.width - visibleRect.right;
-  }
+  } // Right edge outside viewport, try to move it.
 
-  // Right edge outside viewport, try to move it.
+
   if (overflow.adjustX && pos.left + size.width > visibleRect.right) {
     // 保证左边界和可视区域左边界对齐
     pos.left = Math.max(visibleRect.right - size.width, visibleRect.left);
-  }
+  } // Top edge outside viewport, try to move it.
 
-  // Top edge outside viewport, try to move it.
+
   if (overflow.adjustY && pos.top < visibleRect.top) {
     pos.top = visibleRect.top;
-  }
+  } // Top edge inside and bottom edge outside viewport, try to resize it.
 
-  // Top edge inside and bottom edge outside viewport, try to resize it.
+
   if (overflow.resizeHeight && pos.top >= visibleRect.top && pos.top + size.height > visibleRect.bottom) {
     size.height -= pos.top + size.height - visibleRect.bottom;
-  }
+  } // Bottom edge outside viewport, try to move it.
 
-  // Bottom edge outside viewport, try to move it.
+
   if (overflow.adjustY && pos.top + size.height > visibleRect.bottom) {
     // 保证上边界和可视区域上边界对齐
     pos.top = Math.max(visibleRect.bottom - size.height, visibleRect.top);
@@ -13623,9 +13591,10 @@ function adjustForViewport(elFuturePos, elRegion, visibleRect, overflow) {
 }
 
 function getRegion(node) {
-  var offset = void 0;
-  var w = void 0;
-  var h = void 0;
+  var offset;
+  var w;
+  var h;
+
   if (!utils.isWindow(node) && node.nodeType !== 9) {
     offset = utils.offset(node);
     w = utils.outerWidth(node);
@@ -13639,6 +13608,7 @@ function getRegion(node) {
     w = utils.viewportWidth(win);
     h = utils.viewportHeight(win);
   }
+
   offset.width = w;
   offset.height = h;
   return offset;
@@ -13647,13 +13617,11 @@ function getRegion(node) {
 /**
  * 获取 node 上的 align 对齐点 相对于页面的坐标
  */
-
 function getAlignOffset(region, align) {
   var V = align.charAt(0);
   var H = align.charAt(1);
   var w = region.width;
   var h = region.height;
-
   var x = region.left;
   var y = region.top;
 
@@ -13679,10 +13647,9 @@ function getElFuturePos(elRegion, refNodeRegion, points, offset, targetOffset) {
   var p1 = getAlignOffset(refNodeRegion, points[1]);
   var p2 = getAlignOffset(elRegion, points[0]);
   var diff = [p2.left - p1.left, p2.top - p1.top];
-
   return {
-    left: elRegion.left - diff[0] + offset[0] - targetOffset[0],
-    top: elRegion.top - diff[1] + offset[1] - targetOffset[1]
+    left: Math.round(elRegion.left - diff[0] + offset[0] - targetOffset[0]),
+    top: Math.round(elRegion.top - diff[1] + offset[1] - targetOffset[1])
   };
 }
 
@@ -13690,8 +13657,6 @@ function getElFuturePos(elRegion, refNodeRegion, points, offset, targetOffset) {
  * align dom node flexibly
  * @author yiminghe@gmail.com
  */
-
-// http://yiminghe.iteye.com/blog/1124720
 
 function isFailX(elFuturePos, elRegion, visibleRect) {
   return elFuturePos.left < visibleRect.left || elFuturePos.left + elRegion.width > visibleRect.right;
@@ -13725,12 +13690,14 @@ function flipOffset(offset, index) {
 }
 
 function convertOffset(str, offsetLen) {
-  var n = void 0;
+  var n;
+
   if (/%$/.test(str)) {
     n = parseInt(str.substring(0, str.length - 1), 10) / 100 * offsetLen;
   } else {
     n = parseInt(str, 10);
   }
+
   return n || 0;
 }
 
@@ -13738,12 +13705,13 @@ function normalizeOffset(offset, el) {
   offset[0] = convertOffset(offset[0], el.width);
   offset[1] = convertOffset(offset[1], el.height);
 }
-
 /**
  * @param el
  * @param tgtRegion 参照节点所占的区域: { left, top, width, height }
  * @param align
  */
+
+
 function doAlign(el, tgtRegion, align, isTgtRegionVisible) {
   var points = align.points;
   var offset = align.offset || [0, 0];
@@ -13754,30 +13722,29 @@ function doAlign(el, tgtRegion, align, isTgtRegionVisible) {
   targetOffset = [].concat(targetOffset);
   overflow = overflow || {};
   var newOverflowCfg = {};
-  var fail = 0;
-  // 当前节点可以被放置的显示区域
-  var visibleRect = getVisibleRectForElement(source);
-  // 当前节点所占的区域, left/top/width/height
-  var elRegion = getRegion(source);
-  // 将 offset 转换成数值，支持百分比
-  normalizeOffset(offset, elRegion);
-  normalizeOffset(targetOffset, tgtRegion);
-  // 当前节点将要被放置的位置
-  var elFuturePos = getElFuturePos(elRegion, tgtRegion, points, offset, targetOffset);
-  // 当前节点将要所处的区域
-  var newElRegion = utils.merge(elRegion, elFuturePos);
+  var fail = 0; // 当前节点可以被放置的显示区域
 
-  // 如果可视区域不能完全放置当前节点时允许调整
+  var visibleRect = getVisibleRectForElement(source); // 当前节点所占的区域, left/top/width/height
+
+  var elRegion = getRegion(source); // 将 offset 转换成数值，支持百分比
+
+  normalizeOffset(offset, elRegion);
+  normalizeOffset(targetOffset, tgtRegion); // 当前节点将要被放置的位置
+
+  var elFuturePos = getElFuturePos(elRegion, tgtRegion, points, offset, targetOffset); // 当前节点将要所处的区域
+
+  var newElRegion = utils.merge(elRegion, elFuturePos); // 如果可视区域不能完全放置当前节点时允许调整
+
   if (visibleRect && (overflow.adjustX || overflow.adjustY) && isTgtRegionVisible) {
     if (overflow.adjustX) {
       // 如果横向不能放下
       if (isFailX(elFuturePos, elRegion, visibleRect)) {
         // 对齐位置反下
-        var newPoints = flip(points, /[lr]/ig, {
+        var newPoints = flip(points, /[lr]/gi, {
           l: 'r',
           r: 'l'
-        });
-        // 偏移量也反下
+        }); // 偏移量也反下
+
         var newOffset = flipOffset(offset, 0);
         var newTargetOffset = flipOffset(targetOffset, 0);
         var newElFuturePos = getElFuturePos(elRegion, tgtRegion, newPoints, newOffset, newTargetOffset);
@@ -13795,13 +13762,16 @@ function doAlign(el, tgtRegion, align, isTgtRegionVisible) {
       // 如果纵向不能放下
       if (isFailY(elFuturePos, elRegion, visibleRect)) {
         // 对齐位置反下
-        var _newPoints = flip(points, /[tb]/ig, {
+        var _newPoints = flip(points, /[tb]/gi, {
           t: 'b',
           b: 't'
-        });
-        // 偏移量也反下
+        }); // 偏移量也反下
+
+
         var _newOffset = flipOffset(offset, 1);
+
         var _newTargetOffset = flipOffset(targetOffset, 1);
+
         var _newElFuturePos = getElFuturePos(elRegion, tgtRegion, _newPoints, _newOffset, _newTargetOffset);
 
         if (!isCompleteFailY(_newElFuturePos, elRegion, visibleRect)) {
@@ -13811,44 +13781,45 @@ function doAlign(el, tgtRegion, align, isTgtRegionVisible) {
           targetOffset = _newTargetOffset;
         }
       }
-    }
+    } // 如果失败，重新计算当前节点将要被放置的位置
 
-    // 如果失败，重新计算当前节点将要被放置的位置
+
     if (fail) {
       elFuturePos = getElFuturePos(elRegion, tgtRegion, points, offset, targetOffset);
       utils.mix(newElRegion, elFuturePos);
     }
+
     var isStillFailX = isFailX(elFuturePos, elRegion, visibleRect);
-    var isStillFailY = isFailY(elFuturePos, elRegion, visibleRect);
-    // 检查反下后的位置是否可以放下了，如果仍然放不下：
+    var isStillFailY = isFailY(elFuturePos, elRegion, visibleRect); // 检查反下后的位置是否可以放下了，如果仍然放不下：
     // 1. 复原修改过的定位参数
+
     if (isStillFailX || isStillFailY) {
       points = align.points;
       offset = align.offset || [0, 0];
       targetOffset = align.targetOffset || [0, 0];
-    }
-    // 2. 只有指定了可以调整当前方向才调整
-    newOverflowCfg.adjustX = overflow.adjustX && isStillFailX;
-    newOverflowCfg.adjustY = overflow.adjustY && isStillFailY;
+    } // 2. 只有指定了可以调整当前方向才调整
 
-    // 确实要调整，甚至可能会调整高度宽度
+
+    newOverflowCfg.adjustX = overflow.adjustX && isStillFailX;
+    newOverflowCfg.adjustY = overflow.adjustY && isStillFailY; // 确实要调整，甚至可能会调整高度宽度
+
     if (newOverflowCfg.adjustX || newOverflowCfg.adjustY) {
       newElRegion = adjustForViewport(elFuturePos, elRegion, visibleRect, newOverflowCfg);
     }
-  }
+  } // need judge to in case set fixed with in css on height auto element
 
-  // need judge to in case set fixed with in css on height auto element
+
   if (newElRegion.width !== elRegion.width) {
     utils.css(source, 'width', utils.width(source) + newElRegion.width - elRegion.width);
   }
 
   if (newElRegion.height !== elRegion.height) {
     utils.css(source, 'height', utils.height(source) + newElRegion.height - elRegion.height);
-  }
-
-  // https://github.com/kissyteam/kissy/issues/190
+  } // https://github.com/kissyteam/kissy/issues/190
   // 相对于屏幕位置没变，而 left/top 变了
   // 例如 <div 'relative'><el absolute></div>
+
+
   utils.offset(source, {
     left: newElRegion.left,
     top: newElRegion.top
@@ -13858,7 +13829,6 @@ function doAlign(el, tgtRegion, align, isTgtRegionVisible) {
     useCssTransform: align.useCssTransform,
     ignoreShake: align.ignoreShake
   });
-
   return {
     points: points,
     offset: offset,
@@ -13878,24 +13848,18 @@ function doAlign(el, tgtRegion, align, isTgtRegionVisible) {
 function isOutOfVisibleRect(target) {
   var visibleRect = getVisibleRectForElement(target);
   var targetRegion = getRegion(target);
-
   return !visibleRect || targetRegion.left + targetRegion.width <= visibleRect.left || targetRegion.top + targetRegion.height <= visibleRect.top || targetRegion.left >= visibleRect.right || targetRegion.top >= visibleRect.bottom;
 }
 
 function alignElement(el, refNode, align) {
   var target = align.target || refNode;
   var refNodeRegion = getRegion(target);
-
   var isTargetNotOutOfVisible = !isOutOfVisibleRect(target);
-
   return doAlign(el, refNodeRegion, align, isTargetNotOutOfVisible);
 }
 
 alignElement.__getOffsetParent = getOffsetParent;
-
 alignElement.__getVisibleRectForElement = getVisibleRectForElement;
-
-var _extends$2 = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 /**
  * `tgtPoint`: { pageX, pageY } or { clientX, clientY }.
@@ -13903,12 +13867,10 @@ var _extends$2 = Object.assign || function (target) { for (var i = 1; i < argume
  */
 
 function alignPoint(el, tgtPoint, align) {
-  var pageX = void 0;
-  var pageY = void 0;
-
+  var pageX;
+  var pageY;
   var doc = utils.getDocument(el);
   var win = doc.defaultView || doc.parentWindow;
-
   var scrollX = utils.getWindowScrollLeft(win);
   var scrollY = utils.getWindowScrollTop(win);
   var viewportWidth = utils.viewportWidth(win);
@@ -13932,13 +13894,12 @@ function alignPoint(el, tgtPoint, align) {
     width: 0,
     height: 0
   };
+  var pointInView = pageX >= 0 && pageX <= scrollX + viewportWidth && pageY >= 0 && pageY <= scrollY + viewportHeight; // Provide default target point
 
-  var pointInView = pageX >= 0 && pageX <= scrollX + viewportWidth && pageY >= 0 && pageY <= scrollY + viewportHeight;
-
-  // Provide default target point
   var points = [align.points[0], 'cc'];
-
-  return doAlign(el, tgtRegion, _extends$2({}, align, { points: points }), pointInView);
+  return doAlign(el, tgtRegion, _objectSpread2({}, align, {
+    points: points
+  }), pointInView);
 }
 
 function buffer(fn, ms) {
@@ -14050,7 +14011,7 @@ var Align = function (_Component) {
     }, _temp), _possibleConstructorReturn$1(_this, _ret);
   }
 
-  _createClass$1(Align, [{
+  _createClass$3(Align, [{
     key: 'componentDidMount',
     value: function componentDidMount() {
       var props = this.props;
@@ -14208,7 +14169,7 @@ exports.default = function (obj, key, value) {
 };
 });
 
-var _defineProperty$1 = unwrapExports(defineProperty$4);
+var _defineProperty$2 = unwrapExports(defineProperty$4);
 
 function toArrayChildren(children) {
   var ret = [];
@@ -14423,16 +14384,6 @@ var TransitionEvents = {
       removeEventListener(node, endEvent, eventListener);
     });
   }
-};
-
-var indexOf = [].indexOf;
-
-var indexof = function(arr, obj){
-  if (indexOf) return arr.indexOf(obj);
-  for (var i = 0; i < arr.length; ++i) {
-    if (arr[i] === obj) return i;
-  }
-  return -1;
 };
 
 var componentIndexof = function(arr, obj){
@@ -14839,7 +14790,7 @@ var AnimateChild = function (_React$Component) {
     return _possibleConstructorReturn$1(this, (AnimateChild.__proto__ || Object.getPrototypeOf(AnimateChild)).apply(this, arguments));
   }
 
-  _createClass$1(AnimateChild, [{
+  _createClass$3(AnimateChild, [{
     key: 'componentWillUnmount',
     value: function componentWillUnmount() {
       this.stop();
@@ -14922,7 +14873,9 @@ var AnimateChild = function (_React$Component) {
 }(React__default.Component);
 
 AnimateChild.propTypes = {
-  children: propTypes.any
+  children: propTypes.any,
+  animation: propTypes.any,
+  transitionName: propTypes.any
 };
 
 var defaultKey = 'rc_animate_' + Date.now();
@@ -14965,7 +14918,7 @@ var Animate = function (_React$Component) {
     return _this;
   }
 
-  _createClass$1(Animate, [{
+  _createClass$3(Animate, [{
     key: 'componentDidMount',
     value: function componentDidMount() {
       var _this2 = this;
@@ -15008,7 +14961,7 @@ var Animate = function (_React$Component) {
           var nextChild = currentChild && findChildInChildrenByKey(nextChildren, currentChild.key);
           var newChild = void 0;
           if ((!nextChild || !nextChild.props[showProp]) && currentChild.props[showProp]) {
-            newChild = React__default.cloneElement(nextChild || currentChild, _defineProperty$1({}, showProp, true));
+            newChild = React__default.cloneElement(nextChild || currentChild, _defineProperty$2({}, showProp, true));
           } else {
             newChild = nextChild;
           }
@@ -15158,6 +15111,8 @@ var Animate = function (_React$Component) {
 
 Animate.isAnimate = true;
 Animate.propTypes = {
+  className: propTypes.string,
+  style: propTypes.object,
   component: propTypes.any,
   componentProps: propTypes.object,
   animation: propTypes.object,
@@ -15733,11 +15688,16 @@ var Trigger = function (_React$Component) {
       popupVisible = !!props.defaultPopupVisible;
     }
 
-    _this.prevPopupVisible = popupVisible;
-
     _this.state = {
+      prevPopupVisible: popupVisible,
       popupVisible: popupVisible
     };
+
+    ALL_HANDLERS.forEach(function (h) {
+      _this['fire' + h] = function (e) {
+        _this.fireEvents(h, e);
+      };
+    });
     return _this;
   }
 
@@ -15749,30 +15709,10 @@ var Trigger = function (_React$Component) {
     };
   };
 
-  Trigger.prototype.componentWillMount = function componentWillMount() {
-    var _this2 = this;
-
-    ALL_HANDLERS.forEach(function (h) {
-      _this2['fire' + h] = function (e) {
-        _this2.fireEvents(h, e);
-      };
-    });
-  };
-
   Trigger.prototype.componentDidMount = function componentDidMount() {
     this.componentDidUpdate({}, {
       popupVisible: this.state.popupVisible
     });
-  };
-
-  Trigger.prototype.componentWillReceiveProps = function componentWillReceiveProps(_ref) {
-    var popupVisible = _ref.popupVisible;
-
-    if (popupVisible !== undefined) {
-      this.setState({
-        popupVisible: popupVisible
-      });
-    }
   };
 
   Trigger.prototype.componentDidUpdate = function componentDidUpdate(_, prevState) {
@@ -15786,8 +15726,6 @@ var Trigger = function (_React$Component) {
     if (!IS_REACT_16) {
       this.renderComponent(null, triggerAfterPopupVisibleChange);
     }
-
-    this.prevPopupVisible = prevState.popupVisible;
 
     // We must listen to `mousedown` or `touchstart`, edge case:
     // https://github.com/ant-design/ant-design/issues/5804
@@ -15825,6 +15763,19 @@ var Trigger = function (_React$Component) {
     clearTimeout(this.mouseDownTimeout);
   };
 
+  Trigger.getDerivedStateFromProps = function getDerivedStateFromProps(_ref, prevState) {
+    var popupVisible = _ref.popupVisible;
+
+    var newState = {};
+
+    if (popupVisible !== undefined && prevState.popupVisible !== popupVisible) {
+      newState.popupVisible = popupVisible;
+      newState.prevPopupVisible = prevState.popupVisible;
+    }
+
+    return newState;
+  };
+
   Trigger.prototype.getPopupDomNode = function getPopupDomNode() {
     // for test
     if (this._component && this._component.getPopupDomNode) {
@@ -15851,13 +15802,14 @@ var Trigger = function (_React$Component) {
    */
   Trigger.prototype.setPopupVisible = function setPopupVisible(popupVisible, event) {
     var alignPoint = this.props.alignPoint;
+    var prevPopupVisible = this.state.popupVisible;
 
 
     this.clearDelayTimer();
 
-    if (this.state.popupVisible !== popupVisible) {
+    if (prevPopupVisible !== popupVisible) {
       if (!('popupVisible' in this.props)) {
-        this.setState({ popupVisible: popupVisible });
+        this.setState({ popupVisible: popupVisible, prevPopupVisible: prevPopupVisible });
       }
       this.props.onPopupVisibleChange(popupVisible);
     }
@@ -15869,15 +15821,15 @@ var Trigger = function (_React$Component) {
   };
 
   Trigger.prototype.delaySetPopupVisible = function delaySetPopupVisible(visible, delayS, event) {
-    var _this3 = this;
+    var _this2 = this;
 
     var delay = delayS * 1000;
     this.clearDelayTimer();
     if (delay) {
       var point = event ? { pageX: event.pageX, pageY: event.pageY } : null;
       this.delayTimer = setTimeout(function () {
-        _this3.setPopupVisible(visible, point);
-        _this3.clearDelayTimer();
+        _this2.setPopupVisible(visible, point);
+        _this2.clearDelayTimer();
       }, delay);
     } else {
       this.setPopupVisible(visible, event);
@@ -16000,7 +15952,7 @@ var Trigger = function (_React$Component) {
   };
 
   Trigger.prototype.render = function render() {
-    var _this4 = this;
+    var _this3 = this;
 
     var popupVisible = this.state.popupVisible;
     var _props8 = this.props,
@@ -16068,7 +16020,7 @@ var Trigger = function (_React$Component) {
         function (_ref2) {
           var renderComponent = _ref2.renderComponent;
 
-          _this4.renderComponent = renderComponent;
+          _this3.renderComponent = renderComponent;
           return trigger;
         }
       );
@@ -16079,11 +16031,7 @@ var Trigger = function (_React$Component) {
     if (popupVisible || this._component || forceRender) {
       portal = React__default.createElement(
         Portal,
-        {
-          key: 'portal',
-          getContainer: this.getContainer,
-          didUpdate: this.handlePortalUpdate
-        },
+        { key: 'portal', getContainer: this.getContainer, didUpdate: this.handlePortalUpdate },
         this.getComponent()
       );
     }
@@ -16157,115 +16105,119 @@ Trigger.defaultProps = {
 };
 
 var _initialiseProps$2 = function _initialiseProps() {
-  var _this5 = this;
+  var _this4 = this;
 
   this.onMouseEnter = function (e) {
-    var mouseEnterDelay = _this5.props.mouseEnterDelay;
+    var mouseEnterDelay = _this4.props.mouseEnterDelay;
 
-    _this5.fireEvents('onMouseEnter', e);
-    _this5.delaySetPopupVisible(true, mouseEnterDelay, mouseEnterDelay ? null : e);
+    _this4.fireEvents('onMouseEnter', e);
+    _this4.delaySetPopupVisible(true, mouseEnterDelay, mouseEnterDelay ? null : e);
   };
 
   this.onMouseMove = function (e) {
-    _this5.fireEvents('onMouseMove', e);
-    _this5.setPoint(e);
+    _this4.fireEvents('onMouseMove', e);
+    _this4.setPoint(e);
   };
 
   this.onMouseLeave = function (e) {
-    _this5.fireEvents('onMouseLeave', e);
-    _this5.delaySetPopupVisible(false, _this5.props.mouseLeaveDelay);
+    _this4.fireEvents('onMouseLeave', e);
+    _this4.delaySetPopupVisible(false, _this4.props.mouseLeaveDelay);
   };
 
   this.onPopupMouseEnter = function () {
-    _this5.clearDelayTimer();
+    _this4.clearDelayTimer();
   };
 
   this.onPopupMouseLeave = function (e) {
     // https://github.com/react-component/trigger/pull/13
     // react bug?
-    if (e.relatedTarget && !e.relatedTarget.setTimeout && _this5._component && _this5._component.getPopupDomNode && contains(_this5._component.getPopupDomNode(), e.relatedTarget)) {
+    if (e.relatedTarget && !e.relatedTarget.setTimeout && _this4._component && _this4._component.getPopupDomNode && contains(_this4._component.getPopupDomNode(), e.relatedTarget)) {
       return;
     }
-    _this5.delaySetPopupVisible(false, _this5.props.mouseLeaveDelay);
+    _this4.delaySetPopupVisible(false, _this4.props.mouseLeaveDelay);
   };
 
   this.onFocus = function (e) {
-    _this5.fireEvents('onFocus', e);
+    _this4.fireEvents('onFocus', e);
     // incase focusin and focusout
-    _this5.clearDelayTimer();
-    if (_this5.isFocusToShow()) {
-      _this5.focusTime = Date.now();
-      _this5.delaySetPopupVisible(true, _this5.props.focusDelay);
+    _this4.clearDelayTimer();
+    if (_this4.isFocusToShow()) {
+      _this4.focusTime = Date.now();
+      _this4.delaySetPopupVisible(true, _this4.props.focusDelay);
     }
   };
 
   this.onMouseDown = function (e) {
-    _this5.fireEvents('onMouseDown', e);
-    _this5.preClickTime = Date.now();
+    _this4.fireEvents('onMouseDown', e);
+    _this4.preClickTime = Date.now();
   };
 
   this.onTouchStart = function (e) {
-    _this5.fireEvents('onTouchStart', e);
-    _this5.preTouchTime = Date.now();
+    _this4.fireEvents('onTouchStart', e);
+    _this4.preTouchTime = Date.now();
   };
 
   this.onBlur = function (e) {
-    _this5.fireEvents('onBlur', e);
-    _this5.clearDelayTimer();
-    if (_this5.isBlurToHide()) {
-      _this5.delaySetPopupVisible(false, _this5.props.blurDelay);
+    _this4.fireEvents('onBlur', e);
+    _this4.clearDelayTimer();
+    if (_this4.isBlurToHide()) {
+      _this4.delaySetPopupVisible(false, _this4.props.blurDelay);
     }
   };
 
   this.onContextMenu = function (e) {
     e.preventDefault();
-    _this5.fireEvents('onContextMenu', e);
-    _this5.setPopupVisible(true, e);
+    _this4.fireEvents('onContextMenu', e);
+    _this4.setPopupVisible(true, e);
   };
 
   this.onContextMenuClose = function () {
-    if (_this5.isContextMenuToShow()) {
-      _this5.close();
+    if (_this4.isContextMenuToShow()) {
+      _this4.close();
     }
   };
 
   this.onClick = function (event) {
-    _this5.fireEvents('onClick', event);
+    _this4.fireEvents('onClick', event);
     // focus will trigger click
-    if (_this5.focusTime) {
+    if (_this4.focusTime) {
       var preTime = void 0;
-      if (_this5.preClickTime && _this5.preTouchTime) {
-        preTime = Math.min(_this5.preClickTime, _this5.preTouchTime);
-      } else if (_this5.preClickTime) {
-        preTime = _this5.preClickTime;
-      } else if (_this5.preTouchTime) {
-        preTime = _this5.preTouchTime;
+      if (_this4.preClickTime && _this4.preTouchTime) {
+        preTime = Math.min(_this4.preClickTime, _this4.preTouchTime);
+      } else if (_this4.preClickTime) {
+        preTime = _this4.preClickTime;
+      } else if (_this4.preTouchTime) {
+        preTime = _this4.preTouchTime;
       }
-      if (Math.abs(preTime - _this5.focusTime) < 20) {
+      if (Math.abs(preTime - _this4.focusTime) < 20) {
         return;
       }
-      _this5.focusTime = 0;
+      _this4.focusTime = 0;
     }
-    _this5.preClickTime = 0;
-    _this5.preTouchTime = 0;
-    if (event && event.preventDefault) {
+    _this4.preClickTime = 0;
+    _this4.preTouchTime = 0;
+
+    // Only prevent default when all the action is click.
+    // https://github.com/ant-design/ant-design/issues/17043
+    // https://github.com/ant-design/ant-design/issues/17291
+    if (_this4.isClickToShow() && (_this4.isClickToHide() || _this4.isBlurToHide()) && event && event.preventDefault) {
       event.preventDefault();
     }
-    var nextVisible = !_this5.state.popupVisible;
-    if (_this5.isClickToHide() && !nextVisible || nextVisible && _this5.isClickToShow()) {
-      _this5.setPopupVisible(!_this5.state.popupVisible, event);
+    var nextVisible = !_this4.state.popupVisible;
+    if (_this4.isClickToHide() && !nextVisible || nextVisible && _this4.isClickToShow()) {
+      _this4.setPopupVisible(!_this4.state.popupVisible, event);
     }
   };
 
   this.onPopupMouseDown = function () {
-    var _context$rcTrigger = _this5.context.rcTrigger,
+    var _context$rcTrigger = _this4.context.rcTrigger,
         rcTrigger = _context$rcTrigger === undefined ? {} : _context$rcTrigger;
 
-    _this5.hasPopupMouseDown = true;
+    _this4.hasPopupMouseDown = true;
 
-    clearTimeout(_this5.mouseDownTimeout);
-    _this5.mouseDownTimeout = setTimeout(function () {
-      _this5.hasPopupMouseDown = false;
+    clearTimeout(_this4.mouseDownTimeout);
+    _this4.mouseDownTimeout = setTimeout(function () {
+      _this4.hasPopupMouseDown = false;
     }, 0);
 
     if (rcTrigger.onPopupMouseDown) {
@@ -16274,24 +16226,24 @@ var _initialiseProps$2 = function _initialiseProps() {
   };
 
   this.onDocumentClick = function (event) {
-    if (_this5.props.mask && !_this5.props.maskClosable) {
+    if (_this4.props.mask && !_this4.props.maskClosable) {
       return;
     }
 
     var target = event.target;
-    var root = ReactDOM.findDOMNode(_this5);
-    if (!contains(root, target) && !_this5.hasPopupMouseDown) {
-      _this5.close();
+    var root = ReactDOM.findDOMNode(_this4);
+    if (!contains(root, target) && !_this4.hasPopupMouseDown) {
+      _this4.close();
     }
   };
 
   this.getRootDomNode = function () {
-    return ReactDOM.findDOMNode(_this5);
+    return ReactDOM.findDOMNode(_this4);
   };
 
   this.getPopupClassNameFromAlign = function (align) {
     var className = [];
-    var _props9 = _this5.props,
+    var _props9 = _this4.props,
         popupPlacement = _props9.popupPlacement,
         builtinPlacements = _props9.builtinPlacements,
         prefixCls = _props9.prefixCls,
@@ -16308,7 +16260,7 @@ var _initialiseProps$2 = function _initialiseProps() {
   };
 
   this.getComponent = function () {
-    var _props10 = _this5.props,
+    var _props10 = _this4.props,
         prefixCls = _props10.prefixCls,
         destroyPopupOnHide = _props10.destroyPopupOnHide,
         popupClassName = _props10.popupClassName,
@@ -16324,23 +16276,23 @@ var _initialiseProps$2 = function _initialiseProps() {
         popup = _props10.popup,
         stretch = _props10.stretch,
         alignPoint = _props10.alignPoint;
-    var _state = _this5.state,
+    var _state = _this4.state,
         popupVisible = _state.popupVisible,
         point = _state.point;
 
 
-    var align = _this5.getPopupAlign();
+    var align = _this4.getPopupAlign();
 
     var mouseProps = {};
-    if (_this5.isMouseEnterToShow()) {
-      mouseProps.onMouseEnter = _this5.onPopupMouseEnter;
+    if (_this4.isMouseEnterToShow()) {
+      mouseProps.onMouseEnter = _this4.onPopupMouseEnter;
     }
-    if (_this5.isMouseLeaveToHide()) {
-      mouseProps.onMouseLeave = _this5.onPopupMouseLeave;
+    if (_this4.isMouseLeaveToHide()) {
+      mouseProps.onMouseLeave = _this4.onPopupMouseLeave;
     }
 
-    mouseProps.onMouseDown = _this5.onPopupMouseDown;
-    mouseProps.onTouchStart = _this5.onPopupMouseDown;
+    mouseProps.onMouseDown = _this4.onPopupMouseDown;
+    mouseProps.onTouchStart = _this4.onPopupMouseDown;
 
     return React__default.createElement(
       Popup,
@@ -16354,24 +16306,24 @@ var _initialiseProps$2 = function _initialiseProps() {
         align: align,
         onAlign: onPopupAlign,
         animation: popupAnimation,
-        getClassNameFromAlign: _this5.getPopupClassNameFromAlign
+        getClassNameFromAlign: _this4.getPopupClassNameFromAlign
       }, mouseProps, {
         stretch: stretch,
-        getRootDomNode: _this5.getRootDomNode,
+        getRootDomNode: _this4.getRootDomNode,
         style: popupStyle,
         mask: mask,
         zIndex: zIndex,
         transitionName: popupTransitionName,
         maskAnimation: maskAnimation,
         maskTransitionName: maskTransitionName,
-        ref: _this5.savePopup
+        ref: _this4.savePopup
       }),
       typeof popup === 'function' ? popup() : popup
     );
   };
 
   this.getContainer = function () {
-    var props = _this5.props;
+    var props = _this4.props;
 
     var popupContainer = document.createElement('div');
     // Make sure default popup container will never cause scrollbar appearing
@@ -16380,17 +16332,17 @@ var _initialiseProps$2 = function _initialiseProps() {
     popupContainer.style.top = '0';
     popupContainer.style.left = '0';
     popupContainer.style.width = '100%';
-    var mountNode = props.getPopupContainer ? props.getPopupContainer(ReactDOM.findDOMNode(_this5)) : props.getDocument().body;
+    var mountNode = props.getPopupContainer ? props.getPopupContainer(ReactDOM.findDOMNode(_this4)) : props.getDocument().body;
     mountNode.appendChild(popupContainer);
     return popupContainer;
   };
 
   this.setPoint = function (point) {
-    var alignPoint = _this5.props.alignPoint;
+    var alignPoint = _this4.props.alignPoint;
 
     if (!alignPoint || !point) return;
 
-    _this5.setState({
+    _this4.setState({
       point: {
         pageX: point.pageX,
         pageY: point.pageY
@@ -16399,15 +16351,17 @@ var _initialiseProps$2 = function _initialiseProps() {
   };
 
   this.handlePortalUpdate = function () {
-    if (_this5.prevPopupVisible !== _this5.state.popupVisible) {
-      _this5.props.afterPopupVisibleChange(_this5.state.popupVisible);
+    if (_this4.state.prevPopupVisible !== _this4.state.popupVisible) {
+      _this4.props.afterPopupVisibleChange(_this4.state.popupVisible);
     }
   };
 
   this.savePopup = function (node) {
-    _this5._component = node;
+    _this4._component = node;
   };
 };
+
+polyfill(Trigger);
 
 var Header =
 /*#__PURE__*/
@@ -16434,8 +16388,8 @@ function (_React$Component) {
   }
 
   createClass(Header, [{
-    key: "componentWillReceiveProps",
-    value: function componentWillReceiveProps(nextProps) {
+    key: "UNSAFE_componentWillReceiveProps",
+    value: function UNSAFE_componentWillReceiveProps(nextProps) {
       var value = nextProps.value,
           format = nextProps.format;
       this.setState({
@@ -16614,27 +16568,6 @@ defineProperty(Header, "propTypes", {
   currentSelectPanel: propTypes.string
 });
 
-function _objectSpread(target) {
-  for (var i = 1; i < arguments.length; i++) {
-    var source = arguments[i] != null ? arguments[i] : {};
-    var ownKeys = Object.keys(source);
-
-    if (typeof Object.getOwnPropertySymbols === 'function') {
-      ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {
-        return Object.getOwnPropertyDescriptor(source, sym).enumerable;
-      }));
-    }
-
-    ownKeys.forEach(function (key) {
-      defineProperty(target, key, source[key]);
-    });
-  }
-
-  return target;
-}
-
-var objectSpread = _objectSpread;
-
 var scrollTo = function scrollTo(element, to, duration) {
   var requestAnimationFrame = window.requestAnimationFrame || function requestAnimationFrameTimeout() {
     return setTimeout(arguments[0], 10);
@@ -16776,6 +16709,10 @@ defineProperty(Select, "propTypes", {
   onMouseEnter: propTypes.func
 });
 
+function ownKeys$1(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys$1(source, true).forEach(function (key) { defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys$1(source).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
 var pad = function pad(value) {
   return value < 10 ? "0".concat(value) : "".concat(value);
 };
@@ -16868,7 +16805,7 @@ function (_React$Component) {
           return hour < 12 ? value < 12 : value >= 12;
         });
         formattedOptions = formattedOptions.map(function (option) {
-          return objectSpread({}, option, {
+          return _objectSpread({}, option, {
             label: option.value <= 12 ? option.value : pad(option.value - 12)
           });
         }).filter(function (_ref) {
@@ -17050,8 +16987,8 @@ function (_React$Component) {
   }
 
   createClass(Panel, [{
-    key: "componentWillReceiveProps",
-    value: function componentWillReceiveProps(nextProps) {
+    key: "UNSAFE_componentWillReceiveProps",
+    value: function UNSAFE_componentWillReceiveProps(nextProps) {
       var value = nextProps.value;
 
       if (value) {
@@ -17349,8 +17286,8 @@ function (_React$Component) {
   }
 
   createClass(Picker, [{
-    key: "componentWillReceiveProps",
-    value: function componentWillReceiveProps(nextProps) {
+    key: "UNSAFE_componentWillReceiveProps",
+    value: function UNSAFE_componentWillReceiveProps(nextProps) {
       var value = nextProps.value,
           open = nextProps.open;
 
@@ -17684,15 +17621,15 @@ function (_Component) {
       return isGregorian ? inputValue.locale('es').format(inputFormat) : inputValue.locale('fa').format(inputJalaaliFormat);
     }
   }, {
-    key: "componentWillMount",
-    value: function componentWillMount() {
+    key: "UNSAFE_componentWillMount",
+    value: function UNSAFE_componentWillMount() {
       if (this.props.value) {
         this.setMomentValue(this.props.value);
       }
     }
   }, {
-    key: "componentWillReceiveProps",
-    value: function componentWillReceiveProps(nextProps) {
+    key: "UNSAFE_componentWillReceiveProps",
+    value: function UNSAFE_componentWillReceiveProps(nextProps) {
       if ('value' in nextProps && nextProps.value !== this.props.value) {
         this.setMomentValue(nextProps.value);
       }
