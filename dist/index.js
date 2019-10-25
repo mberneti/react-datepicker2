@@ -10434,7 +10434,8 @@ function (_Component) {
       var selectedDay = _ref.selectedDay,
           defaultMonth = _ref.defaultMonth,
           min = _ref.min,
-          isGregorian = _ref.isGregorian;
+          isGregorian = _ref.isGregorian,
+          ranges = _ref.ranges;
 
       if (typeof isGregorian !== 'undefined' && isGregorian !== this.state.isGregorian) {
         this.setState({
@@ -10448,6 +10449,12 @@ function (_Component) {
         this.setMonth(defaultMonth);
       } else if (min && this.props.min !== min && this.state.month.isSame(this.props.min)) {
         this.setMonth(min.clone());
+      }
+
+      if (JSON.stringify(this.props.ranges) !== JSON.stringify(ranges)) {
+        this.setState({
+          ranges: new RangesList(ranges)
+        });
       }
     }
   }, {
