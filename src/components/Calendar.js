@@ -9,7 +9,6 @@ import Day from './Day';
 import { getDaysOfMonth, checkToday } from '../utils/moment-helper';
 import { defaultStyles } from './DefaultStyles';
 import RangeList from '../utils/RangesList';
-
 export class Calendar extends Component {
   static propTypes = {
     min: PropTypes.object,
@@ -21,7 +20,9 @@ export class Calendar extends Component {
     onClickOutside: PropTypes.func,
     containerProps: PropTypes.object,
     isGregorian: PropTypes.bool,
-    calendarClass: PropTypes.string
+    calendarClass: PropTypes.string,
+    showToggleButton:PropTypes.bool,
+    toggleButtonText:PropTypes.any
   };
 
   static childContextTypes = {
@@ -35,7 +36,9 @@ export class Calendar extends Component {
   static defaultProps = {
     styles: defaultStyles,
     containerProps: {},
-    isGregorian: true
+    isGregorian: true,
+    showToggleButton:false,
+    toggleButtonText:['تاریخ شمسی','تاریخ میلادی']
   };
 
   state = {
@@ -200,7 +203,11 @@ export class Calendar extends Component {
       </div>
     );
   };
-
+  changeCalendarMode(){
+    this.setState((state)=>{
+      return {isGregorian:!state.isGregorian}
+    })
+  }
   render() {
     const {
       selectedDay,
@@ -214,9 +221,10 @@ export class Calendar extends Component {
     const { mode, isGregorian } = this.state;
 
     const jalaaliClassName = isGregorian ? '' : 'jalaali ';
-
+    debugger;
     return (
       <div className={`${styles.calendarContainer} ${jalaaliClassName}${className}`}>
+        {this.props.showToggleButton && <input type="button" value={(isGregorian)?this.props.toggleButtonText[0]:this.props.toggleButtonText[1]} onClick={this.changeCalendarMode.bind(this)} />}
         {mode === 'monthSelector' ? this.renderMonthSelector() : this.renderDays()}
         <button className="selectToday" onClick={() => this.handleClickOnDay(moment())}>
           {isGregorian ? 'today' : 'امروز'}
