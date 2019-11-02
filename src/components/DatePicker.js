@@ -32,14 +32,16 @@ export default class DatePicker extends Component {
     datePickerClass: PropTypes.string,
     tetherAttachment: PropTypes.string,
     inputReadOnly: PropTypes.object,
-    ranges: PropTypes.array
+    ranges: PropTypes.array,
+    showToggleButton:PropTypes.bool,
+    toggleButtonText:PropTypes.any
   };
 
   static defaultProps = {
     styles: undefined,
     calendarContainerProps: {},
     isGregorian: true,
-    timePicker: true
+    timePicker: true,
   };
 
   constructor(props) {
@@ -245,6 +247,8 @@ export default class DatePicker extends Component {
           containerProps={calendarContainerProps}
           isGregorian={isGregorian}
           calendarClass={this.props.calendarClass ? this.props.calendarClass : ''}
+          showToggleButton={this.props.showToggleButton}
+          toggleButtonText={this.props.toggleButtonText}
           timePicker={
             TimePicker ? (
               <TimePicker
@@ -254,6 +258,7 @@ export default class DatePicker extends Component {
                 max={max}
                 momentValue={momentValue}
                 setMomentValue={this.setMomentValue.bind(this)}
+
               />
             ) : null
           }
