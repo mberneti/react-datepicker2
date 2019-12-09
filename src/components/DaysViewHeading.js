@@ -56,14 +56,14 @@ export default class Heading extends Component {
           <React.Fragment>
             <button
               type="button"
-              title="next month"
+              title="prev month"
               className={styles.next}
               onClick={prevMonth}
               dangerouslySetInnerHTML={leftArrow}
             />
             <button
               type="button"
-              title="prev month"
+              title="next month"
               className={styles.prev}
               onClick={nextMonth}
               dangerouslySetInnerHTML={rightArrow}
