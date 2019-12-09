@@ -17,6 +17,7 @@ export class Calendar extends Component {
     selectedDay: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
     defaultMonth: PropTypes.object,
     onSelect: PropTypes.func,
+    onMonthChange: PropTypes.func,
     onClickOutside: PropTypes.func,
     containerProps: PropTypes.object,
     isGregorian: PropTypes.bool,
@@ -59,7 +60,7 @@ export class Calendar extends Component {
     };
   }
 
-  UNSAFE_componentWillReceiveProps({ selectedDay, defaultMonth, min, isGregorian }) {
+  UNSAFE_componentWillReceiveProps({ selectedDay, defaultMonth, min, isGregorian, ranges }) {
     if (typeof isGregorian !== 'undefined' && isGregorian !== this.state.isGregorian) {
       this.setState({ isGregorian });
     }
@@ -75,6 +76,10 @@ export class Calendar extends Component {
     } else if (min && this.props.min !== min && this.state.month.isSame(this.props.min)) {
       this.setMonth(min.clone());
     }
+
+    if (JSON.stringify(this.props.ranges) !== JSON.stringify(ranges)) {
+      this.setState({ ranges: new RangeList(ranges) });
+    }
   }
 
   setMode = mode => {
@@ -82,7 +87,11 @@ export class Calendar extends Component {
   };
 
   setMonth = month => {
+    const { onMonthChange } = this.props;
     this.setState({ month });
+    if (onMonthChange) {
+      onMonthChange(month);
+    }
   };
 
   setType = type => {
@@ -93,18 +102,24 @@ export class Calendar extends Component {
     const { isGregorian } = this.state;
     const monthFormat = isGregorian ? 'Month' : 'jMonth';
 
-    this.setState({
-      month: this.state.month.clone().add(1, monthFormat)
-    });
+    this.setState(
+      {
+        month: this.state.month.clone().add(1, monthFormat)
+      },
+      () => this.props.onMonthChange && this.props.onMonthChange(this.state.month)
+    );
   };
 
   prevMonth = () => {
     const { isGregorian } = this.state;
     const monthFormat = isGregorian ? 'Month' : 'jMonth';
 
-    this.setState({
-      month: this.state.month.clone().subtract(1, monthFormat)
-    });
+    this.setState(
+      {
+        month: this.state.month.clone().subtract(1, monthFormat)
+      },
+      () => this.props.onMonthChange && this.props.onMonthChange(this.state.month)
+    );
   };
 
   selectDay = selectedDay => {
