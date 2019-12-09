@@ -10526,9 +10526,15 @@ function (_Component) {
     });
 
     defineProperty(assertThisInitialized(_this), "setMonth", function (month) {
+      var onMonthChange = _this.props.onMonthChange;
+
       _this.setState({
         month: month
       });
+
+      if (onMonthChange) {
+        onMonthChange(month);
+      }
     });
 
     defineProperty(assertThisInitialized(_this), "setType", function (type) {
@@ -10543,6 +10549,8 @@ function (_Component) {
 
       _this.setState({
         month: _this.state.month.clone().add(1, monthFormat)
+      }, function () {
+        return _this.props.onMonthChange && _this.props.onMonthChange(_this.state.month);
       });
     });
 
@@ -10552,6 +10560,8 @@ function (_Component) {
 
       _this.setState({
         month: _this.state.month.clone().subtract(1, monthFormat)
+      }, function () {
+        return _this.props.onMonthChange && _this.props.onMonthChange(_this.state.month);
       });
     });
 
@@ -10689,7 +10699,8 @@ function (_Component) {
       var selectedDay = _ref.selectedDay,
           defaultMonth = _ref.defaultMonth,
           min = _ref.min,
-          isGregorian = _ref.isGregorian;
+          isGregorian = _ref.isGregorian,
+          ranges = _ref.ranges;
 
       if (typeof isGregorian !== 'undefined' && isGregorian !== this.state.isGregorian) {
         this.setState({
@@ -10703,6 +10714,12 @@ function (_Component) {
         this.setMonth(defaultMonth);
       } else if (min && this.props.min !== min && this.state.month.isSame(this.props.min)) {
         this.setMonth(min.clone());
+      }
+
+      if (JSON.stringify(this.props.ranges) !== JSON.stringify(ranges)) {
+        this.setState({
+          ranges: new RangesList(ranges)
+        });
       }
     }
   }, {
@@ -10738,6 +10755,7 @@ function (_Component) {
         value: isGregorian ? this.props.toggleButtonText[0] : this.props.toggleButtonText[1],
         onClick: this.changeCalendarMode.bind(this)
       }), mode === 'monthSelector' ? this.renderMonthSelector() : this.renderDays(), React__default.createElement("button", {
+        type: "button",
         className: "selectToday",
         onClick: function onClick() {
           return _this2.handleClickOnDay(momentJalaali());
@@ -10756,6 +10774,7 @@ defineProperty(Calendar, "propTypes", {
   selectedDay: propTypes.oneOfType([propTypes.object, propTypes.string]),
   defaultMonth: propTypes.object,
   onSelect: propTypes.func,
+  onMonthChange: propTypes.func,
   onClickOutside: propTypes.func,
   containerProps: propTypes.object,
   isGregorian: propTypes.bool,
