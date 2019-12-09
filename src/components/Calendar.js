@@ -247,7 +247,7 @@ export class Calendar extends Component {
           />
         )}
         {mode === 'monthSelector' ? this.renderMonthSelector() : this.renderDays()}
-        <button className="selectToday" onClick={() => this.handleClickOnDay(moment())}>
+        <button type="button" className="selectToday" onClick={() => this.handleClickOnDay(moment())}>
           {isGregorian ? 'today' : 'امروز'}
         </button>
       </div>
