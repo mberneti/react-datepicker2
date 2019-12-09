@@ -10,7 +10,7 @@ const outsideClickIgnoreClass = 'ignore--click--outside';
 
 export default class DatePicker extends Component {
   static propTypes = {
-    value: PropTypes.object,
+    value: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
     defaultValue: PropTypes.object,
     onChange: PropTypes.func,
     onFocus: PropTypes.func,
@@ -33,15 +33,15 @@ export default class DatePicker extends Component {
     tetherAttachment: PropTypes.string,
     inputReadOnly: PropTypes.object,
     ranges: PropTypes.array,
-    showToggleButton:PropTypes.bool,
-    toggleButtonText:PropTypes.any
+    showToggleButton: PropTypes.bool,
+    toggleButtonText: PropTypes.any
   };
 
   static defaultProps = {
     styles: undefined,
     calendarContainerProps: {},
     isGregorian: true,
-    timePicker: true,
+    timePicker: true
   };
 
   constructor(props) {
@@ -58,11 +58,8 @@ export default class DatePicker extends Component {
         this.props.timePicker
       ),
       inputJalaaliFormat:
-        this.props.inputJalaaliFormat ||
-        this.getInputFormat(false, this.props.timePicker),
-      inputFormat:
-        this.props.inputFormat ||
-        this.getInputFormat(true, this.props.timePicker),
+        this.props.inputJalaaliFormat || this.getInputFormat(false, this.props.timePicker),
+      inputFormat: this.props.inputFormat || this.getInputFormat(true, this.props.timePicker),
       isGregorian: this.props.isGregorian,
       timePicker: this.props.timePicker,
       timePickerComponent: this.props.timePicker ? MyTimePicker : undefined
@@ -76,7 +73,7 @@ export default class DatePicker extends Component {
 
   getValue(inputValue, isGregorian, timePicker) {
     if (!inputValue) return '';
-    let { inputFormat } = this.state; 
+    let { inputFormat } = this.state;
     let { inputJalaaliFormat } = this.state;
     if (!inputFormat) inputFormat = this.getInputFormat(isGregorian, timePicker);
     if (!inputJalaaliFormat) inputJalaaliFormat = this.getInputFormat(isGregorian, timePicker);
@@ -87,8 +84,6 @@ export default class DatePicker extends Component {
   }
 
   setOpen = isOpen => {
-    const { momentValue } = this.state;
-
     this.setState({ isOpen });
 
     if (this.props.onOpen) {
@@ -108,14 +103,14 @@ export default class DatePicker extends Component {
     }
 
     if ('isGregorian' in nextProps && nextProps.isGregorian !== this.props.isGregorian) {
-      const { inputFormat } = nextProps;
-      const { inputJalaaliFormat } = nextProps;
+      const { inputFormat: nextPropsInputFormat } = nextProps;
+      const { inputJalaaliFormat: nextPropsInputJalaaliFormat } = nextProps;
 
       this.setState({
         isGregorian: nextProps.isGregorian,
         inputValue: this.getValue(nextProps.value, nextProps.isGregorian, nextProps.timePicker),
-        inputFormat,
-        inputJalaaliFormat
+        inputFormat: nextPropsInputFormat || this.state.inputFormat,
+        inputJalaaliFormat: nextPropsInputJalaaliFormat || this.state.inputJalaaliFormat
       });
     }
 
@@ -185,17 +180,27 @@ export default class DatePicker extends Component {
   }
 
   handleInputChange(event) {
-    const { inputFormat } = this.state;
+    const { inputFormat, inputJalaaliFormat, isGregorian } = this.state;
     const inputValue = this.toEnglishDigits(event.target.value);
-    const momentValue = moment(inputValue, inputFormat);
+    const currentInputFormat = isGregorian ? inputFormat : inputJalaaliFormat;
+
+    const momentValue = moment(inputValue, currentInputFormat);
 
     if (momentValue.isValid()) {
       this.setState({ momentValue });
     }
 
+    const isUserClearInput = inputValue === '';
+
+    if (this.props.onChange) {
+      if (isUserClearInput) {
+        this.props.onChange('');
+      }
+    }
+
     this.setState({ inputValue });
   }
- 
+
   handleInputClick() {
     if (!this.props.disabled) {
       this.setOpen(true);
@@ -258,11 +263,11 @@ export default class DatePicker extends Component {
                 max={max}
                 momentValue={momentValue}
                 setMomentValue={this.setMomentValue.bind(this)}
-
               />
             ) : null
           }
         ></Calendar>
+        )}
       </div>
     );
   };

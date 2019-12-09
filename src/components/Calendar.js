@@ -14,7 +14,7 @@ export class Calendar extends Component {
     min: PropTypes.object,
     max: PropTypes.object,
     styles: PropTypes.object,
-    selectedDay: PropTypes.object,
+    selectedDay: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
     defaultMonth: PropTypes.object,
     onSelect: PropTypes.func,
     onClickOutside: PropTypes.func,
@@ -43,7 +43,7 @@ export class Calendar extends Component {
 
   state = {
     month: this.props.defaultMonth || this.props.selectedDay || moment(this.props.min),
-    selectedDay: this.props.selectedDay || this.props.value || null,
+    selectedDay: this.props.selectedDay || this.props.value || moment(),
     mode: 'days',
     isGregorian: this.props.isGregorian,
     ranges: new RangeList(this.props.ranges)
@@ -65,7 +65,7 @@ export class Calendar extends Component {
     }
 
     if (this.props.selectedDay !== selectedDay) {
-      this.selectDay(selectedDay);
+      this.selectDay(selectedDay || moment());
     } else if (
       defaultMonth &&
       this.props.defaultMonth !== defaultMonth &&
