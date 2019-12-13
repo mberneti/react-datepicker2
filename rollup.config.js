@@ -34,7 +34,7 @@ const config = {
       exports: 'named'
     },
     {
-      file: 'dist/react-datepicker.js',
+      file: 'dist/react-datepicker2.js',
       format: 'umd',
       name: 'DatePicker',
       globals,
@@ -42,7 +42,7 @@ const config = {
     },
     {
       file: pkg.main,
-      format: 'cjs',
+      format: 'commonjs',
       name: 'DatePicker',
       exports: 'named'
     },
@@ -67,12 +67,12 @@ const config = {
     commonjs({
       include: 'node_modules/**'
     }),
-    filesize(),
-    terser(),
+    // filesize(),
+    // terser(),
+    postcss(),
     replace({
       'process.env.NODE_ENV': JSON.stringify('production')
-    }),
-    postcss()
+    })
   ],
   external: Object.keys(pkg.dependencies).concat(Object.keys(pkg.peerDependencies))
 };
