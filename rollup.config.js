@@ -27,26 +27,6 @@ const config = {
   // sourcemap: true,
   output: [
     {
-      file: pkg.browser,
-      format: 'umd',
-      name: 'DatePicker',
-      globals,
-      exports: 'named'
-    },
-    {
-      file: 'dist/react-datepicker2.js',
-      format: 'umd',
-      name: 'DatePicker',
-      globals,
-      exports: 'named'
-    },
-    {
-      file: pkg.main,
-      format: 'commonjs',
-      name: 'DatePicker',
-      exports: 'named'
-    },
-    {
       file: pkg.module,
       format: 'es',
       name: 'DatePicker',
