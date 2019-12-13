@@ -1,44 +1,80 @@
 import nodeResolve from 'rollup-plugin-node-resolve';
 import babel from 'rollup-plugin-babel';
 import commonjs from 'rollup-plugin-commonjs';
-import nodeGlobals from 'rollup-plugin-node-globals';
 import postcss from 'rollup-plugin-postcss';
+import peerDepsExternal from 'rollup-plugin-peer-deps-external';
+import filesize from 'rollup-plugin-filesize';
+import localResolve from 'rollup-plugin-local-resolve';
+import { terser } from 'rollup-plugin-terser';
+import replace from 'rollup-plugin-replace';
+
+import pkg from './package.json';
 
 const globals = {
   react: 'React',
-  'react-dom': 'ReactDOM'
+  'react-dom': 'ReactDom',
+  'prop-types': 'PropTypes',
+  'react-onclickoutside': 'onClickOutside',
+  'react-popper': 'ReactPopper',
+  classnames: 'classNames',
+  'moment-jalaali': 'moment',
+  'react-tether': 'TetherComponent',
+  'rc-trigger': 'Trigger'
 };
 
 const config = {
   input: 'src/index.js',
-  output: {
-    format: 'commonjs',
-    name: 'react-datepicker2',
-    globals
-  },
+  // sourcemap: true,
+  output: [
+    {
+      file: pkg.browser,
+      format: 'umd',
+      name: 'DatePicker',
+      globals,
+      exports: 'named'
+    },
+    {
+      file: 'dist/react-datepicker.js',
+      format: 'umd',
+      name: 'DatePicker',
+      globals,
+      exports: 'named'
+    },
+    {
+      file: pkg.main,
+      format: 'cjs',
+      name: 'DatePicker',
+      exports: 'named'
+    },
+    {
+      file: pkg.module,
+      format: 'es',
+      name: 'DatePicker',
+      exports: 'named'
+    }
+  ],
   plugins: [
-    postcss({
-      plugins: []
-    }),
     nodeResolve({
+      mainFields: ['module'],
       extensions: ['.js', '.jsx']
     }),
+    peerDepsExternal(),
     babel({
       exclude: 'node_modules/**',
       runtimeHelpers: true
     }),
+    localResolve(),
     commonjs({
-      namedExports: {
-        // left-hand side can be an absolute path, a path
-        // relative to the current directory, or the name
-        // of a module in node_modules
-
-        'node_modules/rc-animate/node_modules/fbjs/lib/ExecutionEnvironment.js': ['canUseDOM']
-      }
+      include: 'node_modules/**'
     }),
-    nodeGlobals()
+    filesize(),
+    terser(),
+    replace({
+      'process.env.NODE_ENV': JSON.stringify('production')
+    }),
+    postcss()
   ],
-  external: Object.keys(globals)
+  external: Object.keys(pkg.dependencies).concat(Object.keys(pkg.peerDependencies))
 };
 
 export default config;
