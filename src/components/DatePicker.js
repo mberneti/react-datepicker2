@@ -267,7 +267,7 @@ export default class DatePicker extends Component {
             ) : null
           }
         ></Calendar>
-        )}
+       
       </div>
     );
   };
