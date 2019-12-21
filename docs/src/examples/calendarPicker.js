@@ -1,12 +1,12 @@
 import React from 'react';
-import moment from 'moment-jalaali';
+import momentJalaali from 'moment-jalaali';
 import { Calendar } from '../../../src/components/Calendar';
 
 class component extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: moment(),
+      value: momentJalaali(),
       isGregorian: true
     };
   }
@@ -39,14 +39,14 @@ class component extends React.Component {
 }
 
 const title = 'Calendar';
-const code = `import moment from 'moment-jalaali';
+const code = `import momentJalaali from 'moment-jalaali';
 import { Calendar } from 'react-datepicker2';
 
 class component extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: moment(),
+      value: momentJalaali(),
       isGregorian: true
     };
   }

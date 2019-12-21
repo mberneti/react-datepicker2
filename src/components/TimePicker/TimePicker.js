@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Trigger from 'rc-trigger';
-import moment from 'moment-jalaali';
+import momentJalaali from 'moment-jalaali';
 import Panel from './Panel';
 import placements from './placements';
 
@@ -51,7 +51,7 @@ class Picker extends React.Component {
     style: {},
     className: '',
     align: {},
-    defaultOpenValue: moment(),
+    defaultOpenValue: momentJalaali(),
     allowEmpty: true,
     showHour: true,
     showSecond: true,

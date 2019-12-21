@@ -1,5 +1,5 @@
 import React from 'react'
-import moment from 'moment-jalaali'
+import momentJalaali from 'moment-jalaali'
 import Calendar from '../../../src/components/Calendar';
 
 class component extends React.Component {
@@ -7,20 +7,20 @@ class component extends React.Component {
     super(props);
 
     this.state = {
-      value: moment(),
+      value: momentJalaali(),
       isGregorian: true
     };
 
     this.disabledRanges = [
       { 
         disabled: true, 
-        start:moment().add(-1,'days'),
-        end:moment().add(1,'days') 
+        start:momentJalaali().add(-1,'days'),
+        end:momentJalaali().add(1,'days') 
       },
       { 
         disabled: true, 
-        start:moment().add(3,'days'), 
-        end:moment().add(6,'days') 
+        start:momentJalaali().add(3,'days'), 
+        end:momentJalaali().add(6,'days') 
       }
     ]
 
@@ -49,20 +49,20 @@ const code = `class component extends React.Component {
     super(props);
 
     this.state = {
-      value: moment(),
+      value: momentJalaali(),
       isGregorian: true
     };
 
     this.disabledRanges = [
       { 
         disabled: true, 
-        start:moment().add(-1,'days'),
-        end:moment().add(1,'days') 
+        start:momentJalaali().add(-1,'days'),
+        end:momentJalaali().add(1,'days') 
       },
       { 
         disabled: true, 
-        start:moment().add(3,'days'), 
-        end:moment().add(6,'days') 
+        start:momentJalaali().add(3,'days'), 
+        end:momentJalaali().add(6,'days') 
       }
     ]
 

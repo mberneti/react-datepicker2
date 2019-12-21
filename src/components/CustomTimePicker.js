@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import moment from 'moment-jalaali';
+import momentJalaali from 'moment-jalaali';
 import TimePicker from './TimePicker';
 import { persianNumber } from '../utils/persian';
 
@@ -16,7 +16,7 @@ export default class MyTimePicker extends Component {
   };
 
   static defaultProps = {
-    momentValue: moment()
+    momentValue: momentJalaali()
   };
 
   handleChange(value) {
@@ -25,10 +25,10 @@ export default class MyTimePicker extends Component {
 
     if (momentValue) {
       newValue = momentValue.clone();
-    } else if (min && min.isAfter(moment())) {
+    } else if (min && min.isAfter(momentJalaali())) {
       newValue = min.clone();
     } else {
-      newValue = moment(value);
+      newValue = momentJalaali(value);
     }
 
     newValue.hour(value ? value.hour() : null);

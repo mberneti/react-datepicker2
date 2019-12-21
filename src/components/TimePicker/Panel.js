@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import moment from 'moment-jalaali';
+import momentJalaali from 'moment-jalaali';
 import Header from './Header';
 import Combobox from './Combobox';
 
@@ -42,7 +42,7 @@ class Panel extends React.Component {
     prefixCls: 'rc-time-picker-panel',
     onChange: noop,
     onClear: noop,
-    defaultOpenValue: moment()
+    defaultOpenValue: momentJalaali()
   };
 
   constructor(props) {

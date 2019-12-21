@@ -1,5 +1,5 @@
 import React from 'react';
-import moment from 'moment-jalaali';
+import momentJalaali from 'moment-jalaali';
 import DatePicker from '../../src/index.dev.js';
 
 import Switch from 'react-switch';
@@ -17,7 +17,7 @@ const switchStyle = {
 export default class ReactClass extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { value: moment(), checked: false };
+    this.state = { value: momentJalaali(), checked: false };
     this.handleChange = this.handleChange.bind(this);
   }
 

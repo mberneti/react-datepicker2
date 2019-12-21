@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import moment from 'moment-jalaali';
+import momentJalaali from 'moment-jalaali';
 import DatePicker from '../../../src/components/DatePicker';
 
 function component() {
-  const [value, setValue] = useState(moment());
+  const [value, setValue] = useState(momentJalaali());
 
   return <DatePicker value={value} onChange={value => setValue(value)} />;
 }
@@ -11,7 +11,7 @@ function component() {
 const title = 'React Hook sample';
 const code = `function component() {
   const [value, setValue] = useState(0);
-  setSelectedDate(moment());
+  setSelectedDate(momentJalaali());
 
   return <DatePicker 
   value={value} 

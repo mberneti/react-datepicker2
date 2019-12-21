@@ -1,12 +1,12 @@
 import React from 'react'
-import moment from 'moment-jalaali'
+import momentJalaali from 'moment-jalaali'
 import DatePicker from '../../../src/components/DatePicker';
 
 class component extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: moment(),
+      value: momentJalaali(),
       isGregorian: true
     };
   }
@@ -32,7 +32,7 @@ const code = `class component extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: moment(),
+      value: momentJalaali(),
       isGregorian:true
     };
   }

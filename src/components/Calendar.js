@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import moment from 'moment-jalaali';
+import momentJalaali from 'moment-jalaali';
 import onClickOutside from 'react-onclickoutside';
 import DaysViewHeading from './DaysViewHeading';
 import DaysOfWeek from './DaysOfWeek';
@@ -43,8 +43,8 @@ export class Calendar extends Component {
   };
 
   state = {
-    month: this.props.defaultMonth || this.props.selectedDay || moment(this.props.min),
-    selectedDay: this.props.selectedDay || this.props.value || moment(),
+    month: this.props.defaultMonth || this.props.selectedDay || momentJalaali(this.props.min),
+    selectedDay: this.props.selectedDay || this.props.value || momentJalaali(),
     mode: 'days',
     isGregorian: this.props.isGregorian,
     ranges: new RangeList(this.props.ranges)
@@ -66,7 +66,7 @@ export class Calendar extends Component {
     }
 
     if (this.props.selectedDay !== selectedDay) {
-      this.selectDay(selectedDay || moment());
+      this.selectDay(selectedDay || momentJalaali());
     } else if (
       defaultMonth &&
       this.props.defaultMonth !== defaultMonth &&
@@ -247,7 +247,7 @@ export class Calendar extends Component {
           />
         )}
         {mode === 'monthSelector' ? this.renderMonthSelector() : this.renderDays()}
-        <button type="button" className="selectToday" onClick={() => this.handleClickOnDay(moment())}>
+        <button type="button" className="selectToday" onClick={() => this.handleClickOnDay(momentJalaali())}>
           {isGregorian ? 'today' : 'امروز'}
         </button>
       </div>

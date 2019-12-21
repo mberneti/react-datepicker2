@@ -1,5 +1,5 @@
 import React from 'react';
-import moment from 'moment';
+import momentJalaali from 'moment-jalaali';
 import PropTypes from 'prop-types';
 
 class Header extends React.Component {
@@ -64,7 +64,7 @@ class Header extends React.Component {
     if (str) {
       const originalValue = this.props.value;
       const value = this.getProtoValue().clone();
-      const parsed = moment(str, format, true);
+      const parsed = momentJalaali(str, format, true);
       if (!parsed.isValid()) {
         this.setState({
           invalid: true

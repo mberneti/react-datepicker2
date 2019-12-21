@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import moment from 'moment-jalaali';
+import momentJalaali from 'moment-jalaali';
 import TetherComponent from 'react-tether';
 import classnames from 'classnames';
 import Calendar from './Calendar';
@@ -184,7 +184,7 @@ export default class DatePicker extends Component {
     const inputValue = this.toEnglishDigits(event.target.value);
     const currentInputFormat = isGregorian ? inputFormat : inputJalaaliFormat;
 
-    const momentValue = moment(inputValue, currentInputFormat);
+    const momentValue = momentJalaali(inputValue, currentInputFormat);
 
     if (momentValue.isValid()) {
       this.setState({ momentValue });

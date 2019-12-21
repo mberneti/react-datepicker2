@@ -1,6 +1,6 @@
 {
   "name": "react-datepicker2",
-  "version": "v3.0.10",
+  "version": "v3.0.11",
   "description": "react datepicker component. (include persian jalaali calendar)",
   "main": "dist/index.js",
   "browser": "dist/react-datepicker2.min.js",

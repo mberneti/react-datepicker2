@@ -1,8 +1,8 @@
-import Moment from 'moment-jalaali';
+import momentJalaali from 'moment-jalaali';
 
 const MomentRange = require('moment-range');
 
-const moment = MomentRange.extendMoment(Moment);
+const extendedMoment = MomentRange.extendMoment(momentJalaali);
 
 export default class RangesList {
   constructor(ranges) {
@@ -12,7 +12,7 @@ export default class RangesList {
       ranges.forEach(item => {
         this.validateRangeObject(item);
 
-        const range = moment.range(item.start, item.end);
+        const range = extendedMoment.range(item.start, item.end);
 
         // include start
         const start = range.start.add(-1, 'days');

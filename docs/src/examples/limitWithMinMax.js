@@ -1,5 +1,5 @@
 import React from 'react'
-import moment from 'moment-jalaali'
+import momentJalaali from 'moment-jalaali'
 import Calendar from '../../../src/components/Calendar';
 
 class component extends React.Component {
@@ -7,14 +7,14 @@ class component extends React.Component {
     super(props);
 
     this.state = {
-      value: moment(),
+      value: momentJalaali(),
       isGregorian: true
     };
 
     // limit selection to current months days
     this.enabledRange = {
-      min: moment().startOf('month'),
-      max: moment().endOf('month')
+      min: momentJalaali().startOf('month'),
+      max: momentJalaali().endOf('month')
     };
 
   }
@@ -48,13 +48,13 @@ const code = `class component extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: moment(),
+      value: momentJalaali(),
       isGregorian: true
     };
     // limit selection to current months days
     this.enabledRange = {
-      min: moment().startOf('month'),
-      max: moment().endOf('month')
+      min: momentJalaali().startOf('month'),
+      max: momentJalaali().endOf('month')
     };
   }
   render() {
