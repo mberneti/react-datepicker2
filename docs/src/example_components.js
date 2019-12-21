@@ -5,6 +5,7 @@ import Highlight from 'react-syntax-highlight';
 
 import Default from './examples/default';
 import Jalaali from './examples/jalaali';
+import HideTodayButton from './examples/HideTodayButton';
 import DisabledTimepicker from './examples/disabledTimepicker';
 import SwitchIsGregorian from './examples/switchIsGregorian';
 import CalendarPicker from './examples/calendarPicker';
@@ -23,6 +24,7 @@ export default class ExampleComponents extends React.Component {
     this.examples = [
       Default,
       Jalaali,
+      HideTodayButton,
       DisabledTimepicker,
       SwitchIsGregorian,
       CalendarPicker,

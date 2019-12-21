@@ -23,7 +23,8 @@ export class Calendar extends Component {
     isGregorian: PropTypes.bool,
     calendarClass: PropTypes.string,
     showToggleButton: PropTypes.bool,
-    toggleButtonText: PropTypes.any
+    toggleButtonText: PropTypes.any,
+    showTodayButton: PropTypes.bool
   };
 
   static childContextTypes = {
@@ -39,6 +40,7 @@ export class Calendar extends Component {
     containerProps: {},
     isGregorian: true,
     showToggleButton: false,
+    showTodayButton: true,
     toggleButtonText: ['تاریخ شمسی', 'تاریخ میلادی']
   };
 
@@ -231,7 +233,8 @@ export class Calendar extends Component {
       onClickOutside,
       outsideClickIgnoreClass,
       styles,
-      className
+      className,
+      showTodayButton
     } = this.props;
     const { mode, isGregorian } = this.state;
 
@@ -247,9 +250,15 @@ export class Calendar extends Component {
           />
         )}
         {mode === 'monthSelector' ? this.renderMonthSelector() : this.renderDays()}
-        <button type="button" className="selectToday" onClick={() => this.handleClickOnDay(momentJalaali())}>
-          {isGregorian ? 'today' : 'امروز'}
-        </button>
+        {showTodayButton && (
+          <button
+            type="button"
+            className="selectToday"
+            onClick={() => this.handleClickOnDay(momentJalaali())}
+          >
+            {isGregorian ? 'today' : 'امروز'}
+          </button>
+        )}
       </div>
     );
   }
