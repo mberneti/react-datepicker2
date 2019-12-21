@@ -31,7 +31,7 @@ export default class DatePicker extends Component {
     datePickerClass: PropTypes.string,
     datePickerClass: PropTypes.string,
     tetherAttachment: PropTypes.string,
-    inputReadOnly: PropTypes.object,
+    inputReadOnly: PropTypes.bool,
     ranges: PropTypes.array,
     showToggleButton: PropTypes.bool,
     toggleButtonText: PropTypes.any
@@ -267,7 +267,6 @@ export default class DatePicker extends Component {
             ) : null
           }
         ></Calendar>
-       
       </div>
     );
   };
