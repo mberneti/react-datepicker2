@@ -976,7 +976,8 @@ function (_Component) {
           onClickOutside = _this$props3.onClickOutside,
           outsideClickIgnoreClass = _this$props3.outsideClickIgnoreClass,
           styles = _this$props3.styles,
-          className = _this$props3.className;
+          className = _this$props3.className,
+          showTodayButton = _this$props3.showTodayButton;
       var _this$state4 = this.state,
           mode = _this$state4.mode,
           isGregorian = _this$state4.isGregorian;
@@ -987,7 +988,7 @@ function (_Component) {
         type: "button",
         value: isGregorian ? this.props.toggleButtonText[0] : this.props.toggleButtonText[1],
         onClick: this.changeCalendarMode.bind(this)
-      }), mode === 'monthSelector' ? this.renderMonthSelector() : this.renderDays(), React.createElement("button", {
+      }), mode === 'monthSelector' ? this.renderMonthSelector() : this.renderDays(), showTodayButton && React.createElement("button", {
         type: "button",
         className: "selectToday",
         onClick: function onClick() {
@@ -1013,7 +1014,8 @@ defineProperty(Calendar, "propTypes", {
   isGregorian: PropTypes.bool,
   calendarClass: PropTypes.string,
   showToggleButton: PropTypes.bool,
-  toggleButtonText: PropTypes.any
+  toggleButtonText: PropTypes.any,
+  showTodayButton: PropTypes.bool
 });
 
 defineProperty(Calendar, "childContextTypes", {
@@ -1029,6 +1031,7 @@ defineProperty(Calendar, "defaultProps", {
   containerProps: {},
   isGregorian: true,
   showToggleButton: false,
+  showTodayButton: true,
   toggleButtonText: ['تاریخ شمسی', 'تاریخ میلادی']
 });
 
@@ -2280,6 +2283,7 @@ function (_Component) {
         calendarClass: _this.props.calendarClass ? _this.props.calendarClass : '',
         showToggleButton: _this.props.showToggleButton,
         toggleButtonText: _this.props.toggleButtonText,
+        showTodayButton: _this.props.showTodayButton,
         timePicker: TimePicker ? React.createElement(TimePicker, {
           outsideClickIgnoreClass: outsideClickIgnoreClass,
           isGregorian: isGregorian,
@@ -2522,13 +2526,14 @@ defineProperty(DatePicker, "propTypes", (_defineProperty2 = {
   timePicker: PropTypes.bool,
   calendarClass: PropTypes.string,
   datePickerClass: PropTypes.string
-}, defineProperty(_defineProperty2, "datePickerClass", PropTypes.string), defineProperty(_defineProperty2, "tetherAttachment", PropTypes.string), defineProperty(_defineProperty2, "inputReadOnly", PropTypes.bool), defineProperty(_defineProperty2, "ranges", PropTypes.array), defineProperty(_defineProperty2, "showToggleButton", PropTypes.bool), defineProperty(_defineProperty2, "toggleButtonText", PropTypes.any), _defineProperty2));
+}, defineProperty(_defineProperty2, "datePickerClass", PropTypes.string), defineProperty(_defineProperty2, "tetherAttachment", PropTypes.string), defineProperty(_defineProperty2, "inputReadOnly", PropTypes.bool), defineProperty(_defineProperty2, "ranges", PropTypes.array), defineProperty(_defineProperty2, "showToggleButton", PropTypes.bool), defineProperty(_defineProperty2, "toggleButtonText", PropTypes.any), defineProperty(_defineProperty2, "showTodayButton", PropTypes.bool), _defineProperty2));
 
 defineProperty(DatePicker, "defaultProps", {
   styles: undefined,
   calendarContainerProps: {},
   isGregorian: true,
-  timePicker: true
+  timePicker: true,
+  showTodayButton: true
 });
 
 momentJalaali.loadPersian({
