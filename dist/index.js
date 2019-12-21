@@ -2522,7 +2522,7 @@ defineProperty(DatePicker, "propTypes", (_defineProperty2 = {
   timePicker: PropTypes.bool,
   calendarClass: PropTypes.string,
   datePickerClass: PropTypes.string
-}, defineProperty(_defineProperty2, "datePickerClass", PropTypes.string), defineProperty(_defineProperty2, "tetherAttachment", PropTypes.string), defineProperty(_defineProperty2, "inputReadOnly", PropTypes.object), defineProperty(_defineProperty2, "ranges", PropTypes.array), defineProperty(_defineProperty2, "showToggleButton", PropTypes.bool), defineProperty(_defineProperty2, "toggleButtonText", PropTypes.any), _defineProperty2));
+}, defineProperty(_defineProperty2, "datePickerClass", PropTypes.string), defineProperty(_defineProperty2, "tetherAttachment", PropTypes.string), defineProperty(_defineProperty2, "inputReadOnly", PropTypes.bool), defineProperty(_defineProperty2, "ranges", PropTypes.array), defineProperty(_defineProperty2, "showToggleButton", PropTypes.bool), defineProperty(_defineProperty2, "toggleButtonText", PropTypes.any), _defineProperty2));
 
 defineProperty(DatePicker, "defaultProps", {
   styles: undefined,
