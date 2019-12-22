@@ -15,6 +15,7 @@ import HighlightRange from './examples/HighlightRange';
 import Disabled from './examples/Disabled';
 import ReactHook from './examples/ReactHook';
 import RemoveDate from './examples/RemoveDate';
+import Placeholder from './examples/Placeholder';
 
 import { StickyContainer, Sticky } from 'react-sticky';
 
@@ -33,7 +34,8 @@ export default class ExampleComponents extends React.Component {
       HighlightRange,
       Disabled,
       ReactHook,
-      RemoveDate
+      RemoveDate,
+      Placeholder
     ];
   }
 

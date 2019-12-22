@@ -35,7 +35,8 @@ export default class DatePicker extends Component {
     ranges: PropTypes.array,
     showToggleButton: PropTypes.bool,
     toggleButtonText: PropTypes.any,
-    showTodayButton: PropTypes.bool
+    showTodayButton: PropTypes.bool,
+    placeholder: PropTypes.string
   };
 
   static defaultProps = {
@@ -43,7 +44,8 @@ export default class DatePicker extends Component {
     calendarContainerProps: {},
     isGregorian: true,
     timePicker: true,
-    showTodayButton: true
+    showTodayButton: true,
+    placeholder: ''
   };
 
   constructor(props) {
@@ -219,6 +221,7 @@ export default class DatePicker extends Component {
     return (
       <div ref={ref}>
         <input
+          placeholder={this.props.placeholder}
           className={`datepicker-input ${className}`}
           type="text"
           ref={inst => {
