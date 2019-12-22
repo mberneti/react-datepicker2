@@ -2239,6 +2239,7 @@ function (_Component) {
       return React.createElement("div", {
         ref: ref
       }, React.createElement("input", {
+        placeholder: _this.props.placeholder,
         className: "datepicker-input ".concat(className),
         type: "text",
         ref: function ref(inst) {
@@ -2526,14 +2527,15 @@ defineProperty(DatePicker, "propTypes", (_defineProperty2 = {
   timePicker: PropTypes.bool,
   calendarClass: PropTypes.string,
   datePickerClass: PropTypes.string
-}, defineProperty(_defineProperty2, "datePickerClass", PropTypes.string), defineProperty(_defineProperty2, "tetherAttachment", PropTypes.string), defineProperty(_defineProperty2, "inputReadOnly", PropTypes.bool), defineProperty(_defineProperty2, "ranges", PropTypes.array), defineProperty(_defineProperty2, "showToggleButton", PropTypes.bool), defineProperty(_defineProperty2, "toggleButtonText", PropTypes.any), defineProperty(_defineProperty2, "showTodayButton", PropTypes.bool), _defineProperty2));
+}, defineProperty(_defineProperty2, "datePickerClass", PropTypes.string), defineProperty(_defineProperty2, "tetherAttachment", PropTypes.string), defineProperty(_defineProperty2, "inputReadOnly", PropTypes.bool), defineProperty(_defineProperty2, "ranges", PropTypes.array), defineProperty(_defineProperty2, "showToggleButton", PropTypes.bool), defineProperty(_defineProperty2, "toggleButtonText", PropTypes.any), defineProperty(_defineProperty2, "showTodayButton", PropTypes.bool), defineProperty(_defineProperty2, "placeholder", PropTypes.string), _defineProperty2));
 
 defineProperty(DatePicker, "defaultProps", {
   styles: undefined,
   calendarContainerProps: {},
   isGregorian: true,
   timePicker: true,
-  showTodayButton: true
+  showTodayButton: true,
+  placeholder: ''
 });
 
 momentJalaali.loadPersian({
