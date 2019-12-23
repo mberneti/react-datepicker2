@@ -40,3 +40,5 @@ lib
 yarn.lock
 
 package-lock.json
+#intellij Project File
+*.iml
