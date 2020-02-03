@@ -451,7 +451,7 @@ li.rc-time-picker-panel-select-option-disabled:hover {
   padding: 4px 0 6px 0;
 }
 
-.selectToday {
+.calendarButton {
   display: block;
   width: 100%;
   background: #4285f4;
@@ -461,15 +461,22 @@ li.rc-time-picker-panel-select-option-disabled:hover {
   border: 0;
   cursor: pointer;
   padding: 5px 0 7px 0;
-  margin-top: 2rem;
   -webkit-transition: 0.2s all ease-in-out;
   transition: 0.2s all ease-in-out;
   -webkit-transition-property: background;
   transition-property: background;
 }
 
-.selectToday:hover {
+.calendarButton:hover {
   background: #1266f1;
+}
+
+.toggleButton {
+  margin-bottom: 1rem;
+}
+
+.selectToday {
+  margin-top: 1rem;
 }
 
 .highLightDot-container {
