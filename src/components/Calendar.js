@@ -221,9 +221,7 @@ export class Calendar extends Component {
     );
   };
   changeCalendarMode() {
-    this.setState(state => {
-      return { isGregorian: !state.isGregorian };
-    });
+    this.props.toggleMode();
   }
   render() {
     const {
@@ -243,17 +241,19 @@ export class Calendar extends Component {
     return (
       <div className={`${styles.calendarContainer} ${jalaaliClassName}${className}`}>
         {this.props.showToggleButton && (
-          <input
+          <button
+            className="calendarButton toggleButton"
             type="button"
-            value={isGregorian ? this.props.toggleButtonText[0] : this.props.toggleButtonText[1]}
             onClick={this.changeCalendarMode.bind(this)}
-          />
+          >
+            {isGregorian ? this.props.toggleButtonText[0] : this.props.toggleButtonText[1]}
+          </button>
         )}
         {mode === 'monthSelector' ? this.renderMonthSelector() : this.renderDays()}
         {showTodayButton && (
           <button
             type="button"
-            className="selectToday"
+            className="calendarButton selectToday"
             onClick={() => this.handleClickOnDay(momentJalaali())}
           >
             {isGregorian ? 'today' : 'امروز'}

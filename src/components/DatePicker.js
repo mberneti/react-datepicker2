@@ -126,6 +126,16 @@ export default class DatePicker extends Component {
     }
   }
 
+  toggleMode = () => {
+    const isGregorian = !this.state.isGregorian;
+    const { inputFormat: nextPropsInputFormat } = this.props;
+    const { inputJalaaliFormat: nextPropsInputJalaaliFormat } = this.props;
+    this.setState({
+      isGregorian: isGregorian,
+      inputValue: this.getValue(this.props.value, isGregorian, this.props.timePicker)
+    });
+  };
+
   setMomentValue(momentValue) {
     const { inputFormat, isGregorian, timePicker } = this.state;
 
@@ -245,6 +255,7 @@ export default class DatePicker extends Component {
     return (
       <div ref={ref}>
         <Calendar
+          toggleMode={this.toggleMode}
           ranges={ranges}
           min={min}
           max={max}
