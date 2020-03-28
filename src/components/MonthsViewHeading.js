@@ -13,8 +13,15 @@ export default class MonthsViewHeading extends Component {
 
   static contextTypes = {
     styles: PropTypes.object,
-    type: PropTypes.number
+    type: PropTypes.number,
+    setCalendarMode: PropTypes.func.isRequired
   };
+
+  handleYearClick(event) {
+    const { setCalendarMode } = this.context;
+    event.preventDefault();
+    setCalendarMode('yearSelector');
+  }
 
   render() {
     const { year, styles, type, isGregorian } = this.props;
@@ -23,9 +30,9 @@ export default class MonthsViewHeading extends Component {
 
     return (
       <div className={styles.heading}>
-        <span className={styles.title}>
+        <button className={styles.title} onClick={this.handleYearClick.bind(this)}>
           {isGregorian ? year.format(yearFormat) : persianNumber(year.format(yearFormat))}
-        </span>
+        </button>
         <button
           type="button"
           title={isGregorian ? 'before year' : 'سال قبل'}

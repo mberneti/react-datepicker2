@@ -7,6 +7,7 @@ export const defaultStyles = {
   dayWrapper: 'dayWrapper',
   currentMonth: 'currentMonth',
   daysOfWeek: 'daysOfWeek',
+  yearsList: 'yearsList',
   monthsList: 'monthsList',
   selected: 'selected',
   today: 'today',

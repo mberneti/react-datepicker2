@@ -18,6 +18,7 @@ export default class DatePicker extends Component {
     children: PropTypes.node,
     min: PropTypes.object,
     max: PropTypes.object,
+    defaultYear: PropTypes.object,
     defaultMonth: PropTypes.object,
     inputFormat: PropTypes.string,
     inputJalaaliFormat: PropTypes.string,
@@ -249,7 +250,7 @@ export default class DatePicker extends Component {
 
   renderCalendar = ref => {
     const { momentValue, isGregorian, timePickerComponent: TimePicker } = this.state;
-    const { onChange, min, max, defaultMonth, styles, calendarContainerProps, ranges } = this.props;
+    const { onChange, min, max, defaultYear, defaultMonth, styles, calendarContainerProps, ranges } = this.props;
 
     return (
       <div ref={ref}>
@@ -259,6 +260,7 @@ export default class DatePicker extends Component {
           min={min}
           max={max}
           selectedDay={momentValue}
+          defaultYear={defaultYear}
           defaultMonth={defaultMonth}
           onSelect={this.handleSelectDay.bind(this)}
           onClickOutside={this.handleClickOutsideCalendar.bind(this)}

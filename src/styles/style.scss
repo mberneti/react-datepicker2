@@ -189,6 +189,30 @@ $hoverColor:#d6f1ff;
     cursor: pointer;
 }
 
+/* Year selector portion */
+
+.calendarContainer .yearsList {
+    clear: both;
+    width: 100%;
+}
+
+.calendarContainer .yearsList button {
+    width: 20%;
+    height: 25%;
+    float: right;
+    border: 1px solid #F9F9F9;
+    outline: none;
+    font-size: 1em;
+    background: #fff;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.calendarContainer .yearsList button:hover {
+    background: #eeeeee;
+    cursor: pointer;
+}
+
 
 /* Selected state of buttons */
 
