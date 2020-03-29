@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import momentJalaali from 'moment-jalaali';
 import classnames from 'classnames';
 import MonthsViewHeading from './MonthsViewHeading';
-import { persianNumber } from '../utils/persian';
-import { leftArrow, rightArrow } from '../utils/assets';
 
 // List of months
 const monthsJalaali = [
