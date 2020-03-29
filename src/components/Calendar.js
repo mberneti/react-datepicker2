@@ -189,9 +189,16 @@ export class Calendar extends Component {
   };
 
   renderYearSelector = () => {
-    const { year, isGregorian } = this.state;
+    const { year, month, isGregorian } = this.state;
     const { styles } = this.props;
-    return <YearSelector styles={styles} isGregorian={isGregorian} selectedYear={year} />;
+    return (
+      <YearSelector
+        styles={styles}
+        isGregorian={isGregorian}
+        selectedYear={year}
+        selectedMonth={month}
+      />
+    );
   };
 
   renderDays = () => {

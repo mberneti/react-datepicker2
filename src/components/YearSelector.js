@@ -16,16 +16,18 @@ export default class YearSelector extends Component {
   static propTypes = {
     styles: PropTypes.object,
     selectedYear: PropTypes.object.isRequired,
+    selectedMonth: PropTypes.object.isRequired,
     isGregorian: PropTypes.bool
   };
 
   static contextTypes = {
     setCalendarMode: PropTypes.func.isRequired,
-    setYear: PropTypes.func.isRequired
+    setMonth: PropTypes.func.isRequired
   };
 
   state = {
-    year: this.props.selectedYear
+    year: this.props.selectedYear,
+    month: this.props.selectedMonth
   };
 
   nextYear() {
@@ -41,17 +43,18 @@ export default class YearSelector extends Component {
   }
 
   handleClick(key) {
-    const { setYear, setCalendarMode } = this.context;
+    const { setMonth, setCalendarMode } = this.context;
     const { isGregorian } = this.props;
-    const monthYearFormat = isGregorian ? 'YYYY' : 'jYYYY';
-    setYear(momentJalaali(key, monthYearFormat));
+    const monthYearFormat = isGregorian ? 'M-YYYY' : 'jM-jYYYY';
+    setMonth(momentJalaali(key, monthYearFormat));
     setCalendarMode('days');
   }
 
   render() {
-    const { year } = this.state;
+    const { year, month } = this.state;
     const { styles, isGregorian } = this.props;
     const yearFormat = isGregorian ? 'YYYY' : 'jYYYY';
+    const monthFormat = isGregorian ? 'M' : 'jM';
     const years = isGregorian ? yearsGregorian : yearsJalaali;
 
     return (
@@ -65,7 +68,7 @@ export default class YearSelector extends Component {
         />
         <div className={styles.yearsList}>
           {years.map((name, key) => {
-            const buttonFingerprint = `${key + 1}-${year.format(yearFormat)}`;
+            const buttonFingerprint = `${month.format(monthFormat)}-${years[key]}`;
             const isCurrent = Number(year.format(yearFormat)) === years[key];
 
             const className = classnames(styles.yearWrapper, {
