@@ -44,6 +44,16 @@
         "platform",
         "code"
       ]
+    },
+    {
+      "login": "alireza-molaee",
+      "name": "alireza molaee",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/15848730?v=4",
+      "profile": "https://github.com/alireza-molaee",
+      "contributions": [
+        "maintenance",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
