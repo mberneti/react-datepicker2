@@ -1,0 +1,24 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "dadwic",
+      "name": "Mehrdad Mehralian",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/13819774?v=4",
+      "profile": "http://mehralian.org",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "react-datepicker2",
+  "projectOwner": "mberneti",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
