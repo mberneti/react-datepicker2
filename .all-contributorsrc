@@ -33,6 +33,17 @@
         "maintenance",
         "code"
       ]
+    },
+    {
+      "login": "aliazizi",
+      "name": "Ali Akbar Azizi",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/8492767?v=4",
+      "profile": "https://github.com/aliazizi",
+      "contributions": [
+        "maintenance",
+        "platform",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
