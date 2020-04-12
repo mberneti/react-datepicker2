@@ -1,6 +1,6 @@
 # React DatePicker2
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![npm](https://img.shields.io/npm/v/react-datepicker2.svg)](https://www.npmjs.com/package/react-datepicker2)
@@ -95,6 +95,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="http://mehralian.org"><img src="https://avatars0.githubusercontent.com/u/13819774?v=4" width="100px;" alt=""/><br /><sub><b>Mehrdad Mehralian</b></sub></a><br /><a href="https://github.com/mberneti/react-datepicker2/commits?author=dadwic" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/shayegh"><img src="https://avatars1.githubusercontent.com/u/10929932?v=4" width="100px;" alt=""/><br /><sub><b>mojtaba Shayegh</b></sub></a><br /><a href="https://github.com/mberneti/react-datepicker2/issues?q=author%3Ashayegh" title="Bug reports">🐛</a> <a href="https://github.com/mberneti/react-datepicker2/commits?author=shayegh" title="Code">💻</a></td>
   </tr>
 </table>
 
