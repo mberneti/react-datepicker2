@@ -44,7 +44,8 @@
         "maintenance",
         "platform",
         "code",
-        "code"
+        "bug",
+        "question"
       ]
     },
     {
@@ -123,7 +124,10 @@
       "profile": "http://ir.linkedin.com/in/amirzamani",
       "contributions": [
         "maintenance",
-        "code"
+        "platform",
+        "code",
+        "bug",
+        "question"
       ]
     },
     {
