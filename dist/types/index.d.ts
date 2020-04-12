@@ -1,12 +1,6 @@
-declare module "react-datepicker2" {
-  import {
-    Component,
-    DOMElement,
-    DOMAttributes,
-    StyleHTMLAttributes,
-    CSSProperties
-  } from "react";
-  import { Moment } from "moment-jalaali";
+declare module 'react-datepicker2' {
+  import { Component, DOMElement, DOMAttributes, StyleHTMLAttributes, CSSProperties } from 'react';
+  import { Moment } from 'moment-jalaali';
 
   export interface CalenderProps {
     min?: Moment;
@@ -32,7 +26,7 @@ declare module "react-datepicker2" {
     containerProps?: object;
     isGregorian?: boolean;
     calendarClass?: string;
-    ranges: Array<{
+    ranges?: Array<{
       start: Moment;
       end: Moment;
       color?: string;
@@ -62,8 +56,8 @@ declare module "react-datepicker2" {
     value?: Moment;
     defaultValue?: Moment;
     onChange?: (date: Moment) => void;
-    onFocus?: DOMAttributes<HTMLInputElement>["onFocus"];
-    onBlur?: DOMAttributes<HTMLInputElement>["onBlur"];
+    onFocus?: DOMAttributes<HTMLInputElement>['onFocus'];
+    onBlur?: DOMAttributes<HTMLInputElement>['onBlur'];
     min?: Moment;
     max?: Moment;
     defaultMonth?: Moment;
