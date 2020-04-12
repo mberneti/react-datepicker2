@@ -6,12 +6,42 @@
   "commit": false,
   "contributors": [
     {
+      "login": "mberneti",
+      "name": "mohammadreza berneti",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/3443365?v=4",
+      "profile": "http://berneti.ir",
+      "contributions": [
+        "code",
+        "ideas",
+        "doc",
+        "bug",
+        "design",
+        "example",
+        "maintenance",
+        "platform",
+        "question",
+        "review",
+        "projectManagement"
+      ]
+    },
+    {
       "login": "mohebifar",
       "name": "Mohamad Mohebifar",
       "avatar_url": "https://avatars1.githubusercontent.com/u/6104558?v=4",
       "profile": "https://github.com/mohebifar",
       "contributions": [
+        "ideas",
         "doc",
+        "code"
+      ]
+    },
+    {
+      "login": "alinjf",
+      "name": "Ali Najafi",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/15678289?v=4",
+      "profile": "https://github.com/alinjf",
+      "contributions": [
+        "maintenance",
         "code"
       ]
     },
@@ -86,16 +116,6 @@
       ]
     },
     {
-      "login": "alinjf",
-      "name": "Ali Najafi",
-      "avatar_url": "https://avatars3.githubusercontent.com/u/15678289?v=4",
-      "profile": "https://github.com/alinjf",
-      "contributions": [
-        "maintenance",
-        "code"
-      ]
-    },
-    {
       "login": "azadkuh",
       "name": "amir zamani",
       "avatar_url": "https://avatars0.githubusercontent.com/u/6501462?v=4",
@@ -113,25 +133,6 @@
       "contributions": [
         "maintenance",
         "question"
-      ]
-    },
-    {
-      "login": "mberneti",
-      "name": "mohammadreza berneti",
-      "avatar_url": "https://avatars3.githubusercontent.com/u/3443365?v=4",
-      "profile": "http://berneti.ir",
-      "contributions": [
-        "code",
-        "ideas",
-        "doc",
-        "bug",
-        "design",
-        "example",
-        "maintenance",
-        "platform",
-        "question",
-        "review",
-        "projectManagement"
       ]
     }
   ],
