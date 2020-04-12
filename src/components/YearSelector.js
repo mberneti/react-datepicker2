@@ -6,11 +6,17 @@ import range from 'lodash.range';
 import MonthsViewHeading from './MonthsViewHeading';
 
 // List of months
-const yearsJalaali = range(momentJalaali(new Date()).jYear() + 1, 1300);
+const yearsJalaali = range(momentJalaali(new Date()).jYear() + 100, 1300);
 
-const yearsGregorian = range(momentJalaali(new Date()).year() + 1, 1920);
+const yearsGregorian = range(momentJalaali(new Date()).year() + 100, 1920);
 
 export default class YearSelector extends Component {
+  constructor(props) {
+    super(props);
+    this.currentYearPositionRef = React.createRef();
+    this.yearsContainerRef = React.createRef();
+  }
+
   static propTypes = {
     styles: PropTypes.object,
     selectedYear: PropTypes.object.isRequired,
@@ -27,6 +33,28 @@ export default class YearSelector extends Component {
     year: this.props.selectedYear,
     month: this.props.selectedMonth
   };
+
+  getOffsetTop = element => {
+    let offsetTop = 0;
+    while (element) {
+      console.log(element.scrollTop);
+      offsetTop += element.offsetTop;
+      element = element.offsetParent;
+    }
+    return offsetTop;
+  };
+
+  scrollToCurrentYearPositionRef = () => {
+    const marginTop = 160;
+    this.yearsContainerRef.current.scrollTo({
+      top: this.getOffsetTop(this.currentYearPositionRef.current) - marginTop,
+      behavior: 'smooth' // optional
+    });
+  };
+
+  componentDidMount() {
+    this.scrollToCurrentYearPositionRef();
+  }
 
   nextYear() {
     this.setState({
@@ -64,18 +92,25 @@ export default class YearSelector extends Component {
           onNextYear={this.nextYear.bind(this)}
           onPrevYear={this.prevYear.bind(this)}
         />
-        <div className={styles.yearsList}>
-          {years.map((name, key) => {
+        <div ref={this.yearsContainerRef} className={styles.yearsList}>
+          {years.map((yearItem, key) => {
             const buttonFingerprint = `${month.format(monthFormat)}-${years[key]}`;
             const isCurrent = Number(year.format(yearFormat)) === years[key];
 
-            const className = classnames(styles.yearWrapper, {
+            const isCurrentYearPosition = Number(year.format(yearFormat)) === years[key];
+
+            const currentYearClass = classnames(styles.yearWrapper, {
               [styles.selected]: isCurrent
             });
 
             return (
-              <div key={key} className={className}>
-                <button onClick={this.handleClick.bind(this, buttonFingerprint)}>{name}</button>
+              <div key={key} className={currentYearClass}>
+                <button
+                  ref={isCurrentYearPosition && this.currentYearPositionRef}
+                  onClick={this.handleClick.bind(this, buttonFingerprint)}
+                >
+                  {yearItem}
+                </button>
               </div>
             );
           })}
