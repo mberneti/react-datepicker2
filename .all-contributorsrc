@@ -23,6 +23,16 @@
         "bug",
         "code"
       ]
+    },
+    {
+      "login": "moryrasb",
+      "name": "mory rezaee",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/15072825?v=4",
+      "profile": "https://github.com/moryrasb",
+      "contributions": [
+        "maintenance",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
