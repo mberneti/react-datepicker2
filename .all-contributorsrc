@@ -6,6 +6,16 @@
   "commit": false,
   "contributors": [
     {
+      "login": "mohebifar",
+      "name": "Mohamad Mohebifar",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/6104558?v=4",
+      "profile": "https://github.com/mohebifar",
+      "contributions": [
+        "doc",
+        "code"
+      ]
+    },
+    {
       "login": "dadwic",
       "name": "Mehrdad Mehralian",
       "avatar_url": "https://avatars0.githubusercontent.com/u/13819774?v=4",
@@ -92,16 +102,6 @@
       "profile": "http://ir.linkedin.com/in/amirzamani",
       "contributions": [
         "maintenance",
-        "code"
-      ]
-    },
-    {
-      "login": "mohebifar",
-      "name": "Mohamad Mohebifar",
-      "avatar_url": "https://avatars1.githubusercontent.com/u/6104558?v=4",
-      "profile": "https://github.com/mohebifar",
-      "contributions": [
-        "doc",
         "code"
       ]
     },
