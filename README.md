@@ -94,7 +94,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="http://mehralian.org"><img src="https://avatars0.githubusercontent.com/u/13819774?v=4" width="100px;" alt=""/><br /><sub><b>Mehrdad Mehralian</b></sub></a><br /><a href="https://github.com/mberneti/react-datepicker2/commits?author=dadwic" title="Code">💻</a></td>
+    <td align="center"><a href="http://mehralian.org"><img src="https://avatars0.githubusercontent.com/u/13819774?v=4" width="100px;" alt=""/><br /><sub><b>Mehrdad Mehralian</b></sub></a><br /><a href="https://github.com/mberneti/react-datepicker2/commits?author=dadwic" title="Code">💻</a> <a href="#design-dadwic" title="Design">🎨</a></td>
   </tr>
 </table>
 
