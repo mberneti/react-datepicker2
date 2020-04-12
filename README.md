@@ -69,6 +69,7 @@ The `master` branch contains the latest version of the Datepicker2 component. To
 - [x] UI improvements
 - [x] Adding new highlight feature
 - [x] Adding new year picker feature
+- [x] Adding typescript support
 - [ ] Adding new rangepicker feature
 
 ## Built With
