@@ -1,6 +1,6 @@
 # React DatePicker2
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![npm](https://img.shields.io/npm/v/react-datepicker2.svg)](https://www.npmjs.com/package/react-datepicker2)
@@ -100,6 +100,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/aliazizi"><img src="https://avatars1.githubusercontent.com/u/8492767?v=4" width="100px;" alt=""/><br /><sub><b>Ali Akbar Azizi</b></sub></a><br /><a href="#maintenance-aliazizi" title="Maintenance">🚧</a> <a href="#platform-aliazizi" title="Packaging/porting to new platform">📦</a> <a href="https://github.com/mberneti/react-datepicker2/commits?author=aliazizi" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/Doomfang3"><img src="https://avatars1.githubusercontent.com/u/37439688?v=4" width="100px;" alt=""/><br /><sub><b>Mathieu Saubin</b></sub></a><br /><a href="#maintenance-Doomfang3" title="Maintenance">🚧</a> <a href="https://github.com/mberneti/react-datepicker2/commits?author=Doomfang3" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/alireza-molaee"><img src="https://avatars0.githubusercontent.com/u/15848730?v=4" width="100px;" alt=""/><br /><sub><b>alireza molaee</b></sub></a><br /><a href="#maintenance-alireza-molaee" title="Maintenance">🚧</a> <a href="https://github.com/mberneti/react-datepicker2/commits?author=alireza-molaee" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/alimzadeh"><img src="https://avatars3.githubusercontent.com/u/11006666?v=4" width="100px;" alt=""/><br /><sub><b>Ali MoghaddasZadeh</b></sub></a><br /><a href="https://github.com/mberneti/react-datepicker2/issues?q=author%3Aalimzadeh" title="Bug reports">🐛</a> <a href="https://github.com/mberneti/react-datepicker2/commits?author=alimzadeh" title="Code">💻</a></td>
   </tr>
 </table>
 
