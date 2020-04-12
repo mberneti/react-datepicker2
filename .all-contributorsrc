@@ -42,7 +42,9 @@
       "contributions": [
         "maintenance",
         "platform",
-        "code"
+        "code",
+        "bug",
+        "question"
       ]
     }
   ],
