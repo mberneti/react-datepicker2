@@ -1,6 +1,6 @@
 # React DatePicker2
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-9-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-10-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![npm](https://img.shields.io/npm/v/react-datepicker2.svg)](https://www.npmjs.com/package/react-datepicker2)
@@ -105,6 +105,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://github.com/alinjf"><img src="https://avatars3.githubusercontent.com/u/15678289?v=4" width="100px;" alt=""/><br /><sub><b>Ali Najafi</b></sub></a><br /><a href="#maintenance-alinjf" title="Maintenance">🚧</a> <a href="https://github.com/mberneti/react-datepicker2/commits?author=alinjf" title="Code">💻</a></td>
     <td align="center"><a href="http://ir.linkedin.com/in/amirzamani"><img src="https://avatars0.githubusercontent.com/u/6501462?v=4" width="100px;" alt=""/><br /><sub><b>amir zamani</b></sub></a><br /><a href="#maintenance-azadkuh" title="Maintenance">🚧</a> <a href="https://github.com/mberneti/react-datepicker2/commits?author=azadkuh" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/mohebifar"><img src="https://avatars1.githubusercontent.com/u/6104558?v=4" width="100px;" alt=""/><br /><sub><b>Mohamad Mohebifar</b></sub></a><br /><a href="https://github.com/mberneti/react-datepicker2/commits?author=mohebifar" title="Documentation">📖</a> <a href="https://github.com/mberneti/react-datepicker2/commits?author=mohebifar" title="Code">💻</a></td>
   </tr>
 </table>
 
