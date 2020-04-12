@@ -114,6 +114,25 @@
         "maintenance",
         "question"
       ]
+    },
+    {
+      "login": "mberneti",
+      "name": "mohammadreza berneti",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/3443365?v=4",
+      "profile": "http://berneti.ir",
+      "contributions": [
+        "code",
+        "ideas",
+        "doc",
+        "bug",
+        "design",
+        "example",
+        "maintenance",
+        "platform",
+        "question",
+        "review",
+        "projectManagement"
+      ]
     }
   ],
   "contributorsPerLine": 7,
