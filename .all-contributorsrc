@@ -13,6 +13,16 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "shayegh",
+      "name": "mojtaba Shayegh",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/10929932?v=4",
+      "profile": "https://github.com/shayegh",
+      "contributions": [
+        "bug",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
