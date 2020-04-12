@@ -1,95 +1,105 @@
 {
-   "files":[
-      "README.md"
-   ],
-   "imageSize":100,
-   "commit":false,
-   "contributors":[
-      {
-         "login":"dadwic",
-         "name":"Mehrdad Mehralian",
-         "avatar_url":"https://avatars0.githubusercontent.com/u/13819774?v=4",
-         "profile":"http://mehralian.org",
-         "contributions":[
-            "code",
-            "design"
-         ]
-      },
-      {
-         "login":"shayegh",
-         "name":"mojtaba Shayegh",
-         "avatar_url":"https://avatars1.githubusercontent.com/u/10929932?v=4",
-         "profile":"https://github.com/shayegh",
-         "contributions":[
-            "bug",
-            "code"
-         ]
-      },
-      {
-         "login":"moryrasb",
-         "name":"mory rezaee",
-         "avatar_url":"https://avatars1.githubusercontent.com/u/15072825?v=4",
-         "profile":"https://github.com/moryrasb",
-         "contributions":[
-            "maintenance",
-            "code"
-         ]
-      },
-      {
-         "login":"aliazizi",
-         "name":"Ali Akbar Azizi",
-         "avatar_url":"https://avatars1.githubusercontent.com/u/8492767?v=4",
-         "profile":"https://github.com/aliazizi",
-         "contributions":[
-            "maintenance",
-            "platform",
-            "code"
-         ]
-      },
-      {
-         "login":"Doomfang3",
-         "name":"Mathieu Saubin",
-         "avatar_url":"https://avatars1.githubusercontent.com/u/37439688?v=4",
-         "profile":"https://github.com/Doomfang3",
-         "contributions":[
-            "maintenance",
-            "code"
-         ]
-      },
-      {
-         "login":"alireza-molaee",
-         "name":"alireza molaee",
-         "avatar_url":"https://avatars0.githubusercontent.com/u/15848730?v=4",
-         "profile":"https://github.com/alireza-molaee",
-         "contributions":[
-            "maintenance",
-            "code"
-         ]
-      },
-      {
-         "login":"alimzadeh",
-         "name":"Ali MoghaddasZadeh",
-         "avatar_url":"https://avatars3.githubusercontent.com/u/11006666?v=4",
-         "profile":"https://github.com/alimzadeh",
-         "contributions":[
-            "bug"
-         ]
-      },
-      {
-         "login":"alinjf",
-         "name":"Ali Najafi",
-         "avatar_url":"https://avatars3.githubusercontent.com/u/15678289?v=4",
-         "profile":"https://github.com/alinjf",
-         "contributions":[
-            "maintenance",
-            "code"
-         ]
-      }
-   ],
-   "contributorsPerLine":7,
-   "projectName":"react-datepicker2",
-   "projectOwner":"mberneti",
-   "repoType":"github",
-   "repoHost":"https://github.com",
-   "skipCi":true
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "dadwic",
+      "name": "Mehrdad Mehralian",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/13819774?v=4",
+      "profile": "http://mehralian.org",
+      "contributions": [
+        "code",
+        "design"
+      ]
+    },
+    {
+      "login": "shayegh",
+      "name": "mojtaba Shayegh",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/10929932?v=4",
+      "profile": "https://github.com/shayegh",
+      "contributions": [
+        "bug",
+        "code"
+      ]
+    },
+    {
+      "login": "moryrasb",
+      "name": "mory rezaee",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/15072825?v=4",
+      "profile": "https://github.com/moryrasb",
+      "contributions": [
+        "maintenance",
+        "code"
+      ]
+    },
+    {
+      "login": "aliazizi",
+      "name": "Ali Akbar Azizi",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/8492767?v=4",
+      "profile": "https://github.com/aliazizi",
+      "contributions": [
+        "maintenance",
+        "platform",
+        "code"
+      ]
+    },
+    {
+      "login": "Doomfang3",
+      "name": "Mathieu Saubin",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/37439688?v=4",
+      "profile": "https://github.com/Doomfang3",
+      "contributions": [
+        "maintenance",
+        "code"
+      ]
+    },
+    {
+      "login": "alireza-molaee",
+      "name": "alireza molaee",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/15848730?v=4",
+      "profile": "https://github.com/alireza-molaee",
+      "contributions": [
+        "maintenance",
+        "code"
+      ]
+    },
+    {
+      "login": "alimzadeh",
+      "name": "Ali MoghaddasZadeh",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/11006666?v=4",
+      "profile": "https://github.com/alimzadeh",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "alinjf",
+      "name": "Ali Najafi",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/15678289?v=4",
+      "profile": "https://github.com/alinjf",
+      "contributions": [
+        "maintenance",
+        "code"
+      ]
+    },
+    {
+      "login": "azadkuh",
+      "name": "amir zamani",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6501462?v=4",
+      "profile": "http://ir.linkedin.com/in/amirzamani",
+      "contributions": [
+        "maintenance",
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "react-datepicker2",
+  "projectOwner": "mberneti",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
 }
