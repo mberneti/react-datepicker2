@@ -6,12 +6,65 @@
   "commit": false,
   "contributors": [
     {
+      "login": "mberneti",
+      "name": "mohammadreza berneti",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/3443365?v=4",
+      "profile": "http://berneti.ir",
+      "contributions": [
+        "code",
+        "ideas",
+        "doc",
+        "bug",
+        "design",
+        "example",
+        "maintenance",
+        "platform",
+        "question",
+        "review",
+        "projectManagement"
+      ]
+    },
+    {
+      "login": "mohebifar",
+      "name": "Mohamad Mohebifar",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/6104558?v=4",
+      "profile": "https://github.com/mohebifar",
+      "contributions": [
+        "ideas",
+        "doc",
+        "code"
+      ]
+    },
+    {
+      "login": "aliazizi",
+      "name": "Ali Akbar Azizi",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/8492767?v=4",
+      "profile": "https://github.com/aliazizi",
+      "contributions": [
+        "maintenance",
+        "platform",
+        "code",
+        "bug"
+      ]
+    },
+    {
+      "login": "alinjf",
+      "name": "Ali Najafi",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/15678289?v=4",
+      "profile": "https://github.com/alinjf",
+      "contributions": [
+        "maintenance",
+        "code"
+      ]
+    },
+    {
       "login": "dadwic",
       "name": "Mehrdad Mehralian",
       "avatar_url": "https://avatars0.githubusercontent.com/u/13819774?v=4",
       "profile": "http://mehralian.org",
       "contributions": [
-        "code"
+        "code",
+        "design"
       ]
     },
     {
@@ -35,15 +88,54 @@
       ]
     },
     {
-      "login": "aliazizi",
-      "name": "Ali Akbar Azizi",
-      "avatar_url": "https://avatars1.githubusercontent.com/u/8492767?v=4",
-      "profile": "https://github.com/aliazizi",
+      "login": "Doomfang3",
+      "name": "Mathieu Saubin",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/37439688?v=4",
+      "profile": "https://github.com/Doomfang3",
+      "contributions": [
+        "maintenance",
+        "code"
+      ]
+    },
+    {
+      "login": "alireza-molaee",
+      "name": "alireza molaee",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/15848730?v=4",
+      "profile": "https://github.com/alireza-molaee",
+      "contributions": [
+        "maintenance",
+        "code"
+      ]
+    },
+    {
+      "login": "alimzadeh",
+      "name": "Ali MoghaddasZadeh",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/11006666?v=4",
+      "profile": "https://github.com/alimzadeh",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "azadkuh",
+      "name": "amir zamani",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6501462?v=4",
+      "profile": "http://ir.linkedin.com/in/amirzamani",
       "contributions": [
         "maintenance",
         "platform",
         "code",
         "bug",
+        "question"
+      ]
+    },
+    {
+      "login": "afsanefda",
+      "name": "Afsane Fadaei",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/37764909?v=4",
+      "profile": "http://afsanefadaei.ir",
+      "contributions": [
+        "maintenance",
         "question"
       ]
     }
