@@ -5,6 +5,7 @@ import onClickOutside from 'react-onclickoutside';
 import DaysViewHeading from './DaysViewHeading';
 import DaysOfWeek from './DaysOfWeek';
 import MonthSelector from './MonthSelector';
+import YearSelector from './YearSelector';
 import Day from './Day';
 import { getDaysOfMonth, checkToday } from '../utils/moment-helper';
 import { defaultStyles } from './DefaultStyles';
@@ -15,8 +16,10 @@ export class Calendar extends Component {
     max: PropTypes.object,
     styles: PropTypes.object,
     selectedDay: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+    defaultYear: PropTypes.object,
     defaultMonth: PropTypes.object,
     onSelect: PropTypes.func,
+    onYearChange: PropTypes.func,
     onMonthChange: PropTypes.func,
     onClickOutside: PropTypes.func,
     containerProps: PropTypes.object,
@@ -31,6 +34,7 @@ export class Calendar extends Component {
     nextMonth: PropTypes.func.isRequired,
     prevMonth: PropTypes.func.isRequired,
     setCalendarMode: PropTypes.func.isRequired,
+    setYear: PropTypes.func.isRequired,
     setMonth: PropTypes.func.isRequired,
     setType: PropTypes.func.isRequired
   };
@@ -45,6 +49,7 @@ export class Calendar extends Component {
   };
 
   state = {
+    year: this.props.defaultYear || this.props.selectedDay || momentJalaali(this.props.min),
     month: this.props.defaultMonth || this.props.selectedDay || momentJalaali(this.props.min),
     selectedDay: this.props.selectedDay || this.props.value || momentJalaali(),
     mode: 'days',
@@ -57,18 +62,32 @@ export class Calendar extends Component {
       nextMonth: this.nextMonth.bind(this),
       prevMonth: this.prevMonth.bind(this),
       setCalendarMode: this.setMode.bind(this),
+      setYear: this.setYear.bind(this),
       setMonth: this.setMonth.bind(this),
       setType: this.setMonth.bind(this)
     };
   }
 
-  UNSAFE_componentWillReceiveProps({ selectedDay, defaultMonth, min, isGregorian, ranges }) {
+  UNSAFE_componentWillReceiveProps({
+    selectedDay,
+    defaultYear,
+    defaultMonth,
+    min,
+    isGregorian,
+    ranges
+  }) {
     if (typeof isGregorian !== 'undefined' && isGregorian !== this.state.isGregorian) {
       this.setState({ isGregorian });
     }
 
     if (this.props.selectedDay !== selectedDay) {
       this.selectDay(selectedDay || momentJalaali());
+    } else if (
+      defaultYear &&
+      this.props.defaultYear !== defaultYear &&
+      this.state.year === this.props.defaultYear
+    ) {
+      this.setYear(defaultYear);
     } else if (
       defaultMonth &&
       this.props.defaultMonth !== defaultMonth &&
@@ -86,6 +105,14 @@ export class Calendar extends Component {
 
   setMode = mode => {
     this.setState({ mode });
+  };
+
+  setYear = year => {
+    const { onYearChange } = this.props;
+    this.setState({ year });
+    if (onYearChange) {
+      onYearChange(year);
+    }
   };
 
   setMonth = month => {
@@ -159,6 +186,19 @@ export class Calendar extends Component {
     const { month, isGregorian } = this.state;
     const { styles } = this.props;
     return <MonthSelector styles={styles} isGregorian={isGregorian} selectedMonth={month} />;
+  };
+
+  renderYearSelector = () => {
+    const { year, month, isGregorian } = this.state;
+    const { styles } = this.props;
+    return (
+      <YearSelector
+        styles={styles}
+        isGregorian={isGregorian}
+        selectedYear={year}
+        selectedMonth={month}
+      />
+    );
   };
 
   renderDays = () => {
@@ -249,7 +289,9 @@ export class Calendar extends Component {
             {isGregorian ? this.props.toggleButtonText[0] : this.props.toggleButtonText[1]}
           </button>
         )}
-        {mode === 'monthSelector' ? this.renderMonthSelector() : this.renderDays()}
+        {mode === 'days' && this.renderDays()}
+        {mode === 'monthSelector' && this.renderMonthSelector()}
+        {mode === 'yearSelector' && this.renderYearSelector()}
         {showTodayButton && (
           <button
             type="button"

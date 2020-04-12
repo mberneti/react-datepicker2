@@ -76,7 +76,7 @@
   border-radius: 4px;
   width: auto;
   margin: 0 5px;
-  border: 1px solid #F7F7F7;
+  border: 1px solid #f7f7f7;
   text-align: center;
   display: inline-block;
   font-weight: normal;
@@ -134,7 +134,7 @@
 }
 
 .calendarContainer .dayWrapper:not(.currentMonth) button {
-  opacity: .5;
+  opacity: 0.5;
 }
 
 /* Days of week row */
@@ -168,7 +168,7 @@
   width: 33.33333332%;
   height: 25%;
   float: right;
-  border: 1px solid #F9F9F9;
+  border: 1px solid #f9f9f9;
   outline: none;
   font-size: 1em;
   background: #fff;
@@ -177,6 +177,31 @@
 }
 
 .calendarContainer .monthsList button:hover {
+  background: #eeeeee;
+  cursor: pointer;
+}
+
+/* Year selector portion */
+.calendarContainer .yearsList {
+  clear: both;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: scroll;
+}
+
+.calendarContainer .yearsList button {
+  width: 20%;
+  height: 25%;
+  float: right;
+  border: 1px solid #f9f9f9;
+  outline: none;
+  font-size: 1em;
+  background: #fff;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.calendarContainer .yearsList button:hover {
   background: #eeeeee;
   cursor: pointer;
 }
@@ -229,7 +254,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 110px;
-  border: 1px solid #F7F7F7;
+  border: 1px solid #f7f7f7;
   font-size: 1.2em;
 }
 
@@ -347,7 +372,7 @@
 }
 
 .rc-time-picker-panel-clear-btn:after {
-  content: "x";
+  content: 'x';
   font-size: 12px;
   color: #aaa;
   display: inline-block;
