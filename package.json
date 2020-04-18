@@ -4,10 +4,7 @@
   "description": "react datepicker component. (include persian jalaali calendar)",
   "main": "dist/es/index.js",
   "types": "dist/types/index.d.ts",
-  "browser": "dist/react-datepicker2.min.js",
   "module": "dist/es/index.js",
-  "unpkg": "dist/react-datepicker2.min.js",
-  "style": "dist/react-datepicker2.min.css",
   "repository": {
     "type": "git",
     "url": "https://github.com/mberneti/react-datepicker2"
