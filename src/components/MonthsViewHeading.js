@@ -39,7 +39,7 @@ export default class MonthsViewHeading extends Component {
           style={styles.navButton}
           className={styles.prev}
           onClick={this.props.onPrevYear}
-          dangerouslySetInnerHTML={rightArrow}
+          dangerouslySetInnerHTML={leftArrow}
         />
         <button
           type="button"
@@ -47,7 +47,7 @@ export default class MonthsViewHeading extends Component {
           style={styles.navButton}
           className={styles.next}
           onClick={this.props.onNextYear}
-          dangerouslySetInnerHTML={leftArrow}
+          dangerouslySetInnerHTML={rightArrow}
         />
       </div>
     );
