@@ -139,6 +139,15 @@
         "maintenance",
         "question"
       ]
+    },
+    {
+      "login": "whossein",
+      "name": "Hossein Aghatabar",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/17334987?v=4",
+      "profile": "http://learnyab.com",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
