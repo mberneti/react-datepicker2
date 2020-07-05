@@ -13,6 +13,7 @@ export default class DatePicker extends Component {
     value: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
     defaultValue: PropTypes.object,
     onChange: PropTypes.func,
+    onInputChange: PropTypes.func,
     onFocus: PropTypes.func,
     onBlur: PropTypes.func,
     children: PropTypes.node,
@@ -206,13 +207,17 @@ export default class DatePicker extends Component {
         this.props.onChange(momentValue);
       }
     }
-    else if(inputValue === ''){
+    else if(inputValue === '') {
       if (this.props.onChange) {
         this.props.onChange('');
       }
     }
 
     this.setState({ inputValue });
+    
+    if (this.props.onInputChange) {
+      this.props.onInputChange(event);
+    }
   }
 
   handleInputClick() {
