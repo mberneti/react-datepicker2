@@ -1,5 +1,5 @@
 declare module 'react-datepicker2' {
-  import { Component, DOMElement, DOMAttributes, StyleHTMLAttributes, CSSProperties } from 'react';
+  import { Component, DOMElement, DOMAttributes, StyleHTMLAttributes, CSSProperties, ChangeEventHandler } from 'react';
   import { Moment } from 'moment-jalaali';
 
   export interface CalenderProps {
@@ -35,6 +35,7 @@ declare module 'react-datepicker2' {
     value?: Moment;
     defaultValue?: Moment;
     onChange?: (date: Moment) => void;
+    onInputChange?: (e: ChangeEventHandler<HTMLInputElement>) => void;
     onMonthChange?: (month: Moment) => void;
     inputFormat?: string;
     inputJalaaliFormat?: string;
