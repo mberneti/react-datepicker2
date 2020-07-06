@@ -10,7 +10,7 @@ const outsideClickIgnoreClass = 'ignore--click--outside';
 
 export default class DatePicker extends Component {
   static propTypes = {
-    value: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+    value: PropTypes.object,
     defaultValue: PropTypes.object,
     onChange: PropTypes.func,
     onInputChange: PropTypes.func,
@@ -103,7 +103,11 @@ export default class DatePicker extends Component {
   }
 
   UNSAFE_componentWillReceiveProps(nextProps) {
-    if ('value' in nextProps && nextProps.value !== this.props.value) {
+    if (
+      'value' in nextProps &&
+      ((typeof nextProps.value === 'undefined' && typeof this.props.value !== 'undefined') ||
+        (typeof nextProps.value !== 'undefined' && !nextProps.value.isSame(this.props.value)))
+    ) {
       this.setMomentValue(nextProps.value);
     }
 
@@ -203,20 +207,26 @@ export default class DatePicker extends Component {
 
     if (momentValue.isValid()) {
       this.setState({ momentValue });
-      if (this.props.onChange) {
-        this.props.onChange(momentValue);
-      }
     }
-    else if(inputValue === '') {
-      if (this.props.onChange) {
+
+    const isUserClearInput = inputValue === '';
+
+    if (this.props.onChange) {
+      if (isUserClearInput) {
         this.props.onChange('');
       }
     }
 
     this.setState({ inputValue });
-    
+
     if (this.props.onInputChange) {
       this.props.onInputChange(event);
+    }
+  }
+
+  hanldeBlur() {
+    if (this.props.onChange) {
+      this.props.onChange(this.state.momentValue);
     }
   }
 
@@ -243,6 +253,7 @@ export default class DatePicker extends Component {
             this.input = inst;
           }}
           onFocus={this.handleFocus.bind(this)}
+          onBlur={this.hanldeBlur.bind(this)}
           onChange={this.handleInputChange.bind(this)}
           onClick={this.handleInputClick.bind(this)}
           value={isGregorian ? inputValue : this.toPersianDigits(inputValue)}
@@ -255,7 +266,16 @@ export default class DatePicker extends Component {
 
   renderCalendar = ref => {
     const { momentValue, isGregorian, timePickerComponent: TimePicker } = this.state;
-    const { onChange, min, max, defaultYear, defaultMonth, styles, calendarContainerProps, ranges } = this.props;
+    const {
+      onChange,
+      min,
+      max,
+      defaultYear,
+      defaultMonth,
+      styles,
+      calendarContainerProps,
+      ranges
+    } = this.props;
 
     return (
       <div ref={ref}>

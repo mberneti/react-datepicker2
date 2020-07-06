@@ -2493,6 +2493,7 @@ var DatePicker = /*#__PURE__*/function (_Component) {
           _this.input = inst;
         },
         onFocus: _this.handleFocus.bind(assertThisInitialized(_this)),
+        onBlur: _this.hanldeBlur.bind(assertThisInitialized(_this)),
         onChange: _this.handleInputChange.bind(assertThisInitialized(_this)),
         onClick: _this.handleInputClick.bind(assertThisInitialized(_this)),
         value: isGregorian ? inputValue : _this.toPersianDigits(inputValue),
@@ -2586,7 +2587,7 @@ var DatePicker = /*#__PURE__*/function (_Component) {
   }, {
     key: "UNSAFE_componentWillReceiveProps",
     value: function UNSAFE_componentWillReceiveProps(nextProps) {
-      if ('value' in nextProps && nextProps.value !== this.props.value) {
+      if ('value' in nextProps && (typeof nextProps.value === 'undefined' && typeof this.props.value !== 'undefined' || typeof nextProps.value !== 'undefined' && !nextProps.value.isSame(this.props.value))) {
         this.setMomentValue(nextProps.value);
       }
 
@@ -2685,12 +2686,12 @@ var DatePicker = /*#__PURE__*/function (_Component) {
         this.setState({
           momentValue: momentValue
         });
+      }
 
-        if (this.props.onChange) {
-          this.props.onChange(momentValue);
-        }
-      } else if (inputValue === '') {
-        if (this.props.onChange) {
+      var isUserClearInput = inputValue === '';
+
+      if (this.props.onChange) {
+        if (isUserClearInput) {
           this.props.onChange('');
         }
       }
@@ -2701,6 +2702,13 @@ var DatePicker = /*#__PURE__*/function (_Component) {
 
       if (this.props.onInputChange) {
         this.props.onInputChange(event);
+      }
+    }
+  }, {
+    key: "hanldeBlur",
+    value: function hanldeBlur() {
+      if (this.props.onChange) {
+        this.props.onChange(this.state.momentValue);
       }
     }
   }, {
@@ -2761,7 +2769,7 @@ var DatePicker = /*#__PURE__*/function (_Component) {
 }(Component);
 
 defineProperty(DatePicker, "propTypes", {
-  value: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  value: PropTypes.object,
   defaultValue: PropTypes.object,
   onChange: PropTypes.func,
   onInputChange: PropTypes.func,
