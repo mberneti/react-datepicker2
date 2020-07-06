@@ -2706,15 +2706,14 @@ var DatePicker = /*#__PURE__*/function (_Component) {
   }, {
     key: "hanldeBlur",
     value: function hanldeBlur(event) {
-      var _this$state5 = this.state,
-          inputFormat = _this$state5.inputFormat,
-          inputJalaaliFormat = _this$state5.inputJalaaliFormat,
-          isGregorian = _this$state5.isGregorian;
-      var inputValue = this.toEnglishDigits(event.target.value);
-      var currentInputFormat = isGregorian ? inputFormat : inputJalaaliFormat;
-      var momentValue = momentJalaali(inputValue, currentInputFormat);
-
       if (this.props.onChange) {
+        var _this$state5 = this.state,
+            inputFormat = _this$state5.inputFormat,
+            inputJalaaliFormat = _this$state5.inputJalaaliFormat,
+            isGregorian = _this$state5.isGregorian;
+        var inputValue = this.toEnglishDigits(event.target.value);
+        var currentInputFormat = isGregorian ? inputFormat : inputJalaaliFormat;
+        var momentValue = momentJalaali(inputValue, currentInputFormat);
         this.props.onChange(momentValue.isValid() ? this.state.momentValue : momentJalaali());
       }
     }

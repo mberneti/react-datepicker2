@@ -225,12 +225,12 @@ export default class DatePicker extends Component {
   }
 
   hanldeBlur(event) {
-    const { inputFormat, inputJalaaliFormat, isGregorian } = this.state;
-    const inputValue = this.toEnglishDigits(event.target.value);
-    const currentInputFormat = isGregorian ? inputFormat : inputJalaaliFormat;
-    const momentValue = momentJalaali(inputValue, currentInputFormat);
-
     if (this.props.onChange) {
+      const { inputFormat, inputJalaaliFormat, isGregorian } = this.state;
+      const inputValue = this.toEnglishDigits(event.target.value);
+      const currentInputFormat = isGregorian ? inputFormat : inputJalaaliFormat;
+      const momentValue = momentJalaali(inputValue, currentInputFormat);
+
       this.props.onChange(momentValue.isValid() ? this.state.momentValue : momentJalaali());
     }
   }
