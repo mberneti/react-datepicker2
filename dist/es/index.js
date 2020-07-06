@@ -2496,7 +2496,7 @@ var DatePicker = /*#__PURE__*/function (_Component) {
         onBlur: _this.hanldeBlur.bind(assertThisInitialized(_this)),
         onChange: _this.handleInputChange.bind(assertThisInitialized(_this)),
         onClick: _this.handleInputClick.bind(assertThisInitialized(_this)),
-        value: isGregorian ? inputValue : _this.toPersianDigits(inputValue),
+        value: isGregorian || !_this.props.persianDigits ? inputValue : _this.toPersianDigits(inputValue),
         readOnly: _this.props.inputReadOnly === true,
         disabled: _this.props.disabled
       }));
@@ -2587,6 +2587,8 @@ var DatePicker = /*#__PURE__*/function (_Component) {
   }, {
     key: "UNSAFE_componentWillReceiveProps",
     value: function UNSAFE_componentWillReceiveProps(nextProps) {
+      console.log(nextProps);
+
       if ('value' in nextProps && (typeof nextProps.value === 'undefined' && typeof this.props.value !== 'undefined' || typeof nextProps.value !== 'undefined' && !nextProps.value.isSame(this.props.value))) {
         this.setMomentValue(nextProps.value);
       }
@@ -2674,6 +2676,8 @@ var DatePicker = /*#__PURE__*/function (_Component) {
   }, {
     key: "handleInputChange",
     value: function handleInputChange(event) {
+      var _this2 = this;
+
       var _this$state4 = this.state,
           inputFormat = _this$state4.inputFormat,
           inputJalaaliFormat = _this$state4.inputJalaaliFormat,
@@ -2681,6 +2685,7 @@ var DatePicker = /*#__PURE__*/function (_Component) {
       var inputValue = this.toEnglishDigits(event.target.value);
       var currentInputFormat = isGregorian ? inputFormat : inputJalaaliFormat;
       var momentValue = momentJalaali(inputValue, currentInputFormat);
+      var cursor = event.target.selectionStart;
 
       if (momentValue.isValid()) {
         this.setState({
@@ -2688,16 +2693,12 @@ var DatePicker = /*#__PURE__*/function (_Component) {
         });
       }
 
-      var isUserClearInput = inputValue === '';
-
-      if (this.props.onChange) {
-        if (isUserClearInput) {
-          this.props.onChange('');
-        }
-      }
-
       this.setState({
         inputValue: inputValue
+      }, function () {
+        // It cause lose current cursor positon if persian digits is active
+        // for example it convert 4 to ۴, so the react set cursor position to end of string
+        if (_this2.props.persianDigits) _this2.input.setSelectionRange(cursor, cursor);
       });
 
       if (this.props.onInputChange) {
@@ -2706,9 +2707,17 @@ var DatePicker = /*#__PURE__*/function (_Component) {
     }
   }, {
     key: "hanldeBlur",
-    value: function hanldeBlur() {
+    value: function hanldeBlur(event) {
+      var _this$state5 = this.state,
+          inputFormat = _this$state5.inputFormat,
+          inputJalaaliFormat = _this$state5.inputJalaaliFormat,
+          isGregorian = _this$state5.isGregorian;
+      var inputValue = this.toEnglishDigits(event.target.value);
+      var currentInputFormat = isGregorian ? inputFormat : inputJalaaliFormat;
+      var momentValue = momentJalaali(inputValue, currentInputFormat);
+
       if (this.props.onChange) {
-        this.props.onChange(this.state.momentValue);
+        this.props.onChange(momentValue.isValid() ? this.state.momentValue : momentJalaali());
       }
     }
   }, {
@@ -2735,12 +2744,12 @@ var DatePicker = /*#__PURE__*/function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      var _this2 = this;
+      var _this3 = this;
 
       var isOpen = this.state.isOpen;
       return /*#__PURE__*/React.createElement(TetherComponent, {
         ref: function ref(tether) {
-          return _this2.tether = tether;
+          return _this3.tether = tether;
         },
         attachment: this.props.tetherAttachment ? this.props.tetherAttachment : 'top center',
         constraints: [{
@@ -2749,17 +2758,17 @@ var DatePicker = /*#__PURE__*/function (_Component) {
         }],
         offset: "-10px -10px",
         onResize: function onResize() {
-          return _this2.tether && _this2.tether.position();
+          return _this3.tether && _this3.tether.position();
         }
         /* renderTarget: This is what the item will be tethered to, make sure to attach the ref */
         ,
         renderTarget: function renderTarget(ref) {
-          return _this2.renderInput(ref);
+          return _this3.renderInput(ref);
         }
         /* renderElement: If present, this item will be tethered to the the component returned by renderTarget */
         ,
         renderElement: function renderElement(ref) {
-          return isOpen && _this2.renderCalendar(ref);
+          return isOpen && _this3.renderCalendar(ref);
         }
       });
     }
@@ -2797,7 +2806,8 @@ defineProperty(DatePicker, "propTypes", {
   showToggleButton: PropTypes.bool,
   toggleButtonText: PropTypes.any,
   showTodayButton: PropTypes.bool,
-  placeholder: PropTypes.string
+  placeholder: PropTypes.string,
+  persianDigits: PropTypes.bool
 });
 
 defineProperty(DatePicker, "defaultProps", {
@@ -2806,7 +2816,8 @@ defineProperty(DatePicker, "defaultProps", {
   isGregorian: true,
   timePicker: true,
   showTodayButton: true,
-  placeholder: ''
+  placeholder: '',
+  persianDigits: true
 });
 
 momentJalaali.loadPersian({
