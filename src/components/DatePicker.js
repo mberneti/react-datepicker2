@@ -209,14 +209,6 @@ export default class DatePicker extends Component {
       this.setState({ momentValue });
     }
 
-    const isUserClearInput = inputValue === '';
-
-    if (this.props.onChange) {
-      if (isUserClearInput) {
-        this.props.onChange('');
-      }
-    }
-
     this.setState({ inputValue });
 
     if (this.props.onInputChange) {
