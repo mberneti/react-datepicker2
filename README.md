@@ -1,6 +1,6 @@
 # React DatePicker2
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-12-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-13-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![npm](https://img.shields.io/npm/v/react-datepicker2.svg)](https://www.npmjs.com/package/react-datepicker2)
@@ -110,6 +110,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/alimzadeh"><img src="https://avatars3.githubusercontent.com/u/11006666?v=4" width="100px;" alt=""/><br /><sub><b>Ali MoghaddasZadeh</b></sub></a><br /><a href="https://github.com/mberneti/react-datepicker2/issues?q=author%3Aalimzadeh" title="Bug reports">🐛</a></td>
     <td align="center"><a href="http://ir.linkedin.com/in/amirzamani"><img src="https://avatars0.githubusercontent.com/u/6501462?v=4" width="100px;" alt=""/><br /><sub><b>amir zamani</b></sub></a><br /><a href="#maintenance-azadkuh" title="Maintenance">🚧</a> <a href="#platform-azadkuh" title="Packaging/porting to new platform">📦</a> <a href="https://github.com/mberneti/react-datepicker2/commits?author=azadkuh" title="Code">💻</a> <a href="https://github.com/mberneti/react-datepicker2/issues?q=author%3Aazadkuh" title="Bug reports">🐛</a> <a href="#question-azadkuh" title="Answering Questions">💬</a></td>
     <td align="center"><a href="http://afsanefadaei.ir"><img src="https://avatars0.githubusercontent.com/u/37764909?v=4" width="100px;" alt=""/><br /><sub><b>Afsane Fadaei</b></sub></a><br /><a href="#maintenance-afsanefda" title="Maintenance">🚧</a> <a href="#question-afsanefda" title="Answering Questions">💬</a></td>
+    <td align="center"><a href="http://learnyab.com"><img src="https://avatars2.githubusercontent.com/u/17334987?v=4" width="100px;" alt=""/><br /><sub><b>Hossein Aghatabar</b></sub></a><br /><a href="https://github.com/mberneti/react-datepicker2/issues?q=author%3Awhossein" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 
