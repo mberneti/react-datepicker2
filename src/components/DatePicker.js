@@ -105,7 +105,6 @@ export default class DatePicker extends Component {
   }
 
   UNSAFE_componentWillReceiveProps(nextProps) {
-    console.log(nextProps);
     if (
       'value' in nextProps &&
       ((typeof nextProps.value === 'undefined' && typeof this.props.value !== 'undefined') ||

@@ -2587,8 +2587,6 @@ var DatePicker = /*#__PURE__*/function (_Component) {
   }, {
     key: "UNSAFE_componentWillReceiveProps",
     value: function UNSAFE_componentWillReceiveProps(nextProps) {
-      console.log(nextProps);
-
       if ('value' in nextProps && (typeof nextProps.value === 'undefined' && typeof this.props.value !== 'undefined' || typeof nextProps.value !== 'undefined' && !nextProps.value.isSame(this.props.value))) {
         this.setMomentValue(nextProps.value);
       }
