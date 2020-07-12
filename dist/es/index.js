@@ -204,7 +204,7 @@ var rightArrow = {
   __html: '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 315.5 315.5" style="enable-background:new 0 0 315.5 315.5;" xml:space="preserve"><g><path class="arrow-icon" d="M242,141L109,8c-5-5-12-8-18-8S79,3,74,8c-10,10-10,24,0,34l116,116L74,274c-10,10-10,24,0,34s25,10,35,0l133-133c5-5,7-11,7-17C249,151,247,146,242,141z"/></g></svg>'
 };
 
-function _createSuper(Derived) { return function () { var Super = getPrototypeOf(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return possibleConstructorReturn(this, result); }; }
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return possibleConstructorReturn(this, result); }; }
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
@@ -283,7 +283,7 @@ defineProperty(Heading, "contextTypes", {
   setCalendarMode: PropTypes.func.isRequired
 });
 
-function _createSuper$1(Derived) { return function () { var Super = getPrototypeOf(Derived), result; if (_isNativeReflectConstruct$1()) { var NewTarget = getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return possibleConstructorReturn(this, result); }; }
+function _createSuper$1(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$1(); return function _createSuperInternal() { var Super = getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return possibleConstructorReturn(this, result); }; }
 
 function _isNativeReflectConstruct$1() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
@@ -326,7 +326,7 @@ defineProperty(DaysOfWeek, "propTypes", {
   isGregorian: PropTypes.bool
 });
 
-function _createSuper$2(Derived) { return function () { var Super = getPrototypeOf(Derived), result; if (_isNativeReflectConstruct$2()) { var NewTarget = getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return possibleConstructorReturn(this, result); }; }
+function _createSuper$2(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$2(); return function _createSuperInternal() { var Super = getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return possibleConstructorReturn(this, result); }; }
 
 function _isNativeReflectConstruct$2() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
@@ -396,7 +396,7 @@ defineProperty(MonthsViewHeading, "contextTypes", {
   setCalendarMode: PropTypes.func.isRequired
 });
 
-function _createSuper$3(Derived) { return function () { var Super = getPrototypeOf(Derived), result; if (_isNativeReflectConstruct$3()) { var NewTarget = getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return possibleConstructorReturn(this, result); }; }
+function _createSuper$3(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$3(); return function _createSuperInternal() { var Super = getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return possibleConstructorReturn(this, result); }; }
 
 function _isNativeReflectConstruct$3() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
@@ -503,7 +503,7 @@ defineProperty(MonthSelector, "contextTypes", {
   setMonth: PropTypes.func.isRequired
 });
 
-function _createSuper$4(Derived) { return function () { var Super = getPrototypeOf(Derived), result; if (_isNativeReflectConstruct$4()) { var NewTarget = getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return possibleConstructorReturn(this, result); }; }
+function _createSuper$4(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$4(); return function _createSuperInternal() { var Super = getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return possibleConstructorReturn(this, result); }; }
 
 function _isNativeReflectConstruct$4() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
@@ -549,8 +549,8 @@ var YearSelector = /*#__PURE__*/function (_Component) {
       });
     });
 
-    _this.currentYearPositionRef = React.createRef();
-    _this.yearsContainerRef = React.createRef();
+    _this.currentYearPositionRef = /*#__PURE__*/React.createRef();
+    _this.yearsContainerRef = /*#__PURE__*/React.createRef();
     return _this;
   }
 
@@ -700,7 +700,7 @@ function _objectWithoutProperties(source, excluded) {
 
 var objectWithoutProperties = _objectWithoutProperties;
 
-function _createSuper$5(Derived) { return function () { var Super = getPrototypeOf(Derived), result; if (_isNativeReflectConstruct$5()) { var NewTarget = getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return possibleConstructorReturn(this, result); }; }
+function _createSuper$5(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$5(); return function _createSuperInternal() { var Super = getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return possibleConstructorReturn(this, result); }; }
 
 function _isNativeReflectConstruct$5() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
@@ -892,7 +892,7 @@ var RangesList = /*#__PURE__*/function () {
   return RangesList;
 }();
 
-function _createSuper$6(Derived) { return function () { var Super = getPrototypeOf(Derived), result; if (_isNativeReflectConstruct$6()) { var NewTarget = getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return possibleConstructorReturn(this, result); }; }
+function _createSuper$6(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$6(); return function _createSuperInternal() { var Super = getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return possibleConstructorReturn(this, result); }; }
 
 function _isNativeReflectConstruct$6() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 var Calendar = /*#__PURE__*/function (_Component) {
@@ -1263,7 +1263,7 @@ function _unsupportedIterableToArray(o, minLen) {
   if (typeof o === "string") return arrayLikeToArray(o, minLen);
   var n = Object.prototype.toString.call(o).slice(8, -1);
   if (n === "Object" && o.constructor) n = o.constructor.name;
-  if (n === "Map" || n === "Set") return Array.from(n);
+  if (n === "Map" || n === "Set") return Array.from(o);
   if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return arrayLikeToArray(o, minLen);
 }
 
@@ -1281,7 +1281,7 @@ function _toConsumableArray(arr) {
 
 var toConsumableArray = _toConsumableArray;
 
-function _createSuper$7(Derived) { return function () { var Super = getPrototypeOf(Derived), result; if (_isNativeReflectConstruct$7()) { var NewTarget = getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return possibleConstructorReturn(this, result); }; }
+function _createSuper$7(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$7(); return function _createSuperInternal() { var Super = getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return possibleConstructorReturn(this, result); }; }
 
 function _isNativeReflectConstruct$7() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
@@ -1490,7 +1490,7 @@ defineProperty(Header, "propTypes", {
   currentSelectPanel: PropTypes.string
 });
 
-function _createSuper$8(Derived) { return function () { var Super = getPrototypeOf(Derived), result; if (_isNativeReflectConstruct$8()) { var NewTarget = getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return possibleConstructorReturn(this, result); }; }
+function _createSuper$8(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$8(); return function _createSuperInternal() { var Super = getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return possibleConstructorReturn(this, result); }; }
 
 function _isNativeReflectConstruct$8() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
@@ -1637,7 +1637,7 @@ function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (O
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
-function _createSuper$9(Derived) { return function () { var Super = getPrototypeOf(Derived), result; if (_isNativeReflectConstruct$9()) { var NewTarget = getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return possibleConstructorReturn(this, result); }; }
+function _createSuper$9(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$9(); return function _createSuperInternal() { var Super = getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return possibleConstructorReturn(this, result); }; }
 
 function _isNativeReflectConstruct$9() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
@@ -1731,7 +1731,7 @@ var Combobox = /*#__PURE__*/function (_React$Component) {
           return hour < 12 ? value < 12 : value >= 12;
         });
         formattedOptions = formattedOptions.map(function (option) {
-          return _objectSpread({}, option, {
+          return _objectSpread(_objectSpread({}, option), {}, {
             label: option.value <= 12 ? option.value : pad(option.value - 12)
           });
         }).filter(function (_ref) {
@@ -1861,7 +1861,7 @@ defineProperty(Combobox, "propTypes", {
   isGregorian: PropTypes.bool
 });
 
-function _createSuper$a(Derived) { return function () { var Super = getPrototypeOf(Derived), result; if (_isNativeReflectConstruct$a()) { var NewTarget = getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return possibleConstructorReturn(this, result); }; }
+function _createSuper$a(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$a(); return function _createSuperInternal() { var Super = getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return possibleConstructorReturn(this, result); }; }
 
 function _isNativeReflectConstruct$a() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
@@ -2062,7 +2062,7 @@ var placements = {
   }
 };
 
-function _createSuper$b(Derived) { return function () { var Super = getPrototypeOf(Derived), result; if (_isNativeReflectConstruct$b()) { var NewTarget = getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return possibleConstructorReturn(this, result); }; }
+function _createSuper$b(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$b(); return function _createSuperInternal() { var Super = getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return possibleConstructorReturn(this, result); }; }
 
 function _isNativeReflectConstruct$b() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
@@ -2353,7 +2353,7 @@ defineProperty(Picker, "defaultProps", {
   onClose: noop$1
 });
 
-function _createSuper$c(Derived) { return function () { var Super = getPrototypeOf(Derived), result; if (_isNativeReflectConstruct$c()) { var NewTarget = getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return possibleConstructorReturn(this, result); }; }
+function _createSuper$c(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$c(); return function _createSuperInternal() { var Super = getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return possibleConstructorReturn(this, result); }; }
 
 function _isNativeReflectConstruct$c() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
@@ -2435,7 +2435,7 @@ defineProperty(MyTimePicker, "defaultProps", {
   momentValue: momentJalaali()
 });
 
-function _createSuper$d(Derived) { return function () { var Super = getPrototypeOf(Derived), result; if (_isNativeReflectConstruct$d()) { var NewTarget = getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return possibleConstructorReturn(this, result); }; }
+function _createSuper$d(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$d(); return function _createSuperInternal() { var Super = getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return possibleConstructorReturn(this, result); }; }
 
 function _isNativeReflectConstruct$d() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 var outsideClickIgnoreClass = 'ignore--click--outside';
@@ -2493,9 +2493,10 @@ var DatePicker = /*#__PURE__*/function (_Component) {
           _this.input = inst;
         },
         onFocus: _this.handleFocus.bind(assertThisInitialized(_this)),
+        onBlur: _this.hanldeBlur.bind(assertThisInitialized(_this)),
         onChange: _this.handleInputChange.bind(assertThisInitialized(_this)),
         onClick: _this.handleInputClick.bind(assertThisInitialized(_this)),
-        value: isGregorian ? inputValue : _this.toPersianDigits(inputValue),
+        value: isGregorian || !_this.props.persianDigits ? inputValue : _this.toPersianDigits(inputValue),
         readOnly: _this.props.inputReadOnly === true,
         disabled: _this.props.disabled
       }));
@@ -2546,7 +2547,7 @@ var DatePicker = /*#__PURE__*/function (_Component) {
       }));
     });
 
-    _this.textInput = React.createRef();
+    _this.textInput = /*#__PURE__*/React.createRef();
     _this.state = {
       isOpen: false,
       momentValue: _this.props.defaultValue || null,
@@ -2586,7 +2587,7 @@ var DatePicker = /*#__PURE__*/function (_Component) {
   }, {
     key: "UNSAFE_componentWillReceiveProps",
     value: function UNSAFE_componentWillReceiveProps(nextProps) {
-      if ('value' in nextProps && nextProps.value !== this.props.value) {
+      if ('value' in nextProps && (typeof nextProps.value === 'undefined' && typeof this.props.value !== 'undefined' || typeof nextProps.value !== 'undefined' && !nextProps.value.isSame(this.props.value))) {
         this.setMomentValue(nextProps.value);
       }
 
@@ -2673,6 +2674,8 @@ var DatePicker = /*#__PURE__*/function (_Component) {
   }, {
     key: "handleInputChange",
     value: function handleInputChange(event) {
+      var _this2 = this;
+
       var _this$state4 = this.state,
           inputFormat = _this$state4.inputFormat,
           inputJalaaliFormat = _this$state4.inputJalaaliFormat,
@@ -2680,6 +2683,7 @@ var DatePicker = /*#__PURE__*/function (_Component) {
       var inputValue = this.toEnglishDigits(event.target.value);
       var currentInputFormat = isGregorian ? inputFormat : inputJalaaliFormat;
       var momentValue = momentJalaali(inputValue, currentInputFormat);
+      var cursor = event.target.selectionStart;
 
       if (momentValue.isValid()) {
         this.setState({
@@ -2687,17 +2691,31 @@ var DatePicker = /*#__PURE__*/function (_Component) {
         });
       }
 
-      var isUserClearInput = inputValue === '';
-
-      if (this.props.onChange) {
-        if (isUserClearInput) {
-          this.props.onChange('');
-        }
-      }
-
       this.setState({
         inputValue: inputValue
+      }, function () {
+        // It cause lose current cursor positon if persian digits is active
+        // for example it convert 4 to ۴, so the react set cursor position to end of string
+        if (_this2.props.persianDigits) _this2.input.setSelectionRange(cursor, cursor);
       });
+
+      if (this.props.onInputChange) {
+        this.props.onInputChange(event);
+      }
+    }
+  }, {
+    key: "hanldeBlur",
+    value: function hanldeBlur(event) {
+      if (this.props.onChange) {
+        var _this$state5 = this.state,
+            inputFormat = _this$state5.inputFormat,
+            inputJalaaliFormat = _this$state5.inputJalaaliFormat,
+            isGregorian = _this$state5.isGregorian;
+        var inputValue = this.toEnglishDigits(event.target.value);
+        var currentInputFormat = isGregorian ? inputFormat : inputJalaaliFormat;
+        var momentValue = momentJalaali(inputValue, currentInputFormat);
+        this.props.onChange(momentValue.isValid() ? this.state.momentValue : momentJalaali());
+      }
     }
   }, {
     key: "handleInputClick",
@@ -2723,12 +2741,12 @@ var DatePicker = /*#__PURE__*/function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      var _this2 = this;
+      var _this3 = this;
 
       var isOpen = this.state.isOpen;
       return /*#__PURE__*/React.createElement(TetherComponent, {
         ref: function ref(tether) {
-          return _this2.tether = tether;
+          return _this3.tether = tether;
         },
         attachment: this.props.tetherAttachment ? this.props.tetherAttachment : 'top center',
         constraints: [{
@@ -2737,17 +2755,17 @@ var DatePicker = /*#__PURE__*/function (_Component) {
         }],
         offset: "-10px -10px",
         onResize: function onResize() {
-          return _this2.tether && _this2.tether.position();
+          return _this3.tether && _this3.tether.position();
         }
         /* renderTarget: This is what the item will be tethered to, make sure to attach the ref */
         ,
         renderTarget: function renderTarget(ref) {
-          return _this2.renderInput(ref);
+          return _this3.renderInput(ref);
         }
         /* renderElement: If present, this item will be tethered to the the component returned by renderTarget */
         ,
         renderElement: function renderElement(ref) {
-          return isOpen && _this2.renderCalendar(ref);
+          return isOpen && _this3.renderCalendar(ref);
         }
       });
     }
@@ -2757,9 +2775,10 @@ var DatePicker = /*#__PURE__*/function (_Component) {
 }(Component);
 
 defineProperty(DatePicker, "propTypes", {
-  value: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  value: PropTypes.object,
   defaultValue: PropTypes.object,
   onChange: PropTypes.func,
+  onInputChange: PropTypes.func,
   onFocus: PropTypes.func,
   onBlur: PropTypes.func,
   children: PropTypes.node,
@@ -2784,7 +2803,8 @@ defineProperty(DatePicker, "propTypes", {
   showToggleButton: PropTypes.bool,
   toggleButtonText: PropTypes.any,
   showTodayButton: PropTypes.bool,
-  placeholder: PropTypes.string
+  placeholder: PropTypes.string,
+  persianDigits: PropTypes.bool
 });
 
 defineProperty(DatePicker, "defaultProps", {
@@ -2793,7 +2813,8 @@ defineProperty(DatePicker, "defaultProps", {
   isGregorian: true,
   timePicker: true,
   showTodayButton: true,
-  placeholder: ''
+  placeholder: '',
+  persianDigits: true
 });
 
 momentJalaali.loadPersian({
