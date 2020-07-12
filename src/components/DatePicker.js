@@ -10,9 +10,10 @@ const outsideClickIgnoreClass = 'ignore--click--outside';
 
 export default class DatePicker extends Component {
   static propTypes = {
-    value: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+    value: PropTypes.object,
     defaultValue: PropTypes.object,
     onChange: PropTypes.func,
+    onInputChange: PropTypes.func,
     onFocus: PropTypes.func,
     onBlur: PropTypes.func,
     children: PropTypes.node,
@@ -36,7 +37,8 @@ export default class DatePicker extends Component {
     showToggleButton: PropTypes.bool,
     toggleButtonText: PropTypes.any,
     showTodayButton: PropTypes.bool,
-    placeholder: PropTypes.string
+    placeholder: PropTypes.string,
+    persianDigits: PropTypes.bool
   };
 
   static defaultProps = {
@@ -45,7 +47,8 @@ export default class DatePicker extends Component {
     isGregorian: true,
     timePicker: true,
     showTodayButton: true,
-    placeholder: ''
+    placeholder: '',
+    persianDigits: true
   };
 
   constructor(props) {
@@ -102,7 +105,11 @@ export default class DatePicker extends Component {
   }
 
   UNSAFE_componentWillReceiveProps(nextProps) {
-    if ('value' in nextProps && nextProps.value !== this.props.value) {
+    if (
+      'value' in nextProps &&
+      ((typeof nextProps.value === 'undefined' && typeof this.props.value !== 'undefined') ||
+        (typeof nextProps.value !== 'undefined' && !nextProps.value.isSame(this.props.value)))
+    ) {
       this.setMomentValue(nextProps.value);
     }
 
@@ -200,19 +207,32 @@ export default class DatePicker extends Component {
 
     const momentValue = momentJalaali(inputValue, currentInputFormat);
 
+    const cursor = event.target.selectionStart;
+
     if (momentValue.isValid()) {
       this.setState({ momentValue });
     }
 
-    const isUserClearInput = inputValue === '';
+    this.setState({ inputValue }, () => {
+      // It cause lose current cursor positon if persian digits is active
+      // for example it convert 4 to ۴, so the react set cursor position to end of string
+      if (this.props.persianDigits) this.input.setSelectionRange(cursor, cursor);
+    });
 
-    if (this.props.onChange) {
-      if (isUserClearInput) {
-        this.props.onChange('');
-      }
+    if (this.props.onInputChange) {
+      this.props.onInputChange(event);
     }
+  }
 
-    this.setState({ inputValue });
+  hanldeBlur(event) {
+    if (this.props.onChange) {
+      const { inputFormat, inputJalaaliFormat, isGregorian } = this.state;
+      const inputValue = this.toEnglishDigits(event.target.value);
+      const currentInputFormat = isGregorian ? inputFormat : inputJalaaliFormat;
+      const momentValue = momentJalaali(inputValue, currentInputFormat);
+
+      this.props.onChange(momentValue.isValid() ? this.state.momentValue : momentJalaali());
+    }
   }
 
   handleInputClick() {
@@ -238,9 +258,12 @@ export default class DatePicker extends Component {
             this.input = inst;
           }}
           onFocus={this.handleFocus.bind(this)}
+          onBlur={this.hanldeBlur.bind(this)}
           onChange={this.handleInputChange.bind(this)}
           onClick={this.handleInputClick.bind(this)}
-          value={isGregorian ? inputValue : this.toPersianDigits(inputValue)}
+          value={
+            isGregorian || !this.props.persianDigits ? inputValue : this.toPersianDigits(inputValue)
+          }
           readOnly={this.props.inputReadOnly === true}
           disabled={this.props.disabled}
         />
@@ -250,7 +273,16 @@ export default class DatePicker extends Component {
 
   renderCalendar = ref => {
     const { momentValue, isGregorian, timePickerComponent: TimePicker } = this.state;
-    const { onChange, min, max, defaultYear, defaultMonth, styles, calendarContainerProps, ranges } = this.props;
+    const {
+      onChange,
+      min,
+      max,
+      defaultYear,
+      defaultMonth,
+      styles,
+      calendarContainerProps,
+      ranges
+    } = this.props;
 
     return (
       <div ref={ref}>
