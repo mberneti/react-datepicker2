@@ -17,6 +17,8 @@ import ReactHook from './examples/ReactHook';
 import RemoveDate from './examples/RemoveDate';
 import Placeholder from './examples/Placeholder';
 import ToggleButton from './examples/ToggleButton';
+import OnInputChange from './examples/OnInputChange';
+import JalaaliWithEnglishDigit from './examples/JalaaliWithEnglishDigit';
 
 import { StickyContainer, Sticky } from 'react-sticky';
 
@@ -37,7 +39,9 @@ export default class ExampleComponents extends React.Component {
       ReactHook,
       RemoveDate,
       Placeholder,
-      ToggleButton
+      ToggleButton,
+      OnInputChange,
+      JalaaliWithEnglishDigit
     ];
   }
 
