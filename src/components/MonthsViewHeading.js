@@ -35,19 +35,19 @@ export default class MonthsViewHeading extends Component {
         </button>
         <button
           type="button"
-          title={isGregorian ? 'before year' : 'سال قبل'}
+          title={isGregorian ? 'next year' : 'سال قبل'}
           style={styles.navButton}
           className={styles.prev}
-          onClick={this.props.onPrevYear}
-          dangerouslySetInnerHTML={leftArrow}
+          onClick={isGregorian ? this.props.onNextYear : this.props.onPrevYear}
+          dangerouslySetInnerHTML={rightArrow}
         />
         <button
           type="button"
-          title={isGregorian ? 'next year' : 'سال بعد'}
+          title={isGregorian ? 'previous year' : 'سال بعد'}
           style={styles.navButton}
           className={styles.next}
-          onClick={this.props.onNextYear}
-          dangerouslySetInnerHTML={rightArrow}
+          onClick={isGregorian ? this.props.onPrevYear : this.props.onNextYear}
+          dangerouslySetInnerHTML={leftArrow}
         />
       </div>
     );
