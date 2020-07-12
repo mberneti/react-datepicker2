@@ -34,7 +34,6 @@ export default class ReactClass extends React.Component {
             isGregorian={this.state.checked}
             onChange={value => {
               this.setState({ value });
-              console.log(value);
             }}
             value={this.state.value}
           />
