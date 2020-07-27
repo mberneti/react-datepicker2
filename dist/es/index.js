@@ -2498,6 +2498,7 @@ var DatePicker = /*#__PURE__*/function (_Component) {
         ref: ref
       }, /*#__PURE__*/React.createElement("input", {
         placeholder: _this.props.placeholder,
+        name: _this.props.name,
         className: "datepicker-input ".concat(className),
         type: "text",
         ref: function ref(inst) {
