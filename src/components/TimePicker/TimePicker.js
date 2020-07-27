@@ -27,6 +27,7 @@ class Picker extends React.Component {
     transitionName: PropTypes.string,
     getPopupContainer: PropTypes.func,
     placeholder: PropTypes.string,
+    name: PropTypes.string,
     format: PropTypes.string,
     showHour: PropTypes.bool,
     style: PropTypes.object,
@@ -164,6 +165,7 @@ class Picker extends React.Component {
     const {
       prefixCls,
       placeholder,
+      name,
       disabledHours,
       disabledMinutes,
       disabledSeconds,
@@ -195,6 +197,7 @@ class Picker extends React.Component {
         allowEmpty
         format={this.getFormat()}
         placeholder={placeholder}
+        name={name}
         disabledHours={disabledHours}
         disabledMinutes={disabledMinutes}
         disabledSeconds={disabledSeconds}
@@ -208,6 +211,7 @@ class Picker extends React.Component {
       panelClassName,
       prefixCls,
       placeholder,
+      name,
       placement,
       align,
       disabled,
@@ -246,6 +250,7 @@ class Picker extends React.Component {
             }}
             type="text"
             placeholder={placeholder}
+            name={name}
             readOnly
             onKeyDown={this.onKeyDown}
             disabled={disabled}

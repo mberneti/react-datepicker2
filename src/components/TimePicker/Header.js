@@ -8,6 +8,7 @@ class Header extends React.Component {
     prefixCls: PropTypes.string,
     disabledDate: PropTypes.func,
     placeholder: PropTypes.string,
+    name: PropTypes.string,
     clearText: PropTypes.string,
     value: PropTypes.object,
     hourOptions: PropTypes.array,
@@ -164,7 +165,7 @@ class Header extends React.Component {
   }
 
   getInput() {
-    const { prefixCls, placeholder } = this.props;
+    const { prefixCls, placeholder, name } = this.props;
     const { invalid, str } = this.state;
     const invalidClass = invalid ? `${prefixCls}-input-invalid` : '';
     return (
@@ -176,6 +177,7 @@ class Header extends React.Component {
         onKeyDown={this.onKeyDown}
         value={str}
         placeholder={placeholder}
+        name={name}
         onChange={this.onInputChange}
       />
     );

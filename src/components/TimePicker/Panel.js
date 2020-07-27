@@ -23,6 +23,7 @@ class Panel extends React.Component {
     defaultOpenValue: PropTypes.object,
     value: PropTypes.object,
     placeholder: PropTypes.string,
+    name: PropTypes.string,
     format: PropTypes.string,
     disabledHours: PropTypes.func,
     disabledMinutes: PropTypes.func,
@@ -82,6 +83,7 @@ class Panel extends React.Component {
       prefixCls,
       className,
       placeholder,
+      name,
       disabledHours,
       disabledMinutes,
       disabledSeconds,
@@ -117,6 +119,7 @@ class Panel extends React.Component {
           onEsc={onEsc}
           format={format}
           placeholder={placeholder}
+          name={name}
           hourOptions={hourOptions}
           minuteOptions={minuteOptions}
           secondOptions={secondOptions}

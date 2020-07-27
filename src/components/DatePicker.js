@@ -38,6 +38,7 @@ export default class DatePicker extends Component {
     toggleButtonText: PropTypes.any,
     showTodayButton: PropTypes.bool,
     placeholder: PropTypes.string,
+    name: PropTypes.string,
     persianDigits: PropTypes.bool
   };
 
@@ -48,6 +49,7 @@ export default class DatePicker extends Component {
     timePicker: true,
     showTodayButton: true,
     placeholder: '',
+    name: '',
     persianDigits: true
   };
 
