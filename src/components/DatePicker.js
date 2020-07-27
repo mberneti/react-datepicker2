@@ -254,6 +254,7 @@ export default class DatePicker extends Component {
       <div ref={ref}>
         <input
           placeholder={this.props.placeholder}
+          name={this.props.name}
           className={`datepicker-input ${className}`}
           type="text"
           ref={inst => {
