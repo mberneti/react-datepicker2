@@ -107,13 +107,21 @@ export default class DatePicker extends Component {
   }
 
   UNSAFE_componentWillReceiveProps(nextProps) {
-    if (
-      'value' in nextProps &&
-      ((typeof nextProps.value === 'undefined' && typeof this.props.value !== 'undefined') ||
-        (typeof nextProps.value !== 'undefined' && !nextProps.value.isSame(this.props.value)))
-    ) {
-      this.setMomentValue(nextProps.value);
+
+    if ('value' in nextProps) {
+      if (nextProps.value === null) {
+        this.setState({
+          input: '',
+          inputValue: ''
+        });
+      }
+      else if ((typeof nextProps.value === 'undefined' && typeof this.props.value !== 'undefined') ||
+        (typeof nextProps.value !== 'undefined' && !nextProps.value.isSame(this.props.value))
+      ) {
+        this.setMomentValue(nextProps.value);
+      }
     }
+
 
     if ('isGregorian' in nextProps && nextProps.isGregorian !== this.props.isGregorian) {
       const { inputFormat: nextPropsInputFormat } = nextProps;
@@ -170,10 +178,10 @@ export default class DatePicker extends Component {
     const regex1 = /[\u0660-\u0669]/g;
     const regex2 = /[\u06f0-\u06f9]/g;
     return str
-      .replace(regex1, function(c) {
+      .replace(regex1, function (c) {
         return c.charCodeAt(0) - 0x0660;
       })
-      .replace(regex2, function(c) {
+      .replace(regex2, function (c) {
         return c.charCodeAt(0) - 0x06f0;
       });
   }
@@ -182,7 +190,7 @@ export default class DatePicker extends Component {
     if (!str) return str;
     const regex = /[0-9]/g;
     const id = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
-    return str.replace(regex, function(w) {
+    return str.replace(regex, function (w) {
       return id[+w];
     });
   }

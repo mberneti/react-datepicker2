@@ -2599,8 +2599,15 @@ var DatePicker = /*#__PURE__*/function (_Component) {
   }, {
     key: "UNSAFE_componentWillReceiveProps",
     value: function UNSAFE_componentWillReceiveProps(nextProps) {
-      if ('value' in nextProps && (typeof nextProps.value === 'undefined' && typeof this.props.value !== 'undefined' || typeof nextProps.value !== 'undefined' && !nextProps.value.isSame(this.props.value))) {
-        this.setMomentValue(nextProps.value);
+      if ('value' in nextProps) {
+        if (nextProps.value === null) {
+          this.setState({
+            input: '',
+            inputValue: ''
+          });
+        } else if (typeof nextProps.value === 'undefined' && typeof this.props.value !== 'undefined' || typeof nextProps.value !== 'undefined' && !nextProps.value.isSame(this.props.value)) {
+          this.setMomentValue(nextProps.value);
+        }
       }
 
       if ('isGregorian' in nextProps && nextProps.isGregorian !== this.props.isGregorian) {
