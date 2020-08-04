@@ -39,7 +39,8 @@ export default class MonthSelector extends Component {
   static propTypes = {
     styles: PropTypes.object,
     selectedMonth: PropTypes.object.isRequired,
-    isGregorian: PropTypes.bool
+    isGregorian: PropTypes.bool,
+    disableYearSelector: PropTypes.bool,
   };
 
   static contextTypes = {
@@ -73,7 +74,7 @@ export default class MonthSelector extends Component {
 
   render() {
     const { year } = this.state;
-    const { selectedMonth, styles, isGregorian } = this.props;
+    const { selectedMonth, styles, isGregorian, disableYearSelector } = this.props;
     const yearFormat = isGregorian ? 'YYYY' : 'jYYYY';
     const monthYearFormat = isGregorian ? 'M-YYYY' : 'jM-jYYYY';
     const months = isGregorian ? monthsGregorian : monthsJalaali;
@@ -86,6 +87,7 @@ export default class MonthSelector extends Component {
           year={year}
           onNextYear={this.nextYear.bind(this)}
           onPrevYear={this.prevYear.bind(this)}
+          disableYearSelector={disableYearSelector}
         />
         <div className={styles.monthsList}>
           {months.map((name, key) => {
