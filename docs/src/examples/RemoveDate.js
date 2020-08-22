@@ -20,7 +20,7 @@ class component extends React.Component {
           onChange={value => this.setState({ value })}
         />
         <br />
-        <button onClick={() => this.dt.removeDate()}>remove date</button>
+        <button onClick={() => this.setState({ value: null })}>remove date</button>
       </div>
     );
   }
@@ -45,11 +45,10 @@ const code = `class component extends React.Component {
           onChange={value => this.setState({ value })}
         />
         <br />
-        <button onClick={() => this.dt.removeDate()}>remove date</button>
+        <button onClick={() => this.setState({ value: null })}>remove date</button>
       </div>
     );
   }
-} }
 }
 `;
 const Disabled = { component, title, code };
