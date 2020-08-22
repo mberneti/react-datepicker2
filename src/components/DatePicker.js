@@ -335,7 +335,7 @@ export default class DatePicker extends Component {
   removeDate() {
     const { onChange } = this.props;
     if (onChange) {
-      onChange('');
+      onChange(null);
     }
     this.setState({
       input: '',
