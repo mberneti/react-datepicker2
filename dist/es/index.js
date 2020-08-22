@@ -2749,7 +2749,7 @@ var DatePicker = /*#__PURE__*/function (_Component) {
       var onChange = this.props.onChange;
 
       if (onChange) {
-        onChange('');
+        onChange(null);
       }
 
       this.setState({
