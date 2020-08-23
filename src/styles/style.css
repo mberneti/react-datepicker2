@@ -524,4 +524,8 @@ li.rc-time-picker-panel-select-option-disabled:hover {
 .highLightDot-container .highLightDot:not(:first-child) {
   margin-left: 2px;
 }
+
+.disabled {
+  cursor: not-allowed;
+}
 /*# sourceMappingURL=style.css.map */
