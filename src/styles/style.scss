@@ -211,7 +211,7 @@ $hoverColor: #d6f1ff;
 /* Selected state of buttons */
 
 .calendarContainer .selected button,
-.calendarContainer .selected button:hover,
+.calendarContainer .selected button:hover :not([disabled]),
 .calendarContainer .selected button:active,
 .calendarContainer .selected button:focus {
   background-color: $selectedColor;
@@ -520,4 +520,11 @@ li.rc-time-picker-panel-select-option-disabled:hover {
 
 .disabled {
   cursor: not-allowed;
+}
+
+button[disabled],
+button[disabled]:hover {
+  color: #aaa;
+  cursor: not-allowed;
+  background-color: #ebebeb;
 }

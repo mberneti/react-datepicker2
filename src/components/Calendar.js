@@ -278,6 +278,21 @@ export class Calendar extends Component {
 
     const jalaaliClassName = isGregorian ? '' : 'jalaali ';
 
+    const today = momentJalaali();
+    today.set({ hour: 0, minute: 0, second: 0, millisecond: 0 });
+
+    // check today state -----------
+
+    // disabling by old min-max props
+    const disabled = (min ? today.isBefore(min) : false)
+      || (max ? today.isAfter(max) : false);
+    // new method for disabling and highlighting the ranges of days
+    const dayState = this.state.ranges.getDayState(today);
+
+    const isTodayDisabled = disabled || dayState.disabled;
+
+    // ------------------------------
+
     return (
       <div className={`${styles.calendarContainer} ${jalaaliClassName}${className}`}>
         {this.props.showToggleButton && (
@@ -296,7 +311,8 @@ export class Calendar extends Component {
           <button
             type="button"
             className="calendarButton selectToday"
-            onClick={() => this.handleClickOnDay(momentJalaali())}
+            onClick={() => this.handleClickOnDay(today)}
+            disabled={isTodayDisabled}
           >
             {isGregorian ? 'today' : 'امروز'}
           </button>
