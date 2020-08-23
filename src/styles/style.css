@@ -118,7 +118,7 @@
   padding: 0px 0px 1px 0px;
 }
 
-.calendarContainer .dayWrapper button:hover {
+.calendarContainer .dayWrapper:not(.selected) button:hover {
   background-color: #d6f1ff;
 }
 
