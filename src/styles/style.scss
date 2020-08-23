@@ -517,3 +517,7 @@ li.rc-time-picker-panel-select-option-disabled:hover {
     border-radius: 50%;
   }
 }
+
+.disabled {
+  cursor: not-allowed;
+}

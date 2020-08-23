@@ -3,14 +3,6 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { persianNumber } from '../utils/persian';
 
-const styles = {
-  wrapper: {},
-  button: {
-    outline: 'none',
-    cursor: 'pointer'
-  }
-};
-
 export default class Day extends Component {
   static propTypes = {
     day: PropTypes.object.isRequired,
@@ -33,7 +25,10 @@ export default class Day extends Component {
     event.preventDefault();
     event.stopPropagation();
     event.nativeEvent.stopImmediatePropagation();
-    const { onClick, day } = this.props;
+
+    const { disabled, onClick, day } = this.props;
+    if (disabled)
+      return;
 
     if (onClick) {
       onClick(day);
@@ -57,7 +52,12 @@ export default class Day extends Component {
     const className = classnames(styles.dayWrapper, {
       [styles.selected]: selected,
       [styles.currentMonth]: isCurrentMonth,
-      [styles.today]: isToday
+      [styles.today]: isToday,
+      [styles.disabled]: disabled
+    });
+
+    const highlightDotContainer = classnames("highLightDot-container", {
+      [styles.disabled]: disabled
     });
 
     return (
@@ -65,7 +65,7 @@ export default class Day extends Component {
         <button type="button" onClick={this.handleClick.bind(this)} disabled={disabled} {...rest}>
           {isGregorian ? day.format('D') : persianNumber(day.format('jD'))}
         </button>
-        <div className="highLightDot-container" onClick={this.handleClick.bind(this)}>
+        <div className={highlightDotContainer} onClick={this.handleClick.bind(this)}>
           {colors.map((x, i) => (
             <span key={i} className="highLightDot" style={{ backgroundColor: x }}></span>
           ))}

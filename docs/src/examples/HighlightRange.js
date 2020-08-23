@@ -11,17 +11,17 @@ class component extends React.Component {
       isGregorian: true
     };
 
-    this.disabledRanges = [
-      { color: 'brown', start:momentJalaali().add(-1,'days'), end:momentJalaali().add(1,'days') },
-      { color: '#00BCD4', start:momentJalaali(), end:momentJalaali().add(3,'days') },
-      { color: '#FF9800', start:momentJalaali().add(1,'days'), end:momentJalaali().add(6,'days') },
+    this.highlightRanges = [
+      { color: 'brown', disabled: true, start: momentJalaali().add(-1, 'days'), end: momentJalaali().add(1, 'days') },
+      { color: '#00BCD4', start: momentJalaali(), end: momentJalaali().add(3, 'days') },
+      { color: '#FF9800', start: momentJalaali().add(1, 'days'), end: momentJalaali().add(6, 'days') },
     ]
 
   }
   render() {
     return <div>
       <Calendar
-        ranges={this.disabledRanges}
+        ranges={this.highlightRanges}
         value={this.state.value}
         isGregorian={this.state.isGregorian}
         inputFormat="YYYY-M-D"
@@ -46,9 +46,10 @@ const code = `class component extends React.Component {
       isGregorian: true
     };
 
-    this.disabledRanges = [
+    this.highlightRanges = [
       { 
         color: 'brown', 
+        disabled: true,
         start:momentJalaali().add(-1,'days'), 
         end:momentJalaali().add(1,'days') 
       },
@@ -68,7 +69,7 @@ const code = `class component extends React.Component {
   render() {
     return <div>
       <Calendar
-        ranges={this.disabledRanges}
+        ranges={this.highlightRanges}
         value={this.state.value}
         isGregorian={this.state.isGregorian}
         inputFormat="YYYY-M-D"
