@@ -39,7 +39,9 @@ export default class DatePicker extends Component {
     showTodayButton: PropTypes.bool,
     placeholder: PropTypes.string,
     name: PropTypes.string,
-    persianDigits: PropTypes.bool
+    persianDigits: PropTypes.bool,
+    setTodayOnBlur: PropTypes.bool,
+    disableYearSelector: PropTypes.bool,
   };
 
   static defaultProps = {
@@ -50,7 +52,9 @@ export default class DatePicker extends Component {
     showTodayButton: true,
     placeholder: '',
     name: '',
-    persianDigits: true
+    persianDigits: true,
+    setTodayOnBlur: true,
+    disableYearSelector: false,
   };
 
   constructor(props) {
@@ -240,8 +244,11 @@ export default class DatePicker extends Component {
       const inputValue = this.toEnglishDigits(event.target.value);
       const currentInputFormat = isGregorian ? inputFormat : inputJalaaliFormat;
       const momentValue = momentJalaali(inputValue, currentInputFormat);
-
-      this.props.onChange(momentValue.isValid() ? this.state.momentValue : momentJalaali());
+      if (momentValue.isValid()) {
+        this.props.onChange(this.state.momentValue);
+      } else if (this.props.setTodayOnBlur) {
+        this.props.onChange(momentJalaali());
+      }
     }
   }
 
@@ -292,7 +299,8 @@ export default class DatePicker extends Component {
       defaultMonth,
       styles,
       calendarContainerProps,
-      ranges
+      ranges,
+      disableYearSelector,
     } = this.props;
 
     return (
@@ -315,6 +323,7 @@ export default class DatePicker extends Component {
           showToggleButton={this.props.showToggleButton}
           toggleButtonText={this.props.toggleButtonText}
           showTodayButton={this.props.showTodayButton}
+          disableYearSelector={disableYearSelector}
           timePicker={
             TimePicker ? (
               <TimePicker

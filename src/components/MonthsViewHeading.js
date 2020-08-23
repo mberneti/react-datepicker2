@@ -8,7 +8,8 @@ export default class MonthsViewHeading extends Component {
     year: PropTypes.object.isRequired,
     onNextYear: PropTypes.func.isRequired,
     onPrevYear: PropTypes.func.isRequired,
-    isGregorian: PropTypes.bool
+    isGregorian: PropTypes.bool,
+    disableYearSelector: PropTypes.bool,
   };
 
   static contextTypes = {
@@ -24,13 +25,13 @@ export default class MonthsViewHeading extends Component {
   }
 
   render() {
-    const { year, styles, type, isGregorian } = this.props;
+    const { year, styles, type, isGregorian, disableYearSelector } = this.props;
 
     const yearFormat = isGregorian ? 'YYYY' : 'jYYYY';
 
     return (
       <div className={styles.heading}>
-        <button className={styles.title} onClick={this.handleYearClick.bind(this)}>
+        <button disabled={disableYearSelector} className={styles.title} onClick={this.handleYearClick.bind(this)}>
           {isGregorian ? year.format(yearFormat) : persianNumber(year.format(yearFormat))}
         </button>
         <button

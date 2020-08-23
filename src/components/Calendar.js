@@ -27,7 +27,8 @@ export class Calendar extends Component {
     calendarClass: PropTypes.string,
     showToggleButton: PropTypes.bool,
     toggleButtonText: PropTypes.any,
-    showTodayButton: PropTypes.bool
+    showTodayButton: PropTypes.bool,
+    disableYearSelector: PropTypes.bool,
   };
 
   static childContextTypes = {
@@ -184,8 +185,8 @@ export class Calendar extends Component {
 
   renderMonthSelector = () => {
     const { month, isGregorian } = this.state;
-    const { styles } = this.props;
-    return <MonthSelector styles={styles} isGregorian={isGregorian} selectedMonth={month} />;
+    const { styles, disableYearSelector } = this.props;
+    return <MonthSelector disableYearSelector={disableYearSelector} styles={styles} isGregorian={isGregorian} selectedMonth={month} />;
   };
 
   renderYearSelector = () => {
