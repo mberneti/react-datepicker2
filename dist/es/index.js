@@ -355,11 +355,13 @@ var MonthsViewHeading = /*#__PURE__*/function (_Component) {
           year = _this$props.year,
           styles = _this$props.styles,
           type = _this$props.type,
-          isGregorian = _this$props.isGregorian;
+          isGregorian = _this$props.isGregorian,
+          disableYearSelector = _this$props.disableYearSelector;
       var yearFormat = isGregorian ? 'YYYY' : 'jYYYY';
       return /*#__PURE__*/React.createElement("div", {
         className: styles.heading
       }, /*#__PURE__*/React.createElement("button", {
+        disabled: disableYearSelector,
         className: styles.title,
         onClick: this.handleYearClick.bind(this)
       }, isGregorian ? year.format(yearFormat) : persianNumber(year.format(yearFormat))), /*#__PURE__*/React.createElement("button", {
@@ -387,7 +389,8 @@ defineProperty(MonthsViewHeading, "propTypes", {
   year: PropTypes.object.isRequired,
   onNextYear: PropTypes.func.isRequired,
   onPrevYear: PropTypes.func.isRequired,
-  isGregorian: PropTypes.bool
+  isGregorian: PropTypes.bool,
+  disableYearSelector: PropTypes.bool
 });
 
 defineProperty(MonthsViewHeading, "contextTypes", {
@@ -460,7 +463,8 @@ var MonthSelector = /*#__PURE__*/function (_Component) {
       var _this$props = this.props,
           selectedMonth = _this$props.selectedMonth,
           styles = _this$props.styles,
-          isGregorian = _this$props.isGregorian;
+          isGregorian = _this$props.isGregorian,
+          disableYearSelector = _this$props.disableYearSelector;
       var yearFormat = isGregorian ? 'YYYY' : 'jYYYY';
       var monthYearFormat = isGregorian ? 'M-YYYY' : 'jM-jYYYY';
       var months = isGregorian ? monthsGregorian : monthsJalaali;
@@ -471,7 +475,8 @@ var MonthSelector = /*#__PURE__*/function (_Component) {
         styles: styles,
         year: year,
         onNextYear: this.nextYear.bind(this),
-        onPrevYear: this.prevYear.bind(this)
+        onPrevYear: this.prevYear.bind(this),
+        disableYearSelector: disableYearSelector
       }), /*#__PURE__*/React.createElement("div", {
         className: styles.monthsList
       }, months.map(function (name, key) {
@@ -495,7 +500,8 @@ var MonthSelector = /*#__PURE__*/function (_Component) {
 defineProperty(MonthSelector, "propTypes", {
   styles: PropTypes.object,
   selectedMonth: PropTypes.object.isRequired,
-  isGregorian: PropTypes.bool
+  isGregorian: PropTypes.bool,
+  disableYearSelector: PropTypes.bool
 });
 
 defineProperty(MonthSelector, "contextTypes", {
@@ -1027,8 +1033,11 @@ var Calendar = /*#__PURE__*/function (_Component) {
       var _this$state2 = _this.state,
           month = _this$state2.month,
           isGregorian = _this$state2.isGregorian;
-      var styles = _this.props.styles;
+      var _this$props2 = _this.props,
+          styles = _this$props2.styles,
+          disableYearSelector = _this$props2.disableYearSelector;
       return /*#__PURE__*/React.createElement(MonthSelector, {
+        disableYearSelector: disableYearSelector,
         styles: styles,
         isGregorian: isGregorian,
         selectedMonth: month
@@ -1054,12 +1063,12 @@ var Calendar = /*#__PURE__*/function (_Component) {
           month = _this$state4.month,
           selectedDay = _this$state4.selectedDay,
           isGregorian = _this$state4.isGregorian;
-      var _this$props2 = _this.props,
-          children = _this$props2.children,
-          min = _this$props2.min,
-          max = _this$props2.max,
-          styles = _this$props2.styles,
-          outsideClickIgnoreClass = _this$props2.outsideClickIgnoreClass;
+      var _this$props3 = _this.props,
+          children = _this$props3.children,
+          min = _this$props3.min,
+          max = _this$props3.max,
+          styles = _this$props3.styles,
+          outsideClickIgnoreClass = _this$props3.outsideClickIgnoreClass;
       var days;
 
       if (_this.lastRenderedMonth === month) {
@@ -1167,15 +1176,15 @@ var Calendar = /*#__PURE__*/function (_Component) {
     value: function render() {
       var _this2 = this;
 
-      var _this$props3 = this.props,
-          selectedDay = _this$props3.selectedDay,
-          min = _this$props3.min,
-          max = _this$props3.max,
-          onClickOutside = _this$props3.onClickOutside,
-          outsideClickIgnoreClass = _this$props3.outsideClickIgnoreClass,
-          styles = _this$props3.styles,
-          className = _this$props3.className,
-          showTodayButton = _this$props3.showTodayButton;
+      var _this$props4 = this.props,
+          selectedDay = _this$props4.selectedDay,
+          min = _this$props4.min,
+          max = _this$props4.max,
+          onClickOutside = _this$props4.onClickOutside,
+          outsideClickIgnoreClass = _this$props4.outsideClickIgnoreClass,
+          styles = _this$props4.styles,
+          className = _this$props4.className,
+          showTodayButton = _this$props4.showTodayButton;
       var _this$state5 = this.state,
           mode = _this$state5.mode,
           isGregorian = _this$state5.isGregorian;
@@ -1230,7 +1239,8 @@ defineProperty(Calendar, "propTypes", {
   calendarClass: PropTypes.string,
   showToggleButton: PropTypes.bool,
   toggleButtonText: PropTypes.any,
-  showTodayButton: PropTypes.bool
+  showTodayButton: PropTypes.bool,
+  disableYearSelector: PropTypes.bool
 });
 
 defineProperty(Calendar, "childContextTypes", {
@@ -2546,7 +2556,8 @@ var DatePicker = /*#__PURE__*/function (_Component) {
           defaultMonth = _this$props.defaultMonth,
           styles = _this$props.styles,
           calendarContainerProps = _this$props.calendarContainerProps,
-          ranges = _this$props.ranges;
+          ranges = _this$props.ranges,
+          disableYearSelector = _this$props.disableYearSelector;
       return /*#__PURE__*/React.createElement("div", {
         ref: ref
       }, /*#__PURE__*/React.createElement(Calendar$1, {
@@ -2567,6 +2578,7 @@ var DatePicker = /*#__PURE__*/function (_Component) {
         showToggleButton: _this.props.showToggleButton,
         toggleButtonText: _this.props.toggleButtonText,
         showTodayButton: _this.props.showTodayButton,
+        disableYearSelector: disableYearSelector,
         timePicker: TimePicker ? /*#__PURE__*/React.createElement(TimePicker, {
           outsideClickIgnoreClass: outsideClickIgnoreClass,
           isGregorian: isGregorian,
@@ -2752,7 +2764,12 @@ var DatePicker = /*#__PURE__*/function (_Component) {
         var inputValue = this.toEnglishDigits(event.target.value);
         var currentInputFormat = isGregorian ? inputFormat : inputJalaaliFormat;
         var momentValue = momentJalaali(inputValue, currentInputFormat);
-        this.props.onChange(momentValue.isValid() ? this.state.momentValue : momentJalaali());
+
+        if (momentValue.isValid()) {
+          this.props.onChange(this.state.momentValue);
+        } else if (this.props.setTodayOnBlur) {
+          this.props.onChange(momentJalaali());
+        }
       }
     }
   }, {
@@ -2843,7 +2860,9 @@ defineProperty(DatePicker, "propTypes", {
   showTodayButton: PropTypes.bool,
   placeholder: PropTypes.string,
   name: PropTypes.string,
-  persianDigits: PropTypes.bool
+  persianDigits: PropTypes.bool,
+  setTodayOnBlur: PropTypes.bool,
+  disableYearSelector: PropTypes.bool
 });
 
 defineProperty(DatePicker, "defaultProps", {
@@ -2854,7 +2873,9 @@ defineProperty(DatePicker, "defaultProps", {
   showTodayButton: true,
   placeholder: '',
   name: '',
-  persianDigits: true
+  persianDigits: true,
+  setTodayOnBlur: true,
+  disableYearSelector: false
 });
 
 momentJalaali.loadPersian({
