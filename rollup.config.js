@@ -28,7 +28,7 @@ const config = {
   output: [
     {
       file: pkg.module,
-      format: 'es',
+      format: 'umd',
       name: 'DatePicker',
       exports: 'named'
     }
