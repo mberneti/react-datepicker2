@@ -39,6 +39,7 @@ declare module 'react-datepicker2' {
     onMonthChange?: (month: Moment) => void;
     inputFormat?: string;
     inputJalaaliFormat?: string;
+    persianDigits?: boolean;
   }
 
   export class Calendar extends Component<CalenderProps> {
