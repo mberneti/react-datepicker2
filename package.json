@@ -24,6 +24,7 @@
   "author": "mohammadreza berneti (mberneti)",
   "license": "MIT",
   "scripts": {
+    "cypress": "cypress open",
     "test": "jest --runInBand --detectOpenHandles --no-cache --config ./jest.config.js --coverage && minicat coverage/lcov.info | coveralls",
     "start": "webpack-dev-server --mode development --config webpack.config.dev.js",
     "build": "npm-run-all build:dist build:docs",
@@ -77,6 +78,7 @@
     "clean-css-cli": "^4.3.0",
     "coveralls": "^2.12.0",
     "css-loader": "^2.1.1",
+    "cypress": "^5.0.0",
     "enzyme": "^2.9.1",
     "enzyme-adapter-react-16": "^1.13.1",
     "eslint": "^5.16.0",
