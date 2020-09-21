@@ -336,6 +336,7 @@ export default class DatePicker extends Component {
               />
             ) : null
           }
+          eventType={["click", "touch"]}
         />
       </div>
     );
