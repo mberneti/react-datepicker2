@@ -19,6 +19,7 @@ import Placeholder from './examples/Placeholder';
 import ToggleButton from './examples/ToggleButton';
 import OnInputChange from './examples/OnInputChange';
 import JalaaliWithEnglishDigit from './examples/JalaaliWithEnglishDigit';
+import SetTodayOnBlur from './examples/SetTodayOnBlur';
 
 import { StickyContainer, Sticky } from 'react-sticky';
 
@@ -41,7 +42,8 @@ export default class ExampleComponents extends React.Component {
       Placeholder,
       ToggleButton,
       OnInputChange,
-      JalaaliWithEnglishDigit
+      JalaaliWithEnglishDigit,
+      SetTodayOnBlur
     ];
   }
 

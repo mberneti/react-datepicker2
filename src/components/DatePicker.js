@@ -75,7 +75,8 @@ export default class DatePicker extends Component {
       inputFormat: this.props.inputFormat || this.getInputFormat(true, this.props.timePicker),
       isGregorian: this.props.isGregorian,
       timePicker: this.props.timePicker,
-      timePickerComponent: this.props.timePicker ? MyTimePicker : undefined
+      timePickerComponent: this.props.timePicker ? MyTimePicker : undefined,
+      setTodayOnBlur: this.props.setTodayOnBlur
     };
   }
 
@@ -116,7 +117,8 @@ export default class DatePicker extends Component {
       if (nextProps.value === null) {
         this.setState({
           input: '',
-          inputValue: ''
+          inputValue: '',
+          momentValue: null
         });
       }
       else if ((typeof nextProps.value === 'undefined' && typeof this.props.value !== 'undefined') ||
@@ -143,6 +145,12 @@ export default class DatePicker extends Component {
       this.setState({
         timePicker: nextProps.timePicker,
         timePickerComponent: this.props.timePicker ? MyTimePicker : undefined
+      });
+    }
+
+    if ('setTodayOnBlur' in nextProps && nextProps.setTodayOnBlur !== this.props.setTodayOnBlur) {
+      this.setState({
+        setTodayOnBlur: nextProps.setTodayOnBlur,
       });
     }
   }
@@ -240,13 +248,17 @@ export default class DatePicker extends Component {
 
   hanldeBlur(event) {
     if (this.props.onChange) {
+      if (!event.target.value && this.state.setTodayOnBlur === false)
+        return;
+
       const { inputFormat, inputJalaaliFormat, isGregorian } = this.state;
       const inputValue = this.toEnglishDigits(event.target.value);
       const currentInputFormat = isGregorian ? inputFormat : inputJalaaliFormat;
       const momentValue = momentJalaali(inputValue, currentInputFormat);
-      if (momentValue.isValid()) {
+
+      if (event.target.value && momentValue.isValid()) {
         this.props.onChange(this.state.momentValue);
-      } else if (this.props.setTodayOnBlur) {
+      } else if (this.state.setTodayOnBlur === true) {
         this.props.onChange(momentJalaali());
       }
     }
