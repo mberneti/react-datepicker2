@@ -360,7 +360,8 @@ export default class DatePicker extends Component {
     }
     this.setState({
       input: '',
-      inputValue: ''
+      inputValue: '',
+      momentValue: null
     });
   }
 

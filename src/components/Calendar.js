@@ -156,6 +156,15 @@ export class Calendar extends Component {
     const { month, isGregorian } = this.state;
     const yearMonthFormat = isGregorian ? 'YYYYMM' : 'jYYYYjMM';
 
+    if (!selectedDay) {
+      this.setState({
+        year: this.props.defaultYear || this.props.selectedDay || momentJalaali(this.props.min),
+        month: this.props.defaultMonth || this.props.selectedDay || momentJalaali(this.props.min),
+        selectedDay: null
+      });
+      return;
+    }
+
     // Because there's no `m1.isSame(m2, 'jMonth')`
     if (selectedDay.format(yearMonthFormat) !== month.format(yearMonthFormat)) {
       this.setState({ month: selectedDay });
