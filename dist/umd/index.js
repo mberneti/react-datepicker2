@@ -998,7 +998,18 @@
         var _this$state = _this.state,
             month = _this$state.month,
             isGregorian = _this$state.isGregorian;
-        var yearMonthFormat = isGregorian ? 'YYYYMM' : 'jYYYYjMM'; // Because there's no `m1.isSame(m2, 'jMonth')`
+        var yearMonthFormat = isGregorian ? 'YYYYMM' : 'jYYYYjMM';
+
+        if (!selectedDay) {
+          _this.setState({
+            year: _this.props.defaultYear || _this.props.selectedDay || momentJalaali(_this.props.min),
+            month: _this.props.defaultMonth || _this.props.selectedDay || momentJalaali(_this.props.min),
+            selectedDay: null
+          });
+
+          return;
+        } // Because there's no `m1.isSame(m2, 'jMonth')`
+
 
         if (selectedDay.format(yearMonthFormat) !== month.format(yearMonthFormat)) {
           _this.setState({
@@ -2805,7 +2816,8 @@
 
         this.setState({
           input: '',
-          inputValue: ''
+          inputValue: '',
+          momentValue: null
         });
       }
     }, {
