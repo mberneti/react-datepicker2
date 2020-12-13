@@ -144,7 +144,7 @@ export default class DatePicker extends Component {
     if ('timePicker' in nextProps && nextProps.timePicker !== this.props.timePicker) {
       this.setState({
         timePicker: nextProps.timePicker,
-        timePickerComponent: this.props.timePicker ? MyTimePicker : undefined
+        timePickerComponent: nextProps.timePicker ? MyTimePicker : undefined
       });
     }
 
