@@ -1,28 +1,31 @@
 {
-    "eslint.enable": false,
-    "files.exclude": {
-        ".vscode/": true,
-        "**/admin/css/app.css": true,
-        "**/appLogin-light.css": true,
-        "**/appLogin.css": true,
-        "**/assets/stylesheets/": true,
-        "**/bin/": true,
-        "**/bootstrap-editable.css": true,
-        "**/bootstrap.css": true,
-        "**/bower_components/": true,
-        "**/bs-editable.css": true,
-        "**/css/components/": true,
-        "**/dark-components.css": true,
-        "**/docs/assets/": true,
-        "**/font-icons.css": true,
-        "**/magnific-popup.css": true,
-        "**/node_modules/": true,
-        "**/pricing-table.css": true,
-        "**/responsive.css": true,
-        "**/swagger2/swagger-ui.css": true,
-        "**/sweetalert.css": true,
-        "**/swiper.css": true,
-        "**/wwwroot/demos/": true,
-        "coverage/": true
-    }
+  "eslint.enable": false,
+  "files.exclude": {
+    ".vscode/": true,
+    "**/admin/css/app.css": true,
+    "**/appLogin-light.css": true,
+    "**/appLogin.css": true,
+    "**/assets/stylesheets/": true,
+    "**/bin/": true,
+    "**/bootstrap-editable.css": true,
+    "**/bootstrap.css": true,
+    "**/bower_components/": true,
+    "**/bs-editable.css": true,
+    "**/css/components/": true,
+    "**/dark-components.css": true,
+    "**/docs/assets/": true,
+    "**/font-icons.css": true,
+    "**/magnific-popup.css": true,
+    "**/node_modules/": true,
+    "**/pricing-table.css": true,
+    "**/responsive.css": true,
+    "**/swagger2/swagger-ui.css": true,
+    "**/sweetalert.css": true,
+    "**/swiper.css": true,
+    "**/wwwroot/demos/": true,
+    "coverage/": true
+  },
+  "files.associations": {
+    "*.js": "javascriptreact"
+  }
 }
