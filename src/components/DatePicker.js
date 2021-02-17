@@ -278,7 +278,7 @@ export default class DatePicker extends Component {
     });
 
     return (
-      <div ref={ref}>
+      <div className="datepicker-initial-container" ref={ref}>
         <input
           placeholder={this.props.placeholder}
           name={this.props.name}
