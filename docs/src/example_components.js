@@ -1,7 +1,8 @@
 import React from 'react';
 import hljs from 'highlight.js';
 import CodeExampleComponent from './code_example_component';
-import Highlight from 'react-syntax-highlight';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 import Default from './examples/default';
 import Jalaali from './examples/jalaali';
@@ -56,7 +57,11 @@ export default class ExampleComponents extends React.Component {
       <CodeExampleComponent key={`example-${index}`} id={index} title={example.title}>
         <div className="row">
           <div className="column">
-            <Highlight lang="jsx" value={example.code} />
+            {/* <Highlight lang="jsx" value={example.code} /> */}
+            <SyntaxHighlighter lang="javascript" style={docco}>
+
+            {example.code}
+            </SyntaxHighlighter>
           </div>
           <div className="column">{<example.component />}</div>
         </div>
