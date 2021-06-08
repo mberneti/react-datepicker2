@@ -38,11 +38,11 @@ export default class MyTimePicker extends Component {
   }
 
   render() {
-    const { momentValue, isGregorian, outsideClickIgnoreClass } = this.props;
+    const { momentValue, isGregorian, outsideClickIgnoreClass, showAMPM } = this.props;
 
     return (
       <TimePicker
-        showAMPM
+        showAMPM={showAMPM == undefined ? true : showAMPM}
         isGregorian={isGregorian}
         showSecond={false}
         allowEmpty={false}
